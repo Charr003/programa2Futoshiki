@@ -3,20 +3,143 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.programa2futoshiki;
+import javax.swing.JButton;
 
 /**
  *
  * @author jxdga
  */
 public class Frame10x10 extends javax.swing.JFrame {
-
+    private JButton[][] botones;
+    int PuntoX,PuntoY,PuntoX2,PuntoY2;
+    
     /**
      * Creates new form Frame10x10
      */
+    
     public Frame10x10() {
         initComponents();
+        inicializarBotones();
     }
 
+    /**
+     * Método para inicializar la matriz de botones y enlazarlos con los botones del formulario.
+     */
+    private void inicializarBotones() {
+        botones = new JButton[10][10]; // Creamos la matriz de 10x10
+
+        // Asignación de cada botón de la matriz a su posición correspondiente
+        botones[0][0] = Boton0_0;
+        botones[0][1] = Boton0_1;
+        botones[0][2] = Boton0_2;
+        botones[0][3] = Boton0_3;
+        botones[0][4] = Boton0_4;
+        botones[0][5] = Boton0_5;
+        botones[0][6] = Boton0_6;
+        botones[0][7] = Boton0_7;
+        botones[0][8] = Boton0_8;
+        botones[0][9] = Boton0_9;
+
+        botones[1][0] = Boton1_0;
+        botones[1][1] = Boton1_1;
+        botones[1][2] = Boton1_2;
+        botones[1][3] = Boton1_3;
+        botones[1][4] = Boton1_4;
+        botones[1][5] = Boton1_5;
+        botones[1][6] = Boton1_6;
+        botones[1][7] = Boton1_7;
+        botones[1][8] = Boton1_8;
+        botones[1][9] = Boton1_9;
+        
+        botones[2][0] = Boton2_0;
+        botones[2][1] = Boton2_1;
+        botones[2][2] = Boton2_2;
+        botones[2][3] = Boton2_3;
+        botones[2][4] = Boton2_4;
+        botones[2][5] = Boton2_5;
+        botones[2][6] = Boton2_6;
+        botones[2][7] = Boton2_7;
+        botones[2][8] = Boton2_8;
+        botones[2][9] = Boton2_9;
+        
+        botones[3][0] = Boton3_0;
+        botones[3][1] = Boton3_1;
+        botones[3][2] = Boton3_2;
+        botones[3][3] = Boton3_3;
+        botones[3][4] = Boton3_4;
+        botones[3][5] = Boton3_5;
+        botones[3][6] = Boton3_6;
+        botones[3][7] = Boton3_7;
+        botones[3][8] = Boton3_8;
+        botones[3][9] = Boton3_9;
+        
+        botones[4][0] = Boton4_0;
+        botones[4][1] = Boton4_1;
+        botones[4][2] = Boton4_2;
+        botones[4][3] = Boton4_3;
+        botones[4][4] = Boton4_4;
+        botones[4][5] = Boton4_5;
+        botones[4][6] = Boton4_6;
+        botones[4][7] = Boton4_7;
+        botones[4][8] = Boton4_8;
+        botones[4][9] = Boton4_9;
+        
+        botones[5][0] = Boton5_0;
+        botones[5][1] = Boton5_1;
+        botones[5][2] = Boton5_2;
+        botones[5][3] = Boton5_3;
+        botones[5][4] = Boton5_4;
+        botones[5][5] = Boton5_5;
+        botones[5][6] = Boton5_6;
+        botones[5][7] = Boton5_7;
+        botones[5][8] = Boton5_8;
+        botones[5][9] = Boton5_9;
+        
+        botones[6][0] = Boton6_0;
+        botones[6][1] = Boton6_1;
+        botones[6][2] = Boton6_2;
+        botones[6][3] = Boton6_3;
+        botones[6][4] = Boton6_4;
+        botones[6][5] = Boton6_5;
+        botones[6][6] = Boton6_6;
+        botones[6][7] = Boton6_7;
+        botones[6][8] = Boton6_8;
+        botones[6][9] = Boton6_9;
+        
+        botones[7][0] = Boton7_0;
+        botones[7][1] = Boton7_1;
+        botones[7][2] = Boton7_2;
+        botones[7][3] = Boton7_3;
+        botones[7][4] = Boton7_4;
+        botones[7][5] = Boton7_5;
+        botones[7][6] = Boton7_6;
+        botones[7][7] = Boton7_7;
+        botones[7][8] = Boton7_8;
+        botones[7][9] = Boton7_9;
+        
+        botones[8][0] = Boton8_0;
+        botones[8][1] = Boton8_1;
+        botones[8][2] = Boton8_2;
+        botones[8][3] = Boton8_3;
+        botones[8][4] = Boton8_4;
+        botones[8][5] = Boton8_5;
+        botones[8][6] = Boton8_6;
+        botones[8][7] = Boton8_7;
+        botones[8][8] = Boton8_8;
+        botones[8][9] = Boton8_9;
+        
+        botones[9][0] = Boton9_0;
+        botones[9][1] = Boton9_1;
+        botones[9][2] = Boton9_2;
+        botones[9][3] = Boton9_3;
+        botones[9][4] = Boton9_4;
+        botones[9][5] = Boton9_5;
+        botones[9][6] = Boton9_6;
+        botones[9][7] = Boton9_7;
+        botones[9][8] = Boton9_8;
+        botones[9][9] = Boton9_9;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -2782,445 +2905,549 @@ public class Frame10x10 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton0_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=0;
     }//GEN-LAST:event_Boton0_0ActionPerformed
 
     private void Boton0_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=1;
     }//GEN-LAST:event_Boton0_1ActionPerformed
 
     private void Boton0_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=2;
     }//GEN-LAST:event_Boton0_2ActionPerformed
 
     private void Boton0_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=3;
     }//GEN-LAST:event_Boton0_3ActionPerformed
 
     private void Boton0_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=4;
     }//GEN-LAST:event_Boton0_4ActionPerformed
 
     private void Boton0_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=5;
     }//GEN-LAST:event_Boton0_5ActionPerformed
 
     private void Boton0_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=6;
     }//GEN-LAST:event_Boton0_6ActionPerformed
 
     private void Boton0_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=7;
     }//GEN-LAST:event_Boton0_7ActionPerformed
 
     private void Boton0_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=8;
     }//GEN-LAST:event_Boton0_8ActionPerformed
 
     private void Boton0_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=0;
+        PuntoY=9;
     }//GEN-LAST:event_Boton0_9ActionPerformed
 
     private void Boton1_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=0;
     }//GEN-LAST:event_Boton1_0ActionPerformed
 
     private void Boton1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=1;
     }//GEN-LAST:event_Boton1_1ActionPerformed
 
     private void Boton1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=2;
     }//GEN-LAST:event_Boton1_2ActionPerformed
 
     private void Boton1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=3;
     }//GEN-LAST:event_Boton1_3ActionPerformed
 
     private void Boton1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=4;
     }//GEN-LAST:event_Boton1_4ActionPerformed
 
     private void Boton1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=5;
     }//GEN-LAST:event_Boton1_5ActionPerformed
 
     private void Boton1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=6;
     }//GEN-LAST:event_Boton1_6ActionPerformed
 
     private void Boton1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=7;
     }//GEN-LAST:event_Boton1_7ActionPerformed
 
     private void Boton1_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=8;
     }//GEN-LAST:event_Boton1_8ActionPerformed
 
     private void Boton1_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=1;
+        PuntoY=9;
     }//GEN-LAST:event_Boton1_9ActionPerformed
 
     private void Boton2_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=0;
     }//GEN-LAST:event_Boton2_0ActionPerformed
 
     private void Boton2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=1;
     }//GEN-LAST:event_Boton2_1ActionPerformed
 
     private void Boton2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=2;
     }//GEN-LAST:event_Boton2_2ActionPerformed
 
     private void Boton2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=3;
     }//GEN-LAST:event_Boton2_3ActionPerformed
 
     private void Boton2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=4;
     }//GEN-LAST:event_Boton2_4ActionPerformed
 
     private void Boton2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=5;
     }//GEN-LAST:event_Boton2_5ActionPerformed
 
     private void Boton2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=6;
     }//GEN-LAST:event_Boton2_6ActionPerformed
 
     private void Boton2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=7;
     }//GEN-LAST:event_Boton2_7ActionPerformed
 
     private void Boton2_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=8;
     }//GEN-LAST:event_Boton2_8ActionPerformed
 
     private void Boton2_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=2;
+        PuntoY=9;
     }//GEN-LAST:event_Boton2_9ActionPerformed
 
     private void Boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1ActionPerformed
-        Boton0_0.setText("1");
+        AsignarNum(PuntoX, PuntoY, 1);
     }//GEN-LAST:event_Boton1ActionPerformed
 
     private void Boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 2);
     }//GEN-LAST:event_Boton2ActionPerformed
 
     private void Boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 3);
     }//GEN-LAST:event_Boton3ActionPerformed
 
     private void Boton3_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=0;
     }//GEN-LAST:event_Boton3_0ActionPerformed
 
     private void Boton3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=1;
     }//GEN-LAST:event_Boton3_1ActionPerformed
 
     private void Boton3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=2;
     }//GEN-LAST:event_Boton3_2ActionPerformed
 
     private void Boton3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=3;
     }//GEN-LAST:event_Boton3_3ActionPerformed
 
     private void Boton3_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=4;
     }//GEN-LAST:event_Boton3_4ActionPerformed
 
     private void Boton3_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=5;
     }//GEN-LAST:event_Boton3_5ActionPerformed
 
     private void Boton3_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=6;
     }//GEN-LAST:event_Boton3_6ActionPerformed
 
     private void Boton3_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=7;
     }//GEN-LAST:event_Boton3_7ActionPerformed
 
     private void Boton3_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=8;
     }//GEN-LAST:event_Boton3_8ActionPerformed
 
     private void Boton3_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=3;
+        PuntoY=9;
     }//GEN-LAST:event_Boton3_9ActionPerformed
 
     private void Boton4_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=0;
     }//GEN-LAST:event_Boton4_0ActionPerformed
 
     private void Boton4_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=1;
     }//GEN-LAST:event_Boton4_1ActionPerformed
 
     private void Boton4_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=2;
     }//GEN-LAST:event_Boton4_2ActionPerformed
 
     private void Boton4_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=3;
     }//GEN-LAST:event_Boton4_3ActionPerformed
 
     private void Boton4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=4;
     }//GEN-LAST:event_Boton4_4ActionPerformed
 
     private void Boton4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=5;
     }//GEN-LAST:event_Boton4_5ActionPerformed
 
     private void Boton4_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=6;
     }//GEN-LAST:event_Boton4_6ActionPerformed
 
     private void Boton4_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=7;
     }//GEN-LAST:event_Boton4_7ActionPerformed
 
     private void Boton4_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=8;
     }//GEN-LAST:event_Boton4_8ActionPerformed
 
     private void Boton4_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=4;
+        PuntoY=9;
     }//GEN-LAST:event_Boton4_9ActionPerformed
 
     private void Boton5_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=0;
     }//GEN-LAST:event_Boton5_0ActionPerformed
 
     private void Boton5_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=1;
     }//GEN-LAST:event_Boton5_1ActionPerformed
 
     private void Boton5_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=2;
     }//GEN-LAST:event_Boton5_2ActionPerformed
 
     private void Boton5_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=3;
     }//GEN-LAST:event_Boton5_3ActionPerformed
 
     private void Boton5_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=4;
     }//GEN-LAST:event_Boton5_4ActionPerformed
 
     private void Boton5_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=5;
     }//GEN-LAST:event_Boton5_5ActionPerformed
 
     private void Boton5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=6;
     }//GEN-LAST:event_Boton5_6ActionPerformed
 
     private void Boton5_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=7;
     }//GEN-LAST:event_Boton5_7ActionPerformed
 
     private void Boton5_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=8;
     }//GEN-LAST:event_Boton5_8ActionPerformed
 
     private void Boton5_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=5;
+        PuntoY=9;
     }//GEN-LAST:event_Boton5_9ActionPerformed
 
     private void Boton6_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=0;
     }//GEN-LAST:event_Boton6_0ActionPerformed
 
     private void Boton6_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=1;
     }//GEN-LAST:event_Boton6_1ActionPerformed
 
     private void Boton6_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=2;
     }//GEN-LAST:event_Boton6_2ActionPerformed
 
     private void Boton6_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=3;
     }//GEN-LAST:event_Boton6_3ActionPerformed
 
     private void Boton6_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=4;
     }//GEN-LAST:event_Boton6_4ActionPerformed
 
     private void Boton6_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=5;
     }//GEN-LAST:event_Boton6_5ActionPerformed
 
     private void Boton6_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=6;
     }//GEN-LAST:event_Boton6_6ActionPerformed
 
     private void Boton6_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=7;
     }//GEN-LAST:event_Boton6_7ActionPerformed
 
     private void Boton6_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=8;
     }//GEN-LAST:event_Boton6_8ActionPerformed
 
     private void Boton6_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=6;
+        PuntoY=9;
     }//GEN-LAST:event_Boton6_9ActionPerformed
 
     private void Boton7_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=0;
     }//GEN-LAST:event_Boton7_0ActionPerformed
 
     private void Boton8_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=0;
     }//GEN-LAST:event_Boton8_0ActionPerformed
 
     private void Boton9_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_0ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=0;
     }//GEN-LAST:event_Boton9_0ActionPerformed
 
     private void Boton7_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=1;
     }//GEN-LAST:event_Boton7_1ActionPerformed
 
     private void Boton7_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=2;
     }//GEN-LAST:event_Boton7_2ActionPerformed
 
     private void Boton7_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=3;
     }//GEN-LAST:event_Boton7_3ActionPerformed
 
     private void Boton7_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=4;
     }//GEN-LAST:event_Boton7_4ActionPerformed
 
     private void Boton7_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=5;
     }//GEN-LAST:event_Boton7_5ActionPerformed
 
     private void Boton7_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=6;
     }//GEN-LAST:event_Boton7_6ActionPerformed
 
     private void Boton7_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=7;
     }//GEN-LAST:event_Boton7_7ActionPerformed
 
     private void Boton7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=8;
     }//GEN-LAST:event_Boton7_8ActionPerformed
 
     private void Boton7_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=7;
+        PuntoY=9;
     }//GEN-LAST:event_Boton7_9ActionPerformed
 
     private void Boton8_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=1;
     }//GEN-LAST:event_Boton8_1ActionPerformed
 
     private void Boton8_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=2;
     }//GEN-LAST:event_Boton8_2ActionPerformed
 
     private void Boton8_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=3;
     }//GEN-LAST:event_Boton8_3ActionPerformed
 
     private void Boton8_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=4;
     }//GEN-LAST:event_Boton8_4ActionPerformed
 
     private void Boton8_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=5;
     }//GEN-LAST:event_Boton8_5ActionPerformed
 
     private void Boton8_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=6;
     }//GEN-LAST:event_Boton8_6ActionPerformed
 
     private void Boton8_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=7;
     }//GEN-LAST:event_Boton8_7ActionPerformed
 
     private void Boton8_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=8;
     }//GEN-LAST:event_Boton8_8ActionPerformed
 
     private void Boton8_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=8;
+        PuntoY=9;
     }//GEN-LAST:event_Boton8_9ActionPerformed
 
     private void Boton9_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_1ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=1;
     }//GEN-LAST:event_Boton9_1ActionPerformed
 
     private void Boton9_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_2ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=2;
     }//GEN-LAST:event_Boton9_2ActionPerformed
 
     private void Boton9_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_3ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=3;
     }//GEN-LAST:event_Boton9_3ActionPerformed
 
     private void Boton9_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_4ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=4;
     }//GEN-LAST:event_Boton9_4ActionPerformed
 
     private void Boton9_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_5ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=5;
     }//GEN-LAST:event_Boton9_5ActionPerformed
 
     private void Boton9_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_6ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=6;
     }//GEN-LAST:event_Boton9_6ActionPerformed
 
     private void Boton9_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_7ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=7;
     }//GEN-LAST:event_Boton9_7ActionPerformed
 
     private void Boton9_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_8ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=8;
     }//GEN-LAST:event_Boton9_8ActionPerformed
 
     private void Boton9_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_9ActionPerformed
-        // TODO add your handling code here:
+        PuntoX=9;
+        PuntoY=9;
     }//GEN-LAST:event_Boton9_9ActionPerformed
 
     private void Boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 4);
     }//GEN-LAST:event_Boton4ActionPerformed
 
     private void Boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 5);
     }//GEN-LAST:event_Boton5ActionPerformed
 
     private void Boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 6);
     }//GEN-LAST:event_Boton6ActionPerformed
 
     private void Boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 7);
     }//GEN-LAST:event_Boton7ActionPerformed
 
     private void Boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 9);
     }//GEN-LAST:event_Boton9ActionPerformed
 
     private void Boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton10ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 10);
     }//GEN-LAST:event_Boton10ActionPerformed
 
     private void Boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8ActionPerformed
-        // TODO add your handling code here:
+        AsignarNum(PuntoX, PuntoY, 8);
     }//GEN-LAST:event_Boton8ActionPerformed
 
+    public void AsignarNum(int fila, int columna, int num) {
+        botones[fila][columna].setText(String.valueOf(num)); // Cambiar texto del botón
+    }
+    
     /**
      * @param args the command line arguments
      */
