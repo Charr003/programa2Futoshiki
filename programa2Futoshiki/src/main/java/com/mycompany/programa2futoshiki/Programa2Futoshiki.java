@@ -11,6 +11,11 @@ package com.mycompany.programa2futoshiki;
 public class Programa2Futoshiki {
 
     public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new Frame10x10().setVisible(true); // Muestra la ventana
+        }
+        });
         System.out.println("Hello World!");
         
     }
