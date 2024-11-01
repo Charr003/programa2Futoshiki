@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Programa;
 import javax.swing.JButton;
 
 /**
@@ -20,6 +20,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     public Frame10x10() {
         initComponents();
         inicializarBotones();
+        setLocationRelativeTo(null);
     }
 
     /**
