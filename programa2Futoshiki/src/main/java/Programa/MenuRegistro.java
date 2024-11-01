@@ -4,6 +4,7 @@
  */
 package Programa;
 
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
 /**
@@ -180,13 +181,15 @@ public class MenuRegistro extends javax.swing.JFrame {
                menup.agregarUsuario(new Usuario(nick,pin,correo));
                JOptionPane.showMessageDialog(null, "Se ha registrado al usuario "+ nick);
                correos.EnviarCorreoConfirmacion(correo);
+               
+               menup.guardarDatos();
                setVisible(false);
             
             }else{
                 JOptionPane.showMessageDialog(null, "No se cumplen los requisitos de Registro");
             }
         
-        }catch(Exception e){
+        }catch(HeadlessException e){
         
             System.out.println(e.getMessage());
         }

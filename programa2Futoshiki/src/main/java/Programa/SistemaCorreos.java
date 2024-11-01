@@ -77,4 +77,27 @@ public static void EnviarCorreo(String fromEmail, String password, String toEmai
 
     
     }
+    
+    public void EnviarCorreoNuevoPin(Usuario usuario){
+    
+        try {
+            String fromEmail = "parksysp11@gmail.com"; 
+            String password = "nvei wqaw cugk qtvf"; 
+            String toEmail = usuario.Correo; // Correo del destinatario
+            String subject = "Cambio del PIN";
+            
+            
+            String messageBody = "Estimado usuario, " + usuario.Nickname +"\n\nSe ha generado un nuevo PIN para su cuenta."
+                    + "\nPIN: " +usuario.Pin;
+
+            EnviarCorreo(fromEmail, password, toEmail, subject, messageBody);
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error en los parámetros: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }  
+    
+    
+    }
 }

@@ -4,7 +4,13 @@
  */
 package Programa;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +18,11 @@ import javax.swing.JOptionPane;
  * @author XPC
  */
 public class MenuPrincipal extends javax.swing.JFrame {
-
+    
+    
+    
+    SistemaCorreos correos = new SistemaCorreos();
+    
     /**
      * Creates new form MenuPrincipal
      */
@@ -40,6 +50,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         botonAcercaDe = new javax.swing.JButton();
         botonManual = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
+        botonPIN = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -66,6 +77,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         botonTop.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         botonTop.setText("Top 10");
+        botonTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTopActionPerformed(evt);
+            }
+        });
 
         botonAcercaDe.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonAcercaDe.setText("Acerca de ");
@@ -83,6 +99,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonSalirActionPerformed(evt);
+            }
+        });
+
+        botonPIN.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        botonPIN.setText("Olvide mi PIN");
+        botonPIN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPINActionPerformed(evt);
             }
         });
 
@@ -107,6 +131,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botonPIN)
                     .addComponent(botonSalir)
                     .addComponent(botonAcercaDe)
                     .addComponent(botonManual))
@@ -118,14 +143,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(botonSalir)
                 .addGap(44, 44, 44)
-                .addComponent(txtTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                .addComponent(txtTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(99, 99, 99)
                 .addComponent(botonJugar)
                 .addGap(39, 39, 39)
                 .addComponent(BotonRegistro)
                 .addGap(30, 30, 30)
                 .addComponent(botonTop)
-                .addGap(109, 109, 109)
+                .addGap(66, 66, 66)
+                .addComponent(botonPIN)
+                .addGap(18, 18, 18)
                 .addComponent(botonAcercaDe)
                 .addGap(18, 18, 18)
                 .addComponent(botonManual)
@@ -207,6 +234,23 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_BotonRegistroActionPerformed
 
+    private void botonTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTopActionPerformed
+        
+        // Prueba
+        cargarDatos();
+        mostrarUsuario();
+    }//GEN-LAST:event_botonTopActionPerformed
+
+    private void botonPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPINActionPerformed
+        
+        //cargarDatos();
+        String nick = JOptionPane.showInputDialog("Ingrese el nombre de usuario");
+        
+        NuevoPIN(nick);
+        
+        
+    }//GEN-LAST:event_botonPINActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -255,12 +299,110 @@ public class MenuPrincipal extends javax.swing.JFrame {
         usuarios.add(usuario);
     }
     
+    public void guardarDatos(){
+        
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("usuarios.dat"))){
+            
+            oos.writeObject(usuarios);
+
+        }catch (IOException e){
+            System.out.println("Error al guardar los datos.");
+        }
+    }
+    
+    public void cargarDatos(){
+    
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("usuarios.dat"))) {
+            
+            usuarios = (ArrayList<Usuario>) ois.readObject();
+
+        }catch (IOException | ClassNotFoundException e){
+            
+            System.out.println("Error al cargar los datos.");
+        }
+    }
+    
+    public void mostrarUsuario(){
+      
+       if(usuarios.size()!=0){
+       
+         for(Usuario usuario: usuarios){
+        
+            System.out.println("\nUsuario: "+ usuario.Nickname);
+        
+          }
+       
+       }else{
+           System.out.println("No hay un registro");
+       }
+        
+    }
+    
+    public void NuevoPIN(String nick){
+        
+        
+        cargarDatos();
+        Usuario usuario = ValidarSoloUsuario(nick);
+        
+        if( usuario != null){
+        
+            String cadenaAleatoria = generarStringAleatorio(4); // Pin aletorio
+            System.out.println("El nuevo PIN del usuario "+ usuario.Nickname + " es: "
+            + cadenaAleatoria); // debugging
+            
+            usuario.Pin = cadenaAleatoria; // Guardado de pin
+            guardarDatos();
+            
+            JOptionPane.showMessageDialog(null,"Se ha enviado un correo con el PIN de recuperacion.");
+            correos.EnviarCorreoNuevoPin(usuario);
+
+        }else{
+        
+            JOptionPane.showMessageDialog(null,"Usuario no encontrado.");
+        
+        }
+    }  
+    
+    public Usuario ValidarSoloUsuario(String nombre) {
+        
+        
+        for (Usuario usuario : usuarios) {
+            
+            if (usuario.Nickname.equalsIgnoreCase(nombre)) {
+                
+                    return usuario; // Devuelve el usuario encontrado
+                
+            }
+        }
+        return null; // Si no se encuentra ningún usuario con ese nombre
+    } 
+    
+    
+    public String generarStringAleatorio(int longitud) { 
+                                                                   
+        String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(longitud);
+
+        for (int i = 0; i < longitud; i++){
+            
+            int indice = random.nextInt(letras.length());
+            sb.append(letras.charAt(indice));
+            
+        }
+        
+        return sb.toString();
+    }    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonRegistro;
     private javax.swing.JButton botonAcercaDe;
     private javax.swing.JButton botonJugar;
     private javax.swing.JButton botonManual;
+    private javax.swing.JButton botonPIN;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonTop;
     private javax.swing.JProgressBar jProgressBar1;
@@ -268,6 +410,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel txtTitulo;
     // End of variables declaration//GEN-END:variables
-
 
 }
