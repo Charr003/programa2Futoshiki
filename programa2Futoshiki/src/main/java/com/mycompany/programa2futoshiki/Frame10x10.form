@@ -27,171 +27,6 @@
               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="Boton0_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto0_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto0_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto0_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton0_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton1" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Texto1_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
-                      <Component id="Texto1_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
-                      <Component id="Texto1_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto1_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton1_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Boton1_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto2_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto2_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton1_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton2" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Texto3_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
-                      <Component id="Texto3_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto3_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
-                      <Component id="Texto3_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton2_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Boton2_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto4_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto4_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton2_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton3" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Component id="Texto5_0" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                       <Component id="Texto5_1" min="-2" pref="40" max="-2" attributes="0"/>
@@ -211,47 +46,6 @@
                       <Component id="Texto5_8" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                       <Component id="Texto5_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton3_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto6_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto6_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto6_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton3_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton4" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="Texto7_0" min="-2" pref="40" max="-2" attributes="0"/>
@@ -275,171 +69,6 @@
                       <Component id="Texto7_9" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="Boton4_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto8_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="Texto8_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto8_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton4_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton5" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Texto9_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
-                      <Component id="Texto9_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Texto9_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto9_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton5_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Boton5_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                      <Component id="Boton5_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto10_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton5_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton6" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Texto11_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
-                      <Component id="Texto11_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Texto11_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto11_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton6_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Boton6_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                      <Component id="Boton6_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto12_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton6_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton7" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Component id="Texto13_0" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                       <Component id="Texto13_1" min="-2" pref="40" max="-2" attributes="0"/>
@@ -459,47 +88,6 @@
                       <Component id="Texto13_8" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                       <Component id="Texto13_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton7_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Boton7_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                      <Component id="Boton7_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto14_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton7_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton8" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="Texto15_0" min="-2" pref="40" max="-2" attributes="0"/>
@@ -523,212 +111,712 @@
                       <Component id="Texto15_9" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="Boton8_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Boton8_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                      <Component id="Boton8_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto16_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton8_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Texto17_00" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
-                      <Component id="Texto17_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Texto17_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="Texto17_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Boton9_0" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_0" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Boton9_2" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                      <Component id="Texto18_3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_5" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_6" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_7" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_8" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Texto18_8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="Boton9_9" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                      <Component id="Boton10" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Boton0_0" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_0" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                      <Component id="Texto0_3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="NombreJugador" min="-2" pref="193" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="Boton0_4" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_5" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_6" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Texto0_6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_7" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                      <Component id="Texto0_7" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="Boton0_8" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jPanel1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto0_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton0_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton1" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton1_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Boton1_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto2_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto2_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton1_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton2" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton2_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Boton2_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto4_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto4_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton2_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton3_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto6_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto6_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto6_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton3_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton4" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton4_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto8_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                              <Component id="Texto8_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto8_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton4_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton5" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Texto9_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
+                              <Component id="Texto9_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Texto9_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto9_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton5_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Boton5_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                              <Component id="Boton5_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto10_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton5_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton6" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Texto11_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
+                              <Component id="Texto11_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Texto11_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto11_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton6_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Boton6_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                              <Component id="Boton6_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto12_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton6_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton7" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Texto1_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                              <Component id="Texto1_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                              <Component id="Texto1_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto1_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton7_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Boton7_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                              <Component id="Boton7_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto14_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton7_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton8" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Texto3_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                              <Component id="Texto3_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto3_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                              <Component id="Texto3_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton8_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Boton8_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                              <Component id="Boton8_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto16_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton8_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Texto17_00" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
+                              <Component id="Texto17_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Texto17_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                              <Component id="Texto17_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Boton9_0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_1" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Boton9_2" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                              <Component id="Texto18_3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_4" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_5" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_6" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_7" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_8" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Texto18_8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="Boton9_9" min="-2" pref="40" max="-2" attributes="0"/>
+                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                              <Component id="Boton10" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="HorasTiempo" min="-2" pref="49" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MinutosTiempo" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Horatexto" min="-2" pref="49" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MinutosTexto" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="SegundosTexto" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SegundosTiempo" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="BotonBorrarJuego" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonGuardarJuego" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonBorrarJugada" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonIniciarJuego" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonRehacerJugada" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonCargarJuego" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="BotonTerminarJuego" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                      <Component id="BorrarBoton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="200" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton0_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto0_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton0_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel1" max="32767" attributes="0"/>
+                          <Component id="jLabel2" max="32767" attributes="0"/>
+                          <Component id="NombreJugador" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Boton0_0" max="32767" attributes="0"/>
+                          <Component id="Texto0_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_1" max="32767" attributes="0"/>
+                          <Component id="Texto0_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_2" max="32767" attributes="0"/>
+                          <Component id="Texto0_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_3" max="32767" attributes="0"/>
+                          <Component id="Texto0_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_4" max="32767" attributes="0"/>
+                          <Component id="Texto0_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_5" max="32767" attributes="0"/>
+                          <Component id="Texto0_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_6" max="32767" attributes="0"/>
+                          <Component id="Texto0_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_7" max="32767" attributes="0"/>
+                          <Component id="Texto0_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_8" max="32767" attributes="0"/>
+                          <Component id="Texto0_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton0_9" max="32767" attributes="0"/>
+                          <Component id="Boton1" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="BorrarBoton" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Texto1_0" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_1" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_2" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_4" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_5" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_6" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_7" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_8" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto1_9" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Boton1_0" max="32767" attributes="0"/>
+                          <Component id="Texto2_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_1" max="32767" attributes="0"/>
+                          <Component id="Texto2_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_2" max="32767" attributes="0"/>
+                          <Component id="Texto2_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_3" max="32767" attributes="0"/>
+                          <Component id="Texto2_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_4" max="32767" attributes="0"/>
+                          <Component id="Texto2_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_5" max="32767" attributes="0"/>
+                          <Component id="Texto2_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_6" max="32767" attributes="0"/>
+                          <Component id="Texto2_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_7" max="32767" attributes="0"/>
+                          <Component id="Texto2_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_8" max="32767" attributes="0"/>
+                          <Component id="Texto2_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton1_9" max="32767" attributes="0"/>
+                          <Component id="Boton2" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="BotonIniciarJuego" min="-2" pref="70" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Texto1_0" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_1" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_2" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_4" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_5" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_6" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_7" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_8" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto1_9" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Texto3_0" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_1" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_2" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_4" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_5" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_6" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_7" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_8" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto3_9" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Boton2_0" max="32767" attributes="0"/>
+                          <Component id="Texto4_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_1" max="32767" attributes="0"/>
+                          <Component id="Texto4_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_2" max="32767" attributes="0"/>
+                          <Component id="Texto4_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_3" max="32767" attributes="0"/>
+                          <Component id="Texto4_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_4" max="32767" attributes="0"/>
+                          <Component id="Texto4_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_5" max="32767" attributes="0"/>
+                          <Component id="Texto4_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_6" max="32767" attributes="0"/>
+                          <Component id="Texto4_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_7" max="32767" attributes="0"/>
+                          <Component id="Texto4_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_8" max="32767" attributes="0"/>
+                          <Component id="Texto4_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton2_9" max="32767" attributes="0"/>
+                          <Component id="Boton3" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="BotonTerminarJuego" min="-2" pref="50" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton1_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto2_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton1_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2" min="-2" pref="40" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Texto3_0" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_1" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_2" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_4" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_5" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_6" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_7" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_8" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto3_9" min="-2" pref="25" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton2_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto4_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton2_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3" min="-2" pref="40" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
@@ -748,27 +836,28 @@
                   </Group>
               </Group>
               <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton3_0" min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Boton3_0" max="32767" attributes="0"/>
                   <Component id="Texto6_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_1" max="32767" attributes="0"/>
                   <Component id="Texto6_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_2" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_2" max="32767" attributes="0"/>
                   <Component id="Texto6_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_3" max="32767" attributes="0"/>
                   <Component id="Texto6_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_4" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_4" max="32767" attributes="0"/>
                   <Component id="Texto6_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_5" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_5" max="32767" attributes="0"/>
                   <Component id="Texto6_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_6" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_6" max="32767" attributes="0"/>
                   <Component id="Texto6_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_7" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_7" max="32767" attributes="0"/>
                   <Component id="Texto6_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_8" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_8" max="32767" attributes="0"/>
                   <Component id="Texto6_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton3_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton4" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton3_9" max="32767" attributes="0"/>
+                  <Component id="Boton4" max="32767" attributes="0"/>
+                  <Component id="BotonBorrarJugada" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -788,7 +877,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Boton4_0" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Texto8_0" min="-2" pref="40" max="-2" attributes="0"/>
@@ -810,8 +899,9 @@
                   <Component id="Texto8_8" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Boton4_9" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Boton5" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="BotonRehacerJugada" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Texto9_2" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="Texto9_3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -829,30 +919,31 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton5_0" min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="BotonGuardarJuego" max="32767" attributes="0"/>
+                  <Component id="Boton5_0" max="32767" attributes="0"/>
                   <Component id="Texto10_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_1" max="32767" attributes="0"/>
                   <Component id="Texto10_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_2" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_2" max="32767" attributes="0"/>
                   <Component id="Texto10_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_3" max="32767" attributes="0"/>
                   <Component id="Texto10_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_4" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_4" max="32767" attributes="0"/>
                   <Component id="Texto10_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_5" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_5" max="32767" attributes="0"/>
                   <Component id="Texto10_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_6" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_6" max="32767" attributes="0"/>
                   <Component id="Texto10_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_7" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_7" max="32767" attributes="0"/>
                   <Component id="Texto10_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_8" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_8" max="32767" attributes="0"/>
                   <Component id="Texto10_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton5_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton5_9" max="32767" attributes="0"/>
+                  <Component id="Boton6" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Texto11_0" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="Texto11_1" min="-2" pref="25" max="-2" attributes="0"/>
@@ -865,30 +956,31 @@
                   <Component id="Texto11_8" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="Texto11_9" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton6_0" min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Boton6_0" max="32767" attributes="0"/>
                   <Component id="Texto12_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_1" max="32767" attributes="0"/>
                   <Component id="Texto12_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_2" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_2" max="32767" attributes="0"/>
                   <Component id="Texto12_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_3" max="32767" attributes="0"/>
                   <Component id="Texto12_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_4" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_4" max="32767" attributes="0"/>
                   <Component id="Texto12_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_5" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_5" max="32767" attributes="0"/>
                   <Component id="Texto12_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_6" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_6" max="32767" attributes="0"/>
                   <Component id="Texto12_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_7" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_7" max="32767" attributes="0"/>
                   <Component id="Texto12_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_8" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_8" max="32767" attributes="0"/>
                   <Component id="Texto12_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton6_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton7" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Boton6_9" max="32767" attributes="0"/>
+                  <Component id="Boton7" max="32767" attributes="0"/>
+                  <Component id="BotonCargarJuego" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Texto13_0" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="Texto13_1" min="-2" pref="25" max="-2" attributes="0"/>
@@ -901,7 +993,7 @@
                   <Component id="Texto13_8" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="Texto13_9" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Boton7_0" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Texto14_0" min="-2" pref="40" max="-2" attributes="0"/>
@@ -923,88 +1015,106 @@
                   <Component id="Texto14_8" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Boton7_9" min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="Boton8" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="BotonBorrarJuego" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Texto15_0" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto15_1" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto15_2" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Texto15_3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_4" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_5" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_6" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_7" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_8" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="Texto15_9" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto15_0" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto15_1" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto15_2" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Texto15_3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_4" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_5" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_6" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_7" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_8" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="Texto15_9" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Boton8_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="Texto16_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Boton8_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto16_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton8_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Texto17_00" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_1" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_2" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_4" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_5" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_6" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_7" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_8" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="Texto17_9" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Boton9_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_4" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_7" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Texto18_8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton9_9" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="Boton10" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Horatexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MinutosTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SegundosTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="HorasTiempo" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="MinutosTiempo" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="SegundosTiempo" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton8_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="Texto16_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Boton8_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto16_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton8_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9" min="-2" pref="40" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Texto17_00" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_1" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_2" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_4" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_5" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_6" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_7" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_8" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="Texto17_9" min="-2" pref="25" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton9_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_4" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_5" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_6" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_7" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Texto18_8" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton9_9" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="Boton10" min="-2" pref="40" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -3956,7 +4066,7 @@
     <Component class="javax.swing.JButton" name="Boton10">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="22" style="0"/>
+          <Font name="Segoe UI" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="(10)"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -3980,6 +4090,180 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton8ActionPerformed"/>
       </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jLabel1" alignment="1" pref="38" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="FUTOSHIKI"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="BotonIniciarJuego">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="INICIAR JUEGO"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonIniciarJuegoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBorrarJugada">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="BORRAR JUGADA"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBorrarJuego">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="99" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="BORRAR JUEGO"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonGuardarJuego">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="99" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="GUARDAR JUEGO"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonRehacerJugada">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="REHACER JUGADA"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonCargarJuego">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="33" red="99" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="CARGAR JUEGO"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCargarJuegoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonTerminarJuego">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="TERMINAR JUEGO"/>
+        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+          <Insets value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Horatexto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Horas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="MinutosTexto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Minutos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="SegundosTexto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Segundos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="HorasTiempo">
+    </Component>
+    <Component class="javax.swing.JTextField" name="MinutosTiempo">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinutosTiempoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="SegundosTiempo">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SegundosTiempoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BorrarBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Borrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BorrarBotonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="JUGADOR:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="NombreJugador">
     </Component>
   </SubComponents>
 </Form>

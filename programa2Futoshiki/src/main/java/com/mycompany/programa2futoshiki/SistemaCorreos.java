@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Programa;
+package com.mycompany.programa2futoshiki;
 
 import java.util.Properties;
 import javax.mail.*;

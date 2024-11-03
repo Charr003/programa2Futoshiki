@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Programa;
+package com.mycompany.programa2futoshiki;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -85,6 +87,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         botonAcercaDe.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonAcercaDe.setText("Acerca de ");
+        botonAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAcercaDeActionPerformed(evt);
+            }
+        });
 
         botonManual.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonManual.setText("Manual de Uso");
@@ -163,7 +170,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
-        // TODO add your handling code here:
+        
+        // Opcion temporal, luego se cambia por el menu de configurar
         
         String[] opciones = {"4x4", "5x5","6x6 ","7x7","8x8","9x9",
             "10x10", "Salir"}; 
@@ -217,6 +225,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void botonManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonManualActionPerformed
         // TODO add your handling code here:
+        AbrirPDF();
+        
     }//GEN-LAST:event_botonManualActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
@@ -250,6 +260,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_botonPINActionPerformed
+
+    private void botonAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcercaDeActionPerformed
+        
+        JOptionPane.showMessageDialog(null,"Acerca de");
+    }//GEN-LAST:event_botonAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,7 +339,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     
     public void mostrarUsuario(){
       
-       if(usuarios.size()!=0){
+       if(!usuarios.isEmpty()){
        
          for(Usuario usuario: usuarios){
         
@@ -392,7 +407,32 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
         
         return sb.toString();
-    }    
+    }
+
+    public void AbrirPDF(){
+    
+        File archivoPDF = new File("Manual.pdf");
+    
+        if(archivoPDF.exists() && Desktop.isDesktopSupported()){
+            
+            try{
+                
+                Desktop.getDesktop().open(archivoPDF);
+                
+                
+            }catch(IOException e){
+                
+                System.out.println("Error al intentar abrir el archivo PDF: " + e.getMessage());
+                
+            }
+        }else{
+            
+            JOptionPane.showMessageDialog(null,"El archivo no existe.");
+        }
+    
+    
+    
+    }
     
     
     

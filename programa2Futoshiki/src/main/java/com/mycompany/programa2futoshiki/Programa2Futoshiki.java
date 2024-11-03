@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package Programa;
+package com.mycompany.programa2futoshiki;
 /**
  *
  * @author XPC
