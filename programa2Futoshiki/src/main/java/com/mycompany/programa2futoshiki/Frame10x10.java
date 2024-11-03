@@ -5,12 +5,22 @@
 package com.mycompany.programa2futoshiki;
 import javax.swing.JButton;
 import java.awt.Color;
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
 /**
  *
  * @author jxdga
  */
 public class Frame10x10 extends javax.swing.JFrame {
+    
+    private Timer timer;
+    private int horas, minutos, segundos;
+    private int tiempoTranscurridoSegundos = 0;
+    private int ModoTiempo = 0;
+    private boolean esCronometro = true;
     private JButton[][] botones;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
     int [][] matrizNumeros = {
@@ -34,6 +44,64 @@ public class Frame10x10 extends javax.swing.JFrame {
         initComponents();
         inicializarBotones();
         setLocationRelativeTo(null);
+        
+        
+        timer = new Timer(1000, new ActionListener(){
+            
+            @Override
+            public void actionPerformed(ActionEvent e){
+                
+                
+                tiempoTranscurridoSegundos++; // Esto se usa para el calculo del tiempo total en ambos modos
+
+                if(esCronometro){
+                    // Lógica para cuenta hacia adelante
+                    segundos++;
+                    
+                    if(segundos == 60){
+                        
+                        segundos = 0;
+                        minutos++;
+                        
+                        if(minutos == 60){
+                            
+                            minutos = 0;
+                            horas++;
+                        }
+                    }
+
+                    // Validacion del cronometro, revisar si se alcanzado el limite de tiempo: 10 mins
+                    if(minutos == 10 && segundos == 0){
+                        detenerTiempo("Se ha acabado el tiempo del cronómetro.");
+                    }
+
+                }else{
+                    // Lógica para cuenta hacia atras
+                    if(segundos == 0) {
+                        
+                        if(minutos == 0){
+                            
+                            detenerTiempo("Se ha acabado el tiempo del temporizador.");
+                            return;
+                            
+                        }else{
+                            minutos--;
+                            segundos = 59;
+                        }
+                        
+                    }else{
+                        segundos--;
+                    }
+                }
+
+                // Actualizar el label de tiempo
+                
+                HorasTiempo.setText(String.format("%2d", horas));
+                MinutosTiempo.setText(String.format("%2d", minutos));
+                SegundosTiempo.setText(String.format("%02d", segundos));
+            }
+        });     
+             
     }
 
     /**
@@ -2063,12 +2131,19 @@ public class Frame10x10 extends javax.swing.JFrame {
 
         SegundosTexto.setText("Segundos");
 
+        HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        HorasTiempo.setText("0");
+
+        MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        MinutosTiempo.setText("0");
         MinutosTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinutosTiempoActionPerformed(evt);
             }
         });
 
+        SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        SegundosTiempo.setText("0");
         SegundosTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SegundosTiempoActionPerformed(evt);
@@ -2687,13 +2762,13 @@ public class Frame10x10 extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(HorasTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(MinutosTiempo))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(Horatexto, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(MinutosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(MinutosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(HorasTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(MinutosTiempo)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(SegundosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3656,7 +3731,37 @@ public class Frame10x10 extends javax.swing.JFrame {
     }//GEN-LAST:event_SegundosTiempoActionPerformed
 
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
-        // TODO add your handling code here:
+        
+        if(!timer.isRunning()){
+           
+           if(ModoTiempo ==0){
+           
+                reiniciarTiempo();
+                esCronometro = true;
+                tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
+                timer.start();   
+           
+           
+           }else if(ModoTiempo==1){
+               
+                esCronometro = false;
+                horas = 0;
+                minutos = 10;
+                segundos = 0;
+                
+                HorasTiempo.setText(String.format("%2d", horas));
+                MinutosTiempo.setText(String.format("%2d", minutos));
+                SegundosTiempo.setText(String.format("%02d", segundos));
+           }
+           
+           tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
+           timer.start();
+                       
+        }else{
+        
+            detenerTiempo("Tiempo detenido.");
+        }
+        
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
@@ -3707,6 +3812,30 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
     }
     
+    public void reiniciarTiempo(){
+        
+        horas = 0;
+        minutos = 0;
+        segundos = 0;
+    }
+    
+    public void detenerTiempo(String mensaje) {
+        
+        timer.stop();
+        //JOptionPane.showMessageDialog(null, mensaje);
+
+        // Calculo total del tiempo actual
+        int horasTotales = tiempoTranscurridoSegundos / 3600;
+        int minutosTotales = (tiempoTranscurridoSegundos % 3600) / 60;
+        int segundosTotales = tiempoTranscurridoSegundos % 60;
+        
+        String tiempoDuracion = String.format("%02d:%02d:%02d", horasTotales, minutosTotales, segundosTotales);
+        
+        JOptionPane.showMessageDialog(null, "Tiempo total: " + tiempoDuracion);
+        
+        // Falta que pida al usuario si quiere seguir jugando o no.
+    }    
+
     /**
      * @param args the command line arguments
      */
