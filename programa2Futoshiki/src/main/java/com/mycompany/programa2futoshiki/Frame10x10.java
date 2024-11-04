@@ -3,13 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.programa2futoshiki;
+import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
+import java.util.ArrayList;
+
 /**
  *
  * @author jxdga
@@ -23,6 +25,9 @@ public class Frame10x10 extends javax.swing.JFrame {
     private boolean esCronometro = true;
     private JButton[][] botones;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
+    boolean jugar=false;
+    ArrayList<Jugada> jugadas;
+    Jugada ultimaJugada;
     int [][] matrizNumeros = {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0},
@@ -101,7 +106,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 SegundosTiempo.setText(String.format("%02d", segundos));
             }
         });     
-             
+        jugadas = new ArrayList<Jugada>();
     }
 
     /**
@@ -2095,10 +2100,21 @@ public class Frame10x10 extends javax.swing.JFrame {
         BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonBorrarJugada.setText("BORRAR JUGADA");
         BotonBorrarJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonBorrarJugada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJugadaActionPerformed(evt);
+            }
+        });
 
         BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
         BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonBorrarJuego.setText("BORRAR JUEGO");
+        BotonBorrarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJuegoActionPerformed(evt);
+            }
+        });
 
         BotonGuardarJuego.setBackground(new java.awt.Color(51, 153, 0));
         BotonGuardarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2109,6 +2125,11 @@ public class Frame10x10 extends javax.swing.JFrame {
         BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonRehacerJugada.setText("REHACER JUGADA");
         BotonRehacerJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonRehacerJugada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRehacerJugadaActionPerformed(evt);
+            }
+        });
 
         BotonCargarJuego.setBackground(new java.awt.Color(153, 51, 0));
         BotonCargarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2125,15 +2146,20 @@ public class Frame10x10 extends javax.swing.JFrame {
         BotonTerminarJuego.setText("TERMINAR JUEGO");
         BotonTerminarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
+        Horatexto.setEditable(false);
         Horatexto.setText("Horas");
 
+        MinutosTexto.setEditable(false);
         MinutosTexto.setText("Minutos");
 
+        SegundosTexto.setEditable(false);
         SegundosTexto.setText("Segundos");
 
+        HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         HorasTiempo.setText("0");
 
+        MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MinutosTiempo.setText("0");
         MinutosTiempo.addActionListener(new java.awt.event.ActionListener() {
@@ -2142,6 +2168,7 @@ public class Frame10x10 extends javax.swing.JFrame {
             }
         });
 
+        SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SegundosTiempo.setText("0");
         SegundosTiempo.addActionListener(new java.awt.event.ActionListener() {
@@ -2158,6 +2185,8 @@ public class Frame10x10 extends javax.swing.JFrame {
         });
 
         jLabel2.setText("JUGADOR:");
+
+        NombreJugador.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -3731,6 +3760,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     }//GEN-LAST:event_SegundosTiempoActionPerformed
 
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
+
         
         if(!timer.isRunning()){
            
@@ -3761,17 +3791,89 @@ public class Frame10x10 extends javax.swing.JFrame {
         
             detenerTiempo("Tiempo detenido.");
         }
-        
+        jugar=true;
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
         AsignarNum(PuntoX, PuntoY, 0);
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
+    private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
+        if (!jugadas.isEmpty()) {}
+            Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
+            int cordX=jugadaAnterior.getCordX();
+            int cordY=jugadaAnterior.getCordY();
+            int num=jugadaAnterior.getNum();
+            jugadas.remove(jugadas.size() - 1);
+            botones[cordX][cordY].setText(""+num);
+            if (num==0){
+            botones[cordX][cordY].setText("");
+            matrizNumeros[cordX][cordY]=num;
+            }
+            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
+            if (esta==false){
+                matrizNumeros[cordX][cordY]=num;
+                botones[cordX][cordY].setForeground(Color.GREEN);
+            }
+            else{
+                botones[cordX][cordY].setForeground(Color.RED);
+            }
+    }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
+
+    private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
+        int [][] matrizNumeros = {
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0}
+        };
+        int size = matrizNumeros.length;
+        for (int j = 0; j < size; j++) {
+            for (int i = 0; i < size; i++) {
+                botones[j][i].setText("");
+            }
+        }
+        imprimirMatriz(matrizNumeros);
+    }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
+
+    private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
+        int cordX=ultimaJugada.getCordX();
+            int cordY=ultimaJugada.getCordY();
+            int num=ultimaJugada.getNum();
+            botones[cordX][cordY].setText(""+num);
+            if (num==0){
+            botones[cordX][cordY].setText("");
+            matrizNumeros[cordX][cordY]=num;
+            }
+            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
+            if (esta==false){
+                matrizNumeros[cordX][cordY]=num;
+                botones[cordX][cordY].setForeground(Color.GREEN);
+            }
+            else{
+                botones[cordX][cordY].setForeground(Color.RED);
+            }
+    }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
+
     public void AsignarNum(int fila, int columna, int num) {
+        if (jugar){
+            int numAnterior=0;
+            if (botones[fila][columna].getText()!=""){
+            numAnterior=Integer.parseInt(botones[fila][columna].getText());
+            }
+            Jugada jugadaAnterior=new Jugada(fila,columna,numAnterior);
+            ultimaJugada=new Jugada(fila,columna,numAnterior);
+            jugadas.add(jugadaAnterior);
         botones[fila][columna].setText(""+num); // Cambiar texto del botón
         if (num==0){
             botones[fila][columna].setText("");
+            matrizNumeros[fila][columna]=num;
         }
         boolean esta=verificarMatriz(matrizNumeros,fila,columna,num);
         if (esta==false){
@@ -3781,11 +3883,12 @@ public class Frame10x10 extends javax.swing.JFrame {
         else{
             botones[fila][columna].setForeground(Color.RED);
         }
+        }
+        
     }
     
     public boolean verificarMatriz(int[][] matriz,int fila, int columna,int numero){
         int size = matriz.length;
-        System.out.print(size+"\n");
         
         for (int j = 0; j < size; j++) {
             if (matriz[fila][j] == numero) {
