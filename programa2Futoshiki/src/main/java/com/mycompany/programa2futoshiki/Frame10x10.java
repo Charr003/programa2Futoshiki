@@ -5,6 +5,7 @@
 package com.mycompany.programa2futoshiki;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -23,7 +24,8 @@ public class Frame10x10 extends javax.swing.JFrame {
     private int tiempoTranscurridoSegundos = 0;
     private int ModoTiempo = 0;
     private boolean esCronometro = true;
-    private JButton[][] botones;
+    JButton[][] botones;
+    JLabel[][] texto;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
     boolean jugar=false;
     ArrayList<Jugada> jugadas;
@@ -40,6 +42,27 @@ public class Frame10x10 extends javax.swing.JFrame {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0}
     };
+    String [][] matrizSimbolos={
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",},
+        {"","","","","","","","","","",},
+        {"","","","","","","","","",}
+    };
     
     /**
      * Creates new form Frame10x10
@@ -48,8 +71,8 @@ public class Frame10x10 extends javax.swing.JFrame {
     public Frame10x10() {
         initComponents();
         inicializarBotones();
+        inicializarTexto();
         setLocationRelativeTo(null);
-        
         
         timer = new Timer(1000, new ActionListener(){
             
@@ -227,6 +250,208 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[9][9] = Boton9_9;
     }
     
+    private void inicializarTexto(){
+        texto = new JLabel[19][10]; // Creamos la matriz de 10x10
+
+        texto[0][0] = Texto0_0;
+    texto[0][1] = Texto0_1;
+    texto[0][2] = Texto0_2;
+    texto[0][3] = Texto0_3;
+    texto[0][4] = Texto0_4;
+    texto[0][5] = Texto0_5;
+    texto[0][6] = Texto0_6;
+    texto[0][7] = Texto0_7;
+    texto[0][8] = Texto0_8;
+
+    texto[1][0] = Texto1_0;
+    texto[1][1] = Texto1_1;
+    texto[1][2] = Texto1_2;
+    texto[1][3] = Texto1_3;
+    texto[1][4] = Texto1_4;
+    texto[1][5] = Texto1_5;
+    texto[1][6] = Texto1_6;
+    texto[1][7] = Texto1_7;
+    texto[1][8] = Texto1_8;
+    texto[1][9] = Texto1_9;
+
+    texto[2][0] = Texto2_0;
+    texto[2][1] = Texto2_1;
+    texto[2][2] = Texto2_2;
+    texto[2][3] = Texto2_3;
+    texto[2][4] = Texto2_4;
+    texto[2][5] = Texto2_5;
+    texto[2][6] = Texto2_6;
+    texto[2][7] = Texto2_7;
+    texto[2][8] = Texto2_8;
+
+    texto[3][0] = Texto3_0;
+    texto[3][1] = Texto3_1;
+    texto[3][2] = Texto3_2;
+    texto[3][3] = Texto3_3;
+    texto[3][4] = Texto3_4;
+    texto[3][5] = Texto3_5;
+    texto[3][6] = Texto3_6;
+    texto[3][7] = Texto3_7;
+    texto[3][8] = Texto3_8;
+    texto[3][9] = Texto3_9;
+
+    texto[4][0] = Texto4_0;
+    texto[4][1] = Texto4_1;
+    texto[4][2] = Texto4_2;
+    texto[4][3] = Texto4_3;
+    texto[4][4] = Texto4_4;
+    texto[4][5] = Texto4_5;
+    texto[4][6] = Texto4_6;
+    texto[4][7] = Texto4_7;
+    texto[4][8] = Texto4_8;
+
+    texto[5][0] = Texto5_0;
+    texto[5][1] = Texto5_1;
+    texto[5][2] = Texto5_2;
+    texto[5][3] = Texto5_3;
+    texto[5][4] = Texto5_4;
+    texto[5][5] = Texto5_5;
+    texto[5][6] = Texto5_6;
+    texto[5][7] = Texto5_7;
+    texto[5][8] = Texto5_8;
+    texto[5][9] = Texto5_9;
+
+    texto[6][0] = Texto6_0;
+    texto[6][1] = Texto6_1;
+    texto[6][2] = Texto6_2;
+    texto[6][3] = Texto6_3;
+    texto[6][4] = Texto6_4;
+    texto[6][5] = Texto6_5;
+    texto[6][6] = Texto6_6;
+    texto[6][7] = Texto6_7;
+    texto[6][8] = Texto6_8;
+
+    texto[7][0] = Texto7_0;
+    texto[7][1] = Texto7_1;
+    texto[7][2] = Texto7_2;
+    texto[7][3] = Texto7_3;
+    texto[7][4] = Texto7_4;
+    texto[7][5] = Texto7_5;
+    texto[7][6] = Texto7_6;
+    texto[7][7] = Texto7_7;
+    texto[7][8] = Texto7_8;
+    texto[7][9] = Texto7_9;
+
+    texto[8][0] = Texto8_0;
+    texto[8][1] = Texto8_1;
+    texto[8][2] = Texto8_2;
+    texto[8][3] = Texto8_3;
+    texto[8][4] = Texto8_4;
+    texto[8][5] = Texto8_5;
+    texto[8][6] = Texto8_6;
+    texto[8][7] = Texto8_7;
+    texto[8][8] = Texto8_8;
+
+    texto[9][0] = Texto9_0;
+    texto[9][1] = Texto9_1;
+    texto[9][2] = Texto9_2;
+    texto[9][3] = Texto9_3;
+    texto[9][4] = Texto9_4;
+    texto[9][5] = Texto9_5;
+    texto[9][6] = Texto9_6;
+    texto[9][7] = Texto9_7;
+    texto[9][8] = Texto9_8;
+    texto[9][9] = Texto9_9;
+
+    texto[10][0] = Texto10_0;
+    texto[10][1] = Texto10_1;
+    texto[10][2] = Texto10_2;
+    texto[10][3] = Texto10_3;
+    texto[10][4] = Texto10_4;
+    texto[10][5] = Texto10_5;
+    texto[10][6] = Texto10_6;
+    texto[10][7] = Texto10_7;
+    texto[10][8] = Texto10_8;
+
+    texto[11][0] = Texto11_0;
+    texto[11][1] = Texto11_1;
+    texto[11][2] = Texto11_2;
+    texto[11][3] = Texto11_3;
+    texto[11][4] = Texto11_4;
+    texto[11][5] = Texto11_5;
+    texto[11][6] = Texto11_6;
+    texto[11][7] = Texto11_7;
+    texto[11][8] = Texto11_8;
+    texto[11][9] = Texto11_9;
+
+    texto[12][0] = Texto12_0;
+    texto[12][1] = Texto12_1;
+    texto[12][2] = Texto12_2;
+    texto[12][3] = Texto12_3;
+    texto[12][4] = Texto12_4;
+    texto[12][5] = Texto12_5;
+    texto[12][6] = Texto12_6;
+    texto[12][7] = Texto12_7;
+    texto[12][8] = Texto12_8;
+
+    texto[13][0] = Texto13_0;
+    texto[13][1] = Texto13_1;
+    texto[13][2] = Texto13_2;
+    texto[13][3] = Texto13_3;
+    texto[13][4] = Texto13_4;
+    texto[13][5] = Texto13_5;
+    texto[13][6] = Texto13_6;
+    texto[13][7] = Texto13_7;
+    texto[13][8] = Texto13_8;
+    texto[13][9] = Texto13_9;
+
+    texto[14][0] = Texto14_0;
+    texto[14][1] = Texto14_1;
+    texto[14][2] = Texto14_2;
+    texto[14][3] = Texto14_3;
+    texto[14][4] = Texto14_4;
+    texto[14][5] = Texto14_5;
+    texto[14][6] = Texto14_6;
+    texto[14][7] = Texto14_7;
+    texto[14][8] = Texto14_8;
+
+    texto[15][0] = Texto15_0;
+    texto[15][1] = Texto15_1;
+    texto[15][2] = Texto15_2;
+    texto[15][3] = Texto15_3;
+    texto[15][4] = Texto15_4;
+    texto[15][5] = Texto15_5;
+    texto[15][6] = Texto15_6;
+    texto[15][7] = Texto15_7;
+    texto[15][8] = Texto15_8;
+    texto[15][9] = Texto15_9;
+
+    texto[16][0] = Texto16_0;
+    texto[16][1] = Texto16_1;
+    texto[16][2] = Texto16_2;
+    texto[16][3] = Texto16_3;
+    texto[16][4] = Texto16_4;
+    texto[16][5] = Texto16_5;
+    texto[16][6] = Texto16_6;
+    texto[16][7] = Texto16_7;
+    texto[16][8] = Texto16_8;
+
+    texto[17][0] = Texto17_0;
+    texto[17][1] = Texto17_1;
+    texto[17][2] = Texto17_2;
+    texto[17][3] = Texto17_3;
+    texto[17][4] = Texto17_4;
+    texto[17][5] = Texto17_5;
+    texto[17][6] = Texto17_6;
+    texto[17][7] = Texto17_7;
+    texto[17][8] = Texto17_8;
+    texto[17][9] = Texto17_9;
+
+    texto[18][0] = Texto18_0;
+    texto[18][1] = Texto18_1;
+    texto[18][2] = Texto18_2;
+    texto[18][3] = Texto18_3;
+    texto[18][4] = Texto18_4;
+    texto[18][5] = Texto18_5;
+    texto[18][6] = Texto18_6;
+    texto[18][7] = Texto18_7;
+    texto[18][8] = Texto18_8;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -513,7 +738,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto18_6 = new javax.swing.JLabel();
         Texto18_7 = new javax.swing.JLabel();
         Texto18_8 = new javax.swing.JLabel();
-        Texto17_00 = new javax.swing.JLabel();
+        Texto17_0 = new javax.swing.JLabel();
         Texto17_1 = new javax.swing.JLabel();
         Texto17_2 = new javax.swing.JLabel();
         Texto17_3 = new javax.swing.JLabel();
@@ -544,8 +769,12 @@ public class Frame10x10 extends javax.swing.JFrame {
         BorrarBoton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         NombreJugador = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Boton0_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -554,6 +783,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 59, 40, 40));
 
         Boton0_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -562,6 +792,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 59, 40, 40));
 
         Boton0_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -570,6 +801,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 59, 40, 40));
 
         Boton0_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -578,6 +810,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 59, 40, 40));
 
         Boton0_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -586,6 +819,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 59, 40, 40));
 
         Boton0_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -594,6 +828,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 59, 40, 40));
 
         Boton0_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -602,6 +837,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 59, 40, 40));
 
         Boton0_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -610,6 +846,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 59, 40, 40));
 
         Boton0_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -618,6 +855,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 59, 40, 40));
 
         Boton0_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -626,6 +864,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton0_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 59, 40, 40));
 
         Boton1_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -634,6 +873,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 132, 40, 40));
 
         Boton1_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -642,6 +882,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 132, 40, 40));
 
         Boton1_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -650,6 +891,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 132, 40, 40));
 
         Boton1_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -658,6 +900,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 132, 40, 40));
 
         Boton1_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -666,6 +909,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 132, 40, 40));
 
         Boton1_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -674,6 +918,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 132, 40, 40));
 
         Boton1_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -682,6 +927,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 132, 40, 40));
 
         Boton1_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -690,6 +936,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 132, 40, 40));
 
         Boton1_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -698,6 +945,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 132, 40, 40));
 
         Boton1_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -706,6 +954,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 132, 40, 40));
 
         Boton2_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -714,6 +963,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 203, 40, 40));
 
         Boton2_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -722,6 +972,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 203, 40, 40));
 
         Boton2_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -730,6 +981,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 203, 40, 40));
 
         Boton2_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -738,6 +990,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 203, 40, 40));
 
         Boton2_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -746,6 +999,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 203, 40, 40));
 
         Boton2_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -754,6 +1008,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 203, 40, 40));
 
         Boton2_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -762,6 +1017,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 203, 40, 40));
 
         Boton2_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -770,6 +1026,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 203, 40, 40));
 
         Boton2_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -778,6 +1035,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 203, 40, 40));
 
         Boton2_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -786,6 +1044,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 203, 40, 40));
 
         Boton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton1.setText("(1)");
@@ -796,6 +1055,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 59, 40, 40));
 
         Boton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton2.setText("(2)");
@@ -805,6 +1065,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 132, 40, 40));
 
         Boton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton3.setText("(3)");
@@ -814,6 +1075,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 203, 40, 40));
 
         Boton3_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -822,6 +1084,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 277, 40, 40));
 
         Boton3_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -830,6 +1093,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 277, 40, 40));
 
         Boton3_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -838,6 +1102,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 277, 40, 40));
 
         Boton3_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -846,6 +1111,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 277, 40, 40));
 
         Boton3_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -854,6 +1120,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 277, 40, 40));
 
         Boton3_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -862,6 +1129,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 277, 40, 40));
 
         Boton3_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -870,6 +1138,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 277, 40, 40));
 
         Boton3_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -878,6 +1147,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 277, 40, 40));
 
         Boton3_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -886,6 +1156,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 277, 40, 40));
 
         Boton3_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -894,6 +1165,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton3_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 277, 40, 40));
 
         Boton4_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -902,6 +1174,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 348, 40, 40));
 
         Boton4_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -910,6 +1183,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 348, 40, 40));
 
         Boton4_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -918,6 +1192,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 348, 40, 40));
 
         Boton4_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -926,6 +1201,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 348, 40, 40));
 
         Boton4_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -934,6 +1210,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 348, 40, 40));
 
         Boton4_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -942,6 +1219,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 348, 40, 40));
 
         Boton4_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -950,6 +1228,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 348, 40, 40));
 
         Boton4_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -958,6 +1237,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 348, 40, 40));
 
         Boton4_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -966,6 +1246,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 348, 40, 40));
 
         Boton4_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -974,6 +1255,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 348, 40, 40));
 
         Boton5_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -982,6 +1264,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 420, 40, 40));
 
         Boton5_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -990,6 +1273,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 420, 40, 40));
 
         Boton5_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -998,6 +1282,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 420, 40, 40));
 
         Boton5_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1006,6 +1291,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 420, 40, 40));
 
         Boton5_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1014,6 +1300,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 420, 40, 40));
 
         Boton5_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1022,6 +1309,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 420, 40, 40));
 
         Boton5_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1030,6 +1318,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 420, 40, 40));
 
         Boton5_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1038,6 +1327,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 40, 40));
 
         Boton5_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1046,6 +1336,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 420, 40, 40));
 
         Boton5_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1054,6 +1345,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 420, 40, 40));
 
         Boton6_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1062,6 +1354,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 491, 40, 40));
 
         Boton6_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1070,6 +1363,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 491, 40, 40));
 
         Boton6_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1078,6 +1372,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 491, 40, 40));
 
         Boton6_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1086,6 +1381,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 491, 40, 40));
 
         Boton6_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1094,6 +1390,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 491, 40, 40));
 
         Boton6_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1102,6 +1399,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 491, 40, 40));
 
         Boton6_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1110,6 +1408,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 491, 40, 40));
 
         Boton6_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1118,6 +1417,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 491, 40, 40));
 
         Boton6_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1126,6 +1426,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 491, 40, 40));
 
         Boton6_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1134,6 +1435,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 491, 40, 40));
 
         Boton7_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1142,6 +1444,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 562, 40, 40));
 
         Boton8_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1150,6 +1453,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 634, 40, 40));
 
         Boton9_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1158,314 +1462,401 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_0ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 705, 40, 40));
 
         Texto0_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_0.setText(">");
+        getContentPane().add(Texto0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 59, -1, 40));
 
         Texto0_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_1.setText(">");
+        getContentPane().add(Texto0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 59, -1, 40));
 
         Texto0_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_2.setText(">");
+        getContentPane().add(Texto0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 59, -1, 40));
 
         Texto0_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_3.setText(">");
+        getContentPane().add(Texto0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 59, -1, 40));
 
         Texto0_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_4.setText(">");
+        getContentPane().add(Texto0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 59, -1, 40));
 
         Texto0_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_5.setText(">");
+        getContentPane().add(Texto0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 59, -1, 40));
 
         Texto0_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_6.setText(">");
+        getContentPane().add(Texto0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 59, -1, 40));
 
         Texto0_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_7.setText(">");
+        getContentPane().add(Texto0_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 59, -1, 40));
 
         Texto0_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_8.setText(">");
+        getContentPane().add(Texto0_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 59, -1, 40));
 
         Texto1_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_0.setText(" ^");
         Texto1_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 104, 40, 25));
 
         Texto1_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_1.setText(" ^");
         Texto1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 104, 40, 25));
 
         Texto1_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_2.setText(" ^");
         Texto1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 104, 40, 25));
 
         Texto1_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_3.setText(" ^");
         Texto1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 104, 40, 25));
 
         Texto1_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_4.setText(" ^");
         Texto1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 104, 40, 25));
 
         Texto1_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_5.setText(" ^");
         Texto1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 104, 40, 25));
 
         Texto1_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_6.setText(" ^");
         Texto1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 104, 40, 25));
 
         Texto1_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_7.setText(" ^");
         Texto1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 104, 40, 25));
 
         Texto1_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_8.setText(" ^");
         Texto1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 104, 40, 25));
 
         Texto1_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_9.setText(" ^");
         Texto1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 104, 40, 25));
 
         Texto2_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_0.setText(">");
+        getContentPane().add(Texto2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 132, -1, 40));
 
         Texto2_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_1.setText(">");
+        getContentPane().add(Texto2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 132, -1, 40));
 
         Texto2_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_2.setText(">");
+        getContentPane().add(Texto2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 132, -1, 40));
 
         Texto2_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_3.setText(">");
+        getContentPane().add(Texto2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 132, -1, 40));
 
         Texto2_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_4.setText(">");
+        getContentPane().add(Texto2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 132, -1, 40));
 
         Texto2_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_5.setText(">");
+        getContentPane().add(Texto2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 132, -1, 40));
 
         Texto2_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_6.setText(">");
+        getContentPane().add(Texto2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 132, -1, 40));
 
         Texto2_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_7.setText(">");
+        getContentPane().add(Texto2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 132, -1, 40));
 
         Texto2_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_8.setText(">");
+        getContentPane().add(Texto2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 132, -1, 40));
 
         Texto3_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_0.setText(" ^");
         Texto3_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 175, 40, 25));
 
         Texto3_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_1.setText(" ^");
         Texto3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 175, 40, 25));
 
         Texto3_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_2.setText(" ^");
         Texto3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 175, 40, 25));
 
         Texto3_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_3.setText(" ^");
         Texto3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 175, 40, 25));
 
         Texto3_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_4.setText(" ^");
         Texto3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 175, 40, 25));
 
         Texto3_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_5.setText(" ^");
         Texto3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 175, 40, 25));
 
         Texto3_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_6.setText(" ^");
         Texto3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 175, 40, 25));
 
         Texto3_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_7.setText(" ^");
         Texto3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 175, 40, 25));
 
         Texto3_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_8.setText(" ^");
         Texto3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 175, 40, 25));
 
         Texto3_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_9.setText(" ^");
         Texto3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 175, 40, 25));
 
         Texto4_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_0.setText(">");
+        getContentPane().add(Texto4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 203, -1, 40));
 
         Texto4_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_1.setText(">");
+        getContentPane().add(Texto4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 203, -1, 40));
 
         Texto4_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_2.setText(">");
+        getContentPane().add(Texto4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 203, -1, 40));
 
         Texto4_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_3.setText(">");
+        getContentPane().add(Texto4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 203, -1, 40));
 
         Texto4_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_4.setText(">");
+        getContentPane().add(Texto4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 203, -1, 40));
 
         Texto4_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_5.setText(">");
+        getContentPane().add(Texto4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 203, -1, 40));
 
         Texto4_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_6.setText(">");
+        getContentPane().add(Texto4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 203, -1, 40));
 
         Texto4_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_7.setText(">");
+        getContentPane().add(Texto4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 203, -1, 40));
 
         Texto4_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_8.setText(">");
+        getContentPane().add(Texto4_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 203, -1, 40));
 
         Texto5_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_0.setText(" ^");
         Texto5_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 248, 40, 25));
 
         Texto5_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_1.setText(" ^");
         Texto5_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 246, 40, 25));
 
         Texto5_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_2.setText(" ^");
         Texto5_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 246, 40, 25));
 
         Texto5_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_3.setText(" ^");
         Texto5_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 246, 40, 25));
 
         Texto5_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_4.setText(" ^");
         Texto5_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 246, 40, 25));
 
         Texto5_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_5.setText(" ^");
         Texto5_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 246, 40, 25));
 
         Texto5_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_6.setText(" ^");
         Texto5_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 246, 40, 25));
 
         Texto5_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_7.setText(" ^");
         Texto5_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 246, 40, 25));
 
         Texto5_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_8.setText(" ^");
         Texto5_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 246, 40, 25));
 
         Texto5_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_9.setText(" ^");
         Texto5_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 249, 40, 25));
 
         Texto6_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_0.setText(">");
+        getContentPane().add(Texto6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 277, -1, 40));
 
         Texto6_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_1.setText(">");
+        getContentPane().add(Texto6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 277, -1, 40));
 
         Texto6_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_2.setText(">");
+        getContentPane().add(Texto6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 277, -1, 40));
 
         Texto6_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_3.setText(">");
+        getContentPane().add(Texto6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 277, -1, 40));
 
         Texto6_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_4.setText(">");
+        getContentPane().add(Texto6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 277, -1, 40));
 
         Texto6_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_5.setText(">");
+        getContentPane().add(Texto6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 277, -1, 40));
 
         Texto6_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_6.setText(">");
+        getContentPane().add(Texto6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 277, -1, 40));
 
         Texto6_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_7.setText(">");
+        getContentPane().add(Texto6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 277, -1, 40));
 
         Texto6_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_8.setText(">");
+        getContentPane().add(Texto6_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 277, -1, 40));
 
         Texto7_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_0.setText(" ^");
         Texto7_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 319, 40, 25));
 
         Texto7_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_1.setText(" ^");
         Texto7_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 320, 40, 25));
 
         Texto7_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_2.setText(" ^");
         Texto7_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 320, 40, 25));
 
         Texto7_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_3.setText(" ^");
         Texto7_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 40, 25));
 
         Texto7_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_4.setText(" ^");
         Texto7_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 320, 40, 25));
 
         Texto7_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_5.setText(" ^");
         Texto7_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 320, 40, 25));
 
         Texto7_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_6.setText(" ^");
         Texto7_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 320, 40, 25));
 
         Texto7_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_7.setText(" ^");
         Texto7_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 40, 25));
 
         Texto7_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_8.setText(" ^");
         Texto7_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 320, 40, 25));
 
         Texto7_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_9.setText(" ^");
         Texto7_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto7_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 320, 40, 25));
 
         Texto9_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_0.setText(" ^");
         Texto9_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 392, 40, 25));
 
         Texto9_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_1.setText(" ^");
         Texto9_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 392, 40, 25));
 
         Texto9_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_2.setText(" ^");
         Texto9_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 391, 40, 25));
 
         Texto9_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_3.setText(" ^");
         Texto9_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 391, 40, 25));
 
         Texto9_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_4.setText(" ^");
         Texto9_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 391, 40, 25));
 
         Texto9_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_5.setText(" ^");
         Texto9_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 391, 40, 25));
 
         Texto9_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_6.setText(" ^");
         Texto9_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 391, 40, 25));
 
         Texto9_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_7.setText(" ^");
         Texto9_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 391, 40, 25));
 
         Texto9_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_8.setText(" ^");
         Texto9_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 391, 40, 25));
 
         Texto9_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_9.setText(" ^");
         Texto9_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto9_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 391, 40, 25));
 
         Boton7_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1474,6 +1865,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 562, 40, 40));
 
         Boton7_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1482,6 +1874,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 562, 40, 40));
 
         Boton7_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1490,6 +1883,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 562, 40, 40));
 
         Boton7_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1498,6 +1892,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 562, 40, 40));
 
         Boton7_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1506,6 +1901,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 562, 40, 40));
 
         Boton7_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1514,6 +1910,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 562, 40, 40));
 
         Boton7_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1522,6 +1919,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 562, 40, 40));
 
         Boton7_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1530,6 +1928,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 562, 40, 40));
 
         Boton7_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1538,6 +1937,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 562, 40, 40));
 
         Boton8_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1546,6 +1946,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 634, 40, 40));
 
         Boton8_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1554,6 +1955,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 634, 40, 40));
 
         Boton8_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1562,6 +1964,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 634, 40, 40));
 
         Boton8_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1570,6 +1973,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 634, 40, 40));
 
         Boton8_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1578,6 +1982,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 634, 40, 40));
 
         Boton8_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1586,6 +1991,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 634, 40, 40));
 
         Boton8_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1594,6 +2000,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 634, 40, 40));
 
         Boton8_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1602,6 +2009,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 634, 40, 40));
 
         Boton8_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton8_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1610,6 +2018,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 634, 40, 40));
 
         Boton9_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1618,6 +2027,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 705, 40, 40));
 
         Boton9_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1626,6 +2036,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 705, 40, 40));
 
         Boton9_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1634,6 +2045,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_3ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 705, 40, 40));
 
         Boton9_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1642,6 +2054,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 705, 40, 40));
 
         Boton9_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1650,6 +2063,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 705, 40, 40));
 
         Boton9_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1658,6 +2072,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 705, 40, 40));
 
         Boton9_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1666,6 +2081,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 705, 40, 40));
 
         Boton9_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1674,6 +2090,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 705, 40, 40));
 
         Boton9_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton9_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1682,46 +2099,57 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9_9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 705, 40, 40));
 
         Texto11_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_0.setText(" ^");
         Texto11_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 463, 40, 25));
 
         Texto11_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_1.setText(" ^");
         Texto11_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 463, 40, 25));
 
         Texto11_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_2.setText(" ^");
         Texto11_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 463, 40, 25));
 
         Texto11_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_3.setText(" ^");
         Texto11_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 463, 40, 25));
 
         Texto11_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_4.setText(" ^");
         Texto11_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 463, 40, 25));
 
         Texto11_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_5.setText(" ^");
         Texto11_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 463, 40, 25));
 
         Texto11_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_6.setText(" ^");
         Texto11_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 463, 40, 25));
 
         Texto11_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_7.setText(" ^");
         Texto11_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 463, 40, 25));
 
         Texto11_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_8.setText(" ^");
         Texto11_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 463, 40, 25));
 
         Texto11_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_9.setText(" ^");
         Texto11_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto11_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 463, 40, 25));
 
         Boton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton4.setText("(4)");
@@ -1731,6 +2159,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 277, 40, 40));
 
         Boton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton5.setText("(5)");
@@ -1740,6 +2169,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 348, 40, 40));
 
         Boton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton6.setText("(6)");
@@ -1749,6 +2179,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 420, 40, 40));
 
         Boton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton7.setText("(7)");
@@ -1758,288 +2189,373 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 491, 40, 40));
 
         Texto13_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_0.setText(" ^");
         Texto13_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 534, 40, 25));
 
         Texto13_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_1.setText(" ^");
         Texto13_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 534, 40, 25));
 
         Texto13_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_2.setText(" ^");
         Texto13_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 534, 40, 25));
 
         Texto13_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_3.setText(" ^");
         Texto13_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 534, 40, 25));
 
         Texto13_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_4.setText(" ^");
         Texto13_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 534, 40, 25));
 
         Texto13_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_5.setText(" ^");
         Texto13_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 534, 40, 25));
 
         Texto13_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_6.setText(" ^");
         Texto13_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 534, 40, 25));
 
         Texto13_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_7.setText(" ^");
         Texto13_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 534, 40, 25));
 
         Texto13_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_8.setText(" ^");
         Texto13_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 534, 40, 25));
 
         Texto13_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_9.setText(" ^");
         Texto13_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto13_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 534, 40, 25));
 
         Texto8_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_0.setText(">");
+        getContentPane().add(Texto8_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 348, -1, 40));
 
         Texto8_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_1.setText(">");
+        getContentPane().add(Texto8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 348, -1, 40));
 
         Texto8_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_2.setText(">");
+        getContentPane().add(Texto8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 348, -1, 40));
 
         Texto8_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_3.setText(">");
+        getContentPane().add(Texto8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 348, -1, 40));
 
         Texto8_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_4.setText(">");
+        getContentPane().add(Texto8_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 348, -1, 40));
 
         Texto8_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_5.setText(">");
+        getContentPane().add(Texto8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 348, -1, 40));
 
         Texto8_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_6.setText(">");
+        getContentPane().add(Texto8_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 348, -1, 40));
 
         Texto8_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_7.setText(">");
+        getContentPane().add(Texto8_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 348, -1, 40));
 
         Texto8_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_8.setText(">");
+        getContentPane().add(Texto8_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 348, -1, 40));
 
         Texto10_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_0.setText(">");
+        getContentPane().add(Texto10_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 420, -1, 40));
 
         Texto10_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_1.setText(">");
+        getContentPane().add(Texto10_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 420, -1, 40));
 
         Texto10_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_2.setText(">");
+        getContentPane().add(Texto10_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 420, -1, 40));
 
         Texto10_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_3.setText(">");
+        getContentPane().add(Texto10_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 420, -1, 40));
 
         Texto10_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_4.setText(">");
+        getContentPane().add(Texto10_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 420, -1, 40));
 
         Texto10_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_5.setText(">");
+        getContentPane().add(Texto10_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 420, -1, 40));
 
         Texto10_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_6.setText(">");
+        getContentPane().add(Texto10_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 420, -1, 40));
 
         Texto10_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_7.setText(">");
+        getContentPane().add(Texto10_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 420, -1, 40));
 
         Texto10_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_8.setText(">");
+        getContentPane().add(Texto10_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 420, -1, 40));
 
         Texto12_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_0.setText(">");
+        getContentPane().add(Texto12_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 491, -1, 40));
 
         Texto12_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_1.setText(">");
+        getContentPane().add(Texto12_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 491, -1, 40));
 
         Texto12_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_2.setText(">");
+        getContentPane().add(Texto12_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 491, -1, 40));
 
         Texto12_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_3.setText(">");
+        getContentPane().add(Texto12_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 491, -1, 40));
 
         Texto12_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_4.setText(">");
+        getContentPane().add(Texto12_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 491, -1, 40));
 
         Texto12_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_5.setText(">");
+        getContentPane().add(Texto12_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 491, -1, 40));
 
         Texto12_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_6.setText(">");
+        getContentPane().add(Texto12_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 491, -1, 40));
 
         Texto12_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_7.setText(">");
+        getContentPane().add(Texto12_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 491, -1, 40));
 
         Texto12_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_8.setText(">");
+        getContentPane().add(Texto12_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 491, -1, 40));
 
         Texto14_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_0.setText(">");
+        getContentPane().add(Texto14_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 562, -1, 40));
 
         Texto14_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_1.setText(">");
+        getContentPane().add(Texto14_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 562, -1, 40));
 
         Texto14_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_2.setText(">");
+        getContentPane().add(Texto14_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 562, -1, 40));
 
         Texto14_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_3.setText(">");
+        getContentPane().add(Texto14_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 562, -1, 40));
 
         Texto14_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_4.setText(">");
+        getContentPane().add(Texto14_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 562, -1, 40));
 
         Texto14_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_5.setText(">");
+        getContentPane().add(Texto14_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 562, -1, 40));
 
         Texto14_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_6.setText(">");
+        getContentPane().add(Texto14_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 562, -1, 40));
 
         Texto14_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_7.setText(">");
+        getContentPane().add(Texto14_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 562, -1, 40));
 
         Texto14_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_8.setText(">");
+        getContentPane().add(Texto14_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 562, -1, 40));
 
         Texto15_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_0.setText(" ^");
         Texto15_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 605, 40, 25));
 
         Texto15_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_1.setText(" ^");
         Texto15_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 605, 40, 25));
 
         Texto15_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_2.setText(" ^");
         Texto15_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 605, 40, 25));
 
         Texto15_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_3.setText(" ^");
         Texto15_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 606, 40, 25));
 
         Texto15_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_4.setText(" ^");
         Texto15_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 606, 40, 25));
 
         Texto15_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_5.setText(" ^");
         Texto15_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 606, 40, 25));
 
         Texto15_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_6.setText(" ^");
         Texto15_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 606, 40, 25));
 
         Texto15_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_7.setText(" ^");
         Texto15_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 606, 40, 25));
 
         Texto15_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_8.setText(" ^");
         Texto15_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 606, 40, 25));
 
         Texto15_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto15_9.setText(" ^");
         Texto15_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto15_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 606, 40, 25));
 
         Texto16_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_0.setText(">");
+        getContentPane().add(Texto16_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 634, -1, 40));
 
         Texto16_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_1.setText(">");
+        getContentPane().add(Texto16_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 634, -1, 40));
 
         Texto16_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_2.setText(">");
+        getContentPane().add(Texto16_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 634, -1, 40));
 
         Texto16_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_3.setText(">");
+        getContentPane().add(Texto16_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 634, -1, 40));
 
         Texto16_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_4.setText(">");
+        getContentPane().add(Texto16_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 635, -1, 40));
 
         Texto16_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_5.setText(">");
+        getContentPane().add(Texto16_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 634, -1, 40));
 
         Texto16_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_6.setText(">");
+        getContentPane().add(Texto16_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 634, -1, 40));
 
         Texto16_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_7.setText(">");
+        getContentPane().add(Texto16_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 634, -1, 40));
 
         Texto16_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto16_8.setText(">");
+        getContentPane().add(Texto16_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 634, -1, 40));
 
         Texto18_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_0.setText(">");
+        getContentPane().add(Texto18_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 705, -1, 40));
 
         Texto18_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_1.setText(">");
+        getContentPane().add(Texto18_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 705, -1, 40));
 
         Texto18_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_2.setText(">");
+        getContentPane().add(Texto18_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 705, -1, 40));
 
         Texto18_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_3.setText(">");
+        getContentPane().add(Texto18_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 705, -1, 40));
 
         Texto18_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_4.setText(">");
+        getContentPane().add(Texto18_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 705, -1, 40));
 
         Texto18_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_5.setText(">");
+        getContentPane().add(Texto18_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 705, -1, 40));
 
         Texto18_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_6.setText(">");
+        getContentPane().add(Texto18_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 705, -1, 40));
 
         Texto18_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_7.setText(">");
+        getContentPane().add(Texto18_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 705, -1, 40));
 
         Texto18_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto18_8.setText(">");
+        getContentPane().add(Texto18_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 705, -1, 40));
 
-        Texto17_00.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_00.setText(" ^");
-        Texto17_00.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Texto17_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto17_0.setText(" ^");
+        Texto17_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 677, 40, 25));
 
         Texto17_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_1.setText(" ^");
         Texto17_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 677, 40, 25));
 
         Texto17_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_2.setText(" ^");
         Texto17_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 677, 40, 25));
 
         Texto17_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_3.setText(" ^");
         Texto17_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 677, 40, 25));
 
         Texto17_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_4.setText(" ^");
         Texto17_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 677, 40, 25));
 
         Texto17_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_5.setText(" ^");
         Texto17_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 677, 40, 25));
 
         Texto17_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_6.setText(" ^");
         Texto17_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 677, 40, 25));
 
         Texto17_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_7.setText(" ^");
         Texto17_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 677, 40, 25));
 
         Texto17_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_8.setText(" ^");
         Texto17_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 677, 40, 25));
 
         Texto17_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto17_9.setText(" ^");
         Texto17_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto17_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 677, 40, 25));
 
         Boton9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton9.setText("(9)");
@@ -2049,6 +2565,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton9ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 634, 40, 40));
 
         Boton10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Boton10.setText("(10)");
@@ -2058,6 +2575,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton10ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 705, 40, 40));
 
         Boton8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton8.setText("(8)");
@@ -2067,6 +2585,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8ActionPerformed(evt);
             }
         });
+        getContentPane().add(Boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 562, 40, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 51));
 
@@ -2080,12 +2599,14 @@ public class Frame10x10 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(116, 116, 116))
+                .addGap(110, 110, 110))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 6, 349, -1));
 
         BotonIniciarJuego.setBackground(new java.awt.Color(255, 51, 51));
         BotonIniciarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2095,6 +2616,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonIniciarJuegoActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 102, 158, 70));
 
         BotonBorrarJugada.setBackground(new java.awt.Color(0, 204, 204));
         BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2105,21 +2627,28 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonBorrarJugadaActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 277, 158, 40));
 
         BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
         BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonBorrarJuego.setText("BORRAR JUEGO");
-        BotonBorrarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonBorrarJuegoActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 562, 158, 40));
 
         BotonGuardarJuego.setBackground(new java.awt.Color(51, 153, 0));
         BotonGuardarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonGuardarJuego.setText("GUARDAR JUEGO");
         BotonGuardarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonGuardarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonGuardarJuegoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 420, 158, 40));
 
         BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
         BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2130,6 +2659,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonRehacerJugadaActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 348, 158, 40));
 
         BotonCargarJuego.setBackground(new java.awt.Color(153, 51, 0));
         BotonCargarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2140,33 +2670,46 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonCargarJuegoActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonCargarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 491, 158, 40));
 
         BotonTerminarJuego.setBackground(new java.awt.Color(255, 204, 51));
         BotonTerminarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonTerminarJuego.setText("TERMINAR JUEGO");
         BotonTerminarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonTerminarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonTerminarJuegoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 193, 158, 50));
 
         Horatexto.setEditable(false);
         Horatexto.setText("Horas");
+        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(906, 652, 49, -1));
 
         MinutosTexto.setEditable(false);
         MinutosTexto.setText("Minutos");
+        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(961, 652, -1, -1));
 
         SegundosTexto.setEditable(false);
         SegundosTexto.setText("Segundos");
+        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1031, 652, -1, -1));
 
         HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         HorasTiempo.setText("0");
+        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(906, 680, 49, 65));
 
         MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MinutosTiempo.setText("0");
+        MinutosTiempo.setAutoscrolls(false);
         MinutosTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinutosTiempoActionPerformed(evt);
             }
         });
+        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(961, 680, -1, 65));
 
         SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2176,6 +2719,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 SegundosTiempoActionPerformed(evt);
             }
         });
+        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1031, 680, 67, 65));
 
         BorrarBoton.setText("Borrar");
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -2183,1026 +2727,52 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BorrarBotonActionPerformed(evt);
             }
         });
+        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 35, -1, -1));
 
         jLabel2.setText("JUGADOR:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, 38));
 
         NombreJugador.setEditable(false);
+        getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 6, 193, 38));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Texto5_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(Texto5_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto5_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(Texto5_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Texto7_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(Texto7_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(Texto7_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto7_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Texto13_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(Texto13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(Texto13_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto13_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Texto15_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(Texto15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(Texto15_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Texto15_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Boton0_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_0)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_1)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_2)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(7, 7, 7)
-                                        .addComponent(Texto0_3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(NombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Boton0_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_4)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_5)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Texto0_6)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(7, 7, 7)
-                                        .addComponent(Texto0_7)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Boton0_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto0_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton0_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton1_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_1)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_3)
-                                .addGap(7, 7, 7)
-                                .addComponent(Boton1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto2_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto2_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton1_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton2_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_1)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_3)
-                                .addGap(7, 7, 7)
-                                .addComponent(Boton2_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto4_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto4_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton2_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton3_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_1)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto6_3)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto6_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto6_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton3_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton4_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_1)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto8_3)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(Texto8_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto8_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton4_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Texto9_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(Texto9_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Texto9_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto9_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton5_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_1)
-                                .addGap(1, 1, 1)
-                                .addComponent(Boton5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_3)
-                                .addGap(13, 13, 13)
-                                .addComponent(Boton5_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto10_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton5_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Texto11_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(Texto11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Texto11_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto11_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton6_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_1)
-                                .addGap(1, 1, 1)
-                                .addComponent(Boton6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_3)
-                                .addGap(13, 13, 13)
-                                .addComponent(Boton6_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto12_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton6_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Texto1_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(Texto1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(Texto1_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto1_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton7_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_1)
-                                .addGap(1, 1, 1)
-                                .addComponent(Boton7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_3)
-                                .addGap(13, 13, 13)
-                                .addComponent(Boton7_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto14_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton7_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Texto3_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(Texto3_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto3_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(Texto3_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton8_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_1)
-                                .addGap(1, 1, 1)
-                                .addComponent(Boton8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_3)
-                                .addGap(13, 13, 13)
-                                .addComponent(Boton8_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto16_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton8_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Texto17_00, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(Texto17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Texto17_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(Texto17_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton9_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_0)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_1)
-                                .addGap(1, 1, 1)
-                                .addComponent(Boton9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_2)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(13, 13, 13)
-                                .addComponent(Texto18_3)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_4)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_5)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_6)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_7)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(Texto18_8)
-                                .addGap(6, 6, 6)
-                                .addComponent(Boton9_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(Boton10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Horatexto, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(MinutosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(HorasTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(MinutosTiempo)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SegundosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(SegundosTiempo)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(38, 38, 38)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(BotonBorrarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonGuardarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonBorrarJugada, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonRehacerJugada, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonCargarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BotonTerminarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(72, 72, 72)
-                                        .addComponent(BorrarBoton)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(31, 31, 31))
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(NombreJugador))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Boton0_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto0_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton0_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Boton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(BorrarBoton)))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto1_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto1_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Boton1_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto2_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton1_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Boton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(BotonIniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto3_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto3_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Boton2_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Texto4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton2_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Boton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(BotonTerminarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(Texto5_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Texto5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto5_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(Texto5_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Boton3_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto6_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton3_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Boton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonBorrarJugada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Texto7_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto7_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Boton4_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto8_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton4_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonRehacerJugada, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Texto9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto9_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto9_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BotonGuardarJuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Boton5_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto10_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton5_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Boton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Texto11_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto11_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Boton6_0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto12_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton6_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Boton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonCargarJuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Texto13_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto13_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Boton7_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto14_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton7_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonBorrarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto15_0, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Texto15_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto15_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Boton8_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(Texto16_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Boton8_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto16_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton8_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Texto17_00, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto17_9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Boton9_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto18_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton9_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Horatexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MinutosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SegundosTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(HorasTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MinutosTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SegundosTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(44, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 810, -1, 50));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 27, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 833, -1, -1));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 20, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3748,7 +3318,21 @@ public class Frame10x10 extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton8ActionPerformed
 
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
-        // TODO add your handling code here:
+        int[][] matrizNumeroCargada = ArchivosXML.cargarMatrizNumeros();
+        jugar=true;
+        for (int i = 0; i < texto.length; i++) {
+            for (int j = 0; j < texto[i].length; j++) {
+                if (texto[i][j]!=null){
+                    texto[i][j].setText("");
+                }
+            }
+        }
+        for (int i = 0; i < matrizNumeroCargada.length; i++) {
+            for (int j = 0; j < matrizNumeroCargada[i].length; j++) {
+                AsignarNum(i, j, matrizNumeroCargada[i][j]);
+            }
+        }
+        System.out.println("se cargo la partida guardada");
     }//GEN-LAST:event_BotonCargarJuegoActionPerformed
 
     private void MinutosTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinutosTiempoActionPerformed
@@ -3792,6 +3376,14 @@ public class Frame10x10 extends javax.swing.JFrame {
             detenerTiempo("Tiempo detenido.");
         }
         jugar=true;
+        
+        for (int i = 0; i < texto.length; i++) {
+            for (int j = 0; j < texto[i].length; j++) {
+                if (texto[i][j]!=null){
+                    texto[i][j].setText("");
+                }
+            }
+        }
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
@@ -3860,6 +3452,14 @@ public class Frame10x10 extends javax.swing.JFrame {
                 botones[cordX][cordY].setForeground(Color.RED);
             }
     }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
+
+    private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
+
+    private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
+        ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos);
+    }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
 
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
@@ -4176,7 +3776,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto16_6;
     private javax.swing.JLabel Texto16_7;
     private javax.swing.JLabel Texto16_8;
-    private javax.swing.JLabel Texto17_00;
+    private javax.swing.JLabel Texto17_0;
     private javax.swing.JLabel Texto17_1;
     private javax.swing.JLabel Texto17_2;
     private javax.swing.JLabel Texto17_3;
@@ -4284,5 +3884,8 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
