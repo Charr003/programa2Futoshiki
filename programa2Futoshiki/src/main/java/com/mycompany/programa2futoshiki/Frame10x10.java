@@ -68,11 +68,15 @@ public class Frame10x10 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
-    public Frame10x10() {
+    public Frame10x10(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
         setLocationRelativeTo(null);
+        
+        NombreJugador.setText(nombre);
+        ModoTiempo = usoreloj;
+        determinarTiempo();
         
         timer = new Timer(1000, new ActionListener(){
             
@@ -2597,7 +2601,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(124, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(110, 110, 110))
         );
@@ -2684,21 +2688,24 @@ public class Frame10x10 extends javax.swing.JFrame {
         getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 193, 158, 50));
 
         Horatexto.setEditable(false);
+        Horatexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Horatexto.setText("Horas");
-        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(906, 652, 49, -1));
+        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 650, 49, -1));
 
         MinutosTexto.setEditable(false);
+        MinutosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MinutosTexto.setText("Minutos");
-        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(961, 652, -1, -1));
+        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 650, 50, -1));
 
         SegundosTexto.setEditable(false);
+        SegundosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SegundosTexto.setText("Segundos");
-        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1031, 652, -1, -1));
+        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 650, -1, -1));
 
         HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         HorasTiempo.setText("0");
-        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(906, 680, 49, 65));
+        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 680, 49, 65));
 
         MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2709,7 +2716,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 MinutosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(961, 680, -1, 65));
+        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 680, 50, 65));
 
         SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2719,7 +2726,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 SegundosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1031, 680, 67, 65));
+        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 680, 50, 65));
 
         BorrarBoton.setText("Borrar");
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -2733,6 +2740,13 @@ public class Frame10x10 extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, 38));
 
         NombreJugador.setEditable(false);
+        NombreJugador.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        NombreJugador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NombreJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreJugadorActionPerformed(evt);
+            }
+        });
         getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 6, 193, 38));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -3345,7 +3359,7 @@ public class Frame10x10 extends javax.swing.JFrame {
 
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
 
-        
+    if(ModoTiempo !=2){  
         if(!timer.isRunning()){
            
            if(ModoTiempo ==0){
@@ -3384,6 +3398,19 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
             }
         }
+    }else{
+    
+        jugar=true;
+        
+        for (int i = 0; i < texto.length; i++) {
+            for (int j = 0; j < texto[i].length; j++) {
+                if (texto[i][j]!=null){
+                    texto[i][j].setText("");
+                }
+            }
+        }
+
+    }
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
@@ -3461,6 +3488,13 @@ public class Frame10x10 extends javax.swing.JFrame {
         ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos);
     }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
 
+    private void NombreJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreJugadorActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_NombreJugadorActionPerformed
+
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
             int numAnterior=0;
@@ -3537,12 +3571,26 @@ public class Frame10x10 extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Tiempo total: " + tiempoDuracion);
         
         // Falta que pida al usuario si quiere seguir jugando o no.
-    }    
+    }
+    
+    public void determinarTiempo(){
+    
+        if(ModoTiempo==0){
+        
+            esCronometro = true;
+            
+        }else if(ModoTiempo==1){
+        
+            esCronometro = false;
+        }
+        // Falta opcion para no activar el cronometro
+    }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    
+        public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -3556,25 +3604,23 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SistemaIngreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SistemaIngreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SistemaIngreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SistemaIngreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame10x10().setVisible(true);
+                //new Frame10x10().setVisible(true);  
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BorrarBoton;
     private javax.swing.JButton Boton0_0;

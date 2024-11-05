@@ -4,6 +4,8 @@
  */
 package com.mycompany.programa2futoshiki;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author XPC
@@ -13,8 +15,13 @@ public class MenuConfigurar extends javax.swing.JFrame {
     /**
      * Creates new form MenuConfigurar
      */
+    MenuPrincipal menu = new MenuPrincipal();
+    String nombre;
+    Usuario usuario;
+    
     public MenuConfigurar() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,57 +33,377 @@ public class MenuConfigurar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cboxTamaño2 = new javax.swing.JComboBox<>();
+        txtTitulo = new javax.swing.JLabel();
+        lblTamaño = new javax.swing.JLabel();
+        lblNivel = new javax.swing.JLabel();
+        lblMultiNivel = new javax.swing.JLabel();
+        botonJugar = new javax.swing.JButton();
+        lblReloj = new javax.swing.JLabel();
+        lblReloj1 = new javax.swing.JLabel();
+        cboxTamaño = new javax.swing.JComboBox<>();
+        cboxNivel = new javax.swing.JComboBox<>();
+        cboxMultiNivel = new javax.swing.JComboBox<>();
+        cboxReloj = new javax.swing.JComboBox<>();
+        cboxPosicion = new javax.swing.JComboBox<>();
+        botonSalir = new javax.swing.JButton();
+        lblJugador = new javax.swing.JLabel();
+        txtfUsuario = new javax.swing.JTextField();
+
+        cboxTamaño2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxTamaño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cboxTamaño2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxTamaño2ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        txtTitulo.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
+        txtTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtTitulo.setText("Configuración de la Partida");
+
+        lblTamaño.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblTamaño.setText("Tamaño de la cuadrícula:");
+
+        lblNivel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblNivel.setText("Nivel del juego:");
+
+        lblMultiNivel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblMultiNivel.setText("Multinivel:");
+
+        botonJugar.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        botonJugar.setText("Jugar");
+        botonJugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonJugarActionPerformed(evt);
+            }
+        });
+
+        lblReloj.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblReloj.setText("Uso del reloj:");
+
+        lblReloj1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblReloj1.setText("Posición de los dígitos:");
+
+        cboxTamaño.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxTamaño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4x4", "5x5", "6x6", "7x7", "8x8", "9x9", "10x10" }));
+        cboxTamaño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxTamañoActionPerformed(evt);
+            }
+        });
+
+        cboxNivel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fácil", "Intermedio", "Difícil" }));
+        cboxNivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxNivelActionPerformed(evt);
+            }
+        });
+
+        cboxMultiNivel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxMultiNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No ", "Si" }));
+        cboxMultiNivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxMultiNivelActionPerformed(evt);
+            }
+        });
+
+        cboxReloj.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxReloj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cronómetro ", "Temporizador", "No" }));
+        cboxReloj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxRelojActionPerformed(evt);
+            }
+        });
+
+        cboxPosicion.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxPosicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Derecha", "Izquierda" }));
+        cboxPosicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxPosicionActionPerformed(evt);
+            }
+        });
+
+        botonSalir.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSalirActionPerformed(evt);
+            }
+        });
+
+        lblJugador.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblJugador.setText("Nombre de Jugador:");
+
+        txtfUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 518, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTamaño)
+                            .addComponent(lblNivel)
+                            .addComponent(lblMultiNivel)
+                            .addComponent(lblReloj)
+                            .addComponent(lblReloj1)
+                            .addComponent(lblJugador))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cboxPosicion, 0, 234, Short.MAX_VALUE)
+                            .addComponent(cboxReloj, 0, 234, Short.MAX_VALUE)
+                            .addComponent(cboxMultiNivel, 0, 234, Short.MAX_VALUE)
+                            .addComponent(cboxNivel, 0, 234, Short.MAX_VALUE)
+                            .addComponent(cboxTamaño, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtfUsuario)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addComponent(botonJugar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(txtTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(botonSalir)
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 625, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(botonSalir)))
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTamaño)
+                    .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNivel)
+                    .addComponent(cboxNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMultiNivel)
+                    .addComponent(cboxMultiNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblReloj)
+                    .addComponent(cboxReloj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblReloj1)
+                    .addComponent(cboxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblJugador)
+                    .addComponent(txtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addComponent(botonJugar)
+                .addGap(56, 56, 56))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cboxTamañoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxTamañoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxTamañoActionPerformed
+
+    private void cboxNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxNivelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxNivelActionPerformed
+
+    private void cboxTamaño2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxTamaño2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxTamaño2ActionPerformed
+
+    private void cboxMultiNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxMultiNivelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxMultiNivelActionPerformed
+
+    private void cboxRelojActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxRelojActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxRelojActionPerformed
+
+    private void cboxPosicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxPosicionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxPosicionActionPerformed
+
+    private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
+        // TODO add your handling code here:
+        int  Tablero = cboxTamaño.getSelectedIndex();
+        
+        String Dificultad = getDificultad();
+        int MultiNivel = getMultiNivel(); // 0 : No  1: Si
+        int UsoReloj = getReloj(); // 0 : Cronometro  1: Temporizador   2: No
+        String Posicion = getPosicion();
+        
+        ValidarUsuario();
+        
+
+        
+        switch(Tablero){
+            
+            case 0 : // 4x4
+                break;
+            
+            case 1: // 5x5
+                break;
+            
+            case 2: // 6x6
+                break;
+                
+            case 3: // 7x7
+                break;
+                
+            case 4: // 8x8
+                break;
+            
+            case 5: // 9x9
+                break;
+            
+            case 6: // 10x10
+                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario).setVisible(true);
+                setVisible(false);
+                break;
+        }
+          
+    }//GEN-LAST:event_botonJugarActionPerformed
+
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
+        // TODO add your handling code here:
+
+        setVisible(false);
+    }//GEN-LAST:event_botonSalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuConfigurar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuConfigurar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuConfigurar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuConfigurar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    
+    public String getDificultad(){
+    
+        if(cboxNivel.getSelectedItem().equals("Fácil")){
+        
+            return "Fácil";
+        
+        }else if(cboxNivel.getSelectedItem().equals("Intermedio")){
+        
+            return "Intermedio";
+            
+        }else if(cboxNivel.getSelectedItem().equals("Difícil")){
+        
+            return "Difícil";
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuConfigurar().setVisible(true);
-            }
-        });
+        
+        return null;
     }
+    
+    public int getMultiNivel(){
+    
+        if(cboxMultiNivel.getSelectedIndex()==0){
+        
+            return 0;
+        
+        }else if(cboxMultiNivel.getSelectedIndex()==1){
+        
+            return 1;
+            
+        }
+        
+        return 0;
+    }
+    
+    public int getReloj(){
+        
+        if(cboxReloj.getSelectedIndex()==0){
+        
+            return 0;
+        
+        }else if(cboxReloj.getSelectedIndex()==1){
+        
+            return 1;
+            
+        }else if(cboxReloj.getSelectedIndex()==2){
+        
+            return 2;
+        
+        }
+        
+        return 0;      
+    }
+    
+    public String getPosicion(){
+    
+        if(cboxPosicion.getSelectedIndex()==0){
+        
+            return "Derecha";
+        
+        }else if(cboxPosicion.getSelectedIndex()==1){
+        
+            return "Izquierda";
+            
+        }
+        
+        return null;    
+
+    }
+    
+    public void ValidarUsuario(){
+      
+      try{
+        if(txtfUsuario.getText().equalsIgnoreCase("")){
+            
+            nombre = "Anónimo";
+            
+        }else{
+            String pin = JOptionPane.showInputDialog(null, "Ingrese el PIN del usuario:");
+            usuario = menu.ValidarUsuarioPIN(txtfUsuario.getText(), pin);
+            
+            if(usuario!=null){
+                
+                JOptionPane.showMessageDialog(null, "Se jugara como usuario : "+ usuario.Nickname);
+                nombre = usuario.Nickname;
+            }else{
+            
+                JOptionPane.showMessageDialog(null, "No se encuentra al usuario, se procedera como usuario anónimo");
+                
+            }
+        }
+      }catch(Exception e){
+          
+          e.printStackTrace();
+      }
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonJugar;
+    private javax.swing.JButton botonSalir;
+    private javax.swing.JComboBox<String> cboxMultiNivel;
+    private javax.swing.JComboBox<String> cboxNivel;
+    private javax.swing.JComboBox<String> cboxPosicion;
+    private javax.swing.JComboBox<String> cboxReloj;
+    private javax.swing.JComboBox<String> cboxTamaño;
+    private javax.swing.JComboBox<String> cboxTamaño2;
+    private javax.swing.JLabel lblJugador;
+    private javax.swing.JLabel lblMultiNivel;
+    private javax.swing.JLabel lblNivel;
+    private javax.swing.JLabel lblReloj;
+    private javax.swing.JLabel lblReloj1;
+    private javax.swing.JLabel lblTamaño;
+    private javax.swing.JLabel txtTitulo;
+    private javax.swing.JTextField txtfUsuario;
     // End of variables declaration//GEN-END:variables
 }

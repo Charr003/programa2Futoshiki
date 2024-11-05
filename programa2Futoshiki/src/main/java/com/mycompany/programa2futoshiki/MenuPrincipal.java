@@ -126,22 +126,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtTitulo)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(botonJugar))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(BotonRegistro))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(botonTop)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(botonJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(botonTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BotonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(173, 173, 173))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botonPIN)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(botonSalir)
-                    .addComponent(botonAcercaDe)
-                    .addComponent(botonManual))
+                    .addComponent(botonManual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonAcercaDe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonPIN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -170,7 +168,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
-        
+    /*        
         // Opcion temporal, luego se cambia por el menu de configurar
         
         String[] opciones = {"4x4", "5x5","6x6 ","7x7","8x8","9x9",
@@ -220,7 +218,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 //Salir
                 break;
         }
-        
+       */
+        new MenuConfigurar().setVisible(true);
+    
+    
     }//GEN-LAST:event_botonJugarActionPerformed
 
     private void botonManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonManualActionPerformed
@@ -380,7 +381,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     
     public Usuario ValidarSoloUsuario(String nombre) {
         
-        
+        cargarDatos();
         for (Usuario usuario : usuarios) {
             
             if (usuario.Nickname.equalsIgnoreCase(nombre)) {
@@ -392,7 +393,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         return null; // Si no se encuentra ningún usuario con ese nombre
     } 
     
-    
+    public Usuario ValidarUsuarioPIN(String nombre, String Pin) {
+        
+        cargarDatos();
+        for (Usuario usuario : usuarios){
+            
+            if (usuario.Nickname.equalsIgnoreCase(nombre)){
+                
+                if(usuario.Pin.equalsIgnoreCase(Pin)){
+                    
+                    return usuario; // Devuelve el usuario encontrado
+                }
+            }
+        }
+        return null; // Si no se encuentra ningún usuario con ese nombre
+    }
     public String generarStringAleatorio(int longitud) { 
                                                                    
         String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
