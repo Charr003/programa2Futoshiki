@@ -69,10 +69,125 @@ public class MenuConfigurar extends javax.swing.JFrame{
         lblReloj = new javax.swing.JLabel();
         lblReloj1 = new javax.swing.JLabel();
         cboxTamaño = new javax.swing.JComboBox<>();
+
+        cboxTamaño.setRenderer(new javax.swing.ListCellRenderer<String>() {
+            
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+                
+                return label;
+            }
+        });
+
         cboxNivel = new javax.swing.JComboBox<>();
+
+        cboxNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+                
+                return label;
+            }
+        });
+
         cboxMultiNivel = new javax.swing.JComboBox<>();
+
+        cboxMultiNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+                
+                return label;
+            }
+        });
+
         cboxReloj = new javax.swing.JComboBox<>();
+
+        cboxReloj.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+                
+                return label;
+            }
+        });
+
         cboxPosicion = new javax.swing.JComboBox<>();
+
+        cboxPosicion.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+                
+                return label;
+            }
+        });
+
         botonSalir = new javax.swing.JButton();
         lblJugador = new javax.swing.JLabel();
         txtfUsuario = new javax.swing.JTextField();
