@@ -310,6 +310,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     
     private ArrayList<Usuario> usuarios = new ArrayList<>();
     
+    
     public void agregarUsuario(Usuario usuario) {
         
         usuarios.add(usuario);
@@ -361,7 +362,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Usuario usuario = ValidarSoloUsuario(nick);
         
         if( usuario != null){
-        
+            
+            
             String cadenaAleatoria = generarStringAleatorio(4); // Pin aletorio
             System.out.println("El nuevo PIN del usuario "+ usuario.Nickname + " es: "
             + cadenaAleatoria); // debugging

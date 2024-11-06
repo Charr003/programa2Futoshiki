@@ -5,21 +5,48 @@
 package com.mycompany.programa2futoshiki;
 
 import javax.swing.JOptionPane;
-
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 /**
  *
  * @author XPC
  */
-public class MenuConfigurar extends javax.swing.JFrame {
+public class MenuConfigurar extends javax.swing.JFrame{
 
     /**
      * Creates new form MenuConfigurar
      */
+    private ArrayList<AjustesFutoshiki> Ajustes = new ArrayList<>();
+    
     MenuPrincipal menu = new MenuPrincipal();
-    String nombre;
+    
     Usuario usuario;
     
-    public MenuConfigurar() {
+    private String nombre;
+    private int Tablero;
+    private String Dificultad;
+    private int MultiNivel;
+    private int UsoReloj;
+    private String Posicion;
+    
+    /*
+    private String nombre;
+    private int Tablero = getTam(); 
+    private String Dificultad = getDificultad();
+    private int MultiNivel = getMultiNivel(); // 0 : No  1: Si
+    private int UsoReloj = getReloj(); // 0 : Cronometro  1: Temporizador   2: No
+    private String Posicion = getPosicion();
+    */
+    
+    public MenuConfigurar(){
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -49,6 +76,8 @@ public class MenuConfigurar extends javax.swing.JFrame {
         botonSalir = new javax.swing.JButton();
         lblJugador = new javax.swing.JLabel();
         txtfUsuario = new javax.swing.JTextField();
+        Guardar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         cboxTamaño2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxTamaño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -140,10 +169,32 @@ public class MenuConfigurar extends javax.swing.JFrame {
 
         txtfUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
+        Guardar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        Guardar.setText("Guardar");
+        Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton1.setText("Cargar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(134, Short.MAX_VALUE)
+                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(botonSalir)
+                .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -164,27 +215,28 @@ public class MenuConfigurar extends javax.swing.JFrame {
                             .addComponent(cboxTamaño, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtfUsuario)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(265, 265, 265)
+                        .addGap(28, 28, 28)
+                        .addComponent(Guardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)
+                        .addGap(56, 56, 56)
                         .addComponent(botonJugar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addComponent(txtTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(botonSalir)
-                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(botonSalir)))
-                .addGap(40, 40, 40)
+                .addGap(33, 33, 33)
+                .addComponent(botonSalir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Guardar)
+                    .addComponent(jButton1))
+                .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTamaño)
                     .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -208,9 +260,9 @@ public class MenuConfigurar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblJugador)
                     .addComponent(txtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(botonJugar)
-                .addGap(56, 56, 56))
+                .addGap(57, 57, 57))
         );
 
         pack();
@@ -242,16 +294,11 @@ public class MenuConfigurar extends javax.swing.JFrame {
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
         // TODO add your handling code here:
-        int  Tablero = cboxTamaño.getSelectedIndex();
-        
-        String Dificultad = getDificultad();
-        int MultiNivel = getMultiNivel(); // 0 : No  1: Si
-        int UsoReloj = getReloj(); // 0 : Cronometro  1: Temporizador   2: No
-        String Posicion = getPosicion();
-        
-        ValidarUsuario();
-        
 
+        
+        //ValidarUsuario();
+        setAjustes();
+        
         
         switch(Tablero){
             
@@ -287,82 +334,51 @@ public class MenuConfigurar extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_botonSalirActionPerformed
 
+    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+        // TODO add your handling code here:
+        setAjustes();
+        
+    }//GEN-LAST:event_GuardarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        RestaurarAjustes();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     public String getDificultad(){
-    
-        if(cboxNivel.getSelectedItem().equals("Fácil")){
-        
-            return "Fácil";
-        
-        }else if(cboxNivel.getSelectedItem().equals("Intermedio")){
-        
-            return "Intermedio";
-            
-        }else if(cboxNivel.getSelectedItem().equals("Difícil")){
-        
-            return "Difícil";
-        }
-        
-        return null;
+          
+        return cboxNivel.getSelectedItem().toString();
     }
     
     public int getMultiNivel(){
-    
-        if(cboxMultiNivel.getSelectedIndex()==0){
         
-            return 0;
-        
-        }else if(cboxMultiNivel.getSelectedIndex()==1){
-        
-            return 1;
-            
-        }
-        
-        return 0;
+        return cboxMultiNivel.getSelectedIndex();
     }
     
     public int getReloj(){
-        
-        if(cboxReloj.getSelectedIndex()==0){
-        
-            return 0;
-        
-        }else if(cboxReloj.getSelectedIndex()==1){
-        
-            return 1;
             
-        }else if(cboxReloj.getSelectedIndex()==2){
-        
-            return 2;
-        
-        }
-        
-        return 0;      
+        return cboxReloj.getSelectedIndex();      
     }
     
     public String getPosicion(){
-    
-        if(cboxPosicion.getSelectedIndex()==0){
-        
-            return "Derecha";
-        
-        }else if(cboxPosicion.getSelectedIndex()==1){
-        
-            return "Izquierda";
-            
-        }
-        
-        return null;    
+     
+        return cboxPosicion.getSelectedItem().toString();    
 
+    }
+    public int getTam(){
+    
+        return cboxTamaño.getSelectedIndex();
+    
     }
     
     public void ValidarUsuario(){
       
       try{
-        if(txtfUsuario.getText().equalsIgnoreCase("")){
+        if(txtfUsuario.getText().equalsIgnoreCase("") ||txtfUsuario.getText().equalsIgnoreCase("Anónimo")){
             
             nombre = "Anónimo";
             
@@ -377,7 +393,7 @@ public class MenuConfigurar extends javax.swing.JFrame {
             }else{
             
                 JOptionPane.showMessageDialog(null, "No se encuentra al usuario, se procedera como usuario anónimo");
-                
+                nombre = "Anónimo";
             }
         }
       }catch(Exception e){
@@ -387,8 +403,87 @@ public class MenuConfigurar extends javax.swing.JFrame {
     }
     
     
+    public void setAjustes(){
+        cargarAjustes();
+        
+       ValidarUsuario(); 
+       Tablero = getTam(); 
+       Dificultad = getDificultad();
+       MultiNivel = getMultiNivel(); // 0 : No  1: Si
+       UsoReloj = getReloj(); // 0 : Cronometro  1: Temporizador   2: No
+       Posicion = getPosicion();
+       
+       Ajustes.add(new AjustesFutoshiki(nombre, Tablero,cboxNivel.getSelectedIndex(),MultiNivel,
+                      UsoReloj,cboxPosicion.getSelectedIndex()));
+       
+       guardarAjustes();
+    
+    }
+    
+    public void RestaurarAjustes(){
+    
+        cargarAjustes();
+        AjustesFutoshiki ajuste = Ajuste();
+        
+        if(ajuste!=null){
+        
+            cboxTamaño.setSelectedIndex(ajuste.IndiceTam);
+            cboxNivel.setSelectedIndex(ajuste.IndiceNivel);
+            cboxMultiNivel.setSelectedIndex(ajuste.IndiceMultiNivel);
+            cboxReloj.setSelectedIndex(ajuste.IndiceReloj);
+            cboxPosicion.setSelectedIndex(ajuste.IndiceReloj);
+            txtfUsuario.setText(ajuste.nombre);
+        }else{
+        
+            JOptionPane.showMessageDialog(null, "No hay ajustes previos.");
+        }
+    
+    }
+    
+    public void guardarAjustes(){
+        
+        //cargarAjustes();
+        
+        if(Ajustes.size()==2){
+        
+            Ajustes.remove(0);
+        }
+        
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("futoshiki2024configuración.dat"))){
+            
+            oos.writeObject(Ajustes);
+
+        }catch (IOException e){
+            System.out.println("Error al guardar los datos.");
+        }
+    }
+
+    public void cargarAjustes(){
+    
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("futoshiki2024configuración.dat"))) {
+            
+            Ajustes = (ArrayList<AjustesFutoshiki>) ois.readObject();
+
+        }catch (IOException | ClassNotFoundException e){
+            
+            System.out.println("Error al cargar los datos.");
+        }
+    } 
+    
+    public AjustesFutoshiki Ajuste(){
+        
+        cargarAjustes();
+        for( AjustesFutoshiki ajuste: Ajustes ){
+        
+            return ajuste;
+            
+        
+        }
+        return null;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Guardar;
     private javax.swing.JButton botonJugar;
     private javax.swing.JButton botonSalir;
     private javax.swing.JComboBox<String> cboxMultiNivel;
@@ -397,6 +492,7 @@ public class MenuConfigurar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cboxReloj;
     private javax.swing.JComboBox<String> cboxTamaño;
     private javax.swing.JComboBox<String> cboxTamaño2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblJugador;
     private javax.swing.JLabel lblMultiNivel;
     private javax.swing.JLabel lblNivel;
