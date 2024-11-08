@@ -12,7 +12,7 @@ public class AjustesFutoshiki implements Serializable {
 
    protected String nombre;
    protected int IndiceTam;
-   protected int IndiceNivel;
+   static int IndiceNivel;
    protected int IndiceMultiNivel;
    protected int IndiceReloj;
    protected int IndicePosicion;
@@ -27,5 +27,7 @@ public class AjustesFutoshiki implements Serializable {
         this.IndicePosicion = IndicePosicion;
     }
    
-   
+   static int getIndiceNivel(){
+       return IndiceNivel;
+   }
 }

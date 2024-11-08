@@ -24,6 +24,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     private int tiempoTranscurridoSegundos = 0;
     private int ModoTiempo = 0;
     private boolean esCronometro = true;
+    private String Dificultad;
     JButton[][] botones;
     JLabel[][] texto;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
@@ -76,7 +77,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         NombreJugador.setText(nombre);
         ModoTiempo = usoreloj;
-        determinarTiempo();
+        Dificultad = dificultad;
         
         timer = new Timer(1000, new ActionListener(){
             
@@ -3333,6 +3334,7 @@ public class Frame10x10 extends javax.swing.JFrame {
 
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
         int[][] matrizNumeroCargada = ArchivosXML.cargarMatrizNumeros();
+        String[][] matrizSimbolosCargada = ArchivosXML.cargarMatrizSimbolos();
         jugar=true;
         for (int i = 0; i < texto.length; i++) {
             for (int j = 0; j < texto[i].length; j++) {
@@ -3344,6 +3346,14 @@ public class Frame10x10 extends javax.swing.JFrame {
         for (int i = 0; i < matrizNumeroCargada.length; i++) {
             for (int j = 0; j < matrizNumeroCargada[i].length; j++) {
                 AsignarNum(i, j, matrizNumeroCargada[i][j]);
+            }
+        }
+        for (int i = 0; i < matrizSimbolosCargada.length; i++) {
+            for (int j = 0; j < matrizSimbolosCargada[i].length; j++) {
+                if (matrizSimbolosCargada[i][j]!=null){
+                    matrizSimbolos[i][j]=matrizSimbolosCargada[i][j];
+                    texto[i][j].setText(matrizSimbolos[i][j]);
+                }
             }
         }
         System.out.println("se cargo la partida guardada");
@@ -3393,24 +3403,78 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         for (int i = 0; i < texto.length; i++) {
             for (int j = 0; j < texto[i].length; j++) {
-                if (texto[i][j]!=null){
-                    texto[i][j].setText("");
+                if (texto[i][j] != null) {
+                    texto[i][j].setText(""); // Limpia el texto anterior
+
+                    // Verifica si el índice j está dentro de los límites de la fila i en matrizSimbolos
+                    if (j < matrizSimbolos[i].length && matrizSimbolos[i][j] != null) {
+                        if (matrizSimbolos[i][j].equals(">")) {
+                            texto[i][j].setText(">");
+                            System.out.println("Texto "+i+", "+j+" = >");
+                        } else if (matrizSimbolos[i][j].equals("<")) {
+                            texto[i][j].setText("<");
+                            System.out.println("Texto "+i+", "+j+" = <");
+                        }
+                    }
                 }
             }
         }
+
     }else{
     
         jugar=true;
         
         for (int i = 0; i < texto.length; i++) {
             for (int j = 0; j < texto[i].length; j++) {
-                if (texto[i][j]!=null){
-                    texto[i][j].setText("");
+                if (texto[i][j] != null) {
+                    texto[i][j].setText(""); // Limpia el texto anterior
+
+                    // Verifica si el índice j está dentro de los límites de la fila i en matrizSimbolos
+                    if (j < matrizSimbolos[i].length && matrizSimbolos[i][j] != null) {
+                        if (matrizSimbolos[i][j].equals(">")) {
+                            texto[i][j].setText(">");
+                            System.out.println("Texto "+i+", "+j+" = >");
+                        } else if (matrizSimbolos[i][j].equals("<")) {
+                            texto[i][j].setText("<");
+                            System.out.println("Texto "+i+", "+j+" = <");
+                        }
+                    }
                 }
             }
         }
 
+
     }
+    
+        String juego="Juego";
+        System.out.println(Dificultad);
+        if (Dificultad=="Fácil"){
+            juego+="F";
+        }else if(Dificultad=="Intermedio"){
+            juego+="M";
+        }else{
+            juego+="D";
+        }
+        try{
+            System.out.println(juego);
+            String [][] matrizSimbolosCargada=ArchivosXML.cargarMatrizSimbolos2(juego+".xml");
+            for (int i = 0; i < matrizSimbolosCargada.length; i++) {
+                for (int j = 0; j < matrizSimbolosCargada[i].length; j++) {
+                    if (matrizSimbolosCargada[i][j]!=null){
+                        if (matrizSimbolosCargada[i][j].equals(">")) {
+                            texto[i][j].setText(">");
+                            matrizSimbolos[i][j]=matrizSimbolosCargada[i][j];
+                        } else if (matrizSimbolosCargada[i][j].equals("<")) {
+                            texto[i][j].setText("<");
+                            matrizSimbolos[i][j]=matrizSimbolosCargada[i][j];
+                        }
+                    }
+                }
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
@@ -3510,7 +3574,8 @@ public class Frame10x10 extends javax.swing.JFrame {
             matrizNumeros[fila][columna]=num;
         }
         boolean esta=verificarMatriz(matrizNumeros,fila,columna,num);
-        if (esta==false){
+        boolean esta2=verificarMatriz2(matrizNumeros,fila,columna,num);
+        if (esta==false && esta2==false){
             matrizNumeros[fila][columna]=num;
             botones[fila][columna].setForeground(Color.GREEN);
         }
@@ -3536,6 +3601,69 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
         return false;
     }
+    public boolean verificarMatriz2(int[][] matriz,int fila, int columna,int numero){
+        boolean error=false;
+        int columna2=columna*2-1;
+        if (columna>=0 && matrizSimbolos[fila*2][columna2]!=""){
+            String simbolo=matrizSimbolos[fila][columna2];
+            System.out.println(numero+" -- "+matrizNumeros[fila][columna+1]);
+            if (simbolo=="<"){
+                if (matrizNumeros[fila][columna+1]<numero){
+                    error= true;
+                }
+            }else{
+                if (matrizNumeros[fila][columna+1]>0 && matrizNumeros[fila][columna+1]>numero){
+                    error= true;
+                }
+            }
+            
+        }
+        if (fila>=0 && matrizSimbolos[(fila*2)][columna2]!=""){
+            String simbolo=matrizSimbolos[(fila*2)][columna2];
+            System.out.println(numero+" -- "+matrizNumeros[fila+1][columna]);
+            if (simbolo=="<"){
+                if (matrizNumeros[fila+1][columna]<numero){
+                    error= true;
+                }
+            }else{
+                if (matrizNumeros[fila+1][columna]>0 && matrizNumeros[fila+1][columna]>numero){
+                    error= true;
+                }
+            }
+            
+        }
+        if (columna-1>=0 && matrizSimbolos[fila*2][columna2-2]!=""){
+            String simbolo=matrizSimbolos[fila][columna2-2];
+            System.out.println(simbolo);
+            System.out.println(matrizNumeros[fila][columna-1]+" -- "+numero);
+            if (simbolo=="<"){
+                if (matrizNumeros[fila][columna-1]>numero){
+                    error= true;
+                }
+            }else{
+                if (matrizNumeros[fila][columna-1]>0 && matrizNumeros[fila][columna-1]<numero){
+                    error= true;
+                }
+            }
+            
+        }
+        if (fila-1>=0 && matrizSimbolos[(fila*2)-2][columna2]!=""){
+            String simbolo=matrizSimbolos[(fila*2)-2][columna2];
+            System.out.println(simbolo);
+            System.out.println(matrizNumeros[fila-1][columna]+" -- "+numero);
+            if (simbolo=="<"){
+                if (matrizNumeros[fila-1][columna]>numero){
+                    error= true;
+                }
+            }else{
+                if (matrizNumeros[fila-1][columna]>0 && matrizNumeros[fila-1][columna]<numero){
+                    error= true;
+                }
+            }
+            
+        }
+        return error;
+    }
     public void imprimirMatriz(int[][] matriz){
         int size = matriz.length;
         String linea;
@@ -3543,6 +3671,19 @@ public class Frame10x10 extends javax.swing.JFrame {
             linea="(";
             for (int i = 0; i < size; i++) {
                 linea+=matrizNumeros[j][i]+",";
+            }
+            linea+=")";
+            System.out.println(linea);
+        }
+    }
+    public void imprimirMatriz2(String[][] matriz){
+        int filas = matriz.length;
+        int columnas = matriz[0].length;
+        String linea;
+        for (int j = 0; j < filas; j++) {
+            linea = "(";
+            for (int i = 0; i < columnas; i++) {
+                linea += matriz[j][i] + ",";
             }
             linea+=")";
             System.out.println(linea);
@@ -3589,6 +3730,10 @@ public class Frame10x10 extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    public int generarNumeroAleatorio() {
+    return (int) (Math.random() * 3) + 1;
+    }
     
         public static void main(String args[]) {
         /* Set the Nimbus look and feel */

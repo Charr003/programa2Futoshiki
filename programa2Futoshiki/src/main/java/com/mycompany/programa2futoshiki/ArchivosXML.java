@@ -158,4 +158,94 @@ public class ArchivosXML {
 
         return matrizSimbolos;
     }
+    
+    //Metodo para cargar la partida nueva
+    public static String[][] cargarMatrizSimbolos2(String archivo) {
+        String[][] matrizSimbolos = new String[18][10]; // Matriz de tamaño fijo 18x10
+
+        try {
+            // Cargar el archivo XML
+            File file = new File(archivo);
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(file);
+            document.getDocumentElement().normalize();
+
+            // Obtener nodos de símbolos
+            NodeList simboloNodos = document.getElementsByTagName("Simbolos").item(0).getChildNodes();
+
+            // Llenar la matriz de símbolos
+            for (int i = 0; i < simboloNodos.getLength(); i++) {
+                Node nodo = simboloNodos.item(i);
+
+                if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                    Element elemento = (Element) nodo;
+                    String[] coords = elemento.getTagName().split("_");
+
+                    try {
+                        // Obtener las coordenadas j y k del nombre de la etiqueta
+                        int j = Integer.parseInt(coords[1]);
+                        int k = Integer.parseInt(coords[2]);
+
+                        // Verificar que las coordenadas están dentro del rango de la matriz
+                        if (j >= 0 && j < 18 && k >= 0 && k < 10) {
+                            // Obtener el contenido del elemento y asignar "" si es nulo o vacío
+                            String contenido = elemento.getTextContent();
+                            matrizSimbolos[j][k] = (contenido != null && !contenido.isEmpty()) ? contenido : "";
+                        }
+                    } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                        System.err.println("Error al analizar las coordenadas en la etiqueta: " + elemento.getTagName());
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return matrizSimbolos;
+    }
+    
+    
+    public static void guardarEnXML2(String [][] matrizSimbolos) {
+        try {
+        // Crear el document builder
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+
+        // Crear el documento XML
+        Document document = builder.newDocument();
+        
+        // Crear el elemento raíz
+        Element root = document.createElement("partida");
+        document.appendChild(root);
+        
+        // Guardar la matriz de símbolos
+        Element simbolos = document.createElement("Simbolos");
+        root.appendChild(simbolos);
+
+        for (int j = 0; j < matrizSimbolos.length; j++) {
+            for (int i = 0; i < matrizSimbolos[j].length; i++) {
+                Element cordSim = document.createElement("Sim_" + j + "_" + i);
+                // Agregar el valor de matrizSimbolos como texto dentro del elemento
+                cordSim.appendChild(document.createTextNode(matrizSimbolos[j][i]));
+                simbolos.appendChild(cordSim);
+            }
+        }
+
+        // Guardar el documento XML en un archivo
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        DOMSource domSource = new DOMSource(document);
+        StreamResult streamResult = new StreamResult(new File("Juego1F.xml"));
+
+        transformer.transform(domSource, streamResult);
+
+        System.out.println("Archivo XML guardado correctamente con su partida.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
