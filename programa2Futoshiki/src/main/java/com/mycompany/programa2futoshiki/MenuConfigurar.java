@@ -137,12 +137,54 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 cboxTamañoActionPerformed(evt);
             }
         });
+        cboxTamaño.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
+            }
+        });
 
         cboxNivel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fácil", "Intermedio", "Difícil" }));
         cboxNivel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxNivelActionPerformed(evt);
+            }
+        });
+        cboxNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
             }
         });
 
@@ -153,6 +195,27 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 cboxMultiNivelActionPerformed(evt);
             }
         });
+        cboxMultiNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
+            }
+        });
 
         cboxReloj.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxReloj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cronómetro ", "Temporizador", "No" }));
@@ -161,12 +224,54 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 cboxRelojActionPerformed(evt);
             }
         });
+        cboxReloj.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
+            }
+        });
 
         cboxPosicion.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxPosicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Derecha", "Izquierda" }));
         cboxPosicion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxPosicionActionPerformed(evt);
+            }
+        });
+        cboxPosicion.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
             }
         });
 

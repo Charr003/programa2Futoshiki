@@ -21,6 +21,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     
     ArchivosXML archivoXML = new ArchivosXML();
     private Timer timer;
+    private boolean ValidoTop = true;
     private int horas, minutos, segundos;
     private int tiempoTranscurridoSegundos = 0;
     private int ModoTiempo = 0;
@@ -29,6 +30,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     int tempHora = 0;
     int tempMins = 0;
     int tempSeg= 0;
+    
     JButton[][] botones;
     JLabel[][] texto;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
@@ -3727,7 +3729,16 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         // Falta que pida al usuario si quiere seguir jugando o no.
         
+        int resultado = JOptionPane.showConfirmDialog(null, "Seguir Jugando?", "Fin del Juego", JOptionPane.YES_NO_OPTION);
         
+        if(resultado == JOptionPane.YES_OPTION){
+        
+            timer.start();
+            ValidoTop = false;
+        }else{
+            ValidoTop = false;
+            setVisible(false);
+        }    
     }
     
     public void determinarTiempo(){
@@ -3755,7 +3766,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         int [] valores = archivoXML.restaurarValoresTiempo();
         
-        if (valores != null && valores.length == 4) {
+        if (valores != null && valores.length == 4){
             horas = valores[0];
             minutos = valores[1];
             segundos = valores[2];
@@ -3764,7 +3775,7 @@ public class Frame10x10 extends javax.swing.JFrame {
             tempMins = valores[5];
             tempSeg = valores[6];
 
-        } else {
+        }else{
             System.out.println("Error al restaurar los valores desde el archivo XML.");
         }
     

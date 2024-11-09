@@ -237,6 +237,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboxTama&#xf1;oActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxTama&#xf1;o.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;            &#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -257,6 +258,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboxNivelActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxNivel.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -276,6 +278,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboxMultiNivelActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxMultiNivel.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -296,6 +299,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboxRelojActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxReloj.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -315,6 +319,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboxPosicionActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxPosicion.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
