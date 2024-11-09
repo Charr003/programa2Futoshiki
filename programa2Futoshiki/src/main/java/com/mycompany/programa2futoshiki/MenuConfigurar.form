@@ -53,35 +53,38 @@
               <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblTamaño" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblNivel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblMultiNivel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblReloj" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblReloj1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblJugador" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="tabPanelReloj" alignment="1" min="-2" pref="525" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblTamaño" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNivel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblMultiNivel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblReloj" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblReloj1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblJugador" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="cboxPosicion" pref="234" max="32767" attributes="0"/>
+                              <Component id="cboxReloj" pref="234" max="32767" attributes="0"/>
+                              <Component id="cboxMultiNivel" pref="234" max="32767" attributes="0"/>
+                              <Component id="cboxNivel" pref="234" max="32767" attributes="0"/>
+                              <Component id="cboxTamaño" max="32767" attributes="0"/>
+                              <Component id="txtfUsuario" alignment="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cboxPosicion" pref="234" max="32767" attributes="0"/>
-                          <Component id="cboxReloj" pref="234" max="32767" attributes="0"/>
-                          <Component id="cboxMultiNivel" pref="234" max="32767" attributes="0"/>
-                          <Component id="cboxNivel" pref="234" max="32767" attributes="0"/>
-                          <Component id="cboxTamaño" max="32767" attributes="0"/>
-                          <Component id="txtfUsuario" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="Guardar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="Guardar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                      <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -90,52 +93,63 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-              <Component id="txtTitulo" min="-2" pref="88" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboxTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblNivel" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboxNivel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="txtTitulo" min="-2" pref="88" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblNivel" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxNivel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblMultiNivel" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxMultiNivel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblReloj" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxReloj" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblReloj1" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboxPosicion" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblJugador" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtfUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="tabPanelReloj" min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblMultiNivel" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboxMultiNivel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblReloj" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboxReloj" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblReloj1" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboxPosicion" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblJugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtfUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
-              <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -351,5 +365,134 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
+    <Container class="javax.swing.JTabbedPane" name="tabPanelReloj">
+      <Properties>
+        <Property name="selectedIndex" type="int" value="1"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="">
+                <Property name="tabTitle" type="java.lang.String" value=""/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtfHoras" max="32767" attributes="0"/>
+                          <Component id="jLabel1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtfMinutos" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtfSegundos" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="124" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtfMinutos" alignment="3" pref="40" max="32767" attributes="0"/>
+                                  <Component id="txtfSegundos" alignment="3" pref="41" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtfHoras" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Horas"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Minutos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Segundos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtfHoras">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfHorasActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtfMinutos">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="10"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtfSegundos">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="">
+                <Property name="tabTitle" type="java.lang.String" value=""/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="520" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

@@ -69,13 +69,17 @@ public class Frame10x10 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
-    public Frame10x10(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario) {
+    public Frame10x10(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
         setLocationRelativeTo(null);
         
+        
         NombreJugador.setText(nombre);
+        horas = Horas; 
+        minutos = Minutos;
+        segundos = Segundos;
         ModoTiempo = usoreloj;
         Dificultad = dificultad;
         
@@ -3374,7 +3378,7 @@ public class Frame10x10 extends javax.swing.JFrame {
            
            if(ModoTiempo ==0){
            
-                reiniciarTiempo();
+                //reiniciarTiempo();
                 esCronometro = true;
                 tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
                 timer.start();   
@@ -3383,9 +3387,7 @@ public class Frame10x10 extends javax.swing.JFrame {
            }else if(ModoTiempo==1){
                
                 esCronometro = false;
-                horas = 0;
-                minutos = 10;
-                segundos = 0;
+
                 
                 HorasTiempo.setText(String.format("%2d", horas));
                 MinutosTiempo.setText(String.format("%2d", minutos));

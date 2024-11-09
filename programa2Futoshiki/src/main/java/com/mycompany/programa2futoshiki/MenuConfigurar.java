@@ -24,6 +24,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     /**
      * Creates new form MenuConfigurar
      */
+    
     private ArrayList<AjustesFutoshiki> Ajustes = new ArrayList<>();
     
     MenuPrincipal menu = new MenuPrincipal();
@@ -36,6 +37,9 @@ public class MenuConfigurar extends javax.swing.JFrame{
     private int MultiNivel;
     private int UsoReloj;
     private String Posicion;
+    private int Horas = 0;
+    private int Minutos = 0;
+    private int Segundos = 0;
     
     /*
     private String nombre;
@@ -47,8 +51,9 @@ public class MenuConfigurar extends javax.swing.JFrame{
     */
     
     public MenuConfigurar(){
+        
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); 
     }
 
     /**
@@ -69,130 +74,24 @@ public class MenuConfigurar extends javax.swing.JFrame{
         lblReloj = new javax.swing.JLabel();
         lblReloj1 = new javax.swing.JLabel();
         cboxTamaño = new javax.swing.JComboBox<>();
-
-        cboxTamaño.setRenderer(new javax.swing.ListCellRenderer<String>() {
-            
-            @Override
-            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
-                JLabel label = new JLabel(value);
-                label.setFont(new java.awt.Font("Dialog", 0, 14));
-
-                if (index == 0) {
-                    label.setForeground(Color.RED);
-                } else {
-                    label.setForeground(Color.BLACK);
-                }
-
-                if (isSelected) {
-                    label.setBackground(Color.LIGHT_GRAY);
-                    label.setOpaque(true);
-                }
-                
-                return label;
-            }
-        });
-
         cboxNivel = new javax.swing.JComboBox<>();
-
-        cboxNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
-
-            @Override
-            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
-                JLabel label = new JLabel(value);
-                label.setFont(new java.awt.Font("Dialog", 0, 14));
-
-                if (index == 0) {
-                    label.setForeground(Color.RED);
-                } else {
-                    label.setForeground(Color.BLACK);
-                }
-
-                if (isSelected) {
-                    label.setBackground(Color.LIGHT_GRAY);
-                    label.setOpaque(true);
-                }
-                
-                return label;
-            }
-        });
-
         cboxMultiNivel = new javax.swing.JComboBox<>();
-
-        cboxMultiNivel.setRenderer(new javax.swing.ListCellRenderer<String>() {
-
-            @Override
-            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
-                JLabel label = new JLabel(value);
-                label.setFont(new java.awt.Font("Dialog", 0, 14));
-
-                if (index == 0) {
-                    label.setForeground(Color.RED);
-                } else {
-                    label.setForeground(Color.BLACK);
-                }
-
-                if (isSelected) {
-                    label.setBackground(Color.LIGHT_GRAY);
-                    label.setOpaque(true);
-                }
-                
-                return label;
-            }
-        });
-
         cboxReloj = new javax.swing.JComboBox<>();
-
-        cboxReloj.setRenderer(new javax.swing.ListCellRenderer<String>() {
-
-            @Override
-            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
-                JLabel label = new JLabel(value);
-                label.setFont(new java.awt.Font("Dialog", 0, 14));
-
-                if (index == 0) {
-                    label.setForeground(Color.RED);
-                } else {
-                    label.setForeground(Color.BLACK);
-                }
-
-                if (isSelected) {
-                    label.setBackground(Color.LIGHT_GRAY);
-                    label.setOpaque(true);
-                }
-                
-                return label;
-            }
-        });
-
         cboxPosicion = new javax.swing.JComboBox<>();
-
-        cboxPosicion.setRenderer(new javax.swing.ListCellRenderer<String>() {
-
-            @Override
-            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
-                JLabel label = new JLabel(value);
-                label.setFont(new java.awt.Font("Dialog", 0, 14));
-
-                if (index == 0) {
-                    label.setForeground(Color.RED);
-                } else {
-                    label.setForeground(Color.BLACK);
-                }
-
-                if (isSelected) {
-                    label.setBackground(Color.LIGHT_GRAY);
-                    label.setOpaque(true);
-                }
-                
-                return label;
-            }
-        });
-
         botonSalir = new javax.swing.JButton();
         lblJugador = new javax.swing.JLabel();
         txtfUsuario = new javax.swing.JTextField();
         Guardar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        tabPanelReloj = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtfHoras = new javax.swing.JTextField();
+        txtfMinutos = new javax.swing.JTextField();
+        txtfSegundos = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
 
         cboxTamaño2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxTamaño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -300,6 +199,83 @@ public class MenuConfigurar extends javax.swing.JFrame{
             }
         });
 
+        tabPanelReloj.setEnabled(false);
+
+        jLabel1.setText("Horas");
+
+        jLabel2.setText("Minutos");
+
+        jLabel3.setText("Segundos");
+
+        txtfHoras.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtfHoras.setText("0");
+        txtfHoras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfHorasActionPerformed(evt);
+            }
+        });
+
+        txtfMinutos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtfMinutos.setText("10");
+
+        txtfSegundos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtfSegundos.setText("0");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtfHoras)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(txtfMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(68, 68, 68)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtfSegundos, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(124, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtfMinutos, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                            .addComponent(txtfSegundos, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtfHoras)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)))
+        );
+
+        tabPanelReloj.addTab("", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 73, Short.MAX_VALUE)
+        );
+
+        tabPanelReloj.addTab("", jPanel4);
+
+        tabPanelReloj.setSelectedIndex(1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -311,73 +287,81 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 .addComponent(botonSalir)
                 .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTamaño)
-                            .addComponent(lblNivel)
-                            .addComponent(lblMultiNivel)
-                            .addComponent(lblReloj)
-                            .addComponent(lblReloj1)
-                            .addComponent(lblJugador))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cboxPosicion, 0, 234, Short.MAX_VALUE)
-                            .addComponent(cboxReloj, 0, 234, Short.MAX_VALUE)
-                            .addComponent(cboxMultiNivel, 0, 234, Short.MAX_VALUE)
-                            .addComponent(cboxNivel, 0, 234, Short.MAX_VALUE)
-                            .addComponent(cboxTamaño, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtfUsuario)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(Guardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
-                        .addGap(56, 56, 56)
-                        .addComponent(botonJugar)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tabPanelReloj, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(60, 60, 60)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblTamaño)
+                                .addComponent(lblNivel)
+                                .addComponent(lblMultiNivel)
+                                .addComponent(lblReloj)
+                                .addComponent(lblReloj1)
+                                .addComponent(lblJugador))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(cboxPosicion, 0, 234, Short.MAX_VALUE)
+                                .addComponent(cboxReloj, 0, 234, Short.MAX_VALUE)
+                                .addComponent(cboxMultiNivel, 0, 234, Short.MAX_VALUE)
+                                .addComponent(cboxNivel, 0, 234, Short.MAX_VALUE)
+                                .addComponent(cboxTamaño, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtfUsuario)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(Guardar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton1)
+                            .addGap(56, 56, 56)
+                            .addComponent(botonJugar))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(botonSalir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Guardar)
-                    .addComponent(jButton1))
-                .addGap(45, 45, 45))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTamaño)
-                    .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblNivel)
-                    .addComponent(cboxNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(botonSalir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTamaño)
+                            .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNivel)
+                            .addComponent(cboxNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMultiNivel)
+                            .addComponent(cboxMultiNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblReloj)
+                            .addComponent(cboxReloj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblReloj1)
+                            .addComponent(cboxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblJugador)
+                            .addComponent(txtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(31, 31, 31)
+                .addComponent(tabPanelReloj, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMultiNivel)
-                    .addComponent(cboxMultiNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblReloj)
-                    .addComponent(cboxReloj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblReloj1)
-                    .addComponent(cboxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblJugador)
-                    .addComponent(txtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(botonJugar)
-                .addGap(57, 57, 57))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Guardar)
+                            .addComponent(jButton1))
+                        .addGap(45, 45, 45))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(botonJugar)
+                        .addGap(57, 57, 57))))
         );
 
         pack();
@@ -401,6 +385,15 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
     private void cboxRelojActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxRelojActionPerformed
         // TODO add your handling code here:
+        if(cboxReloj.getSelectedIndex()==1){
+        
+            tabPanelReloj.setSelectedIndex(0);
+            
+        }else{
+        
+            tabPanelReloj.setSelectedIndex(1);
+            
+        }
     }//GEN-LAST:event_cboxRelojActionPerformed
 
     private void cboxPosicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxPosicionActionPerformed
@@ -410,35 +403,22 @@ public class MenuConfigurar extends javax.swing.JFrame{
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
         // TODO add your handling code here:
 
+        if(cboxReloj.getSelectedIndex() == 0 || cboxReloj.getSelectedIndex() == 1){
         
-        //ValidarUsuario();
-        setAjustes();
+            if(validarTiempo()){
+            
+                setAjustes();
+                seleTablero();    
+            
+            }else{
+                JOptionPane.showMessageDialog(null, "Valores Invalidos");
+            
+            }
+
+        }else{
         
-        
-        switch(Tablero){
-            
-            case 0 : // 4x4
-                break;
-            
-            case 1: // 5x5
-                break;
-            
-            case 2: // 6x6
-                break;
-                
-            case 3: // 7x7
-                break;
-                
-            case 4: // 8x8
-                break;
-            
-            case 5: // 9x9
-                break;
-            
-            case 6: // 10x10
-                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario).setVisible(true);
-                setVisible(false);
-                break;
+                setAjustes();
+                seleTablero();     
         }
           
     }//GEN-LAST:event_botonJugarActionPerformed
@@ -459,6 +439,10 @@ public class MenuConfigurar extends javax.swing.JFrame{
         // TODO add your handling code here:
         RestaurarAjustes();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtfHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfHorasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfHorasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -519,9 +503,14 @@ public class MenuConfigurar extends javax.swing.JFrame{
     
     
     public void setAjustes(){
-        cargarAjustes();
+       cargarAjustes();
         
-       ValidarUsuario(); 
+       ValidarUsuario();
+       
+        Horas = Integer.parseInt(txtfHoras.getText());
+        Minutos = Integer.parseInt(txtfMinutos.getText());
+        Segundos = Integer.parseInt(txtfSegundos.getText());  
+       
        Tablero = getTam(); 
        Dificultad = getDificultad();
        MultiNivel = getMultiNivel(); // 0 : No  1: Si
@@ -596,6 +585,64 @@ public class MenuConfigurar extends javax.swing.JFrame{
         }
         return null;
     }
+    
+    public boolean validarTiempo(){
+        
+        try{
+            
+        int horas = Integer.parseInt(txtfHoras.getText());
+        int minutos = Integer.parseInt(txtfMinutos.getText());
+        int segundos = Integer.parseInt(txtfSegundos.getText());  
+        
+            if(horas <=5){
+                
+                if(minutos <= 59 && segundos <= 59){
+                
+                    return true;
+                }
+            
+            }
+            
+        
+        }catch(Exception e){
+        
+        
+        }
+        return false;
+    
+    }
+    
+    public void seleTablero(){
+    
+        switch(Tablero){
+            
+            case 0 : // 4x4
+                break;
+            
+            case 1: // 5x5
+                break;
+            
+            case 2: // 6x6
+                break;
+                
+            case 3: // 7x7
+                break;
+                
+            case 4: // 8x8
+                break;
+            
+            case 5: // 9x9
+                break;
+            
+            case 6: // 10x10
+                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos).setVisible(true);
+                setVisible(false);
+                break;
+        }
+    
+    
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Guardar;
@@ -608,13 +655,22 @@ public class MenuConfigurar extends javax.swing.JFrame{
     private javax.swing.JComboBox<String> cboxTamaño;
     private javax.swing.JComboBox<String> cboxTamaño2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblJugador;
     private javax.swing.JLabel lblMultiNivel;
     private javax.swing.JLabel lblNivel;
     private javax.swing.JLabel lblReloj;
     private javax.swing.JLabel lblReloj1;
     private javax.swing.JLabel lblTamaño;
+    private javax.swing.JTabbedPane tabPanelReloj;
     private javax.swing.JLabel txtTitulo;
+    private javax.swing.JTextField txtfHoras;
+    private javax.swing.JTextField txtfMinutos;
+    private javax.swing.JTextField txtfSegundos;
     private javax.swing.JTextField txtfUsuario;
     // End of variables declaration//GEN-END:variables
 }
