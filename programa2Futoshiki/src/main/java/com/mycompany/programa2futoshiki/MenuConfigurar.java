@@ -131,7 +131,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
         lblReloj1.setText("Posición de los dígitos:");
 
         cboxTamaño.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        cboxTamaño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4x4", "5x5", "6x6", "7x7", "8x8", "9x9", "10x10" }));
+        cboxTamaño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3x3", "4x4", "5x5", "6x6", "7x7", "8x8", "9x9", "10x10" }));
         cboxTamaño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxTamañoActionPerformed(evt);
@@ -274,8 +274,6 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
         tabPanelReloj.addTab("", jPanel4);
 
-        tabPanelReloj.setSelectedIndex(1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -385,7 +383,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
     private void cboxRelojActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxRelojActionPerformed
         // TODO add your handling code here:
-        if(cboxReloj.getSelectedIndex()==1){
+        if(cboxReloj.getSelectedIndex() == 0 || cboxReloj.getSelectedIndex()==1){
         
             tabPanelReloj.setSelectedIndex(0);
             
@@ -431,7 +429,25 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         // TODO add your handling code here:
-        setAjustes();
+        
+        
+        if(cboxReloj.getSelectedIndex() == 1){
+        
+            if(validarTiempo()){
+            
+                setAjustes();
+                    
+            
+            }else{
+                JOptionPane.showMessageDialog(null, "Valores Invalidos");
+            
+            }
+
+        }else{
+        
+                setAjustes();
+                     
+        }
         
     }//GEN-LAST:event_GuardarActionPerformed
 
@@ -507,9 +523,9 @@ public class MenuConfigurar extends javax.swing.JFrame{
         
        ValidarUsuario();
        
-        Horas = Integer.parseInt(txtfHoras.getText());
-        Minutos = Integer.parseInt(txtfMinutos.getText());
-        Segundos = Integer.parseInt(txtfSegundos.getText());  
+       Horas = Integer.parseInt(txtfHoras.getText());
+       Minutos = Integer.parseInt(txtfMinutos.getText());
+       Segundos = Integer.parseInt(txtfSegundos.getText());  
        
        Tablero = getTam(); 
        Dificultad = getDificultad();
@@ -518,7 +534,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
        Posicion = getPosicion();
        
        Ajustes.add(new AjustesFutoshiki(nombre, Tablero,cboxNivel.getSelectedIndex(),MultiNivel,
-                      UsoReloj,cboxPosicion.getSelectedIndex()));
+                      UsoReloj,cboxPosicion.getSelectedIndex(),Horas,Minutos,Segundos));
        
        guardarAjustes();
     
@@ -537,6 +553,9 @@ public class MenuConfigurar extends javax.swing.JFrame{
             cboxReloj.setSelectedIndex(ajuste.IndiceReloj);
             cboxPosicion.setSelectedIndex(ajuste.IndiceReloj);
             txtfUsuario.setText(ajuste.nombre);
+            txtfHoras.setText(String.valueOf(ajuste.HorasG));
+            txtfMinutos.setText(String.valueOf(ajuste.MinutosG));
+            txtfHoras.setText(String.valueOf(ajuste.SegundosG));
         }else{
         
             JOptionPane.showMessageDialog(null, "No hay ajustes previos.");
@@ -616,28 +635,33 @@ public class MenuConfigurar extends javax.swing.JFrame{
     
         switch(Tablero){
             
-            case 0 : // 4x4
+            case 0 : // 3x3
                 break;
             
-            case 1: // 5x5
+            case 1: // 4x4
                 break;
             
-            case 2: // 6x6
+            case 2: // 5x5
                 break;
                 
-            case 3: // 7x7
+            case 3: // 6x6
                 break;
                 
-            case 4: // 8x8
+            case 4: // 7x7
                 break;
             
-            case 5: // 9x9
+            case 5: // 8x8
                 break;
             
-            case 6: // 10x10
+            case 6: // 9x9
+
+                
+            case 7: // 10x10    
+                
                 new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos).setVisible(true);
                 setVisible(false);
-                break;
+                break; 
+                
         }
     
     

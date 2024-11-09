@@ -16,8 +16,11 @@ public class AjustesFutoshiki implements Serializable {
    protected int IndiceMultiNivel;
    protected int IndiceReloj;
    protected int IndicePosicion;
+   protected int HorasG;
+   protected int MinutosG;
+   protected int SegundosG;
    
-    public AjustesFutoshiki(String nombre, int IndiceTam, int IndiceNivel, int IndiceMultiNivel, int IndiceReloj, int IndicePosicion) {
+    public AjustesFutoshiki(String nombre, int IndiceTam, int IndiceNivel, int IndiceMultiNivel, int IndiceReloj, int IndicePosicion, int hora, int min, int seg) {
         
         this.nombre = nombre;
         this.IndiceTam = IndiceTam;
@@ -25,6 +28,9 @@ public class AjustesFutoshiki implements Serializable {
         this.IndiceMultiNivel = IndiceMultiNivel;
         this.IndiceReloj = IndiceReloj;
         this.IndicePosicion = IndicePosicion;
+        this.HorasG = hora;
+        this.MinutosG = min;
+        this.SegundosG = seg;
     }
    
    static int getIndiceNivel(){

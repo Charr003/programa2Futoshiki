@@ -221,14 +221,15 @@
           <Font name="Dialog" size="14" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
-            <StringItem index="0" value="4x4"/>
-            <StringItem index="1" value="5x5"/>
-            <StringItem index="2" value="6x6"/>
-            <StringItem index="3" value="7x7"/>
-            <StringItem index="4" value="8x8"/>
-            <StringItem index="5" value="9x9"/>
-            <StringItem index="6" value="10x10"/>
+          <StringArray count="8">
+            <StringItem index="0" value="3x3"/>
+            <StringItem index="1" value="4x4"/>
+            <StringItem index="2" value="5x5"/>
+            <StringItem index="3" value="6x6"/>
+            <StringItem index="4" value="7x7"/>
+            <StringItem index="5" value="8x8"/>
+            <StringItem index="6" value="9x9"/>
+            <StringItem index="7" value="10x10"/>
           </StringArray>
         </Property>
       </Properties>
@@ -367,7 +368,6 @@
     </Component>
     <Container class="javax.swing.JTabbedPane" name="tabPanelReloj">
       <Properties>
-        <Property name="selectedIndex" type="int" value="1"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
 

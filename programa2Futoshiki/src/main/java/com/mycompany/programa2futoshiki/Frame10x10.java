@@ -19,18 +19,23 @@ import java.util.ArrayList;
  */
 public class Frame10x10 extends javax.swing.JFrame {
     
+    ArchivosXML archivoXML = new ArchivosXML();
     private Timer timer;
     private int horas, minutos, segundos;
     private int tiempoTranscurridoSegundos = 0;
     private int ModoTiempo = 0;
     private boolean esCronometro = true;
     private String Dificultad;
+    int tempHora = 0;
+    int tempMins = 0;
+    int tempSeg= 0;
     JButton[][] botones;
     JLabel[][] texto;
     int PuntoX,PuntoY,PuntoX2,PuntoY2;
     boolean jugar=false;
     ArrayList<Jugada> jugadas;
     Jugada ultimaJugada;
+    
     int [][] matrizNumeros = {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0},
@@ -82,6 +87,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         segundos = Segundos;
         ModoTiempo = usoreloj;
         Dificultad = dificultad;
+
         
         timer = new Timer(1000, new ActionListener(){
             
@@ -93,22 +99,22 @@ public class Frame10x10 extends javax.swing.JFrame {
 
                 if(esCronometro){
                     // Lógica para cuenta hacia adelante
-                    segundos++;
+                    tempSeg++;
                     
-                    if(segundos == 60){
+                    if(tempSeg == 60){
                         
-                        segundos = 0;
-                        minutos++;
+                        tempSeg = 0;
+                        tempMins++;
                         
-                        if(minutos == 60){
+                        if(tempMins == 60){
                             
-                            minutos = 0;
-                            horas++;
+                            tempMins = 0;
+                            tempHora++;
                         }
                     }
 
                     // Validacion del cronometro, revisar si se alcanzado el limite de tiempo: 10 mins
-                    if(minutos == 10 && segundos == 0){
+                    if(tempMins == minutos && tempSeg == segundos){
                         detenerTiempo("Se ha acabado el tiempo del cronómetro.");
                     }
 
@@ -132,10 +138,15 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
 
                 // Actualizar el label de tiempo
-                
-                HorasTiempo.setText(String.format("%2d", horas));
-                MinutosTiempo.setText(String.format("%2d", minutos));
-                SegundosTiempo.setText(String.format("%02d", segundos));
+                if(ModoTiempo==1){
+                    HorasTiempo.setText(String.format("%2d", horas));
+                    MinutosTiempo.setText(String.format("%2d", minutos));
+                    SegundosTiempo.setText(String.format("%02d", segundos));
+                }else{
+                    HorasTiempo.setText(String.format("%2d", tempHora));
+                    MinutosTiempo.setText(String.format("%2d", tempMins));
+                    SegundosTiempo.setText(String.format("%02d", tempSeg));       
+                }    
             }
         });     
         jugadas = new ArrayList<Jugada>();
@@ -3360,6 +3371,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
             }
         }
+        cargarTiempo();
         System.out.println("se cargo la partida guardada");
     }//GEN-LAST:event_BotonCargarJuegoActionPerformed
 
@@ -3551,13 +3563,13 @@ public class Frame10x10 extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
-        ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos);
+        ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos,horas,minutos,segundos,tempHora,tempMins,tempSeg,tiempoTranscurridoSegundos);  
     }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
 
     private void NombreJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreJugadorActionPerformed
         // TODO add your handling code here:
         
-        
+       
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
 
@@ -3714,6 +3726,8 @@ public class Frame10x10 extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Tiempo total: " + tiempoDuracion);
         
         // Falta que pida al usuario si quiere seguir jugando o no.
+        
+        
     }
     
     public void determinarTiempo(){
@@ -3736,6 +3750,26 @@ public class Frame10x10 extends javax.swing.JFrame {
     public int generarNumeroAleatorio() {
     return (int) (Math.random() * 3) + 1;
     }
+    
+    public void cargarTiempo(){
+        
+        int [] valores = archivoXML.restaurarValoresTiempo();
+        
+        if (valores != null && valores.length == 4) {
+            horas = valores[0];
+            minutos = valores[1];
+            segundos = valores[2];
+            tiempoTranscurridoSegundos = valores[3];
+            tempHora = valores[4];
+            tempMins = valores[5];
+            tempSeg = valores[6];
+
+        } else {
+            System.out.println("Error al restaurar los valores desde el archivo XML.");
+        }
+    
+    }    
+    
     
         public static void main(String args[]) {
         /* Set the Nimbus look and feel */

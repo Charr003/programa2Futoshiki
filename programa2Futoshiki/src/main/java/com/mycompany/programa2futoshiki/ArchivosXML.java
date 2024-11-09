@@ -20,7 +20,7 @@ import java.io.File;
  * @author jxdga
  */
 public class ArchivosXML {
-    public static void guardarEnXML(int [][] matrizNumeros, String [][] matrizSimbolos) {
+    public static void guardarEnXML(int [][] matrizNumeros, String [][] matrizSimbolos, int horas, int minutos, int segundos, int temphoras, int tempminutos, int tempsegundos, int tiempo) {
         try {
         // Crear el document builder
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -61,7 +61,37 @@ public class ArchivosXML {
                 simbolos.appendChild(cordSim);
             }
         }
+        
+        Element horasElement = document.createElement("Horas");
+        horasElement.appendChild(document.createTextNode(String.valueOf(horas)));
+        root.appendChild(horasElement);        
+        
+        Element minutosElement = document.createElement("Minutos");
+        minutosElement.appendChild(document.createTextNode(String.valueOf(minutos)));
+        root.appendChild(minutosElement);
+        
+        Element segundosElement = document.createElement("Segundos");
+        segundosElement.appendChild(document.createTextNode(String.valueOf(segundos)));
+        root.appendChild(segundosElement);
 
+        Element tiempoTranscurridoElement = document.createElement("TiempoTranscurridoSegundos");
+        tiempoTranscurridoElement.appendChild(document.createTextNode(String.valueOf(tiempo)));
+        root.appendChild(tiempoTranscurridoElement);        
+
+        Element TemphorasElement = document.createElement("TempHoras");
+        TemphorasElement.appendChild(document.createTextNode(String.valueOf(horas)));
+        root.appendChild(TemphorasElement);        
+        
+        Element TempminutosElement = document.createElement("TempMinutos");
+        TempminutosElement.appendChild(document.createTextNode(String.valueOf(minutos)));
+        root.appendChild(TempminutosElement);
+        
+        Element TempsegundosElement = document.createElement("TempSegundos");
+        TempsegundosElement.appendChild(document.createTextNode(String.valueOf(segundos)));
+        root.appendChild(TempsegundosElement);    
+        
+        
+        
         // Guardar el documento XML en un archivo
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
@@ -248,4 +278,35 @@ public class ArchivosXML {
             e.printStackTrace();
         }
     }
+    
+    
+    public int[] restaurarValoresTiempo(){
+        
+        int[] valores = new int[7];
+        
+        try{
+            
+            File file = new File("PartidaGuardada.xml");
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(file);
+
+            valores[0] = Integer.parseInt(document.getElementsByTagName("Horas").item(0).getTextContent());
+            valores[1] = Integer.parseInt(document.getElementsByTagName("Minutos").item(0).getTextContent());
+            valores[2] = Integer.parseInt(document.getElementsByTagName("Segundos").item(0).getTextContent());
+            valores[3] = Integer.parseInt(document.getElementsByTagName("TiempoTranscurridoSegundos").item(0).getTextContent());
+            valores[4] = Integer.parseInt(document.getElementsByTagName("TempHoras").item(0).getTextContent());
+            valores[5] = Integer.parseInt(document.getElementsByTagName("TempMinutos").item(0).getTextContent());
+            valores[6] = Integer.parseInt(document.getElementsByTagName("TempSegundos").item(0).getTextContent());
+            
+            System.out.println("Datos restaurados exitosamente desde tiempo.xml");
+            
+        }catch (Exception e){
+            
+            e.printStackTrace();
+        }
+        
+        return valores;
+    }    
+    
 }
