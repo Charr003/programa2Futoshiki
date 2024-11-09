@@ -53,6 +53,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         botonManual = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         botonPIN = new javax.swing.JButton();
+        botonConfigurar = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -117,6 +118,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        botonConfigurar.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        botonConfigurar.setText("Configurar");
+        botonConfigurar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonConfigurarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -129,9 +138,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(botonJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(botonTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BotonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(botonTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BotonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botonConfigurar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(173, 173, 173))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -151,11 +160,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(txtTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(99, 99, 99)
                 .addComponent(botonJugar)
-                .addGap(39, 39, 39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonConfigurar)
+                .addGap(14, 14, 14)
                 .addComponent(BotonRegistro)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(botonTop)
-                .addGap(66, 66, 66)
+                .addGap(35, 35, 35)
                 .addComponent(botonPIN)
                 .addGap(18, 18, 18)
                 .addComponent(botonAcercaDe)
@@ -219,7 +230,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 break;
         }
        */
-        new MenuConfigurar().setVisible(true);
+        MenuConfigurar config = new MenuConfigurar();
+        AjustesFutoshiki ajuste = config.Ajuste();
+        
+        if(ajuste!=null){
+        
+            seleTablero(ajuste);
+            setVisible(false); 
+
+        }else{
+        
+             new Frame10x10("Facíl",0,0,"Derecha","Anónimo",null,0,0,0).setVisible(true);
+             setVisible(false); 
+        
+        }
     
     
     }//GEN-LAST:event_botonJugarActionPerformed
@@ -235,15 +259,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
         System.exit(0);
     }//GEN-LAST:event_botonSalirActionPerformed
-
-    private void BotonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistroActionPerformed
-        // TODO add your handling code here:
-        
-        MenuRegistro registro = new MenuRegistro();
-        
-        registro.setVisible(true);
-        
-    }//GEN-LAST:event_BotonRegistroActionPerformed
 
     private void botonTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTopActionPerformed
         
@@ -266,6 +281,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null,"Acerca de");
     }//GEN-LAST:event_botonAcercaDeActionPerformed
+
+    private void botonConfigurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfigurarActionPerformed
+
+        new MenuConfigurar().setVisible(true);
+    }//GEN-LAST:event_botonConfigurarActionPerformed
+
+    private void BotonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistroActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_BotonRegistroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -446,10 +471,51 @@ public class MenuPrincipal extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(null,"El archivo no existe.");
         }
-    
-    
-    
     }
+    
+    public void seleTablero(AjustesFutoshiki ajuste){
+        
+     String nombre = ajuste.nombre;
+     int Tablero = ajuste.IndiceTam;
+     String Dificultad = "Fácil";
+     int MultiNivel = ajuste.IndiceMultiNivel;
+     int UsoReloj = ajuste.IndiceReloj;
+     String Posicion = "Derecha";
+     int Horas = ajuste.HorasG;
+     int Minutos = ajuste.MinutosG;
+     int Segundos = ajuste.SegundosG;
+     
+        switch(Tablero){
+            
+            case 0 : // 3x3
+                break;
+            
+            case 1: // 4x4
+                break;
+            
+            case 2: // 5x5
+                break;
+                
+            case 3: // 6x6
+                break;
+                
+            case 4: // 7x7
+                break;
+            
+            case 5: // 8x8
+                break;
+            
+            case 6: // 9x9
+
+                
+            case 7: // 10x10    
+                
+                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos).setVisible(true);
+                setVisible(false);
+                break; 
+                
+        }
+    }    
     
     
     
@@ -457,6 +523,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonRegistro;
     private javax.swing.JButton botonAcercaDe;
+    private javax.swing.JButton botonConfigurar;
     private javax.swing.JButton botonJugar;
     private javax.swing.JButton botonManual;
     private javax.swing.JButton botonPIN;
