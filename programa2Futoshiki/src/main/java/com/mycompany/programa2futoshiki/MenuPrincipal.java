@@ -477,10 +477,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
      String nombre = ajuste.nombre;
      int Tablero = ajuste.IndiceTam;
-     String Dificultad = "Fácil";
+     String Dificultad = getDif(ajuste);
      int MultiNivel = ajuste.IndiceMultiNivel;
      int UsoReloj = ajuste.IndiceReloj;
-     String Posicion = "Derecha";
+     String Posicion = getPosicion(ajuste);
      int Horas = ajuste.HorasG;
      int Minutos = ajuste.MinutosG;
      int Segundos = ajuste.SegundosG;
@@ -515,7 +515,33 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 break; 
                 
         }
-    }    
+    }
+
+    public String getDif(AjustesFutoshiki ajuste){
+    
+        if(ajuste.IndiceNivel ==0){
+        
+            return "Fácil";
+        
+        }else if(ajuste.IndiceNivel==1){
+        
+            return "Intermedio";
+        }
+        
+        return "Díficil";
+    }
+    
+    public String getPosicion(AjustesFutoshiki ajuste){
+    
+        if(ajuste.IndicePosicion==0){
+        
+            return "Derecha";
+        }
+    
+    
+        return "Izquierda";
+    
+    }
     
     
     

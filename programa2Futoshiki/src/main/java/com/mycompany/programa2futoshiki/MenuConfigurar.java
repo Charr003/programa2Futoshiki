@@ -631,7 +631,6 @@ public class MenuConfigurar extends javax.swing.JFrame{
        Horas = Integer.parseInt(txtfHoras.getText());
        Minutos = Integer.parseInt(txtfMinutos.getText());
        Segundos = Integer.parseInt(txtfSegundos.getText());  
-       
        Tablero = getTam(); 
        Dificultad = getDificultad();
        MultiNivel = getMultiNivel(); // 0 : No  1: Si

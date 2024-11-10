@@ -3350,6 +3350,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton8ActionPerformed
 
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
+        cargarTiempo();
         int[][] matrizNumeroCargada = ArchivosXML.cargarMatrizNumeros();
         String[][] matrizSimbolosCargada = ArchivosXML.cargarMatrizSimbolos();
         jugar=true;
@@ -3373,7 +3374,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
             }
         }
-        cargarTiempo();
+        //cargarTiempo();
         System.out.println("se cargo la partida guardada");
     }//GEN-LAST:event_BotonCargarJuegoActionPerformed
 
@@ -3394,7 +3395,7 @@ public class Frame10x10 extends javax.swing.JFrame {
            
                 //reiniciarTiempo();
                 esCronometro = true;
-                tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
+                //tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
                 timer.start();   
            
            
@@ -3408,7 +3409,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 SegundosTiempo.setText(String.format("%02d", segundos));
            }
            
-           tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
+           //tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
            timer.start();
                        
         }else{
@@ -3733,8 +3734,19 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         if(resultado == JOptionPane.YES_OPTION){
         
-            timer.start();
-            ValidoTop = false;
+            if(ModoTiempo==1){
+            
+                ModoTiempo=2;
+                //timer.start();
+                ValidoTop = false;
+            
+            
+            }else{
+            
+                 //timer.start();
+                 ModoTiempo=1;
+                 ValidoTop = false;
+            }
         }else{
             ValidoTop = false;
             setVisible(false);
@@ -3766,7 +3778,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         
         int [] valores = archivoXML.restaurarValoresTiempo();
         
-        if (valores != null && valores.length == 4){
+        if (valores != null){
             horas = valores[0];
             minutos = valores[1];
             segundos = valores[2];
