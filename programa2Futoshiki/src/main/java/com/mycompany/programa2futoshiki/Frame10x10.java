@@ -102,7 +102,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 if(esCronometro){
                     // Lógica para cuenta hacia adelante
                     tempSeg++;
-                    
+                                  
                     if(tempSeg == 60){
                         
                         tempSeg = 0;
@@ -116,13 +116,15 @@ public class Frame10x10 extends javax.swing.JFrame {
                     }
 
                     // Validacion del cronometro, revisar si se alcanzado el limite de tiempo: 10 mins
+                    
                     if(tempMins == minutos && tempSeg == segundos){
                         detenerTiempo("Se ha acabado el tiempo del cronómetro.");
                     }
 
                 }else{
                     // Lógica para cuenta hacia atras
-                    if(segundos == 0) {
+                  
+                    if(segundos == 0){
                         
                         if(minutos == 0){
                             
@@ -141,13 +143,21 @@ public class Frame10x10 extends javax.swing.JFrame {
 
                 // Actualizar el label de tiempo
                 if(ModoTiempo==1){
+                    
                     HorasTiempo.setText(String.format("%2d", horas));
                     MinutosTiempo.setText(String.format("%2d", minutos));
                     SegundosTiempo.setText(String.format("%02d", segundos));
-                }else{
+                }else if(ModoTiempo==0){
+                    
                     HorasTiempo.setText(String.format("%2d", tempHora));
                     MinutosTiempo.setText(String.format("%2d", tempMins));
                     SegundosTiempo.setText(String.format("%02d", tempSeg));       
+                }else{
+                
+                    HorasTiempo.setText("");
+                    MinutosTiempo.setText("");
+                    SegundosTiempo.setText("");  
+                
                 }    
             }
         });     
@@ -2722,12 +2732,10 @@ public class Frame10x10 extends javax.swing.JFrame {
 
         HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        HorasTiempo.setText("0");
         getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 680, 49, 65));
 
         MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        MinutosTiempo.setText("0");
         MinutosTiempo.setAutoscrolls(false);
         MinutosTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2738,7 +2746,6 @@ public class Frame10x10 extends javax.swing.JFrame {
 
         SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        SegundosTiempo.setText("0");
         SegundosTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SegundosTiempoActionPerformed(evt);
@@ -3735,8 +3742,12 @@ public class Frame10x10 extends javax.swing.JFrame {
         if(resultado == JOptionPane.YES_OPTION){
         
             if(ModoTiempo==1){
-            
-                ModoTiempo=2;
+                
+                horas = tiempoTranscurridoSegundos / 3600;
+                minutos = (tiempoTranscurridoSegundos % 3600) / 60;
+                segundos = tiempoTranscurridoSegundos % 60;
+                
+                ModoTiempo=0;
                 //timer.start();
                 ValidoTop = false;
             
@@ -3744,7 +3755,7 @@ public class Frame10x10 extends javax.swing.JFrame {
             }else{
             
                  //timer.start();
-                 ModoTiempo=1;
+                 ModoTiempo=3;
                  ValidoTop = false;
             }
         }else{
