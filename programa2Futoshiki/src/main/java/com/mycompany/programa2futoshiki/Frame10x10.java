@@ -2759,13 +2759,14 @@ public class Frame10x10 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 680, 50, 65));
 
-        BorrarBoton.setText("Borrar");
+        BorrarBoton.setIcon(new javax.swing.ImageIcon("C:\\Users\\jxdga\\Documents\\GitHub\\programa2Futoshiki\\programa2Futoshiki\\src\\main\\java\\com\\mycompany\\programa2futoshiki\\borrador.jpg")); // NOI18N
+        BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BorrarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 35, -1, -1));
+        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 40, -1, 40));
 
         jLabel2.setText("JUGADOR:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, 38));
