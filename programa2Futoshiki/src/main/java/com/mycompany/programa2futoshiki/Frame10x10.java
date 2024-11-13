@@ -3606,6 +3606,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         else{
             botones[fila][columna].setForeground(Color.RED);
         }
+        boolean fin=juegoTerminado(matrizNumeros);
         }
         
     }
@@ -3630,7 +3631,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         int columna2=columna*2-1;
         if (columna>=0 && matrizSimbolos[fila*2][columna2]!=""){
             String simbolo=matrizSimbolos[fila][columna2];
-            System.out.println(numero+" -- "+matrizNumeros[fila][columna+1]);
             if (simbolo=="<"){
                 if (matrizNumeros[fila][columna+1]<numero){
                     error= true;
@@ -3644,7 +3644,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
         if (fila>=0 && matrizSimbolos[(fila*2)][columna2]!=""){
             String simbolo=matrizSimbolos[(fila*2)][columna2];
-            System.out.println(numero+" -- "+matrizNumeros[fila+1][columna]);
             if (simbolo=="<"){
                 if (matrizNumeros[fila+1][columna]<numero){
                     error= true;
@@ -3658,8 +3657,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
         if (columna-1>=0 && matrizSimbolos[fila*2][columna2-2]!=""){
             String simbolo=matrizSimbolos[fila][columna2-2];
-            System.out.println(simbolo);
-            System.out.println(matrizNumeros[fila][columna-1]+" -- "+numero);
             if (simbolo=="<"){
                 if (matrizNumeros[fila][columna-1]>numero){
                     error= true;
@@ -3673,8 +3670,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
         if (fila-1>=0 && matrizSimbolos[(fila*2)-2][columna2]!=""){
             String simbolo=matrizSimbolos[(fila*2)-2][columna2];
-            System.out.println(simbolo);
-            System.out.println(matrizNumeros[fila-1][columna]+" -- "+numero);
             if (simbolo=="<"){
                 if (matrizNumeros[fila-1][columna]>numero){
                     error= true;
@@ -3803,6 +3798,21 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
     
     }    
+    
+    public boolean juegoTerminado(int[][] matriz){
+        boolean fin=true;
+        int size = matriz.length;
+        for (int j = 0; j < size; j++) {
+            for (int i = 0; i < size; i++) {
+                if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("0")){
+                    fin=false;
+                }else{
+                    System.out.println(botones[j][i].getText());
+                }
+            }
+        }
+        return fin;
+    }
     
     
         public static void main(String args[]) {
