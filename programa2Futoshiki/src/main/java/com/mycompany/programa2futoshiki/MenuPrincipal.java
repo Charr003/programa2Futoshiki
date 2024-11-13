@@ -240,7 +240,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         }else{
         
-             new Frame10x10("Facíl",0,0,"Derecha","Anónimo",null,0,0,0).setVisible(true);
+             new Frame3x3("Facíl",0,0,"Derecha","Anónimo",null,0,0,0).setVisible(true);
              setVisible(false); 
         
         }

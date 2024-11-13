@@ -3477,7 +3477,7 @@ public class Frame10x10 extends javax.swing.JFrame {
 
     }
     
-        String juego="Juego";
+        String juego="Juego10x10";
         System.out.println(Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
