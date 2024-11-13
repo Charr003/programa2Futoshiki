@@ -3598,15 +3598,13 @@ public class Frame10x10 extends javax.swing.JFrame {
             matrizNumeros[fila][columna]=num;
         }
         boolean esta=verificarMatriz(matrizNumeros,fila,columna,num);
-        boolean esta2=verificarMatriz2(matrizNumeros,fila,columna,num);
-        if (esta==false && esta2==false){
+        if (esta==false){
             matrizNumeros[fila][columna]=num;
             botones[fila][columna].setForeground(Color.GREEN);
         }
         else{
             botones[fila][columna].setForeground(Color.RED);
         }
-        boolean fin=juegoTerminado(matrizNumeros);
         }
         
     }
