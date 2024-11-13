@@ -3612,7 +3612,8 @@ public class Frame10x10 extends javax.swing.JFrame {
             botones[fila][columna].setForeground(Color.RED);
         }
         boolean finJuego=juegoTerminado(matrizNumeros);
-        if (finJuego){
+        if (!finJuego){
+            JOptionPane.showMessageDialog(null, "Juego Terminado");
             if (Multinivel==0){
                 new MenuPrincipal().setVisible(true);
                 this.dispose();
