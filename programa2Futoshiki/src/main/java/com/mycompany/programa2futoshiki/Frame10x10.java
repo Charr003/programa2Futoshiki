@@ -27,6 +27,9 @@ public class Frame10x10 extends javax.swing.JFrame {
     private int ModoTiempo = 0;
     private boolean esCronometro = true;
     private String Dificultad;
+    private int Multinivel;
+    private String Posicion;
+    private Usuario usuario2;
     int tempHora = 0;
     int tempMins = 0;
     int tempSeg= 0;
@@ -89,6 +92,9 @@ public class Frame10x10 extends javax.swing.JFrame {
         segundos = Segundos;
         ModoTiempo = usoreloj;
         Dificultad = dificultad;
+        Multinivel = multinivel;
+        Posicion = posicion;
+        usuario2 = usuario;
 
         
         timer = new Timer(1000, new ActionListener(){
@@ -3605,6 +3611,15 @@ public class Frame10x10 extends javax.swing.JFrame {
         else{
             botones[fila][columna].setForeground(Color.RED);
         }
+        boolean finJuego=juegoTerminado(matrizNumeros);
+        if (finJuego){
+            if (Multinivel==0){
+                new MenuPrincipal().setVisible(true);
+                this.dispose();
+            }else{
+                new Frame10x10("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+            }
+        }
         }
         
     }
@@ -3798,14 +3813,12 @@ public class Frame10x10 extends javax.swing.JFrame {
     }    
     
     public boolean juegoTerminado(int[][] matriz){
-        boolean fin=true;
+        boolean fin=false;
         int size = matriz.length;
         for (int j = 0; j < size; j++) {
             for (int i = 0; i < size; i++) {
                 if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("0")){
-                    fin=false;
-                }else{
-                    System.out.println(botones[j][i].getText());
+                    fin=true;
                 }
             }
         }
