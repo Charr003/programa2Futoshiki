@@ -288,7 +288,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonConfigurarActionPerformed
 
     private void BotonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistroActionPerformed
-        // TODO add your handling code here:
+        
+        
+        new MenuRegistro().setVisible(true);
+        
 
     }//GEN-LAST:event_BotonRegistroActionPerformed
 
@@ -488,6 +491,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         switch(Tablero){
             
             case 0 : // 3x3
+                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos).setVisible(true);
+                setVisible(false);
                 break;
             
             case 1: // 4x4
