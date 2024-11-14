@@ -783,7 +783,7 @@ public class Frame3x3 extends javax.swing.JFrame {
 
     }
     
-        String juego="Juego10x10";
+        String juego="Juego3x3";
         System.out.println(Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
@@ -911,7 +911,8 @@ public class Frame3x3 extends javax.swing.JFrame {
             matrizNumeros[fila][columna]=num;
         }
         boolean esta=verificarMatriz(matrizNumeros,fila,columna,num);
-        if (esta==false){
+        boolean esta2=verificarMatriz2(matrizNumeros,fila,columna,num);
+        if (esta==false && esta2==false){
             matrizNumeros[fila][columna]=num;
             botones[fila][columna].setForeground(Color.GREEN);
         }
@@ -919,15 +920,23 @@ public class Frame3x3 extends javax.swing.JFrame {
             botones[fila][columna].setForeground(Color.RED);
         }
         boolean finJuego=juegoTerminado(matrizNumeros);
-        if (!finJuego){
+        if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
             if (Multinivel==0){
                 new MenuPrincipal().setVisible(true);
                 this.dispose();
             }else{
-                new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+                if (Dificultad=="Facil"){
+                    new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+                }else if(Dificultad=="Intermedio"){
+                    new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+                }else{
+                    new MenuPrincipal().setVisible(true);
+                    this.dispose();
+                }
             }
         }
+        
         }
         
     }
@@ -947,63 +956,64 @@ public class Frame3x3 extends javax.swing.JFrame {
         }
         return false;
     }
-    public boolean verificarMatriz2(int[][] matriz,int fila, int columna,int numero){
-        boolean error=false;
-        int columna2=columna*2-1;
-        if (columna>=0 && matrizSimbolos[fila*2][columna2]!=""){
-            String simbolo=matrizSimbolos[fila][columna2];
-            if (simbolo=="<"){
-                if (matrizNumeros[fila][columna+1]<numero){
-                    error= true;
-                }
-            }else{
-                if (matrizNumeros[fila][columna+1]>0 && matrizNumeros[fila][columna+1]>numero){
-                    error= true;
-                }
+    public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
+    boolean error = false;
+    
+    if (columna >= 0 && columna+1 < 3 && !matrizSimbolos[fila * 2][columna].equals("")) {
+        String simbolo = matrizSimbolos[fila*2][columna];
+        if (simbolo.equals("<")) {
+            if (matrizNumeros[fila][columna + 1] < numero) {
+                error = true;
             }
-            
-        }
-        if (fila>=0 && matrizSimbolos[(fila*2)][columna2]!=""){
-            String simbolo=matrizSimbolos[(fila*2)][columna2];
-            if (simbolo=="<"){
-                if (matrizNumeros[fila+1][columna]<numero){
-                    error= true;
-                }
-            }else{
-                if (matrizNumeros[fila+1][columna]>0 && matrizNumeros[fila+1][columna]>numero){
-                    error= true;
-                }
+        } else {
+            if (matrizNumeros[fila][columna + 1] > 0 && matrizNumeros[fila][columna + 1] > numero) {
+                error = true;
             }
-            
         }
-        if (columna-1>=0 && matrizSimbolos[fila*2][columna2-2]!=""){
-            String simbolo=matrizSimbolos[fila][columna2-2];
-            if (simbolo=="<"){
-                if (matrizNumeros[fila][columna-1]>numero){
-                    error= true;
-                }
-            }else{
-                if (matrizNumeros[fila][columna-1]>0 && matrizNumeros[fila][columna-1]<numero){
-                    error= true;
-                }
-            }
-            
-        }
-        if (fila-1>=0 && matrizSimbolos[(fila*2)-2][columna2]!=""){
-            String simbolo=matrizSimbolos[(fila*2)-2][columna2];
-            if (simbolo=="<"){
-                if (matrizNumeros[fila-1][columna]>numero){
-                    error= true;
-                }
-            }else{
-                if (matrizNumeros[fila-1][columna]>0 && matrizNumeros[fila-1][columna]<numero){
-                    error= true;
-                }
-            }
-            
-        }
-        return error;
     }
+    
+    if (columna-1 >= 0 && !matrizSimbolos[fila * 2][columna - 1].equals("")) {
+        String simbolo = matrizSimbolos[fila*2][columna - 1];
+        if (simbolo.equals("<")) {
+            if (matrizNumeros[fila*2-1][columna - 1] > numero) {
+                error = true;
+            }
+        } else {
+            if (matrizNumeros[fila][columna - 1] > 0 && matrizNumeros[fila][columna - 1] < numero) {
+                error = true;
+            }
+        }
+    }
+    
+    if (fila*2-1 >= 0 && !matrizSimbolos[(fila * 2-1)][columna].equals("")) {
+        String simbolo = matrizSimbolos[(fila * 2 - 1)][columna];
+        if (simbolo.equals("<")) {
+            if (matrizNumeros[fila * 2 - 1][columna] > numero) {
+                error = true;
+            }
+        } else {
+            if (matrizNumeros[fila * 2 - 1][columna] > 0 && matrizNumeros[fila * 2 - 1][columna] < numero) {
+                error = true;
+            }
+        }
+    }
+
+    if (fila*2+1 >= 0 && fila*2+1 < 5 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
+        String simbolo = matrizSimbolos[fila * 2+1][columna];
+        if (simbolo.equals("<")) {
+            if (matrizNumeros[fila * 2 + 1][columna] < numero) {
+                error = true;
+            }
+        } else {
+            if (matrizNumeros[fila * 2 + 1][columna] > 0 && matrizNumeros[fila * 2 + 1][columna] > numero) {
+                error = true;
+            }
+        }
+    }
+
+    return error;
+}
+
     public void imprimirMatriz(int[][] matriz){
         int size = matriz.length;
         String linea;
@@ -1121,12 +1131,12 @@ public class Frame3x3 extends javax.swing.JFrame {
     }    
     
     public boolean juegoTerminado(int[][] matriz){
-        boolean fin=false;
+        boolean fin=true;
         int size = matriz.length;
         for (int j = 0; j < size; j++) {
             for (int i = 0; i < size; i++) {
-                if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("0")){
-                    fin=true;
+                if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("")){
+                    fin=false;
                 }
             }
         }
