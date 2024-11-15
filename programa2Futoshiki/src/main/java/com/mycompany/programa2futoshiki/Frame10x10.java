@@ -3682,24 +3682,24 @@ public class Frame10x10 extends javax.swing.JFrame {
     if (fila*2-1 >= 0 && !matrizSimbolos[(fila * 2-1)][columna].equals("")) {
         String simbolo = matrizSimbolos[(fila * 2 - 1)][columna];
         if (simbolo.equals("<")) {
-            if (matrizNumeros[fila * 2 - 1][columna] > numero) {
+            if (matrizNumeros[fila - 1][columna] > numero) {
                 error = true;
             }
         } else {
-            if (matrizNumeros[fila * 2 - 1][columna] > 0 && matrizNumeros[fila * 2 - 1][columna] < numero) {
+            if (matrizNumeros[fila - 1][columna] > 0 && matrizNumeros[fila- 1][columna] < numero) {
                 error = true;
             }
         }
     }
 
-    if (fila*2+1 >= 0 && fila*2+1 < 20 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
+    if (fila*2+1 >= 0 && fila*2+1 < 19 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
-            if (matrizNumeros[fila * 2 + 1][columna] < numero) {
+            if (matrizNumeros[fila + 1][columna] < numero) {
                 error = true;
             }
         } else {
-            if (matrizNumeros[fila * 2 + 1][columna] > 0 && matrizNumeros[fila * 2 + 1][columna] > numero) {
+            if (matrizNumeros[fila + 1][columna] > 0 && matrizNumeros[fila + 1][columna] > numero) {
                 error = true;
             }
         }
@@ -3824,12 +3824,12 @@ public class Frame10x10 extends javax.swing.JFrame {
     }    
     
     public boolean juegoTerminado(int[][] matriz){
-        boolean fin=false;
+        boolean fin=true;
         int size = matriz.length;
         for (int j = 0; j < size; j++) {
             for (int i = 0; i < size; i++) {
-                if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("0")){
-                    fin=true;
+                if (botones[j][i].getForeground().equals(Color.RED) || botones[j][i].getText().equals("")){
+                    fin=false;
                 }
             }
         }

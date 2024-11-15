@@ -959,7 +959,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
-    if (columna >= 0 && columna+1 < 3 && !matrizSimbolos[fila * 2][columna].equals("")) {
+    if (columna >= 0 && columna+1 < 4 && !matrizSimbolos[fila * 2][columna].equals("")) {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero) {
@@ -988,11 +988,11 @@ public class Frame3x3 extends javax.swing.JFrame {
     if (fila*2-1 >= 0 && !matrizSimbolos[(fila * 2-1)][columna].equals("")) {
         String simbolo = matrizSimbolos[(fila * 2 - 1)][columna];
         if (simbolo.equals("<")) {
-            if (matrizNumeros[fila * 2 - 1][columna] > numero) {
+            if (matrizNumeros[fila - 1][columna] > numero) {
                 error = true;
             }
         } else {
-            if (matrizNumeros[fila * 2 - 1][columna] > 0 && matrizNumeros[fila * 2 - 1][columna] < numero) {
+            if (matrizNumeros[fila - 1][columna] > 0 && matrizNumeros[fila - 1][columna] < numero) {
                 error = true;
             }
         }
@@ -1001,11 +1001,11 @@ public class Frame3x3 extends javax.swing.JFrame {
     if (fila*2+1 >= 0 && fila*2+1 < 5 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
-            if (matrizNumeros[fila * 2 + 1][columna] < numero) {
+            if (matrizNumeros[fila + 1][columna] < numero) {
                 error = true;
             }
         } else {
-            if (matrizNumeros[fila * 2 + 1][columna] > 0 && matrizNumeros[fila * 2 + 1][columna] > numero) {
+            if (matrizNumeros[fila + 1][columna] > 0 && matrizNumeros[fila + 1][columna] > numero) {
                 error = true;
             }
         }
