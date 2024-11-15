@@ -26,7 +26,10 @@ public class MenuTop10 extends javax.swing.JFrame {
     public MenuTop10() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        //Prueba
         cargarAjustes();
+       
         String topFacil = mostrarTop10("3x3", "Fácil");
         
         System.out.println(topFacil);
@@ -84,7 +87,7 @@ public class MenuTop10 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    private static ArrayList<AjustesTop10> jugadores = new ArrayList<>();
+    private ArrayList<AjustesTop10> jugadores = new ArrayList<>();
     
     
     public void AgregarLista(AjustesTop10 prefs){
@@ -117,7 +120,7 @@ public class MenuTop10 extends javax.swing.JFrame {
         }
     } 
     
-    private static String mostrarTop10(String tablero, String dificultad){
+    public String mostrarTop10(String tablero, String dificultad){
         
 
         StringBuilder resultado = new StringBuilder();
