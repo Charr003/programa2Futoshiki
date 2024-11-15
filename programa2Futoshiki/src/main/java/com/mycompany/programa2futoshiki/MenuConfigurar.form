@@ -43,116 +43,8 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="134" max="32767" attributes="0"/>
-              <Component id="txtTitulo" min="-2" pref="373" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="tabPanelReloj" alignment="1" min="-2" pref="525" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblTamaño" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNivel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblMultiNivel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblReloj" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblReloj1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblJugador" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="cboxPosicion" pref="234" max="32767" attributes="0"/>
-                              <Component id="cboxReloj" pref="234" max="32767" attributes="0"/>
-                              <Component id="cboxMultiNivel" pref="234" max="32767" attributes="0"/>
-                              <Component id="cboxNivel" pref="234" max="32767" attributes="0"/>
-                              <Component id="cboxTamaño" max="32767" attributes="0"/>
-                              <Component id="txtfUsuario" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="Guardar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                          <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="txtTitulo" min="-2" pref="88" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboxTamaño" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblNivel" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboxNivel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblMultiNivel" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboxMultiNivel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblReloj" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboxReloj" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblReloj1" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboxPosicion" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblJugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtfUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="tabPanelReloj" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace pref="32" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="botonJugar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="txtTitulo">
@@ -163,6 +55,11 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n de la Partida"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="20" width="373" height="88"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTama&#xf1;o">
       <Properties>
@@ -171,6 +68,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Tama&#xf1;o de la cuadr&#xed;cula:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="80" y="100" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblNivel">
       <Properties>
@@ -179,6 +81,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Nivel del juego:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="190" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMultiNivel">
       <Properties>
@@ -187,6 +94,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Multinivel:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="270" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="botonJugar">
       <Properties>
@@ -198,6 +110,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonJugarActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="270" y="700" width="140" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblReloj">
       <Properties>
@@ -206,6 +123,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Uso del reloj:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="350" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblReloj1">
       <Properties>
@@ -214,6 +136,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Posici&#xf3;n de los d&#xed;gitos:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="80" y="430" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cboxTama&#xf1;o">
       <Properties>
@@ -240,6 +167,11 @@
         <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxTama&#xf1;o.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;            &#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="110" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cboxNivel">
       <Properties>
@@ -261,6 +193,11 @@
         <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxNivel.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="190" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cboxMultiNivel">
       <Properties>
@@ -281,6 +218,11 @@
         <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxMultiNivel.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="270" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cboxReloj">
       <Properties>
@@ -302,6 +244,11 @@
         <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxReloj.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="350" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cboxPosicion">
       <Properties>
@@ -322,6 +269,11 @@
         <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="cboxPosicion.setRenderer(new javax.swing.ListCellRenderer&lt;String&gt;() {&#xa;&#xa;            @Override&#xa;            public Component getListCellRendererComponent(JList&lt;? extends String&gt; list, String value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;                JLabel label = new JLabel(value);&#xa;                label.setFont(new java.awt.Font(&quot;Dialog&quot;, 0, 14));&#xa;&#xa;                if (index == 0) {&#xa;                    label.setForeground(Color.RED);&#xa;                } else {&#xa;                    label.setForeground(Color.BLACK);&#xa;                }&#xa;&#xa;                if (isSelected) {&#xa;                    label.setBackground(Color.LIGHT_GRAY);&#xa;                    label.setOpaque(true);&#xa;                }&#xa;                &#xa;                return label;&#xa;            }&#xa;        });"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="430" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="botonSalir">
       <Properties>
@@ -333,6 +285,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonSalirActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="545" y="33" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblJugador">
       <Properties>
@@ -341,6 +298,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Nombre de Jugador:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="500" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtfUsuario">
       <Properties>
@@ -348,6 +310,11 @@
           <Font name="Dialog" size="14" style="0"/>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="510" width="234" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="Guardar">
       <Properties>
@@ -359,6 +326,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="730" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -370,11 +342,21 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="730" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JTabbedPane" name="tabPanelReloj">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="80" y="550" width="525" height="130"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -492,12 +474,32 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="95" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
         </Container>
       </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="603" y="686" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
     </Container>
   </SubComponents>
 </Form>

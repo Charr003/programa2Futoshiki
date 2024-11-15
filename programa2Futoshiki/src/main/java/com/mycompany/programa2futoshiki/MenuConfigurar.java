@@ -92,6 +92,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
         txtfMinutos = new javax.swing.JTextField();
         txtfSegundos = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         cboxTamaño2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxTamaño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -102,19 +103,24 @@ public class MenuConfigurar extends javax.swing.JFrame{
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtTitulo.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
         txtTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTitulo.setText("Configuración de la Partida");
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 373, 88));
 
         lblTamaño.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblTamaño.setText("Tamaño de la cuadrícula:");
+        getContentPane().add(lblTamaño, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
         lblNivel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblNivel.setText("Nivel del juego:");
+        getContentPane().add(lblNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
 
         lblMultiNivel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblMultiNivel.setText("Multinivel:");
+        getContentPane().add(lblMultiNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
         botonJugar.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         botonJugar.setText("Jugar");
@@ -123,12 +129,15 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 botonJugarActionPerformed(evt);
             }
         });
+        getContentPane().add(botonJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 700, 140, -1));
 
         lblReloj.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblReloj.setText("Uso del reloj:");
+        getContentPane().add(lblReloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
 
         lblReloj1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblReloj1.setText("Posición de los dígitos:");
+        getContentPane().add(lblReloj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
 
         cboxTamaño.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxTamaño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3x3", "4x4", "5x5", "6x6", "7x7", "8x8", "9x9", "10x10" }));
@@ -158,6 +167,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 return label;
             }
         });
+        getContentPane().add(cboxTamaño, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 234, -1));
 
         cboxNivel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fácil", "Intermedio", "Difícil" }));
@@ -187,6 +197,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 return label;
             }
         });
+        getContentPane().add(cboxNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 234, -1));
 
         cboxMultiNivel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxMultiNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No ", "Si" }));
@@ -216,6 +227,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 return label;
             }
         });
+        getContentPane().add(cboxMultiNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 234, -1));
 
         cboxReloj.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxReloj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cronómetro ", "Temporizador", "No" }));
@@ -245,6 +257,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 return label;
             }
         });
+        getContentPane().add(cboxReloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 234, -1));
 
         cboxPosicion.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         cboxPosicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Derecha", "Izquierda" }));
@@ -274,6 +287,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 return label;
             }
         });
+        getContentPane().add(cboxPosicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 234, -1));
 
         botonSalir.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonSalir.setText("Salir");
@@ -282,11 +296,14 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 botonSalirActionPerformed(evt);
             }
         });
+        getContentPane().add(botonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 33, -1, -1));
 
         lblJugador.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblJugador.setText("Nombre de Jugador:");
+        getContentPane().add(lblJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
 
         txtfUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        getContentPane().add(txtfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 234, -1));
 
         Guardar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         Guardar.setText("Guardar");
@@ -295,6 +312,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 GuardarActionPerformed(evt);
             }
         });
+        getContentPane().add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 730, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton1.setText("Cargar");
@@ -303,6 +321,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 730, -1, -1));
 
         tabPanelReloj.setEnabled(false);
 
@@ -374,98 +393,25 @@ public class MenuConfigurar extends javax.swing.JFrame{
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 73, Short.MAX_VALUE)
+            .addGap(0, 95, Short.MAX_VALUE)
         );
 
         tabPanelReloj.addTab("", jPanel4);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(134, Short.MAX_VALUE)
-                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(botonSalir)
-                .addGap(29, 29, 29))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tabPanelReloj, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblTamaño)
-                                .addComponent(lblNivel)
-                                .addComponent(lblMultiNivel)
-                                .addComponent(lblReloj)
-                                .addComponent(lblReloj1)
-                                .addComponent(lblJugador))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cboxPosicion, 0, 234, Short.MAX_VALUE)
-                                .addComponent(cboxReloj, 0, 234, Short.MAX_VALUE)
-                                .addComponent(cboxMultiNivel, 0, 234, Short.MAX_VALUE)
-                                .addComponent(cboxNivel, 0, 234, Short.MAX_VALUE)
-                                .addComponent(cboxTamaño, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtfUsuario)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(28, 28, 28)
-                            .addComponent(Guardar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jButton1)
-                            .addGap(56, 56, 56)
-                            .addComponent(botonJugar))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        getContentPane().add(tabPanelReloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 525, 130));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(botonSalir))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTamaño)
-                            .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNivel)
-                            .addComponent(cboxNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMultiNivel)
-                            .addComponent(cboxMultiNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblReloj)
-                            .addComponent(cboxReloj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblReloj1)
-                            .addComponent(cboxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblJugador)
-                            .addComponent(txtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(31, 31, 31)
-                .addComponent(tabPanelReloj, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Guardar)
-                            .addComponent(jButton1))
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(botonJugar)
-                        .addGap(57, 57, 57))))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(603, 686, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -745,21 +691,34 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 break;
             
             case 1: // 4x4
+                new Frame4x4(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
                 break;
             
             case 2: // 5x5
+                new Frame5x5(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
                 break;
                 
             case 3: // 6x6
+                new Frame6x6(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
                 break;
                 
             case 4: // 7x7
+                new Frame7x7(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
                 break;
             
             case 5: // 8x8
+                new Frame8x8(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
                 break;
             
             case 6: // 9x9
+                new Frame9x9(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break;
 
                 
             case 7: // 10x10    
@@ -788,6 +747,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblJugador;

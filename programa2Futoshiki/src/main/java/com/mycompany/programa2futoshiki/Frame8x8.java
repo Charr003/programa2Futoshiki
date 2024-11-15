@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author jxdga
  */
-public class Frame10x10 extends javax.swing.JFrame {
+public class Frame8x8 extends javax.swing.JFrame {
     
     ArchivosXML archivoXML = new ArchivosXML();
     MenuTop10 menuTop = new MenuTop10();
@@ -84,7 +84,7 @@ public class Frame10x10 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
-    public Frame10x10(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
+    public Frame8x8(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
@@ -191,8 +191,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[0][5] = Boton0_5;
         botones[0][6] = Boton0_6;
         botones[0][7] = Boton0_7;
-        botones[0][8] = Boton0_8;
-        botones[0][9] = Boton0_9;
 
         botones[1][0] = Boton1_0;
         botones[1][1] = Boton1_1;
@@ -202,8 +200,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[1][5] = Boton1_5;
         botones[1][6] = Boton1_6;
         botones[1][7] = Boton1_7;
-        botones[1][8] = Boton1_8;
-        botones[1][9] = Boton1_9;
         
         botones[2][0] = Boton2_0;
         botones[2][1] = Boton2_1;
@@ -213,8 +209,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[2][5] = Boton2_5;
         botones[2][6] = Boton2_6;
         botones[2][7] = Boton2_7;
-        botones[2][8] = Boton2_8;
-        botones[2][9] = Boton2_9;
         
         botones[3][0] = Boton3_0;
         botones[3][1] = Boton3_1;
@@ -224,8 +218,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[3][5] = Boton3_5;
         botones[3][6] = Boton3_6;
         botones[3][7] = Boton3_7;
-        botones[3][8] = Boton3_8;
-        botones[3][9] = Boton3_9;
         
         botones[4][0] = Boton4_0;
         botones[4][1] = Boton4_1;
@@ -235,8 +227,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[4][5] = Boton4_5;
         botones[4][6] = Boton4_6;
         botones[4][7] = Boton4_7;
-        botones[4][8] = Boton4_8;
-        botones[4][9] = Boton4_9;
         
         botones[5][0] = Boton5_0;
         botones[5][1] = Boton5_1;
@@ -246,8 +236,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[5][5] = Boton5_5;
         botones[5][6] = Boton5_6;
         botones[5][7] = Boton5_7;
-        botones[5][8] = Boton5_8;
-        botones[5][9] = Boton5_9;
         
         botones[6][0] = Boton6_0;
         botones[6][1] = Boton6_1;
@@ -257,8 +245,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[6][5] = Boton6_5;
         botones[6][6] = Boton6_6;
         botones[6][7] = Boton6_7;
-        botones[6][8] = Boton6_8;
-        botones[6][9] = Boton6_9;
         
         botones[7][0] = Boton7_0;
         botones[7][1] = Boton7_1;
@@ -268,30 +254,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         botones[7][5] = Boton7_5;
         botones[7][6] = Boton7_6;
         botones[7][7] = Boton7_7;
-        botones[7][8] = Boton7_8;
-        botones[7][9] = Boton7_9;
-        
-        botones[8][0] = Boton8_0;
-        botones[8][1] = Boton8_1;
-        botones[8][2] = Boton8_2;
-        botones[8][3] = Boton8_3;
-        botones[8][4] = Boton8_4;
-        botones[8][5] = Boton8_5;
-        botones[8][6] = Boton8_6;
-        botones[8][7] = Boton8_7;
-        botones[8][8] = Boton8_8;
-        botones[8][9] = Boton8_9;
-        
-        botones[9][0] = Boton9_0;
-        botones[9][1] = Boton9_1;
-        botones[9][2] = Boton9_2;
-        botones[9][3] = Boton9_3;
-        botones[9][4] = Boton9_4;
-        botones[9][5] = Boton9_5;
-        botones[9][6] = Boton9_6;
-        botones[9][7] = Boton9_7;
-        botones[9][8] = Boton9_8;
-        botones[9][9] = Boton9_9;
     }
     
     private void inicializarTexto(){
@@ -304,8 +266,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[0][4] = Texto0_4;
     texto[0][5] = Texto0_5;
     texto[0][6] = Texto0_6;
-    texto[0][7] = Texto0_7;
-    texto[0][8] = Texto0_8;
 
     texto[1][0] = Texto1_0;
     texto[1][1] = Texto1_1;
@@ -315,8 +275,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[1][5] = Texto1_5;
     texto[1][6] = Texto1_6;
     texto[1][7] = Texto1_7;
-    texto[1][8] = Texto1_8;
-    texto[1][9] = Texto1_9;
 
     texto[2][0] = Texto2_0;
     texto[2][1] = Texto2_1;
@@ -325,8 +283,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[2][4] = Texto2_4;
     texto[2][5] = Texto2_5;
     texto[2][6] = Texto2_6;
-    texto[2][7] = Texto2_7;
-    texto[2][8] = Texto2_8;
 
     texto[3][0] = Texto3_0;
     texto[3][1] = Texto3_1;
@@ -336,9 +292,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[3][5] = Texto3_5;
     texto[3][6] = Texto3_6;
     texto[3][7] = Texto3_7;
-    texto[3][8] = Texto3_8;
-    texto[3][9] = Texto3_9;
-
+    
     texto[4][0] = Texto4_0;
     texto[4][1] = Texto4_1;
     texto[4][2] = Texto4_2;
@@ -346,8 +300,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[4][4] = Texto4_4;
     texto[4][5] = Texto4_5;
     texto[4][6] = Texto4_6;
-    texto[4][7] = Texto4_7;
-    texto[4][8] = Texto4_8;
 
     texto[5][0] = Texto5_0;
     texto[5][1] = Texto5_1;
@@ -357,8 +309,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[5][5] = Texto5_5;
     texto[5][6] = Texto5_6;
     texto[5][7] = Texto5_7;
-    texto[5][8] = Texto5_8;
-    texto[5][9] = Texto5_9;
 
     texto[6][0] = Texto6_0;
     texto[6][1] = Texto6_1;
@@ -367,8 +317,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[6][4] = Texto6_4;
     texto[6][5] = Texto6_5;
     texto[6][6] = Texto6_6;
-    texto[6][7] = Texto6_7;
-    texto[6][8] = Texto6_8;
 
     texto[7][0] = Texto7_0;
     texto[7][1] = Texto7_1;
@@ -378,8 +326,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[7][5] = Texto7_5;
     texto[7][6] = Texto7_6;
     texto[7][7] = Texto7_7;
-    texto[7][8] = Texto7_8;
-    texto[7][9] = Texto7_9;
 
     texto[8][0] = Texto8_0;
     texto[8][1] = Texto8_1;
@@ -388,8 +334,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[8][4] = Texto8_4;
     texto[8][5] = Texto8_5;
     texto[8][6] = Texto8_6;
-    texto[8][7] = Texto8_7;
-    texto[8][8] = Texto8_8;
 
     texto[9][0] = Texto9_0;
     texto[9][1] = Texto9_1;
@@ -399,8 +343,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[9][5] = Texto9_5;
     texto[9][6] = Texto9_6;
     texto[9][7] = Texto9_7;
-    texto[9][8] = Texto9_8;
-    texto[9][9] = Texto9_9;
 
     texto[10][0] = Texto10_0;
     texto[10][1] = Texto10_1;
@@ -409,8 +351,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[10][4] = Texto10_4;
     texto[10][5] = Texto10_5;
     texto[10][6] = Texto10_6;
-    texto[10][7] = Texto10_7;
-    texto[10][8] = Texto10_8;
 
     texto[11][0] = Texto11_0;
     texto[11][1] = Texto11_1;
@@ -420,8 +360,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[11][5] = Texto11_5;
     texto[11][6] = Texto11_6;
     texto[11][7] = Texto11_7;
-    texto[11][8] = Texto11_8;
-    texto[11][9] = Texto11_9;
 
     texto[12][0] = Texto12_0;
     texto[12][1] = Texto12_1;
@@ -430,8 +368,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[12][4] = Texto12_4;
     texto[12][5] = Texto12_5;
     texto[12][6] = Texto12_6;
-    texto[12][7] = Texto12_7;
-    texto[12][8] = Texto12_8;
 
     texto[13][0] = Texto13_0;
     texto[13][1] = Texto13_1;
@@ -441,8 +377,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[13][5] = Texto13_5;
     texto[13][6] = Texto13_6;
     texto[13][7] = Texto13_7;
-    texto[13][8] = Texto13_8;
-    texto[13][9] = Texto13_9;
 
     texto[14][0] = Texto14_0;
     texto[14][1] = Texto14_1;
@@ -451,50 +385,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     texto[14][4] = Texto14_4;
     texto[14][5] = Texto14_5;
     texto[14][6] = Texto14_6;
-    texto[14][7] = Texto14_7;
-    texto[14][8] = Texto14_8;
-
-    texto[15][0] = Texto15_0;
-    texto[15][1] = Texto15_1;
-    texto[15][2] = Texto15_2;
-    texto[15][3] = Texto15_3;
-    texto[15][4] = Texto15_4;
-    texto[15][5] = Texto15_5;
-    texto[15][6] = Texto15_6;
-    texto[15][7] = Texto15_7;
-    texto[15][8] = Texto15_8;
-    texto[15][9] = Texto15_9;
-
-    texto[16][0] = Texto16_0;
-    texto[16][1] = Texto16_1;
-    texto[16][2] = Texto16_2;
-    texto[16][3] = Texto16_3;
-    texto[16][4] = Texto16_4;
-    texto[16][5] = Texto16_5;
-    texto[16][6] = Texto16_6;
-    texto[16][7] = Texto16_7;
-    texto[16][8] = Texto16_8;
-
-    texto[17][0] = Texto17_0;
-    texto[17][1] = Texto17_1;
-    texto[17][2] = Texto17_2;
-    texto[17][3] = Texto17_3;
-    texto[17][4] = Texto17_4;
-    texto[17][5] = Texto17_5;
-    texto[17][6] = Texto17_6;
-    texto[17][7] = Texto17_7;
-    texto[17][8] = Texto17_8;
-    texto[17][9] = Texto17_9;
-
-    texto[18][0] = Texto18_0;
-    texto[18][1] = Texto18_1;
-    texto[18][2] = Texto18_2;
-    texto[18][3] = Texto18_3;
-    texto[18][4] = Texto18_4;
-    texto[18][5] = Texto18_5;
-    texto[18][6] = Texto18_6;
-    texto[18][7] = Texto18_7;
-    texto[18][8] = Texto18_8;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -513,8 +403,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton0_5 = new javax.swing.JButton();
         Boton0_6 = new javax.swing.JButton();
         Boton0_7 = new javax.swing.JButton();
-        Boton0_8 = new javax.swing.JButton();
-        Boton0_9 = new javax.swing.JButton();
         Boton1_0 = new javax.swing.JButton();
         Boton1_1 = new javax.swing.JButton();
         Boton1_2 = new javax.swing.JButton();
@@ -523,8 +411,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton1_5 = new javax.swing.JButton();
         Boton1_6 = new javax.swing.JButton();
         Boton1_7 = new javax.swing.JButton();
-        Boton1_8 = new javax.swing.JButton();
-        Boton1_9 = new javax.swing.JButton();
         Boton2_0 = new javax.swing.JButton();
         Boton2_1 = new javax.swing.JButton();
         Boton2_2 = new javax.swing.JButton();
@@ -533,8 +419,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton2_5 = new javax.swing.JButton();
         Boton2_6 = new javax.swing.JButton();
         Boton2_7 = new javax.swing.JButton();
-        Boton2_8 = new javax.swing.JButton();
-        Boton2_9 = new javax.swing.JButton();
         Boton1 = new javax.swing.JButton();
         Boton2 = new javax.swing.JButton();
         Boton3 = new javax.swing.JButton();
@@ -546,8 +430,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton3_5 = new javax.swing.JButton();
         Boton3_6 = new javax.swing.JButton();
         Boton3_7 = new javax.swing.JButton();
-        Boton3_8 = new javax.swing.JButton();
-        Boton3_9 = new javax.swing.JButton();
         Boton4_0 = new javax.swing.JButton();
         Boton4_1 = new javax.swing.JButton();
         Boton4_2 = new javax.swing.JButton();
@@ -556,8 +438,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton4_5 = new javax.swing.JButton();
         Boton4_6 = new javax.swing.JButton();
         Boton4_7 = new javax.swing.JButton();
-        Boton4_8 = new javax.swing.JButton();
-        Boton4_9 = new javax.swing.JButton();
         Boton5_0 = new javax.swing.JButton();
         Boton5_1 = new javax.swing.JButton();
         Boton5_2 = new javax.swing.JButton();
@@ -566,8 +446,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton5_5 = new javax.swing.JButton();
         Boton5_6 = new javax.swing.JButton();
         Boton5_7 = new javax.swing.JButton();
-        Boton5_8 = new javax.swing.JButton();
-        Boton5_9 = new javax.swing.JButton();
         Boton6_0 = new javax.swing.JButton();
         Boton6_1 = new javax.swing.JButton();
         Boton6_2 = new javax.swing.JButton();
@@ -576,11 +454,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton6_5 = new javax.swing.JButton();
         Boton6_6 = new javax.swing.JButton();
         Boton6_7 = new javax.swing.JButton();
-        Boton6_8 = new javax.swing.JButton();
-        Boton6_9 = new javax.swing.JButton();
         Boton7_0 = new javax.swing.JButton();
-        Boton8_0 = new javax.swing.JButton();
-        Boton9_0 = new javax.swing.JButton();
         Texto0_0 = new javax.swing.JLabel();
         Texto0_1 = new javax.swing.JLabel();
         Texto0_2 = new javax.swing.JLabel();
@@ -588,8 +462,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto0_4 = new javax.swing.JLabel();
         Texto0_5 = new javax.swing.JLabel();
         Texto0_6 = new javax.swing.JLabel();
-        Texto0_7 = new javax.swing.JLabel();
-        Texto0_8 = new javax.swing.JLabel();
         Texto1_0 = new javax.swing.JLabel();
         Texto1_1 = new javax.swing.JLabel();
         Texto1_2 = new javax.swing.JLabel();
@@ -598,8 +470,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto1_5 = new javax.swing.JLabel();
         Texto1_6 = new javax.swing.JLabel();
         Texto1_7 = new javax.swing.JLabel();
-        Texto1_8 = new javax.swing.JLabel();
-        Texto1_9 = new javax.swing.JLabel();
         Texto2_0 = new javax.swing.JLabel();
         Texto2_1 = new javax.swing.JLabel();
         Texto2_2 = new javax.swing.JLabel();
@@ -607,8 +477,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto2_4 = new javax.swing.JLabel();
         Texto2_5 = new javax.swing.JLabel();
         Texto2_6 = new javax.swing.JLabel();
-        Texto2_7 = new javax.swing.JLabel();
-        Texto2_8 = new javax.swing.JLabel();
         Texto3_0 = new javax.swing.JLabel();
         Texto3_1 = new javax.swing.JLabel();
         Texto3_2 = new javax.swing.JLabel();
@@ -617,8 +485,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto3_5 = new javax.swing.JLabel();
         Texto3_6 = new javax.swing.JLabel();
         Texto3_7 = new javax.swing.JLabel();
-        Texto3_8 = new javax.swing.JLabel();
-        Texto3_9 = new javax.swing.JLabel();
         Texto4_0 = new javax.swing.JLabel();
         Texto4_1 = new javax.swing.JLabel();
         Texto4_2 = new javax.swing.JLabel();
@@ -626,8 +492,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto4_4 = new javax.swing.JLabel();
         Texto4_5 = new javax.swing.JLabel();
         Texto4_6 = new javax.swing.JLabel();
-        Texto4_7 = new javax.swing.JLabel();
-        Texto4_8 = new javax.swing.JLabel();
         Texto5_0 = new javax.swing.JLabel();
         Texto5_1 = new javax.swing.JLabel();
         Texto5_2 = new javax.swing.JLabel();
@@ -636,8 +500,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto5_5 = new javax.swing.JLabel();
         Texto5_6 = new javax.swing.JLabel();
         Texto5_7 = new javax.swing.JLabel();
-        Texto5_8 = new javax.swing.JLabel();
-        Texto5_9 = new javax.swing.JLabel();
         Texto6_0 = new javax.swing.JLabel();
         Texto6_1 = new javax.swing.JLabel();
         Texto6_2 = new javax.swing.JLabel();
@@ -645,8 +507,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto6_4 = new javax.swing.JLabel();
         Texto6_5 = new javax.swing.JLabel();
         Texto6_6 = new javax.swing.JLabel();
-        Texto6_7 = new javax.swing.JLabel();
-        Texto6_8 = new javax.swing.JLabel();
         Texto7_0 = new javax.swing.JLabel();
         Texto7_1 = new javax.swing.JLabel();
         Texto7_2 = new javax.swing.JLabel();
@@ -655,8 +515,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto7_5 = new javax.swing.JLabel();
         Texto7_6 = new javax.swing.JLabel();
         Texto7_7 = new javax.swing.JLabel();
-        Texto7_8 = new javax.swing.JLabel();
-        Texto7_9 = new javax.swing.JLabel();
         Texto9_0 = new javax.swing.JLabel();
         Texto9_1 = new javax.swing.JLabel();
         Texto9_2 = new javax.swing.JLabel();
@@ -665,8 +523,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto9_5 = new javax.swing.JLabel();
         Texto9_6 = new javax.swing.JLabel();
         Texto9_7 = new javax.swing.JLabel();
-        Texto9_8 = new javax.swing.JLabel();
-        Texto9_9 = new javax.swing.JLabel();
         Boton7_1 = new javax.swing.JButton();
         Boton7_2 = new javax.swing.JButton();
         Boton7_3 = new javax.swing.JButton();
@@ -674,26 +530,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Boton7_5 = new javax.swing.JButton();
         Boton7_6 = new javax.swing.JButton();
         Boton7_7 = new javax.swing.JButton();
-        Boton7_8 = new javax.swing.JButton();
-        Boton7_9 = new javax.swing.JButton();
-        Boton8_1 = new javax.swing.JButton();
-        Boton8_2 = new javax.swing.JButton();
-        Boton8_3 = new javax.swing.JButton();
-        Boton8_4 = new javax.swing.JButton();
-        Boton8_5 = new javax.swing.JButton();
-        Boton8_6 = new javax.swing.JButton();
-        Boton8_7 = new javax.swing.JButton();
-        Boton8_8 = new javax.swing.JButton();
-        Boton8_9 = new javax.swing.JButton();
-        Boton9_1 = new javax.swing.JButton();
-        Boton9_2 = new javax.swing.JButton();
-        Boton9_3 = new javax.swing.JButton();
-        Boton9_4 = new javax.swing.JButton();
-        Boton9_5 = new javax.swing.JButton();
-        Boton9_6 = new javax.swing.JButton();
-        Boton9_7 = new javax.swing.JButton();
-        Boton9_8 = new javax.swing.JButton();
-        Boton9_9 = new javax.swing.JButton();
         Texto11_0 = new javax.swing.JLabel();
         Texto11_1 = new javax.swing.JLabel();
         Texto11_2 = new javax.swing.JLabel();
@@ -702,8 +538,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto11_5 = new javax.swing.JLabel();
         Texto11_6 = new javax.swing.JLabel();
         Texto11_7 = new javax.swing.JLabel();
-        Texto11_8 = new javax.swing.JLabel();
-        Texto11_9 = new javax.swing.JLabel();
         Boton4 = new javax.swing.JButton();
         Boton5 = new javax.swing.JButton();
         Boton6 = new javax.swing.JButton();
@@ -716,8 +550,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto13_5 = new javax.swing.JLabel();
         Texto13_6 = new javax.swing.JLabel();
         Texto13_7 = new javax.swing.JLabel();
-        Texto13_8 = new javax.swing.JLabel();
-        Texto13_9 = new javax.swing.JLabel();
         Texto8_0 = new javax.swing.JLabel();
         Texto8_1 = new javax.swing.JLabel();
         Texto8_2 = new javax.swing.JLabel();
@@ -725,8 +557,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto8_4 = new javax.swing.JLabel();
         Texto8_5 = new javax.swing.JLabel();
         Texto8_6 = new javax.swing.JLabel();
-        Texto8_7 = new javax.swing.JLabel();
-        Texto8_8 = new javax.swing.JLabel();
         Texto10_0 = new javax.swing.JLabel();
         Texto10_1 = new javax.swing.JLabel();
         Texto10_2 = new javax.swing.JLabel();
@@ -734,8 +564,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto10_4 = new javax.swing.JLabel();
         Texto10_5 = new javax.swing.JLabel();
         Texto10_6 = new javax.swing.JLabel();
-        Texto10_7 = new javax.swing.JLabel();
-        Texto10_8 = new javax.swing.JLabel();
         Texto12_0 = new javax.swing.JLabel();
         Texto12_1 = new javax.swing.JLabel();
         Texto12_2 = new javax.swing.JLabel();
@@ -743,8 +571,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto12_4 = new javax.swing.JLabel();
         Texto12_5 = new javax.swing.JLabel();
         Texto12_6 = new javax.swing.JLabel();
-        Texto12_7 = new javax.swing.JLabel();
-        Texto12_8 = new javax.swing.JLabel();
         Texto14_0 = new javax.swing.JLabel();
         Texto14_1 = new javax.swing.JLabel();
         Texto14_2 = new javax.swing.JLabel();
@@ -752,48 +578,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         Texto14_4 = new javax.swing.JLabel();
         Texto14_5 = new javax.swing.JLabel();
         Texto14_6 = new javax.swing.JLabel();
-        Texto14_7 = new javax.swing.JLabel();
-        Texto14_8 = new javax.swing.JLabel();
-        Texto15_0 = new javax.swing.JLabel();
-        Texto15_1 = new javax.swing.JLabel();
-        Texto15_2 = new javax.swing.JLabel();
-        Texto15_3 = new javax.swing.JLabel();
-        Texto15_4 = new javax.swing.JLabel();
-        Texto15_5 = new javax.swing.JLabel();
-        Texto15_6 = new javax.swing.JLabel();
-        Texto15_7 = new javax.swing.JLabel();
-        Texto15_8 = new javax.swing.JLabel();
-        Texto15_9 = new javax.swing.JLabel();
-        Texto16_0 = new javax.swing.JLabel();
-        Texto16_1 = new javax.swing.JLabel();
-        Texto16_2 = new javax.swing.JLabel();
-        Texto16_3 = new javax.swing.JLabel();
-        Texto16_4 = new javax.swing.JLabel();
-        Texto16_5 = new javax.swing.JLabel();
-        Texto16_6 = new javax.swing.JLabel();
-        Texto16_7 = new javax.swing.JLabel();
-        Texto16_8 = new javax.swing.JLabel();
-        Texto18_0 = new javax.swing.JLabel();
-        Texto18_1 = new javax.swing.JLabel();
-        Texto18_2 = new javax.swing.JLabel();
-        Texto18_3 = new javax.swing.JLabel();
-        Texto18_4 = new javax.swing.JLabel();
-        Texto18_5 = new javax.swing.JLabel();
-        Texto18_6 = new javax.swing.JLabel();
-        Texto18_7 = new javax.swing.JLabel();
-        Texto18_8 = new javax.swing.JLabel();
-        Texto17_0 = new javax.swing.JLabel();
-        Texto17_1 = new javax.swing.JLabel();
-        Texto17_2 = new javax.swing.JLabel();
-        Texto17_3 = new javax.swing.JLabel();
-        Texto17_4 = new javax.swing.JLabel();
-        Texto17_5 = new javax.swing.JLabel();
-        Texto17_6 = new javax.swing.JLabel();
-        Texto17_7 = new javax.swing.JLabel();
-        Texto17_8 = new javax.swing.JLabel();
-        Texto17_9 = new javax.swing.JLabel();
-        Boton9 = new javax.swing.JButton();
-        Boton10 = new javax.swing.JButton();
         Boton8 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -827,7 +611,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 59, 40, 40));
+        getContentPane().add(Boton0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 40, 40));
 
         Boton0_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -836,7 +620,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 59, 40, 40));
+        getContentPane().add(Boton0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 40, 40));
 
         Boton0_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -845,7 +629,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 59, 40, 40));
+        getContentPane().add(Boton0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 40, 40));
 
         Boton0_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -854,7 +638,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 59, 40, 40));
+        getContentPane().add(Boton0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 40, 40));
 
         Boton0_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -863,7 +647,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 59, 40, 40));
+        getContentPane().add(Boton0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 40, 40));
 
         Boton0_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -872,7 +656,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 59, 40, 40));
+        getContentPane().add(Boton0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 40, 40));
 
         Boton0_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -881,7 +665,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 59, 40, 40));
+        getContentPane().add(Boton0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 70, 40, 40));
 
         Boton0_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -890,25 +674,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton0_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 59, 40, 40));
-
-        Boton0_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton0_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton0_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton0_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton0_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 59, 40, 40));
-
-        Boton0_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton0_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton0_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton0_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton0_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 59, 40, 40));
+        getContentPane().add(Boton0_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 70, 40, 40));
 
         Boton1_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -917,7 +683,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 132, 40, 40));
+        getContentPane().add(Boton1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 40, 40));
 
         Boton1_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -926,7 +692,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 132, 40, 40));
+        getContentPane().add(Boton1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 40, 40));
 
         Boton1_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -935,7 +701,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 132, 40, 40));
+        getContentPane().add(Boton1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 40, 40));
 
         Boton1_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -944,7 +710,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 132, 40, 40));
+        getContentPane().add(Boton1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 40, 40));
 
         Boton1_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -953,7 +719,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 132, 40, 40));
+        getContentPane().add(Boton1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 40, 40));
 
         Boton1_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -962,7 +728,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 132, 40, 40));
+        getContentPane().add(Boton1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 40, 40));
 
         Boton1_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -971,7 +737,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 132, 40, 40));
+        getContentPane().add(Boton1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 140, 40, 40));
 
         Boton1_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -980,25 +746,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 132, 40, 40));
-
-        Boton1_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton1_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton1_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton1_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton1_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 132, 40, 40));
-
-        Boton1_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton1_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton1_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton1_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton1_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 132, 40, 40));
+        getContentPane().add(Boton1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 140, 40, 40));
 
         Boton2_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1007,7 +755,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 203, 40, 40));
+        getContentPane().add(Boton2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 40, 40));
 
         Boton2_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1016,7 +764,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 203, 40, 40));
+        getContentPane().add(Boton2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 40, 40));
 
         Boton2_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1025,7 +773,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 203, 40, 40));
+        getContentPane().add(Boton2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 40, 40));
 
         Boton2_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1034,7 +782,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 203, 40, 40));
+        getContentPane().add(Boton2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 40, 40));
 
         Boton2_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1043,7 +791,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 203, 40, 40));
+        getContentPane().add(Boton2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 40, 40));
 
         Boton2_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1052,7 +800,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 203, 40, 40));
+        getContentPane().add(Boton2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 40, 40));
 
         Boton2_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1061,7 +809,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 203, 40, 40));
+        getContentPane().add(Boton2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 40, 40));
 
         Boton2_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1070,25 +818,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 203, 40, 40));
-
-        Boton2_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton2_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton2_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton2_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 203, 40, 40));
-
-        Boton2_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton2_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton2_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton2_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton2_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 203, 40, 40));
+        getContentPane().add(Boton2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 210, 40, 40));
 
         Boton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton1.setText("(1)");
@@ -1099,7 +829,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 59, 40, 40));
+        getContentPane().add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 70, 40, 40));
 
         Boton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton2.setText("(2)");
@@ -1109,7 +839,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 132, 40, 40));
+        getContentPane().add(Boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 140, 40, 40));
 
         Boton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton3.setText("(3)");
@@ -1119,7 +849,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 203, 40, 40));
+        getContentPane().add(Boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 210, 40, 40));
 
         Boton3_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1128,7 +858,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 277, 40, 40));
+        getContentPane().add(Boton3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 40, 40));
 
         Boton3_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1137,7 +867,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 277, 40, 40));
+        getContentPane().add(Boton3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 40, 40));
 
         Boton3_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1146,7 +876,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 277, 40, 40));
+        getContentPane().add(Boton3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 40, 40));
 
         Boton3_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1155,7 +885,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 277, 40, 40));
+        getContentPane().add(Boton3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 40, 40));
 
         Boton3_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1164,7 +894,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 277, 40, 40));
+        getContentPane().add(Boton3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 40, 40));
 
         Boton3_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1173,7 +903,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 277, 40, 40));
+        getContentPane().add(Boton3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 290, 40, 40));
 
         Boton3_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1182,7 +912,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 277, 40, 40));
+        getContentPane().add(Boton3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, 40, 40));
 
         Boton3_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton3_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1191,25 +921,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton3_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 277, 40, 40));
-
-        Boton3_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton3_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton3_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton3_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton3_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 277, 40, 40));
-
-        Boton3_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton3_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton3_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton3_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton3_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 277, 40, 40));
+        getContentPane().add(Boton3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 290, 40, 40));
 
         Boton4_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1218,7 +930,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 348, 40, 40));
+        getContentPane().add(Boton4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 40, 40));
 
         Boton4_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1227,7 +939,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 348, 40, 40));
+        getContentPane().add(Boton4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 40, 40));
 
         Boton4_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1236,7 +948,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 348, 40, 40));
+        getContentPane().add(Boton4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 40, 40));
 
         Boton4_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1245,7 +957,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 348, 40, 40));
+        getContentPane().add(Boton4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 360, 40, 40));
 
         Boton4_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1254,7 +966,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 348, 40, 40));
+        getContentPane().add(Boton4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 40, 40));
 
         Boton4_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1263,7 +975,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 348, 40, 40));
+        getContentPane().add(Boton4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 360, 40, 40));
 
         Boton4_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1272,7 +984,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 348, 40, 40));
+        getContentPane().add(Boton4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 360, 40, 40));
 
         Boton4_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton4_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1281,25 +993,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 348, 40, 40));
-
-        Boton4_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton4_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton4_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton4_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton4_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 348, 40, 40));
-
-        Boton4_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton4_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton4_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton4_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton4_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 348, 40, 40));
+        getContentPane().add(Boton4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 360, 40, 40));
 
         Boton5_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1308,7 +1002,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 420, 40, 40));
+        getContentPane().add(Boton5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 40, 40));
 
         Boton5_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1317,7 +1011,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 420, 40, 40));
+        getContentPane().add(Boton5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, 40, 40));
 
         Boton5_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1326,7 +1020,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 420, 40, 40));
+        getContentPane().add(Boton5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 40, 40));
 
         Boton5_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1335,7 +1029,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 420, 40, 40));
+        getContentPane().add(Boton5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 40, 40));
 
         Boton5_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1344,7 +1038,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 420, 40, 40));
+        getContentPane().add(Boton5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 40, 40));
 
         Boton5_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1353,7 +1047,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 420, 40, 40));
+        getContentPane().add(Boton5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 430, 40, 40));
 
         Boton5_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1362,7 +1056,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 420, 40, 40));
+        getContentPane().add(Boton5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 40, 40));
 
         Boton5_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton5_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1371,25 +1065,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 40, 40));
-
-        Boton5_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton5_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton5_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton5_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton5_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 420, 40, 40));
-
-        Boton5_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton5_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton5_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton5_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton5_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 420, 40, 40));
+        getContentPane().add(Boton5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 40, 40));
 
         Boton6_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1398,7 +1074,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 491, 40, 40));
+        getContentPane().add(Boton6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 500, 40, 40));
 
         Boton6_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1407,7 +1083,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 491, 40, 40));
+        getContentPane().add(Boton6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 40, 40));
 
         Boton6_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1416,7 +1092,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 491, 40, 40));
+        getContentPane().add(Boton6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, 40, 40));
 
         Boton6_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1425,7 +1101,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 491, 40, 40));
+        getContentPane().add(Boton6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, 40, 40));
 
         Boton6_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1434,7 +1110,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 491, 40, 40));
+        getContentPane().add(Boton6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 500, 40, 40));
 
         Boton6_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1443,7 +1119,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 491, 40, 40));
+        getContentPane().add(Boton6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 500, 40, 40));
 
         Boton6_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1452,7 +1128,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 491, 40, 40));
+        getContentPane().add(Boton6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 500, 40, 40));
 
         Boton6_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton6_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1461,25 +1137,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 491, 40, 40));
-
-        Boton6_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton6_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton6_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton6_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton6_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 491, 40, 40));
-
-        Boton6_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton6_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton6_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton6_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton6_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 491, 40, 40));
+        getContentPane().add(Boton6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 500, 40, 40));
 
         Boton7_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1488,419 +1146,319 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 562, 40, 40));
-
-        Boton8_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_0ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 634, 40, 40));
-
-        Boton9_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_0ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 705, 40, 40));
+        getContentPane().add(Boton7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 570, 40, 40));
 
         Texto0_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_0.setText(">");
-        getContentPane().add(Texto0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 59, -1, 40));
+        getContentPane().add(Texto0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, 40));
 
         Texto0_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_1.setText(">");
-        getContentPane().add(Texto0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 59, -1, 40));
+        getContentPane().add(Texto0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, 40));
 
         Texto0_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_2.setText(">");
-        getContentPane().add(Texto0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 59, -1, 40));
+        getContentPane().add(Texto0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, 40));
 
         Texto0_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_3.setText(">");
-        getContentPane().add(Texto0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 59, -1, 40));
+        getContentPane().add(Texto0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, 40));
 
         Texto0_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_4.setText(">");
-        getContentPane().add(Texto0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 59, -1, 40));
+        getContentPane().add(Texto0_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, -1, 40));
 
         Texto0_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_5.setText(">");
-        getContentPane().add(Texto0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 59, -1, 40));
+        getContentPane().add(Texto0_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, 40));
 
         Texto0_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_6.setText(">");
-        getContentPane().add(Texto0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 59, -1, 40));
-
-        Texto0_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto0_7.setText(">");
-        getContentPane().add(Texto0_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 59, -1, 40));
-
-        Texto0_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto0_8.setText(">");
-        getContentPane().add(Texto0_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 59, -1, 40));
+        getContentPane().add(Texto0_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, -1, 40));
 
         Texto1_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_0.setText(" ^");
         Texto1_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 104, 40, 25));
+        getContentPane().add(Texto1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 40, 25));
 
         Texto1_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_1.setText(" ^");
         Texto1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 104, 40, 25));
+        getContentPane().add(Texto1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 40, 25));
 
         Texto1_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_2.setText(" ^");
         Texto1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 104, 40, 25));
+        getContentPane().add(Texto1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 40, 25));
 
         Texto1_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_3.setText(" ^");
         Texto1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 104, 40, 25));
+        getContentPane().add(Texto1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 40, 25));
 
         Texto1_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_4.setText(" ^");
         Texto1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 104, 40, 25));
+        getContentPane().add(Texto1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 40, 25));
 
         Texto1_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_5.setText(" ^");
         Texto1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 104, 40, 25));
+        getContentPane().add(Texto1_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 40, 25));
 
         Texto1_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_6.setText(" ^");
         Texto1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 104, 40, 25));
+        getContentPane().add(Texto1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 40, 25));
 
         Texto1_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_7.setText(" ^");
         Texto1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 104, 40, 25));
-
-        Texto1_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto1_8.setText(" ^");
-        Texto1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 104, 40, 25));
-
-        Texto1_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto1_9.setText(" ^");
-        Texto1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 104, 40, 25));
+        getContentPane().add(Texto1_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, 40, 25));
 
         Texto2_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_0.setText(">");
-        getContentPane().add(Texto2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 132, -1, 40));
+        getContentPane().add(Texto2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, 40));
 
         Texto2_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_1.setText(">");
-        getContentPane().add(Texto2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 132, -1, 40));
+        getContentPane().add(Texto2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, 40));
 
         Texto2_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_2.setText(">");
-        getContentPane().add(Texto2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 132, -1, 40));
+        getContentPane().add(Texto2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, -1, 40));
 
         Texto2_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_3.setText(">");
-        getContentPane().add(Texto2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 132, -1, 40));
+        getContentPane().add(Texto2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, -1, 40));
 
         Texto2_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_4.setText(">");
-        getContentPane().add(Texto2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 132, -1, 40));
+        getContentPane().add(Texto2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, -1, 40));
 
         Texto2_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_5.setText(">");
-        getContentPane().add(Texto2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 132, -1, 40));
+        getContentPane().add(Texto2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, -1, 40));
 
         Texto2_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_6.setText(">");
-        getContentPane().add(Texto2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 132, -1, 40));
-
-        Texto2_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto2_7.setText(">");
-        getContentPane().add(Texto2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 132, -1, 40));
-
-        Texto2_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto2_8.setText(">");
-        getContentPane().add(Texto2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 132, -1, 40));
+        getContentPane().add(Texto2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, -1, 40));
 
         Texto3_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_0.setText(" ^");
         Texto3_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 175, 40, 25));
+        getContentPane().add(Texto3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 40, 25));
 
         Texto3_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_1.setText(" ^");
         Texto3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 175, 40, 25));
+        getContentPane().add(Texto3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 40, 25));
 
         Texto3_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_2.setText(" ^");
         Texto3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 175, 40, 25));
+        getContentPane().add(Texto3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 40, 25));
 
         Texto3_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_3.setText(" ^");
         Texto3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 175, 40, 25));
+        getContentPane().add(Texto3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 40, 25));
 
         Texto3_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_4.setText(" ^");
         Texto3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 175, 40, 25));
+        getContentPane().add(Texto3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 40, 25));
 
         Texto3_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_5.setText(" ^");
         Texto3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 175, 40, 25));
+        getContentPane().add(Texto3_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 40, 25));
 
         Texto3_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_6.setText(" ^");
         Texto3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 175, 40, 25));
+        getContentPane().add(Texto3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 40, 25));
 
         Texto3_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_7.setText(" ^");
         Texto3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 175, 40, 25));
-
-        Texto3_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto3_8.setText(" ^");
-        Texto3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 175, 40, 25));
-
-        Texto3_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto3_9.setText(" ^");
-        Texto3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 175, 40, 25));
+        getContentPane().add(Texto3_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 40, 25));
 
         Texto4_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_0.setText(">");
-        getContentPane().add(Texto4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 203, -1, 40));
+        getContentPane().add(Texto4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, -1, 40));
 
         Texto4_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_1.setText(">");
-        getContentPane().add(Texto4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 203, -1, 40));
+        getContentPane().add(Texto4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, 40));
 
         Texto4_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_2.setText(">");
-        getContentPane().add(Texto4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 203, -1, 40));
+        getContentPane().add(Texto4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, 40));
 
         Texto4_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_3.setText(">");
-        getContentPane().add(Texto4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 203, -1, 40));
+        getContentPane().add(Texto4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, -1, 40));
 
         Texto4_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_4.setText(">");
-        getContentPane().add(Texto4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 203, -1, 40));
+        getContentPane().add(Texto4_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, -1, 40));
 
         Texto4_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_5.setText(">");
-        getContentPane().add(Texto4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 203, -1, 40));
+        getContentPane().add(Texto4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, -1, 40));
 
         Texto4_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_6.setText(">");
-        getContentPane().add(Texto4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 203, -1, 40));
-
-        Texto4_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto4_7.setText(">");
-        getContentPane().add(Texto4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 203, -1, 40));
-
-        Texto4_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto4_8.setText(">");
-        getContentPane().add(Texto4_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 203, -1, 40));
+        getContentPane().add(Texto4_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, -1, 40));
 
         Texto5_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_0.setText(" ^");
         Texto5_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 248, 40, 25));
+        getContentPane().add(Texto5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 40, 25));
 
         Texto5_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_1.setText(" ^");
         Texto5_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 246, 40, 25));
+        getContentPane().add(Texto5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 40, 25));
 
         Texto5_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_2.setText(" ^");
         Texto5_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 246, 40, 25));
+        getContentPane().add(Texto5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 40, 25));
 
         Texto5_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_3.setText(" ^");
         Texto5_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 246, 40, 25));
+        getContentPane().add(Texto5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 40, 25));
 
         Texto5_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_4.setText(" ^");
         Texto5_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 246, 40, 25));
+        getContentPane().add(Texto5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 40, 25));
 
         Texto5_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_5.setText(" ^");
         Texto5_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 246, 40, 25));
+        getContentPane().add(Texto5_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, 40, 25));
 
         Texto5_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_6.setText(" ^");
         Texto5_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 246, 40, 25));
+        getContentPane().add(Texto5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 40, 25));
 
         Texto5_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto5_7.setText(" ^");
         Texto5_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 246, 40, 25));
-
-        Texto5_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto5_8.setText(" ^");
-        Texto5_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 246, 40, 25));
-
-        Texto5_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto5_9.setText(" ^");
-        Texto5_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto5_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 249, 40, 25));
+        getContentPane().add(Texto5_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 260, 40, 25));
 
         Texto6_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_0.setText(">");
-        getContentPane().add(Texto6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 277, -1, 40));
+        getContentPane().add(Texto6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, -1, 40));
 
         Texto6_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_1.setText(">");
-        getContentPane().add(Texto6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 277, -1, 40));
+        getContentPane().add(Texto6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, -1, 40));
 
         Texto6_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_2.setText(">");
-        getContentPane().add(Texto6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 277, -1, 40));
+        getContentPane().add(Texto6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, -1, 40));
 
         Texto6_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_3.setText(">");
-        getContentPane().add(Texto6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 277, -1, 40));
+        getContentPane().add(Texto6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, 40));
 
         Texto6_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_4.setText(">");
-        getContentPane().add(Texto6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 277, -1, 40));
+        getContentPane().add(Texto6_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 290, -1, 40));
 
         Texto6_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_5.setText(">");
-        getContentPane().add(Texto6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 277, -1, 40));
+        getContentPane().add(Texto6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 290, -1, 40));
 
         Texto6_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto6_6.setText(">");
-        getContentPane().add(Texto6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 277, -1, 40));
-
-        Texto6_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto6_7.setText(">");
-        getContentPane().add(Texto6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 277, -1, 40));
-
-        Texto6_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto6_8.setText(">");
-        getContentPane().add(Texto6_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 277, -1, 40));
+        getContentPane().add(Texto6_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 290, -1, 40));
 
         Texto7_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_0.setText(" ^");
         Texto7_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 319, 40, 25));
+        getContentPane().add(Texto7_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 40, 25));
 
         Texto7_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_1.setText(" ^");
         Texto7_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 320, 40, 25));
+        getContentPane().add(Texto7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 40, 25));
 
         Texto7_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_2.setText(" ^");
         Texto7_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 320, 40, 25));
+        getContentPane().add(Texto7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 40, 25));
 
         Texto7_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_3.setText(" ^");
         Texto7_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 40, 25));
+        getContentPane().add(Texto7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 40, 25));
 
         Texto7_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_4.setText(" ^");
         Texto7_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 320, 40, 25));
+        getContentPane().add(Texto7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 40, 25));
 
         Texto7_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_5.setText(" ^");
         Texto7_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 320, 40, 25));
+        getContentPane().add(Texto7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 40, 25));
 
         Texto7_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_6.setText(" ^");
         Texto7_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 320, 40, 25));
+        getContentPane().add(Texto7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 40, 25));
 
         Texto7_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto7_7.setText(" ^");
         Texto7_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 40, 25));
-
-        Texto7_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto7_8.setText(" ^");
-        Texto7_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 320, 40, 25));
-
-        Texto7_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto7_9.setText(" ^");
-        Texto7_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto7_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 320, 40, 25));
+        getContentPane().add(Texto7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 330, 40, 25));
 
         Texto9_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_0.setText(" ^");
         Texto9_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 392, 40, 25));
+        getContentPane().add(Texto9_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 40, 25));
 
         Texto9_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_1.setText(" ^");
         Texto9_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 392, 40, 25));
+        getContentPane().add(Texto9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 40, 25));
 
         Texto9_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_2.setText(" ^");
         Texto9_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 391, 40, 25));
+        getContentPane().add(Texto9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 40, 25));
 
         Texto9_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_3.setText(" ^");
         Texto9_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 391, 40, 25));
+        getContentPane().add(Texto9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 40, 25));
 
         Texto9_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_4.setText(" ^");
         Texto9_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 391, 40, 25));
+        getContentPane().add(Texto9_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 40, 25));
 
         Texto9_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_5.setText(" ^");
         Texto9_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 391, 40, 25));
+        getContentPane().add(Texto9_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 40, 25));
 
         Texto9_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_6.setText(" ^");
         Texto9_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 391, 40, 25));
+        getContentPane().add(Texto9_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 40, 25));
 
         Texto9_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto9_7.setText(" ^");
         Texto9_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 391, 40, 25));
-
-        Texto9_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto9_8.setText(" ^");
-        Texto9_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 391, 40, 25));
-
-        Texto9_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto9_9.setText(" ^");
-        Texto9_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto9_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 391, 40, 25));
+        getContentPane().add(Texto9_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 400, 40, 25));
 
         Boton7_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1909,7 +1467,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 562, 40, 40));
+        getContentPane().add(Boton7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 570, 40, 40));
 
         Boton7_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1918,7 +1476,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 562, 40, 40));
+        getContentPane().add(Boton7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 570, 40, 40));
 
         Boton7_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1927,7 +1485,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 562, 40, 40));
+        getContentPane().add(Boton7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, 40, 40));
 
         Boton7_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1936,7 +1494,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 562, 40, 40));
+        getContentPane().add(Boton7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 40, 40));
 
         Boton7_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1945,7 +1503,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 562, 40, 40));
+        getContentPane().add(Boton7_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 570, 40, 40));
 
         Boton7_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1954,7 +1512,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 562, 40, 40));
+        getContentPane().add(Boton7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, 40, 40));
 
         Boton7_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton7_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1963,237 +1521,47 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7_7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 562, 40, 40));
-
-        Boton7_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton7_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton7_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton7_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton7_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 562, 40, 40));
-
-        Boton7_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton7_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton7_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton7_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton7_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 562, 40, 40));
-
-        Boton8_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 634, 40, 40));
-
-        Boton8_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 634, 40, 40));
-
-        Boton8_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 634, 40, 40));
-
-        Boton8_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 634, 40, 40));
-
-        Boton8_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 634, 40, 40));
-
-        Boton8_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 634, 40, 40));
-
-        Boton8_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 634, 40, 40));
-
-        Boton8_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 634, 40, 40));
-
-        Boton8_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton8_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton8_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton8_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton8_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 634, 40, 40));
-
-        Boton9_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 705, 40, 40));
-
-        Boton9_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 705, 40, 40));
-
-        Boton9_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 705, 40, 40));
-
-        Boton9_4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_4.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 705, 40, 40));
-
-        Boton9_5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_5.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 705, 40, 40));
-
-        Boton9_6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_6.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 705, 40, 40));
-
-        Boton9_7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_7.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 705, 40, 40));
-
-        Boton9_8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 705, 40, 40));
-
-        Boton9_9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Boton9_9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9_9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9_9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 705, 40, 40));
+        getContentPane().add(Boton7_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 570, 40, 40));
 
         Texto11_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_0.setText(" ^");
         Texto11_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 463, 40, 25));
+        getContentPane().add(Texto11_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 40, 25));
 
         Texto11_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_1.setText(" ^");
         Texto11_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 463, 40, 25));
+        getContentPane().add(Texto11_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 40, 25));
 
         Texto11_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_2.setText(" ^");
         Texto11_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 463, 40, 25));
+        getContentPane().add(Texto11_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 40, 25));
 
         Texto11_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_3.setText(" ^");
         Texto11_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 463, 40, 25));
+        getContentPane().add(Texto11_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, 40, 25));
 
         Texto11_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_4.setText(" ^");
         Texto11_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 463, 40, 25));
+        getContentPane().add(Texto11_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 40, 25));
 
         Texto11_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_5.setText(" ^");
         Texto11_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 463, 40, 25));
+        getContentPane().add(Texto11_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 470, 40, 25));
 
         Texto11_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_6.setText(" ^");
         Texto11_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 463, 40, 25));
+        getContentPane().add(Texto11_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 470, 40, 25));
 
         Texto11_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto11_7.setText(" ^");
         Texto11_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 463, 40, 25));
-
-        Texto11_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto11_8.setText(" ^");
-        Texto11_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 463, 40, 25));
-
-        Texto11_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto11_9.setText(" ^");
-        Texto11_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto11_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 463, 40, 25));
+        getContentPane().add(Texto11_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 470, 40, 25));
 
         Boton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton4.setText("(4)");
@@ -2203,7 +1571,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 277, 40, 40));
+        getContentPane().add(Boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 290, 40, 40));
 
         Boton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton5.setText("(5)");
@@ -2213,7 +1581,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 348, 40, 40));
+        getContentPane().add(Boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 360, 40, 40));
 
         Boton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton6.setText("(6)");
@@ -2223,7 +1591,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 420, 40, 40));
+        getContentPane().add(Boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 430, 40, 40));
 
         Boton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton7.setText("(7)");
@@ -2233,393 +1601,159 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 491, 40, 40));
+        getContentPane().add(Boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 500, 40, 40));
 
         Texto13_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_0.setText(" ^");
         Texto13_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 534, 40, 25));
+        getContentPane().add(Texto13_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 550, 40, 25));
 
         Texto13_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_1.setText(" ^");
         Texto13_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 534, 40, 25));
+        getContentPane().add(Texto13_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 40, 25));
 
         Texto13_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_2.setText(" ^");
         Texto13_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 534, 40, 25));
+        getContentPane().add(Texto13_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, 40, 25));
 
         Texto13_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_3.setText(" ^");
         Texto13_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 534, 40, 25));
+        getContentPane().add(Texto13_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 40, 25));
 
         Texto13_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_4.setText(" ^");
         Texto13_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 534, 40, 25));
+        getContentPane().add(Texto13_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 40, 25));
 
         Texto13_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_5.setText(" ^");
         Texto13_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 534, 40, 25));
+        getContentPane().add(Texto13_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 40, 25));
 
         Texto13_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_6.setText(" ^");
         Texto13_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 534, 40, 25));
+        getContentPane().add(Texto13_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 550, 40, 25));
 
         Texto13_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto13_7.setText(" ^");
         Texto13_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 534, 40, 25));
-
-        Texto13_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto13_8.setText(" ^");
-        Texto13_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 534, 40, 25));
-
-        Texto13_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto13_9.setText(" ^");
-        Texto13_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto13_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 534, 40, 25));
+        getContentPane().add(Texto13_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 550, 40, 25));
 
         Texto8_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_0.setText(">");
-        getContentPane().add(Texto8_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 348, -1, 40));
+        getContentPane().add(Texto8_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, 40));
 
         Texto8_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_1.setText(">");
-        getContentPane().add(Texto8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 348, -1, 40));
+        getContentPane().add(Texto8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, 40));
 
         Texto8_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_2.setText(">");
-        getContentPane().add(Texto8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 348, -1, 40));
+        getContentPane().add(Texto8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, -1, 40));
 
         Texto8_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_3.setText(">");
-        getContentPane().add(Texto8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 348, -1, 40));
+        getContentPane().add(Texto8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, -1, 40));
 
         Texto8_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_4.setText(">");
-        getContentPane().add(Texto8_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 348, -1, 40));
+        getContentPane().add(Texto8_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 360, -1, 40));
 
         Texto8_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_5.setText(">");
-        getContentPane().add(Texto8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 348, -1, 40));
+        getContentPane().add(Texto8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 360, -1, 40));
 
         Texto8_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto8_6.setText(">");
-        getContentPane().add(Texto8_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 348, -1, 40));
-
-        Texto8_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto8_7.setText(">");
-        getContentPane().add(Texto8_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 348, -1, 40));
-
-        Texto8_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto8_8.setText(">");
-        getContentPane().add(Texto8_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 348, -1, 40));
+        getContentPane().add(Texto8_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, -1, 40));
 
         Texto10_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_0.setText(">");
-        getContentPane().add(Texto10_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 420, -1, 40));
+        getContentPane().add(Texto10_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, 40));
 
         Texto10_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_1.setText(">");
-        getContentPane().add(Texto10_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 420, -1, 40));
+        getContentPane().add(Texto10_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, 40));
 
         Texto10_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_2.setText(">");
-        getContentPane().add(Texto10_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 420, -1, 40));
+        getContentPane().add(Texto10_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, -1, 40));
 
         Texto10_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_3.setText(">");
-        getContentPane().add(Texto10_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 420, -1, 40));
+        getContentPane().add(Texto10_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, -1, 40));
 
         Texto10_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_4.setText(">");
-        getContentPane().add(Texto10_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 420, -1, 40));
+        getContentPane().add(Texto10_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, -1, 40));
 
         Texto10_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_5.setText(">");
-        getContentPane().add(Texto10_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 420, -1, 40));
+        getContentPane().add(Texto10_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, -1, 40));
 
         Texto10_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto10_6.setText(">");
-        getContentPane().add(Texto10_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 420, -1, 40));
-
-        Texto10_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto10_7.setText(">");
-        getContentPane().add(Texto10_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 420, -1, 40));
-
-        Texto10_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto10_8.setText(">");
-        getContentPane().add(Texto10_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 420, -1, 40));
+        getContentPane().add(Texto10_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 430, -1, 40));
 
         Texto12_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_0.setText(">");
-        getContentPane().add(Texto12_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 491, -1, 40));
+        getContentPane().add(Texto12_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, 40));
 
         Texto12_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_1.setText(">");
-        getContentPane().add(Texto12_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 491, -1, 40));
+        getContentPane().add(Texto12_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, -1, 40));
 
         Texto12_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_2.setText(">");
-        getContentPane().add(Texto12_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 491, -1, 40));
+        getContentPane().add(Texto12_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, -1, 40));
 
         Texto12_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_3.setText(">");
-        getContentPane().add(Texto12_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 491, -1, 40));
+        getContentPane().add(Texto12_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 500, -1, 40));
 
         Texto12_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_4.setText(">");
-        getContentPane().add(Texto12_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 491, -1, 40));
+        getContentPane().add(Texto12_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 500, -1, 40));
 
         Texto12_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_5.setText(">");
-        getContentPane().add(Texto12_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 491, -1, 40));
+        getContentPane().add(Texto12_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, 40));
 
         Texto12_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto12_6.setText(">");
-        getContentPane().add(Texto12_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 491, -1, 40));
-
-        Texto12_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto12_7.setText(">");
-        getContentPane().add(Texto12_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 491, -1, 40));
-
-        Texto12_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto12_8.setText(">");
-        getContentPane().add(Texto12_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 491, -1, 40));
+        getContentPane().add(Texto12_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 500, -1, 40));
 
         Texto14_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_0.setText(">");
-        getContentPane().add(Texto14_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 562, -1, 40));
+        getContentPane().add(Texto14_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, -1, 40));
 
         Texto14_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_1.setText(">");
-        getContentPane().add(Texto14_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 562, -1, 40));
+        getContentPane().add(Texto14_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, -1, 40));
 
         Texto14_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_2.setText(">");
-        getContentPane().add(Texto14_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 562, -1, 40));
+        getContentPane().add(Texto14_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 570, -1, 40));
 
         Texto14_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_3.setText(">");
-        getContentPane().add(Texto14_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 562, -1, 40));
+        getContentPane().add(Texto14_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 570, -1, 40));
 
         Texto14_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_4.setText(">");
-        getContentPane().add(Texto14_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 562, -1, 40));
+        getContentPane().add(Texto14_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 570, -1, 40));
 
         Texto14_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_5.setText(">");
-        getContentPane().add(Texto14_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 562, -1, 40));
+        getContentPane().add(Texto14_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 570, -1, 40));
 
         Texto14_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto14_6.setText(">");
-        getContentPane().add(Texto14_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 562, -1, 40));
-
-        Texto14_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto14_7.setText(">");
-        getContentPane().add(Texto14_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 562, -1, 40));
-
-        Texto14_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto14_8.setText(">");
-        getContentPane().add(Texto14_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 562, -1, 40));
-
-        Texto15_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_0.setText(" ^");
-        Texto15_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 605, 40, 25));
-
-        Texto15_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_1.setText(" ^");
-        Texto15_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 605, 40, 25));
-
-        Texto15_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_2.setText(" ^");
-        Texto15_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 605, 40, 25));
-
-        Texto15_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_3.setText(" ^");
-        Texto15_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 606, 40, 25));
-
-        Texto15_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_4.setText(" ^");
-        Texto15_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 606, 40, 25));
-
-        Texto15_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_5.setText(" ^");
-        Texto15_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 606, 40, 25));
-
-        Texto15_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_6.setText(" ^");
-        Texto15_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 606, 40, 25));
-
-        Texto15_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_7.setText(" ^");
-        Texto15_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 606, 40, 25));
-
-        Texto15_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_8.setText(" ^");
-        Texto15_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 606, 40, 25));
-
-        Texto15_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto15_9.setText(" ^");
-        Texto15_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto15_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 606, 40, 25));
-
-        Texto16_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_0.setText(">");
-        getContentPane().add(Texto16_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 634, -1, 40));
-
-        Texto16_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_1.setText(">");
-        getContentPane().add(Texto16_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 634, -1, 40));
-
-        Texto16_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_2.setText(">");
-        getContentPane().add(Texto16_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 634, -1, 40));
-
-        Texto16_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_3.setText(">");
-        getContentPane().add(Texto16_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 634, -1, 40));
-
-        Texto16_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_4.setText(">");
-        getContentPane().add(Texto16_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 635, -1, 40));
-
-        Texto16_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_5.setText(">");
-        getContentPane().add(Texto16_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 634, -1, 40));
-
-        Texto16_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_6.setText(">");
-        getContentPane().add(Texto16_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 634, -1, 40));
-
-        Texto16_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_7.setText(">");
-        getContentPane().add(Texto16_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 634, -1, 40));
-
-        Texto16_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto16_8.setText(">");
-        getContentPane().add(Texto16_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 634, -1, 40));
-
-        Texto18_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_0.setText(">");
-        getContentPane().add(Texto18_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 705, -1, 40));
-
-        Texto18_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_1.setText(">");
-        getContentPane().add(Texto18_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 705, -1, 40));
-
-        Texto18_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_2.setText(">");
-        getContentPane().add(Texto18_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 705, -1, 40));
-
-        Texto18_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_3.setText(">");
-        getContentPane().add(Texto18_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 705, -1, 40));
-
-        Texto18_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_4.setText(">");
-        getContentPane().add(Texto18_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 705, -1, 40));
-
-        Texto18_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_5.setText(">");
-        getContentPane().add(Texto18_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 705, -1, 40));
-
-        Texto18_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_6.setText(">");
-        getContentPane().add(Texto18_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 705, -1, 40));
-
-        Texto18_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_7.setText(">");
-        getContentPane().add(Texto18_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 705, -1, 40));
-
-        Texto18_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto18_8.setText(">");
-        getContentPane().add(Texto18_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 705, -1, 40));
-
-        Texto17_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_0.setText(" ^");
-        Texto17_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 677, 40, 25));
-
-        Texto17_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_1.setText(" ^");
-        Texto17_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 677, 40, 25));
-
-        Texto17_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_2.setText(" ^");
-        Texto17_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 677, 40, 25));
-
-        Texto17_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_3.setText(" ^");
-        Texto17_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 677, 40, 25));
-
-        Texto17_4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_4.setText(" ^");
-        Texto17_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 677, 40, 25));
-
-        Texto17_5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_5.setText(" ^");
-        Texto17_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 677, 40, 25));
-
-        Texto17_6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_6.setText(" ^");
-        Texto17_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 677, 40, 25));
-
-        Texto17_7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_7.setText(" ^");
-        Texto17_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 677, 40, 25));
-
-        Texto17_8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_8.setText(" ^");
-        Texto17_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 677, 40, 25));
-
-        Texto17_9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        Texto17_9.setText(" ^");
-        Texto17_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto17_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(764, 677, 40, 25));
-
-        Boton9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Boton9.setText("(9)");
-        Boton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 634, 40, 40));
-
-        Boton10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Boton10.setText("(10)");
-        Boton10.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Boton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton10ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Boton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 705, 40, 40));
+        getContentPane().add(Texto14_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 570, -1, 40));
 
         Boton8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton8.setText("(8)");
@@ -2629,7 +1763,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 Boton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 562, 40, 40));
+        getContentPane().add(Boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 570, 40, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 51));
 
@@ -2660,7 +1794,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonIniciarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 102, 158, 70));
+        getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, 158, 70));
 
         BotonBorrarJugada.setBackground(new java.awt.Color(0, 204, 204));
         BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2671,7 +1805,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonBorrarJugadaActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 277, 158, 40));
+        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 650, 158, 40));
 
         BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
         BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2681,7 +1815,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonBorrarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 562, 158, 40));
+        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 650, 158, 40));
 
         BotonGuardarJuego.setBackground(new java.awt.Color(51, 153, 0));
         BotonGuardarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2692,7 +1826,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonGuardarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 420, 158, 40));
+        getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 650, 158, 40));
 
         BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
         BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2703,7 +1837,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonRehacerJugadaActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 348, 158, 40));
+        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 720, 158, 40));
 
         BotonCargarJuego.setBackground(new java.awt.Color(153, 51, 0));
         BotonCargarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2714,7 +1848,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonCargarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonCargarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 491, 158, 40));
+        getContentPane().add(BotonCargarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 720, 158, 40));
 
         BotonTerminarJuego.setBackground(new java.awt.Color(255, 204, 51));
         BotonTerminarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2725,26 +1859,26 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BotonTerminarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(926, 193, 158, 50));
+        getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 720, 158, 40));
 
         Horatexto.setEditable(false);
         Horatexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Horatexto.setText("Horas");
-        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 650, 49, -1));
+        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 670, 49, -1));
 
         MinutosTexto.setEditable(false);
         MinutosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MinutosTexto.setText("Minutos");
-        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 650, 50, -1));
+        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 670, 50, -1));
 
         SegundosTexto.setEditable(false);
         SegundosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SegundosTexto.setText("Segundos");
-        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 650, -1, -1));
+        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 670, -1, -1));
 
         HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 680, 49, 65));
+        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 700, 49, 65));
 
         MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2754,7 +1888,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 MinutosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 680, 50, 65));
+        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 50, 65));
 
         SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2763,7 +1897,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 SegundosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 680, 50, 65));
+        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 700, 50, 65));
 
         BorrarBoton.setIcon(new javax.swing.ImageIcon("C:\\Users\\jxdga\\Documents\\GitHub\\programa2Futoshiki\\programa2Futoshiki\\src\\main\\java\\com\\mycompany\\programa2futoshiki\\borrador.jpg")); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -2772,7 +1906,7 @@ public class Frame10x10 extends javax.swing.JFrame {
                 BorrarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 40, -1, 40));
+        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, 40));
 
         jLabel2.setText("JUGADOR:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, 38));
@@ -2869,16 +2003,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton0_7ActionPerformed
 
-    private void Boton0_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_8ActionPerformed
-        PuntoX=0;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton0_8ActionPerformed
-
-    private void Boton0_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_9ActionPerformed
-        PuntoX=0;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton0_9ActionPerformed
-
     private void Boton1_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_0ActionPerformed
         PuntoX=1;
         PuntoY=0;
@@ -2919,16 +2043,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton1_7ActionPerformed
 
-    private void Boton1_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_8ActionPerformed
-        PuntoX=1;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton1_8ActionPerformed
-
-    private void Boton1_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_9ActionPerformed
-        PuntoX=1;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton1_9ActionPerformed
-
     private void Boton2_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_0ActionPerformed
         PuntoX=2;
         PuntoY=0;
@@ -2968,16 +2082,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoX=2;
         PuntoY=7;
     }//GEN-LAST:event_Boton2_7ActionPerformed
-
-    private void Boton2_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_8ActionPerformed
-        PuntoX=2;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton2_8ActionPerformed
-
-    private void Boton2_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_9ActionPerformed
-        PuntoX=2;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton2_9ActionPerformed
 
     private void Boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1ActionPerformed
         AsignarNum(PuntoX, PuntoY, 1);
@@ -3031,16 +2135,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton3_7ActionPerformed
 
-    private void Boton3_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_8ActionPerformed
-        PuntoX=3;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton3_8ActionPerformed
-
-    private void Boton3_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_9ActionPerformed
-        PuntoX=3;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton3_9ActionPerformed
-
     private void Boton4_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_0ActionPerformed
         PuntoX=4;
         PuntoY=0;
@@ -3080,16 +2174,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoX=4;
         PuntoY=7;
     }//GEN-LAST:event_Boton4_7ActionPerformed
-
-    private void Boton4_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_8ActionPerformed
-        PuntoX=4;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton4_8ActionPerformed
-
-    private void Boton4_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4_9ActionPerformed
-        PuntoX=4;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton4_9ActionPerformed
 
     private void Boton5_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_0ActionPerformed
         PuntoX=5;
@@ -3131,16 +2215,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton5_7ActionPerformed
 
-    private void Boton5_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_8ActionPerformed
-        PuntoX=5;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton5_8ActionPerformed
-
-    private void Boton5_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5_9ActionPerformed
-        PuntoX=5;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton5_9ActionPerformed
-
     private void Boton6_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_0ActionPerformed
         PuntoX=6;
         PuntoY=0;
@@ -3181,30 +2255,10 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton6_7ActionPerformed
 
-    private void Boton6_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_8ActionPerformed
-        PuntoX=6;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton6_8ActionPerformed
-
-    private void Boton6_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6_9ActionPerformed
-        PuntoX=6;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton6_9ActionPerformed
-
     private void Boton7_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_0ActionPerformed
         PuntoX=7;
         PuntoY=0;
     }//GEN-LAST:event_Boton7_0ActionPerformed
-
-    private void Boton8_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_0ActionPerformed
-        PuntoX=8;
-        PuntoY=0;
-    }//GEN-LAST:event_Boton8_0ActionPerformed
-
-    private void Boton9_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_0ActionPerformed
-        PuntoX=9;
-        PuntoY=0;
-    }//GEN-LAST:event_Boton9_0ActionPerformed
 
     private void Boton7_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_1ActionPerformed
         PuntoX=7;
@@ -3241,106 +2295,6 @@ public class Frame10x10 extends javax.swing.JFrame {
         PuntoY=7;
     }//GEN-LAST:event_Boton7_7ActionPerformed
 
-    private void Boton7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_8ActionPerformed
-        PuntoX=7;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton7_8ActionPerformed
-
-    private void Boton7_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7_9ActionPerformed
-        PuntoX=7;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton7_9ActionPerformed
-
-    private void Boton8_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_1ActionPerformed
-        PuntoX=8;
-        PuntoY=1;
-    }//GEN-LAST:event_Boton8_1ActionPerformed
-
-    private void Boton8_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_2ActionPerformed
-        PuntoX=8;
-        PuntoY=2;
-    }//GEN-LAST:event_Boton8_2ActionPerformed
-
-    private void Boton8_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_3ActionPerformed
-        PuntoX=8;
-        PuntoY=3;
-    }//GEN-LAST:event_Boton8_3ActionPerformed
-
-    private void Boton8_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_4ActionPerformed
-        PuntoX=8;
-        PuntoY=4;
-    }//GEN-LAST:event_Boton8_4ActionPerformed
-
-    private void Boton8_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_5ActionPerformed
-        PuntoX=8;
-        PuntoY=5;
-    }//GEN-LAST:event_Boton8_5ActionPerformed
-
-    private void Boton8_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_6ActionPerformed
-        PuntoX=8;
-        PuntoY=6;
-    }//GEN-LAST:event_Boton8_6ActionPerformed
-
-    private void Boton8_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_7ActionPerformed
-        PuntoX=8;
-        PuntoY=7;
-    }//GEN-LAST:event_Boton8_7ActionPerformed
-
-    private void Boton8_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_8ActionPerformed
-        PuntoX=8;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton8_8ActionPerformed
-
-    private void Boton8_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8_9ActionPerformed
-        PuntoX=8;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton8_9ActionPerformed
-
-    private void Boton9_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_1ActionPerformed
-        PuntoX=9;
-        PuntoY=1;
-    }//GEN-LAST:event_Boton9_1ActionPerformed
-
-    private void Boton9_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_2ActionPerformed
-        PuntoX=9;
-        PuntoY=2;
-    }//GEN-LAST:event_Boton9_2ActionPerformed
-
-    private void Boton9_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_3ActionPerformed
-        PuntoX=9;
-        PuntoY=3;
-    }//GEN-LAST:event_Boton9_3ActionPerformed
-
-    private void Boton9_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_4ActionPerformed
-        PuntoX=9;
-        PuntoY=4;
-    }//GEN-LAST:event_Boton9_4ActionPerformed
-
-    private void Boton9_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_5ActionPerformed
-        PuntoX=9;
-        PuntoY=5;
-    }//GEN-LAST:event_Boton9_5ActionPerformed
-
-    private void Boton9_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_6ActionPerformed
-        PuntoX=9;
-        PuntoY=6;
-    }//GEN-LAST:event_Boton9_6ActionPerformed
-
-    private void Boton9_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_7ActionPerformed
-        PuntoX=9;
-        PuntoY=7;
-    }//GEN-LAST:event_Boton9_7ActionPerformed
-
-    private void Boton9_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_8ActionPerformed
-        PuntoX=9;
-        PuntoY=8;
-    }//GEN-LAST:event_Boton9_8ActionPerformed
-
-    private void Boton9_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9_9ActionPerformed
-        PuntoX=9;
-        PuntoY=9;
-    }//GEN-LAST:event_Boton9_9ActionPerformed
-
     private void Boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4ActionPerformed
         AsignarNum(PuntoX, PuntoY, 4);
     }//GEN-LAST:event_Boton4ActionPerformed
@@ -3356,14 +2310,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private void Boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7ActionPerformed
         AsignarNum(PuntoX, PuntoY, 7);
     }//GEN-LAST:event_Boton7ActionPerformed
-
-    private void Boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton9ActionPerformed
-        AsignarNum(PuntoX, PuntoY, 9);
-    }//GEN-LAST:event_Boton9ActionPerformed
-
-    private void Boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton10ActionPerformed
-        AsignarNum(PuntoX, PuntoY, 10);
-    }//GEN-LAST:event_Boton10ActionPerformed
 
     private void Boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton8ActionPerformed
         AsignarNum(PuntoX, PuntoY, 8);
@@ -3483,7 +2429,7 @@ public class Frame10x10 extends javax.swing.JFrame {
 
     }
     
-        String juego="Juego10x10";
+        String juego="Juego8x8";
         System.out.println(Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
@@ -3688,7 +2634,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
-    if (columna >= 0 && columna+1 < 10 && !matrizSimbolos[fila * 2][columna].equals("")) {
+    if (columna >= 0 && columna+1 < 8 && !matrizSimbolos[fila * 2][columna].equals("")) {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero && matrizNumeros[fila][columna + 1] > 0) {
@@ -3727,7 +2673,7 @@ public class Frame10x10 extends javax.swing.JFrame {
         }
     }
 
-    if (fila+1 >= 0 && fila+1 < 10 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
+    if (fila+1 >= 0 && fila+1 < 8 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila + 1][columna] < numero && matrizNumeros[fila + 1][columna] > 0) {
@@ -3902,14 +2848,15 @@ public class Frame10x10 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame8x8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame8x8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame8x8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame10x10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame8x8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -3929,10 +2876,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton0_5;
     private javax.swing.JButton Boton0_6;
     private javax.swing.JButton Boton0_7;
-    private javax.swing.JButton Boton0_8;
-    private javax.swing.JButton Boton0_9;
     private javax.swing.JButton Boton1;
-    private javax.swing.JButton Boton10;
     private javax.swing.JButton Boton1_0;
     private javax.swing.JButton Boton1_1;
     private javax.swing.JButton Boton1_2;
@@ -3941,8 +2885,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton1_5;
     private javax.swing.JButton Boton1_6;
     private javax.swing.JButton Boton1_7;
-    private javax.swing.JButton Boton1_8;
-    private javax.swing.JButton Boton1_9;
     private javax.swing.JButton Boton2;
     private javax.swing.JButton Boton2_0;
     private javax.swing.JButton Boton2_1;
@@ -3952,8 +2894,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton2_5;
     private javax.swing.JButton Boton2_6;
     private javax.swing.JButton Boton2_7;
-    private javax.swing.JButton Boton2_8;
-    private javax.swing.JButton Boton2_9;
     private javax.swing.JButton Boton3;
     private javax.swing.JButton Boton3_0;
     private javax.swing.JButton Boton3_1;
@@ -3963,8 +2903,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton3_5;
     private javax.swing.JButton Boton3_6;
     private javax.swing.JButton Boton3_7;
-    private javax.swing.JButton Boton3_8;
-    private javax.swing.JButton Boton3_9;
     private javax.swing.JButton Boton4;
     private javax.swing.JButton Boton4_0;
     private javax.swing.JButton Boton4_1;
@@ -3974,8 +2912,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton4_5;
     private javax.swing.JButton Boton4_6;
     private javax.swing.JButton Boton4_7;
-    private javax.swing.JButton Boton4_8;
-    private javax.swing.JButton Boton4_9;
     private javax.swing.JButton Boton5;
     private javax.swing.JButton Boton5_0;
     private javax.swing.JButton Boton5_1;
@@ -3985,8 +2921,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton5_5;
     private javax.swing.JButton Boton5_6;
     private javax.swing.JButton Boton5_7;
-    private javax.swing.JButton Boton5_8;
-    private javax.swing.JButton Boton5_9;
     private javax.swing.JButton Boton6;
     private javax.swing.JButton Boton6_0;
     private javax.swing.JButton Boton6_1;
@@ -3996,8 +2930,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton6_5;
     private javax.swing.JButton Boton6_6;
     private javax.swing.JButton Boton6_7;
-    private javax.swing.JButton Boton6_8;
-    private javax.swing.JButton Boton6_9;
     private javax.swing.JButton Boton7;
     private javax.swing.JButton Boton7_0;
     private javax.swing.JButton Boton7_1;
@@ -4007,30 +2939,7 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JButton Boton7_5;
     private javax.swing.JButton Boton7_6;
     private javax.swing.JButton Boton7_7;
-    private javax.swing.JButton Boton7_8;
-    private javax.swing.JButton Boton7_9;
     private javax.swing.JButton Boton8;
-    private javax.swing.JButton Boton8_0;
-    private javax.swing.JButton Boton8_1;
-    private javax.swing.JButton Boton8_2;
-    private javax.swing.JButton Boton8_3;
-    private javax.swing.JButton Boton8_4;
-    private javax.swing.JButton Boton8_5;
-    private javax.swing.JButton Boton8_6;
-    private javax.swing.JButton Boton8_7;
-    private javax.swing.JButton Boton8_8;
-    private javax.swing.JButton Boton8_9;
-    private javax.swing.JButton Boton9;
-    private javax.swing.JButton Boton9_0;
-    private javax.swing.JButton Boton9_1;
-    private javax.swing.JButton Boton9_2;
-    private javax.swing.JButton Boton9_3;
-    private javax.swing.JButton Boton9_4;
-    private javax.swing.JButton Boton9_5;
-    private javax.swing.JButton Boton9_6;
-    private javax.swing.JButton Boton9_7;
-    private javax.swing.JButton Boton9_8;
-    private javax.swing.JButton Boton9_9;
     private javax.swing.JButton BotonBorrarJuego;
     private javax.swing.JButton BotonBorrarJugada;
     private javax.swing.JButton BotonCargarJuego;
@@ -4052,8 +2961,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto0_4;
     private javax.swing.JLabel Texto0_5;
     private javax.swing.JLabel Texto0_6;
-    private javax.swing.JLabel Texto0_7;
-    private javax.swing.JLabel Texto0_8;
     private javax.swing.JLabel Texto10_0;
     private javax.swing.JLabel Texto10_1;
     private javax.swing.JLabel Texto10_2;
@@ -4061,8 +2968,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto10_4;
     private javax.swing.JLabel Texto10_5;
     private javax.swing.JLabel Texto10_6;
-    private javax.swing.JLabel Texto10_7;
-    private javax.swing.JLabel Texto10_8;
     private javax.swing.JLabel Texto11_0;
     private javax.swing.JLabel Texto11_1;
     private javax.swing.JLabel Texto11_2;
@@ -4071,8 +2976,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto11_5;
     private javax.swing.JLabel Texto11_6;
     private javax.swing.JLabel Texto11_7;
-    private javax.swing.JLabel Texto11_8;
-    private javax.swing.JLabel Texto11_9;
     private javax.swing.JLabel Texto12_0;
     private javax.swing.JLabel Texto12_1;
     private javax.swing.JLabel Texto12_2;
@@ -4080,8 +2983,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto12_4;
     private javax.swing.JLabel Texto12_5;
     private javax.swing.JLabel Texto12_6;
-    private javax.swing.JLabel Texto12_7;
-    private javax.swing.JLabel Texto12_8;
     private javax.swing.JLabel Texto13_0;
     private javax.swing.JLabel Texto13_1;
     private javax.swing.JLabel Texto13_2;
@@ -4090,8 +2991,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto13_5;
     private javax.swing.JLabel Texto13_6;
     private javax.swing.JLabel Texto13_7;
-    private javax.swing.JLabel Texto13_8;
-    private javax.swing.JLabel Texto13_9;
     private javax.swing.JLabel Texto14_0;
     private javax.swing.JLabel Texto14_1;
     private javax.swing.JLabel Texto14_2;
@@ -4099,46 +2998,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto14_4;
     private javax.swing.JLabel Texto14_5;
     private javax.swing.JLabel Texto14_6;
-    private javax.swing.JLabel Texto14_7;
-    private javax.swing.JLabel Texto14_8;
-    private javax.swing.JLabel Texto15_0;
-    private javax.swing.JLabel Texto15_1;
-    private javax.swing.JLabel Texto15_2;
-    private javax.swing.JLabel Texto15_3;
-    private javax.swing.JLabel Texto15_4;
-    private javax.swing.JLabel Texto15_5;
-    private javax.swing.JLabel Texto15_6;
-    private javax.swing.JLabel Texto15_7;
-    private javax.swing.JLabel Texto15_8;
-    private javax.swing.JLabel Texto15_9;
-    private javax.swing.JLabel Texto16_0;
-    private javax.swing.JLabel Texto16_1;
-    private javax.swing.JLabel Texto16_2;
-    private javax.swing.JLabel Texto16_3;
-    private javax.swing.JLabel Texto16_4;
-    private javax.swing.JLabel Texto16_5;
-    private javax.swing.JLabel Texto16_6;
-    private javax.swing.JLabel Texto16_7;
-    private javax.swing.JLabel Texto16_8;
-    private javax.swing.JLabel Texto17_0;
-    private javax.swing.JLabel Texto17_1;
-    private javax.swing.JLabel Texto17_2;
-    private javax.swing.JLabel Texto17_3;
-    private javax.swing.JLabel Texto17_4;
-    private javax.swing.JLabel Texto17_5;
-    private javax.swing.JLabel Texto17_6;
-    private javax.swing.JLabel Texto17_7;
-    private javax.swing.JLabel Texto17_8;
-    private javax.swing.JLabel Texto17_9;
-    private javax.swing.JLabel Texto18_0;
-    private javax.swing.JLabel Texto18_1;
-    private javax.swing.JLabel Texto18_2;
-    private javax.swing.JLabel Texto18_3;
-    private javax.swing.JLabel Texto18_4;
-    private javax.swing.JLabel Texto18_5;
-    private javax.swing.JLabel Texto18_6;
-    private javax.swing.JLabel Texto18_7;
-    private javax.swing.JLabel Texto18_8;
     private javax.swing.JLabel Texto1_0;
     private javax.swing.JLabel Texto1_1;
     private javax.swing.JLabel Texto1_2;
@@ -4147,8 +3006,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto1_5;
     private javax.swing.JLabel Texto1_6;
     private javax.swing.JLabel Texto1_7;
-    private javax.swing.JLabel Texto1_8;
-    private javax.swing.JLabel Texto1_9;
     private javax.swing.JLabel Texto2_0;
     private javax.swing.JLabel Texto2_1;
     private javax.swing.JLabel Texto2_2;
@@ -4156,8 +3013,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto2_4;
     private javax.swing.JLabel Texto2_5;
     private javax.swing.JLabel Texto2_6;
-    private javax.swing.JLabel Texto2_7;
-    private javax.swing.JLabel Texto2_8;
     private javax.swing.JLabel Texto3_0;
     private javax.swing.JLabel Texto3_1;
     private javax.swing.JLabel Texto3_2;
@@ -4166,8 +3021,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto3_5;
     private javax.swing.JLabel Texto3_6;
     private javax.swing.JLabel Texto3_7;
-    private javax.swing.JLabel Texto3_8;
-    private javax.swing.JLabel Texto3_9;
     private javax.swing.JLabel Texto4_0;
     private javax.swing.JLabel Texto4_1;
     private javax.swing.JLabel Texto4_2;
@@ -4175,8 +3028,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto4_4;
     private javax.swing.JLabel Texto4_5;
     private javax.swing.JLabel Texto4_6;
-    private javax.swing.JLabel Texto4_7;
-    private javax.swing.JLabel Texto4_8;
     private javax.swing.JLabel Texto5_0;
     private javax.swing.JLabel Texto5_1;
     private javax.swing.JLabel Texto5_2;
@@ -4185,8 +3036,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto5_5;
     private javax.swing.JLabel Texto5_6;
     private javax.swing.JLabel Texto5_7;
-    private javax.swing.JLabel Texto5_8;
-    private javax.swing.JLabel Texto5_9;
     private javax.swing.JLabel Texto6_0;
     private javax.swing.JLabel Texto6_1;
     private javax.swing.JLabel Texto6_2;
@@ -4194,8 +3043,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto6_4;
     private javax.swing.JLabel Texto6_5;
     private javax.swing.JLabel Texto6_6;
-    private javax.swing.JLabel Texto6_7;
-    private javax.swing.JLabel Texto6_8;
     private javax.swing.JLabel Texto7_0;
     private javax.swing.JLabel Texto7_1;
     private javax.swing.JLabel Texto7_2;
@@ -4204,8 +3051,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto7_5;
     private javax.swing.JLabel Texto7_6;
     private javax.swing.JLabel Texto7_7;
-    private javax.swing.JLabel Texto7_8;
-    private javax.swing.JLabel Texto7_9;
     private javax.swing.JLabel Texto8_0;
     private javax.swing.JLabel Texto8_1;
     private javax.swing.JLabel Texto8_2;
@@ -4213,8 +3058,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto8_4;
     private javax.swing.JLabel Texto8_5;
     private javax.swing.JLabel Texto8_6;
-    private javax.swing.JLabel Texto8_7;
-    private javax.swing.JLabel Texto8_8;
     private javax.swing.JLabel Texto9_0;
     private javax.swing.JLabel Texto9_1;
     private javax.swing.JLabel Texto9_2;
@@ -4223,8 +3066,6 @@ public class Frame10x10 extends javax.swing.JFrame {
     private javax.swing.JLabel Texto9_5;
     private javax.swing.JLabel Texto9_6;
     private javax.swing.JLabel Texto9_7;
-    private javax.swing.JLabel Texto9_8;
-    private javax.swing.JLabel Texto9_9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
