@@ -20,16 +20,20 @@ import java.util.ArrayList;
 public class Frame3x3 extends javax.swing.JFrame {
     
     ArchivosXML archivoXML = new ArchivosXML();
+    MenuTop10 menuTop = new MenuTop10();
+    
     private Timer timer;
     private boolean ValidoTop = true;
     private int horas, minutos, segundos;
-    private int tiempoTranscurridoSegundos = 0;
+    private int tiempoTranscurridoSegundos;
     private int ModoTiempo = 0;
     private boolean esCronometro = true;
     private String Dificultad;
     private int Multinivel;
     private String Posicion;
     private Usuario usuario2;
+    private String Nombre;
+    private String TamTablero ="3x3";
     int tempHora = 0;
     int tempMins = 0;
     int tempSeg= 0;
@@ -58,13 +62,14 @@ public class Frame3x3 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
-    public Frame3x3(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos) {
+    public Frame3x3(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int segundosTranscurridos) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
         setLocationRelativeTo(null);
         
-        
+        tiempoTranscurridoSegundos = segundosTranscurridos;
+        Nombre = nombre;
         NombreJugador.setText(nombre);
         horas = Horas; 
         minutos = Minutos;
@@ -886,7 +891,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
-        ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos,horas,minutos,segundos,tempHora,tempMins,tempSeg,tiempoTranscurridoSegundos);  
+        ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos,horas,minutos,segundos,tempHora,tempMins,tempSeg,tiempoTranscurridoSegundos,ValidoTop);  
     }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
 
     private void NombreJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreJugadorActionPerformed
@@ -923,14 +928,43 @@ public class Frame3x3 extends javax.swing.JFrame {
         if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
             if (Multinivel==0){
+              
+                ConfValiUsuario();
+                
+                if(ValidoTop){
+                
+                    menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
+                    menuTop.guardarAjustes();
+                    JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
+                
+                }else{
+                
+                    JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
+                
+                }
+                
                 new MenuPrincipal().setVisible(true);
                 this.dispose();
             }else{
                 if (Dificultad=="Facil"){
-                    new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+                    new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else if(Dificultad=="Intermedio"){
-                    new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos).setVisible(true);
+                    new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else{
+                    
+                    ConfValiUsuario();
+                    
+                    if(ValidoTop){
+                
+                        menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
+                        menuTop.guardarAjustes();
+                        JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
+                
+                    }else{
+                
+                        JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
+                    }      
+                    
                     new MenuPrincipal().setVisible(true);
                     this.dispose();
                 }
@@ -1141,6 +1175,22 @@ public class Frame3x3 extends javax.swing.JFrame {
             }
         }
         return fin;
+    }
+    
+    public boolean ConfValiUsuario(){
+    
+        if(Nombre.equalsIgnoreCase("Anónimo")){
+        
+                ValidoTop = false;
+        }
+        
+        if(ValidoTop){
+        
+            return true;
+        }
+    
+        return false;
+    
     }
     
     

@@ -20,7 +20,7 @@ import java.io.File;
  * @author jxdga
  */
 public class ArchivosXML {
-    public static void guardarEnXML(int [][] matrizNumeros, String [][] matrizSimbolos, int horas, int minutos, int segundos, int temphoras, int tempminutos, int tempsegundos, int tiempo) {
+    public static void guardarEnXML(int [][] matrizNumeros, String [][] matrizSimbolos, int horas, int minutos, int segundos, int temphoras, int tempminutos, int tempsegundos, int tiempo, boolean ValidoTop) {
         try {
         // Crear el document builder
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -87,8 +87,12 @@ public class ArchivosXML {
         root.appendChild(TempminutosElement);
         
         Element TempsegundosElement = document.createElement("TempSegundos");
-        TempsegundosElement.appendChild(document.createTextNode(String.valueOf(segundos)));
-        root.appendChild(TempsegundosElement);    
+        TempsegundosElement.appendChild(document.createTextNode(String.valueOf(tempsegundos)));
+        root.appendChild(TempsegundosElement);   
+        
+        Element ValidoTopElement = document.createElement("ValidoParaTop");
+        ValidoTopElement.appendChild(document.createTextNode(String.valueOf(ValidoTop)));
+        root.appendChild(ValidoTopElement);  
         
         
         
@@ -298,6 +302,7 @@ public class ArchivosXML {
             valores[4] = Integer.parseInt(document.getElementsByTagName("TempHoras").item(0).getTextContent());
             valores[5] = Integer.parseInt(document.getElementsByTagName("TempMinutos").item(0).getTextContent());
             valores[6] = Integer.parseInt(document.getElementsByTagName("TempSegundos").item(0).getTextContent());
+            valores[7] = Integer.parseInt(document.getElementsByTagName("ValidoParaTop").item(0).getTextContent());
             
             System.out.println("Datos restaurados exitosamente desde tiempo.xml");
             

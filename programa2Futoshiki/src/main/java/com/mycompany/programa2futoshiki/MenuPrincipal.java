@@ -240,7 +240,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         }else{
         
-             new Frame3x3("Facíl",0,0,"Derecha","Anónimo",null,0,0,0).setVisible(true);
+             new Frame3x3("Facíl",0,0,"Derecha","Anónimo",null,0,0,0,0).setVisible(true);
              setVisible(false); 
         
         }
@@ -263,8 +263,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void botonTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTopActionPerformed
         
         // Prueba
-        cargarDatos();
-        mostrarUsuario();
+        //cargarDatos();
+        //mostrarUsuario();
+        
+        MenuTop10 menuTop = new MenuTop10();
+        menuTop.setVisible(true);
+        
     }//GEN-LAST:event_botonTopActionPerformed
 
     private void botonPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPINActionPerformed
@@ -491,7 +495,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         switch(Tablero){
             
             case 0 : // 3x3
-                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos).setVisible(true);
+                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
                 setVisible(false);
                 break;
             
@@ -515,7 +519,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 
             case 7: // 10x10    
                 
-                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos).setVisible(true);
+                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
                 setVisible(false);
                 break; 
                 

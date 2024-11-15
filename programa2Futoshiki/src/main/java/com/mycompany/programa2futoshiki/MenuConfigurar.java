@@ -740,7 +740,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
         switch(Tablero){
             
             case 0 : // 3x3
-                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos).setVisible(true);
+                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
                 setVisible(false);
                 break;
             
@@ -764,7 +764,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 
             case 7: // 10x10    
                 
-                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos).setVisible(true);
+                new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
                 setVisible(false);
                 break; 
                 

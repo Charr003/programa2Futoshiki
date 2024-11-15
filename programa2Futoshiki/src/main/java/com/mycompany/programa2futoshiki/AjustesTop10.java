@@ -12,12 +12,28 @@ public class AjustesTop10 implements Serializable {
     
     protected String Nickname;
     protected String Dificultad;
+    protected String TamTablero;
     protected int SegundosTotal;
 
-    public AjustesTop10(String Nickname, String Dificultad, int SegundosTotal) {
+    public AjustesTop10(String Nickname, String Dificultad, String Tablero, int SegundosTotal){
         
         this.Nickname = Nickname;
         this.Dificultad = Dificultad;
+        this.TamTablero = Tablero;
         this.SegundosTotal = SegundosTotal;
     }
+    public String tiempoFormateado(){
+        
+        int horas = SegundosTotal / 3600;
+        int minutos = (SegundosTotal % 3600) / 60;
+        int segundos = SegundosTotal % 60;
+        return String.format("%02d:%02d:%02d", horas, minutos, segundos);
+    }
+    
+    @Override
+    public String toString(){
+        
+        return Nickname + " - Tiempo: " + tiempoFormateado();
+    } 
+    
 }
