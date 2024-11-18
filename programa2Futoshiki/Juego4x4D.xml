@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partida>
+    <Simbolos>
+        <Sim_0_0>&lt;</Sim_0_0>
+        <Sim_0_1/>
+        <Sim_0_2/>
+        <Sim_1_0/>
+        <Sim_1_1/>
+        <Sim_1_2/>
+        <Sim_1_3>&gt;</Sim_1_3>
+        <Sim_2_0/>
+        <Sim_2_1/>
+        <Sim_2_2/>
+        <Sim_3_0>&gt;</Sim_3_0>
+        <Sim_3_1/>
+        <Sim_3_2/>
+        <Sim_3_3/>
+        <Sim_4_0/>
+        <Sim_4_1/>
+        <Sim_4_2/>
+        <Sim_5_0/>
+        <Sim_5_1/>
+        <Sim_5_2>&lt;</Sim_5_2>
+        <Sim_5_3>&lt;</Sim_5_3>
+        <Sim_6_0/>
+        <Sim_6_1/>
+        <Sim_6_2>&lt;</Sim_6_2>
+    </Simbolos>
+</partida>
