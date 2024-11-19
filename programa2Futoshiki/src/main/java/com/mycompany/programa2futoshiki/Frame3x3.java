@@ -927,6 +927,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         boolean finJuego=juegoTerminado(matrizNumeros);
         if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
+            System.out.println(Multinivel);
             if (Multinivel==0){
               
                 ConfValiUsuario();
@@ -943,10 +944,10 @@ public class Frame3x3 extends javax.swing.JFrame {
                 
                 }
                 
-                new MenuPrincipal().setVisible(true);
                 this.dispose();
             }else{
-                if (Dificultad=="Facil"){
+                this.setVisible(false);
+                if (Dificultad=="Fácil"){
                     new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else if(Dificultad=="Intermedio"){
                     new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
@@ -963,9 +964,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                     }else{
                 
                         JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
-                    }      
-                    
-                    new MenuPrincipal().setVisible(true);
+                    }     
                     this.dispose();
                 }
             }

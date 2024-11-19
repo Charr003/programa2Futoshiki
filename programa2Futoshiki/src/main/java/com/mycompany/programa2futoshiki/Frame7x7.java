@@ -2135,13 +2135,13 @@ public class Frame7x7 extends javax.swing.JFrame {
                 
                 }    
                 
-                new MenuPrincipal().setVisible(true);
                 this.dispose();
             }else{
-                if (Dificultad=="Facil"){
-                    new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+                this.setVisible(false);
+                if (Dificultad=="Fácil"){
+                    new Frame7x7("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else if(Dificultad=="Intermedio"){
-                    new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+                    new Frame7x7("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else{
                     
                     ConfValiUsuario();
@@ -2156,8 +2156,6 @@ public class Frame7x7 extends javax.swing.JFrame {
                 
                         JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                     }            
-                    
-                    new MenuPrincipal().setVisible(true);
                     this.dispose();
                 }
             }
