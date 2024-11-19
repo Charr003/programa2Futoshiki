@@ -553,7 +553,6 @@ public class Frame3x3 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 50, 65));
 
-        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2futoshiki/borrador.jpg"))); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -993,7 +992,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
-    if (columna >= 0 && columna+1 < 33 && !matrizSimbolos[fila * 2][columna].equals("")) {
+    if (columna >= 0 && columna+1 < 3 && !matrizSimbolos[fila * 2][columna].equals("")) {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero && matrizNumeros[fila][columna + 1] > 0) {
