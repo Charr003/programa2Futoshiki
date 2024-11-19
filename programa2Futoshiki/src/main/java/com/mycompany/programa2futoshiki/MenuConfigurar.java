@@ -686,41 +686,40 @@ public class MenuConfigurar extends javax.swing.JFrame{
         switch(Tablero){
             
             case 0 : // 3x3
-                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
             
             case 1: // 4x4
-                new Frame4x4(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame4x4(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
             
             case 2: // 5x5
-                new Frame5x5(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame5x5(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
                 
             case 3: // 6x6
-                new Frame6x6(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame6x6(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
                 
             case 4: // 7x7
-                new Frame7x7(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame7x7(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
             
             case 5: // 8x8
-                new Frame8x8(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame8x8(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
             
             case 6: // 9x9
-                new Frame9x9(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);
+                new Frame9x9(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);                
                 setVisible(false);
                 break;
-
-                
+        
             case 7: // 10x10    
                 
                 new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,usuario,Horas,Minutos,Segundos,0).setVisible(true);

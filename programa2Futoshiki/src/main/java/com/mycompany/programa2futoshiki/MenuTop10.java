@@ -28,9 +28,10 @@ public class MenuTop10 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         //Prueba
+        
         cargarAjustes();
        
-        String topFacil = mostrarTop10("3x3", "Fácil");
+        String topFacil = mostrarTop10("4x4", "Fácil");
         
         System.out.println(topFacil);
         
