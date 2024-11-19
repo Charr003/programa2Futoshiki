@@ -63,13 +63,13 @@ public class Frame3x3 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
-    public Frame3x3(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
+    public Frame3x3(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int segundosTranscurridos) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
         setLocationRelativeTo(null);
         
-        tiempoTranscurridoSegundos = SegundosTranscurridos;
+        tiempoTranscurridoSegundos = segundosTranscurridos;
         Nombre = nombre;
         NombreJugador.setText(nombre);
         horas = Horas; 
