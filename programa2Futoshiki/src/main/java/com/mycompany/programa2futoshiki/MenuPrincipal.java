@@ -500,23 +500,34 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 break;
             
             case 1: // 4x4
-                break;
+                new Frame4x4(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break; 
             
             case 2: // 5x5
-                break;
+                new Frame5x5(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break; 
                 
             case 3: // 6x6
-                break;
+                new Frame6x6(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break; 
                 
             case 4: // 7x7
-                break;
+                new Frame7x7(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break; 
             
             case 5: // 8x8
-                break;
+                new Frame8x8(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break; 
             
             case 6: // 9x9
-
-                
+                new Frame9x9(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
+                setVisible(false);
+                break;   
             case 7: // 10x10    
                 
                 new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);

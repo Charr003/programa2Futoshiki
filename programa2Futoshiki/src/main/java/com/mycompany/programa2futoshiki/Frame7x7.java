@@ -34,7 +34,7 @@ public class Frame7x7 extends javax.swing.JFrame {
     private String Posicion;
     private Usuario usuario2;
     private String Nombre;
-    private String TamTablero ="3x3";
+    private String TamTablero ="7x7";
     int tempHora = 0;
     int tempMins = 0;
     int tempSeg= 0;
