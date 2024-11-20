@@ -430,6 +430,20 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
     private void cboxMultiNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxMultiNivelActionPerformed
         // TODO add your handling code here:
+        
+        if(cboxMultiNivel.getSelectedIndex()==1){
+        
+            cboxNivel.enable(false);
+            cboxReloj.enable(false);
+            cboxNivel.setSelectedIndex(0);
+            cboxReloj.setSelectedIndex(1);
+        
+        }else{
+        
+            cboxNivel.enable(true);
+            cboxReloj.enable(true);
+        
+        }
     }//GEN-LAST:event_cboxMultiNivelActionPerformed
 
     private void cboxRelojActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxRelojActionPerformed
