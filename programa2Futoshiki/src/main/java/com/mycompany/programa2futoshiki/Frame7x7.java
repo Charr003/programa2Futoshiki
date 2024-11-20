@@ -483,10 +483,7 @@ public class Frame7x7 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BotonIniciarJuego = new javax.swing.JButton();
-        BotonBorrarJugada = new javax.swing.JButton();
-        BotonBorrarJuego = new javax.swing.JButton();
         BotonGuardarJuego = new javax.swing.JButton();
-        BotonRehacerJugada = new javax.swing.JButton();
         BotonCargarJuego = new javax.swing.JButton();
         BotonTerminarJuego = new javax.swing.JButton();
         Horatexto = new javax.swing.JTextField();
@@ -501,6 +498,9 @@ public class Frame7x7 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        BotonBorrarJugada = new javax.swing.JButton();
+        BotonRehacerJugada = new javax.swing.JButton();
+        BotonBorrarJuego = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1426,27 +1426,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         });
         getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, 158, 70));
 
-        BotonBorrarJugada.setBackground(new java.awt.Color(0, 204, 204));
-        BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonBorrarJugada.setText("BORRAR JUGADA");
-        BotonBorrarJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        BotonBorrarJugada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonBorrarJugadaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, 158, 40));
-
-        BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
-        BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonBorrarJuego.setText("BORRAR JUEGO");
-        BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonBorrarJuegoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, 158, 40));
-
         BotonGuardarJuego.setBackground(new java.awt.Color(51, 153, 0));
         BotonGuardarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonGuardarJuego.setText("GUARDAR JUEGO");
@@ -1457,17 +1436,6 @@ public class Frame7x7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 610, 158, 40));
-
-        BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
-        BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonRehacerJugada.setText("REHACER JUGADA");
-        BotonRehacerJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        BotonRehacerJugada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRehacerJugadaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 690, 158, 40));
 
         BotonCargarJuego.setBackground(new java.awt.Color(153, 51, 0));
         BotonCargarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -1529,7 +1497,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 700, 50, 65));
 
-        BorrarBoton.setIcon(new javax.swing.ImageIcon("C:\\Users\\jxdga\\Documents\\GitHub\\programa2Futoshiki\\programa2Futoshiki\\src\\main\\java\\com\\mycompany\\programa2futoshiki\\borrador.jpg")); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1589,6 +1556,38 @@ public class Frame7x7 extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 20, -1));
+
+        BotonBorrarJugada.setBackground(new java.awt.Color(0, 204, 204));
+        BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonBorrarJugada.setText("BORRAR JUGADA");
+        BotonBorrarJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonBorrarJugada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJugadaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 610, 158, 40));
+
+        BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
+        BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonRehacerJugada.setText("REHACER JUGADA");
+        BotonRehacerJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonRehacerJugada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRehacerJugadaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 690, 158, 40));
+
+        BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
+        BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonBorrarJuego.setText("BORRAR JUEGO");
+        BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJuegoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, 158, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2015,71 +2014,15 @@ public class Frame7x7 extends javax.swing.JFrame {
         AsignarNum(PuntoX, PuntoY, 0);
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
-    private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
-        if (!jugadas.isEmpty()) {}
-            Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
-            int cordX=jugadaAnterior.getCordX();
-            int cordY=jugadaAnterior.getCordY();
-            int num=jugadaAnterior.getNum();
-            jugadas.remove(jugadas.size() - 1);
-            botones[cordX][cordY].setText(""+num);
-            if (num==0){
-            botones[cordX][cordY].setText("");
-            matrizNumeros[cordX][cordY]=num;
-            }
-            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
-            if (esta==false){
-                matrizNumeros[cordX][cordY]=num;
-                botones[cordX][cordY].setForeground(Color.GREEN);
-            }
-            else{
-                botones[cordX][cordY].setForeground(Color.RED);
-            }
-    }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
-
-    private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
-        int [][] matrizNumeros = {
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0}
-        };
-        int size = matrizNumeros.length;
-        for (int j = 0; j < size; j++) {
-            for (int i = 0; i < size; i++) {
-                botones[j][i].setText("");
-            }
-        }
-        imprimirMatriz(matrizNumeros);
-    }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
-
-    private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
-        int cordX=ultimaJugada.getCordX();
-            int cordY=ultimaJugada.getCordY();
-            int num=ultimaJugada.getNum();
-            botones[cordX][cordY].setText(""+num);
-            if (num==0){
-            botones[cordX][cordY].setText("");
-            matrizNumeros[cordX][cordY]=num;
-            }
-            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
-            if (esta==false){
-                matrizNumeros[cordX][cordY]=num;
-                botones[cordX][cordY].setForeground(Color.GREEN);
-            }
-            else{
-                botones[cordX][cordY].setForeground(Color.RED);
-            }
-    }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
-
     private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
-        this.dispose();
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,"¿ESTÁ SEGURO DE TERMINAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+        );
+        if (respuesta == JOptionPane.YES_OPTION){
+            this.setVisible(false);
+            new Frame7x7(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
@@ -2092,6 +2035,45 @@ public class Frame7x7 extends javax.swing.JFrame {
        
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
+
+    private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
+        if (!jugadas.isEmpty()) {}
+        Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
+        int cordX=jugadaAnterior.getCordX();
+        int cordY=jugadaAnterior.getCordY();
+        int num=Integer.parseInt(botones[cordX][cordY].getText());
+        ultimaJugada=new Jugada(cordX,cordY,num);
+        jugadas.remove(jugadas.size() - 1);
+        botones[cordX][cordY].setText("");
+        matrizNumeros[cordX][cordY]=0;
+    }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
+
+    private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
+        if (ultimaJugada!=null) {
+            int cordX=ultimaJugada.getCordX();
+            int cordY=ultimaJugada.getCordY();
+            int num=ultimaJugada.getNum();
+            AsignarNum(cordX, cordY, num);
+        }
+    }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
+
+    private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+        );
+        if (respuesta == JOptionPane.YES_OPTION){
+
+            int size = matrizNumeros.length;
+            for (int j = 0; j < size; j++) {
+                for (int i = 0; i < size; i++) {
+                    botones[j][i].setText("");
+                    matrizNumeros[j][i]=0;
+                }
+            }
+
+        }
+
+    }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
 
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
@@ -2170,11 +2152,17 @@ public class Frame7x7 extends javax.swing.JFrame {
         
         for (int j = 0; j < size; j++) {
             if (matriz[fila][j] == numero) {
+                if (numero!=0){
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE EL ELEMENTO YA ESTÁ EN LA FILA");
+                }
                 return true; // Número encontrado en la fila
             }
         }
         for (int i = 0; i < size; i++) {
             if (matriz[i][columna] == numero) {
+                if (numero!=0){
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE EL ELEMENTO YA ESTÁ EN LA COLUMNA");
+                }
                 return true; // Número encontrado en la columna
             }
         }
@@ -2187,10 +2175,12 @@ public class Frame7x7 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero && matrizNumeros[fila][columna + 1] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila][columna + 1] > 0 && matrizNumeros[fila][columna + 1] > numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         }
@@ -2200,10 +2190,12 @@ public class Frame7x7 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila*2][columna - 1];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna - 1] > numero && matrizNumeros[fila][columna - 1] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila][columna - 1] > 0 && matrizNumeros[fila][columna - 1] < numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         }
@@ -2213,10 +2205,12 @@ public class Frame7x7 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[(fila * 2 - 1)][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila - 1][columna] > numero && matrizNumeros[fila - 1][columna] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila - 1][columna] > 0 && matrizNumeros[fila- 1][columna] < numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         }
@@ -2226,10 +2220,12 @@ public class Frame7x7 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila + 1][columna] < numero && matrizNumeros[fila + 1][columna] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila + 1][columna] > 0 && matrizNumeros[fila + 1][columna] > numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         }

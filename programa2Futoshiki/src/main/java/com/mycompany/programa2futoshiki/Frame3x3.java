@@ -153,6 +153,8 @@ public class Frame3x3 extends javax.swing.JFrame {
             }
         });     
         jugadas = new ArrayList<Jugada>();
+        
+        
     }
 
     /**
@@ -824,70 +826,53 @@ public class Frame3x3 extends javax.swing.JFrame {
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
     private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
-        if (!jugadas.isEmpty()) {}
-            Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
-            int cordX=jugadaAnterior.getCordX();
-            int cordY=jugadaAnterior.getCordY();
-            int num=jugadaAnterior.getNum();
-            jugadas.remove(jugadas.size() - 1);
-            botones[cordX][cordY].setText(""+num);
-            if (num==0){
-            botones[cordX][cordY].setText("");
-            matrizNumeros[cordX][cordY]=num;
-            }
-            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
-            if (esta==false){
-                matrizNumeros[cordX][cordY]=num;
-                botones[cordX][cordY].setForeground(Color.GREEN);
-            }
-            else{
-                botones[cordX][cordY].setForeground(Color.RED);
-            }
+        if (ultimaJugada!=null) {
+            int cordX=ultimaJugada.getCordX();
+            int cordY=ultimaJugada.getCordY();
+            int num=ultimaJugada.getNum();
+            AsignarNum(cordX, cordY, num);
+        }    
     }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
 
     private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
-        int [][] matrizNumeros = {
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0}
-        };
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+        );
+        if (respuesta == JOptionPane.YES_OPTION){
+            
         int size = matrizNumeros.length;
         for (int j = 0; j < size; j++) {
             for (int i = 0; i < size; i++) {
                 botones[j][i].setText("");
+                matrizNumeros[j][i]=0;
             }
         }
-        imprimirMatriz(matrizNumeros);
+        
+        }
+        
     }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
 
     private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
-        int cordX=ultimaJugada.getCordX();
-            int cordY=ultimaJugada.getCordY();
-            int num=ultimaJugada.getNum();
-            botones[cordX][cordY].setText(""+num);
-            if (num==0){
+        if (!jugadas.isEmpty()) {}
+            Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
+            int cordX=jugadaAnterior.getCordX();
+            int cordY=jugadaAnterior.getCordY();
+            int num=Integer.parseInt(botones[cordX][cordY].getText());
+            ultimaJugada=new Jugada(cordX,cordY,num);
+            jugadas.remove(jugadas.size() - 1);
             botones[cordX][cordY].setText("");
-            matrizNumeros[cordX][cordY]=num;
-            }
-            boolean esta=verificarMatriz(matrizNumeros,cordX,cordY,num);
-            if (esta==false){
-                matrizNumeros[cordX][cordY]=num;
-                botones[cordX][cordY].setForeground(Color.GREEN);
-            }
-            else{
-                botones[cordX][cordY].setForeground(Color.RED);
-            }
+            matrizNumeros[cordX][cordY]=0;
     }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
 
     private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
-        this.dispose();
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,"¿ESTÁ SEGURO DE TERMINAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+        );
+        if (respuesta == JOptionPane.YES_OPTION){
+            this.setVisible(false);
+            new Frame3x3(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
@@ -971,7 +956,6 @@ public class Frame3x3 extends javax.swing.JFrame {
         }
         
         }
-        
     }
     
     public boolean verificarMatriz(int[][] matriz,int fila, int columna,int numero){
@@ -979,11 +963,17 @@ public class Frame3x3 extends javax.swing.JFrame {
         
         for (int j = 0; j < size; j++) {
             if (matriz[fila][j] == numero) {
+                if (numero!=0){
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE EL ELEMENTO YA ESTÁ EN LA FILA");
+                }
                 return true; // Número encontrado en la fila
             }
         }
         for (int i = 0; i < size; i++) {
             if (matriz[i][columna] == numero) {
+                if (numero!=0){
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE EL ELEMENTO YA ESTÁ EN LA COLUMNA");
+                }
                 return true; // Número encontrado en la columna
             }
         }
@@ -996,10 +986,12 @@ public class Frame3x3 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero && matrizNumeros[fila][columna + 1] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila][columna + 1] > 0 && matrizNumeros[fila][columna + 1] > numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         }
@@ -1009,10 +1001,12 @@ public class Frame3x3 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila*2][columna - 1];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna - 1] > numero && matrizNumeros[fila][columna - 1] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila][columna - 1] > 0 && matrizNumeros[fila][columna - 1] < numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         }
@@ -1022,10 +1016,12 @@ public class Frame3x3 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[(fila * 2 - 1)][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila - 1][columna] > numero && matrizNumeros[fila - 1][columna] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila - 1][columna] > 0 && matrizNumeros[fila- 1][columna] < numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         }
@@ -1035,10 +1031,12 @@ public class Frame3x3 extends javax.swing.JFrame {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila + 1][columna] < numero && matrizNumeros[fila + 1][columna] > 0) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MENOR");
                 error = true;
             }
         } else {
             if (matrizNumeros[fila + 1][columna] > 0 && matrizNumeros[fila + 1][columna] > numero) {
+                JOptionPane.showMessageDialog(null, "JUGADA NO ES VÁLIDA PORQUE NO CUMPLE CON LA RESTRICCIÓN DE MAYOR");
                 error = true;
             }
         }

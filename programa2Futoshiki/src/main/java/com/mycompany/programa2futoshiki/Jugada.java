@@ -10,10 +10,10 @@ public class Jugada {
     int cordenadaY;
     int num;
     
-    public Jugada(int cordX, int cordY, int num){
+    public Jugada(int cordX, int cordY, int Num){
         cordenadaX=cordX;
         cordenadaY=cordY;
-        num=num;
+        num=Num;
     }
     
     public int getCordX(){
