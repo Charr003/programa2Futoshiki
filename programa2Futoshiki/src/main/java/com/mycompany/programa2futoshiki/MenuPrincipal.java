@@ -266,8 +266,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         //cargarDatos();
         //mostrarUsuario();
         
-        MenuTop10 menuTop = new MenuTop10();
-        menuTop.setVisible(true);
+        new MenuTop10().setVisible(true);
         
     }//GEN-LAST:event_botonTopActionPerformed
 

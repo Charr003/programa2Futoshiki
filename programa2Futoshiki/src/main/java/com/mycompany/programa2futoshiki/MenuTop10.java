@@ -4,6 +4,11 @@
  */
 package com.mycompany.programa2futoshiki;
 
+import javax.swing.JOptionPane;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,7 +16,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Scanner;
+
 
 
 /**
@@ -25,16 +30,7 @@ public class MenuTop10 extends javax.swing.JFrame {
      */
     public MenuTop10() {
         initComponents();
-        setLocationRelativeTo(null);
-        
-        //Prueba
-        
-        cargarAjustes();
-       
-        String topFacil = mostrarTop10("4x4", "Fácil");
-        
-        System.out.println(topFacil);
-        
+        setLocationRelativeTo(null);  
     }
 
     /**
@@ -47,8 +43,21 @@ public class MenuTop10 extends javax.swing.JFrame {
     private void initComponents() {
 
         botonSalir = new javax.swing.JButton();
+        txtTitulo = new javax.swing.JLabel();
+        cboxTamaño = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textFacil = new javax.swing.JTextArea();
+        lblMultiNivel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textIntermedio = new javax.swing.JTextArea();
+        lblMultiNivel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        textDificil = new javax.swing.JTextArea();
+        lblMultiNivel2 = new javax.swing.JLabel();
+        botonBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         botonSalir.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonSalir.setText("Salir");
@@ -58,21 +67,137 @@ public class MenuTop10 extends javax.swing.JFrame {
             }
         });
 
+        txtTitulo.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
+        txtTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtTitulo.setText("Top 10");
+
+        cboxTamaño.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        cboxTamaño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3x3", "4x4", "5x5", "6x6", "7x7", "8x8", "9x9", "10x10" }));
+        cboxTamaño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxTamañoActionPerformed(evt);
+            }
+        });
+        cboxTamaño.setRenderer(new javax.swing.ListCellRenderer<String>() {
+
+            @Override
+            public Component getListCellRendererComponent(JList<? extends String> list, String value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = new JLabel(value);
+                label.setFont(new java.awt.Font("Dialog", 0, 14));
+
+                if (index == 0) {
+                    label.setForeground(Color.RED);
+                } else {
+                    label.setForeground(Color.BLACK);
+                }
+
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                }
+
+                return label;
+            }
+        });
+
+        textFacil.setEditable(false);
+        textFacil.setColumns(20);
+        textFacil.setRows(5);
+        jScrollPane1.setViewportView(textFacil);
+
+        lblMultiNivel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblMultiNivel.setText("Fácil:");
+
+        textIntermedio.setEditable(false);
+        textIntermedio.setColumns(20);
+        textIntermedio.setRows(5);
+        jScrollPane2.setViewportView(textIntermedio);
+
+        lblMultiNivel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblMultiNivel1.setText("Intermedio:");
+
+        textDificil.setEditable(false);
+        textDificil.setColumns(20);
+        textDificil.setRows(5);
+        jScrollPane3.setViewportView(textDificil);
+
+        lblMultiNivel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lblMultiNivel2.setText("Difícil:");
+
+        botonBuscar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        botonBuscar.setText("Buscar");
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(296, Short.MAX_VALUE)
-                .addComponent(botonSalir)
-                .addGap(34, 34, 34))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(81, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(botonBuscar)
+                                .addGap(341, 341, 341))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(77, 77, 77)
+                                        .addComponent(lblMultiNivel)))
+                                .addGap(59, 59, 59)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(60, 60, 60))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(lblMultiNivel1)
+                                        .addGap(113, 113, 113)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(83, 83, 83)
+                                        .addComponent(lblMultiNivel2)))))
+                        .addGap(57, 57, 57))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127)
+                        .addComponent(botonSalir)
+                        .addGap(66, 66, 66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(330, 330, 330))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(botonSalir)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(botonSalir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(txtTitulo)
+                        .addGap(18, 18, 18)
+                        .addComponent(cboxTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMultiNivel1)
+                    .addComponent(lblMultiNivel)
+                    .addComponent(lblMultiNivel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(botonBuscar)
+                .addGap(45, 45, 45))
         );
 
         pack();
@@ -84,6 +209,31 @@ public class MenuTop10 extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_botonSalirActionPerformed
 
+    private void cboxTamañoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxTamañoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxTamañoActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        
+        cargarAjustes();
+        
+        String buscar = String.valueOf(cboxTamaño.getSelectedItem());
+        
+        
+        String topFacil = mostrarTop10(buscar, "Fácil");
+        String topIntermedio = mostrarTop10(buscar, "Intermedio");
+        String topDificil = mostrarTop10(buscar, "Difícil");
+        
+        
+        //System.out.println(topFacil);
+        
+        textFacil.setText(topFacil);
+        textIntermedio.setText(topIntermedio);
+        textDificil.setText(topDificil);
+        
+        
+    }//GEN-LAST:event_botonBuscarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -92,7 +242,7 @@ public class MenuTop10 extends javax.swing.JFrame {
     
     
     public void AgregarLista(AjustesTop10 prefs){
-    
+        cargarAjustes();
         jugadores.add(prefs);
         
     }
@@ -125,7 +275,7 @@ public class MenuTop10 extends javax.swing.JFrame {
         
 
         StringBuilder resultado = new StringBuilder();
-        resultado.append("\nTop 10 - Tablero: ").append(tablero).append(" - Dificultad: ").append(dificultad).append("\n");
+        //resultado.append("\nTop 10 - Tablero: ").append(tablero).append(" - Dificultad: ").append(dificultad).append("\n");
 
         ArrayList<AjustesTop10> top10 = new ArrayList<>(jugadores.stream()
                 
@@ -146,6 +296,18 @@ public class MenuTop10 extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBuscar;
     private javax.swing.JButton botonSalir;
+    private javax.swing.JComboBox<String> cboxTamaño;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblMultiNivel;
+    private javax.swing.JLabel lblMultiNivel1;
+    private javax.swing.JLabel lblMultiNivel2;
+    private javax.swing.JTextArea textDificil;
+    private javax.swing.JTextArea textFacil;
+    private javax.swing.JTextArea textIntermedio;
+    private javax.swing.JLabel txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
