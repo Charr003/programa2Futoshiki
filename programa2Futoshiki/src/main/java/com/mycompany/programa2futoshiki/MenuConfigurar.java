@@ -393,7 +393,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 95, Short.MAX_VALUE)
+            .addGap(0, 103, Short.MAX_VALUE)
         );
 
         tabPanelReloj.addTab("", jPanel4);
