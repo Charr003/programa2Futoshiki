@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 import java.util.ArrayList;
 
+import java.net.URL;
+
 /**
  *
  * @author jxdga
@@ -556,6 +558,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 50, 65));
 
+        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2futoshiki/borrador.jpg"))); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

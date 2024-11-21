@@ -2273,6 +2273,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 680, 50, 65));
 
+        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2Futoshiki/borrador.jpg"))); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

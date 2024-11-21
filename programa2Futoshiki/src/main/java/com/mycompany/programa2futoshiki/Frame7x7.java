@@ -1497,6 +1497,7 @@ public class Frame7x7 extends javax.swing.JFrame {
         });
         getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 700, 50, 65));
 
+        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2Futoshiki/borrador.jpg"))); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
