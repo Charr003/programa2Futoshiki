@@ -179,69 +179,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
-    /*        
-        // Opcion temporal, luego se cambia por el menu de configurar
-        
-        String[] opciones = {"4x4", "5x5","6x6 ","7x7","8x8","9x9",
-            "10x10", "Salir"}; 
-        
-        int tablero = JOptionPane.showOptionDialog(
-                null,
-                "Seleccione el tamaño del tablero con el que se quiere jugar:",
-                "Menú de Opciones de Tablero",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                opciones,
-                opciones[0]
-        );
-        
-        switch(tablero){
-        
-            case 0:
-                //4x4
-                break;
-                
-            case 1:
-                //5x5
-                break;
-                
-            case 2:
-                //6x6
-                break;
-                
-            case 3:
-                //7x7
-                break;
-            case 4:
-                //8x8 
-                break;
-            case 5:
-                //9x9
-                break;
-            case 6:
-                //10x10
-                new Frame10x10().setVisible(true);
-                //setVisible(false);
-                break;
-                
-            case 7:
-                //Salir
-                break;
-        }
-       */
+
         MenuConfigurar config = new MenuConfigurar();
         AjustesFutoshiki ajuste = config.Ajuste();
         
         if(ajuste!=null){
         
             seleTablero(ajuste);
-            setVisible(false); 
+            
 
         }else{
         
              new Frame3x3("Facíl",0,0,"Derecha","Anónimo",null,0,0,0,0).setVisible(true);
-             setVisible(false); 
+             
         
         }
     
@@ -495,22 +445,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
             
             case 0 : // 3x3
                 new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break;
             
             case 1: // 4x4
                 new Frame4x4(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break; 
             
             case 2: // 5x5
                 new Frame5x5(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break; 
                 
             case 3: // 6x6
                 new Frame6x6(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break; 
                 
             case 4: // 7x7
@@ -520,17 +470,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
             
             case 5: // 8x8
                 new Frame8x8(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break; 
             
             case 6: // 9x9
                 new Frame9x9(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break;   
             case 7: // 10x10    
                 
                 new Frame10x10(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                
                 break; 
                 
         }
