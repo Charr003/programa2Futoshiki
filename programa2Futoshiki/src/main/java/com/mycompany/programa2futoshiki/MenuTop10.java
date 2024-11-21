@@ -57,7 +57,6 @@ public class MenuTop10 extends javax.swing.JFrame {
         botonBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         botonSalir.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         botonSalir.setText("Salir");

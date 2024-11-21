@@ -2975,7 +2975,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         );
         if (respuesta == JOptionPane.YES_OPTION){
             this.setVisible(false);
-            new Frame9x9(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+            //new Frame9x9(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed

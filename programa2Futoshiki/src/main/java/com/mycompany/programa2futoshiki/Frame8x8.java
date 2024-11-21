@@ -2463,7 +2463,7 @@ public class Frame8x8 extends javax.swing.JFrame {
         );
         if (respuesta == JOptionPane.YES_OPTION){
             this.setVisible(false);
-            new Frame8x8(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+            //new Frame8x8(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
