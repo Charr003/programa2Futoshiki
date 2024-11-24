@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Controlador;
 import java.io.Serializable;
 /**
  *
@@ -10,15 +10,15 @@ import java.io.Serializable;
  */
 public class AjustesFutoshiki implements Serializable {
 
-   protected String nombre;
-   protected int IndiceTam;
-   protected int IndiceNivel;
-   protected int IndiceMultiNivel;
-   protected int IndiceReloj;
-   protected int IndicePosicion;
-   protected int HorasG;
-   protected int MinutosG;
-   protected int SegundosG;
+   public String nombre;
+   public int IndiceTam;
+   public int IndiceNivel;
+   public int IndiceMultiNivel;
+   public int IndiceReloj;
+   public int IndicePosicion;
+   public int HorasG;
+   public int MinutosG;
+   public int SegundosG;
    
     public AjustesFutoshiki(String nombre, int IndiceTam, int Nivel, int IndiceMultiNivel, int IndiceReloj, int IndicePosicion, int hora, int min, int seg) {
         

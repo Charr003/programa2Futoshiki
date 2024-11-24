@@ -2,11 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.programa2futoshiki;
+
+package Controlador;
 /**
  *
  * @author XPC
  */
+
+import Vista.MenuPrincipal;
+import Vista.*;
+import Modelo.*;
+
+
 public class Programa2Futoshiki {
 
     public static void main(String[] args) {

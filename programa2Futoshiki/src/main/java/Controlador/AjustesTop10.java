@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Controlador;
 import java.io.Serializable;
 /**
  *
@@ -10,10 +10,10 @@ import java.io.Serializable;
  */
 public class AjustesTop10 implements Serializable {
     
-    protected String Nickname;
-    protected String Dificultad;
-    protected String TamTablero;
-    protected int SegundosTotal;
+    public String Nickname;
+    public String Dificultad;
+    public String TamTablero;
+    public int SegundosTotal;
 
     public AjustesTop10(String Nickname, String Dificultad, String Tablero, int SegundosTotal){
         
