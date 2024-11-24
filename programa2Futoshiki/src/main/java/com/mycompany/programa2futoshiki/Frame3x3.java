@@ -254,6 +254,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        NivelDificultad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -434,7 +435,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(123, Short.MAX_VALUE)
+                .addContainerGap(124, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(110, 110, 110))
         );
@@ -469,6 +470,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
         BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BotonBorrarJuego.setText("BORRAR JUEGO");
+        BotonBorrarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonBorrarJuegoActionPerformed(evt);
@@ -578,7 +580,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 NombreJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 6, 193, 38));
+        getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 193, 38));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -618,6 +620,16 @@ public class Frame3x3 extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 20, -1));
+
+        NivelDificultad.setEditable(false);
+        NivelDificultad.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        NivelDificultad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NivelDificultad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NivelDificultadActionPerformed(evt);
+            }
+        });
+        getContentPane().add(NivelDificultad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 193, 38));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -795,6 +807,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     
         String juego="Juego3x3";
         System.out.println(Dificultad);
+        NivelDificultad.setText("Nivel "+Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
         }else if(Dificultad=="Intermedio"){
@@ -889,6 +902,10 @@ public class Frame3x3 extends javax.swing.JFrame {
        
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
+
+    private void NivelDificultadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivelDificultadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NivelDificultadActionPerformed
 
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
@@ -1221,6 +1238,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     private javax.swing.JTextField Horatexto;
     private javax.swing.JTextField MinutosTexto;
     private javax.swing.JTextField MinutosTiempo;
+    private javax.swing.JTextField NivelDificultad;
     private javax.swing.JTextField NombreJugador;
     private javax.swing.JTextField SegundosTexto;
     private javax.swing.JTextField SegundosTiempo;

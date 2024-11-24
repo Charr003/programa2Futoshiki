@@ -232,7 +232,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void botonAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcercaDeActionPerformed
         
-        JOptionPane.showMessageDialog(null,"Acerca de");
+        JOptionPane.showMessageDialog(null,"Programación Orientada a Objetos - Programa 2: FUTOSHIKI\n"+"Versión 1.0\n"+"23/11/24\n"
+                +"Desarollado por Carlos Gutiérrez y Joshua Valverde ");
     }//GEN-LAST:event_botonAcercaDeActionPerformed
 
     private void botonConfigurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfigurarActionPerformed
@@ -409,7 +410,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public void AbrirPDF(){
     
-        File archivoPDF = new File("Manual.pdf");
+        File archivoPDF = new File("programa2_futoshiki_manual_de_usuario.pdf");
     
         if(archivoPDF.exists() && Desktop.isDesktopSupported()){
             
