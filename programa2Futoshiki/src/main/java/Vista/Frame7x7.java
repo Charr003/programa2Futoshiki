@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Vista;
+import Controlador.AjustesTop10;
+import Modelo.ArchivosXML;
+import Controlador.Jugada;
+import Modelo.Usuario;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;

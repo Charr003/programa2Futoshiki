@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Vista;
 
+import Controlador.AjustesTop10;
 import javax.swing.JOptionPane;
 import java.awt.Color;
 import javax.swing.JLabel;

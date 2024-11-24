@@ -1,5 +1,5 @@
 
-package com.mycompany.programa2futoshiki;
+package Controlador;
 
 /**
  *

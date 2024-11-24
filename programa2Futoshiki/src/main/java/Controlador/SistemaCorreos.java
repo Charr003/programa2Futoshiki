@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
-
+package Controlador;
+import Modelo.Usuario;
+import Modelo.*;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -14,13 +15,13 @@ public class SistemaCorreos {
 public static void EnviarCorreo(String fromEmail, String password, String toEmail, String subject, String messageBody) throws Exception {
         
         // Validar los inputs
-        if (fromEmail == null || !fromEmail.contains("@")) {
+        if (fromEmail == null || !fromEmail.contains("@")){
             throw new IllegalArgumentException("Correo del remitente inválido");
         }
-        if (password == null || password.length() < 6) {
+        if (password == null || password.length() < 6){
             throw new IllegalArgumentException("Contraseña inválida");
         }
-        if (toEmail == null || !toEmail.contains("@")) {
+        if (toEmail == null || !toEmail.contains("@")){
             throw new IllegalArgumentException("Correo del destinatario inválido");
         }
         

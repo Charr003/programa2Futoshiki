@@ -1,5 +1,5 @@
 
-package com.mycompany.programa2futoshiki;
+package Modelo;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;

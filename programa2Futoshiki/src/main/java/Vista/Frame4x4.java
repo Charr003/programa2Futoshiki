@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
+package Vista;
+import Controlador.AjustesTop10;
+import Modelo.ArchivosXML;
+import Controlador.Jugada;
+import Modelo.Usuario;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,13 +17,11 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 import java.util.ArrayList;
 
-import java.net.URL;
-
 /**
  *
  * @author jxdga
  */
-public class Frame3x3 extends javax.swing.JFrame {
+public class Frame4x4 extends javax.swing.JFrame {
     
     ArchivosXML archivoXML = new ArchivosXML();
     MenuTop10 menuTop = new MenuTop10();
@@ -36,7 +38,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     private String Posicion;
     private Usuario usuario2;
     private String Nombre;
-    private String TamTablero ="3x3";
+    private String TamTablero ="4x4";
     int tempHora = 0;
     int tempMins = 0;
     int tempSeg= 0;
@@ -49,29 +51,32 @@ public class Frame3x3 extends javax.swing.JFrame {
     Jugada ultimaJugada;
     
     int [][] matrizNumeros = {
-        {0,0,0},
-        {0,0,0},
-        {0,0,0}
+        {0,0,0,0},
+        {0,0,0,0},
+        {0,0,0,0},
+        {0,0,0,0}
     };
     String [][] matrizSimbolos={
-        {"",""},
         {"","",""},
-        {"",""},
+        {"","","",""},
         {"","",""},
-        {"",""}
+        {"","","",""},
+        {"","",""},
+        {"","","",""},
+        {"","",""}
     };
     
     /**
      * Creates new form Frame10x10
      */
     
-    public Frame3x3(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int segundosTranscurridos) {
+    public Frame4x4(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
         inicializarBotones();
         inicializarTexto();
         setLocationRelativeTo(null);
         
-        tiempoTranscurridoSegundos = segundosTranscurridos;
+        tiempoTranscurridoSegundos = SegundosTranscurridos;
         Nombre = nombre;
         NombreJugador.setText(nombre);
         horas = Horas; 
@@ -155,8 +160,6 @@ public class Frame3x3 extends javax.swing.JFrame {
             }
         });     
         jugadas = new ArrayList<Jugada>();
-        
-        
     }
 
     /**
@@ -169,36 +172,58 @@ public class Frame3x3 extends javax.swing.JFrame {
         botones[0][0] = Boton0_0;
         botones[0][1] = Boton0_1;
         botones[0][2] = Boton0_2;
-
+        botones[0][3] = Boton0_3;
+        
         botones[1][0] = Boton1_0;
         botones[1][1] = Boton1_1;
         botones[1][2] = Boton1_2;
+        botones[1][3] = Boton1_3;
         
         botones[2][0] = Boton2_0;
         botones[2][1] = Boton2_1;
         botones[2][2] = Boton2_2;
+        botones[2][3] = Boton2_3;
+        
+        botones[3][0] = Boton3_0;
+        botones[3][1] = Boton3_1;
+        botones[3][2] = Boton3_2;
+        botones[3][3] = Boton3_3;
         
     }
     
     private void inicializarTexto(){
-    texto = new JLabel[19][10]; // Creamos la matriz de 10x10
+        texto = new JLabel[19][10]; // Creamos la matriz de 10x10
 
-    texto[0][0] = Texto0_0;
+        texto[0][0] = Texto0_0;
     texto[0][1] = Texto0_1;
+    texto[0][2] = Texto0_2;
 
     texto[1][0] = Texto1_0;
     texto[1][1] = Texto1_1;
     texto[1][2] = Texto1_2;
+    texto[1][3] = Texto1_3;
 
     texto[2][0] = Texto2_0;
     texto[2][1] = Texto2_1;
+    texto[2][2] = Texto2_2;
 
     texto[3][0] = Texto3_0;
     texto[3][1] = Texto3_1;
     texto[3][2] = Texto3_2;
+    texto[3][3] = Texto3_3;
 
     texto[4][0] = Texto4_0;
     texto[4][1] = Texto4_1;
+    texto[4][2] = Texto4_2;
+
+    texto[5][0] = Texto5_0;
+    texto[5][1] = Texto5_1;
+    texto[5][2] = Texto5_2;
+    texto[5][3] = Texto5_3;
+
+    texto[6][0] = Texto6_0;
+    texto[6][1] = Texto6_1;
+    texto[6][2] = Texto6_2;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -209,37 +234,55 @@ public class Frame3x3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        BotonBorrarJugada1 = new javax.swing.JButton();
         Boton0_0 = new javax.swing.JButton();
         Boton0_1 = new javax.swing.JButton();
         Boton0_2 = new javax.swing.JButton();
+        Boton0_3 = new javax.swing.JButton();
         Boton1_0 = new javax.swing.JButton();
         Boton1_1 = new javax.swing.JButton();
         Boton1_2 = new javax.swing.JButton();
+        Boton1_3 = new javax.swing.JButton();
         Boton2_0 = new javax.swing.JButton();
         Boton2_1 = new javax.swing.JButton();
         Boton2_2 = new javax.swing.JButton();
+        Boton2_3 = new javax.swing.JButton();
         Boton1 = new javax.swing.JButton();
         Boton2 = new javax.swing.JButton();
         Boton3 = new javax.swing.JButton();
+        Boton3_0 = new javax.swing.JButton();
+        Boton3_1 = new javax.swing.JButton();
+        Boton3_2 = new javax.swing.JButton();
+        Boton3_3 = new javax.swing.JButton();
         Texto0_0 = new javax.swing.JLabel();
         Texto0_1 = new javax.swing.JLabel();
+        Texto0_2 = new javax.swing.JLabel();
         Texto1_0 = new javax.swing.JLabel();
         Texto1_1 = new javax.swing.JLabel();
         Texto1_2 = new javax.swing.JLabel();
+        Texto1_3 = new javax.swing.JLabel();
         Texto2_0 = new javax.swing.JLabel();
         Texto2_1 = new javax.swing.JLabel();
+        Texto2_2 = new javax.swing.JLabel();
         Texto3_0 = new javax.swing.JLabel();
         Texto3_1 = new javax.swing.JLabel();
         Texto3_2 = new javax.swing.JLabel();
+        Texto3_3 = new javax.swing.JLabel();
         Texto4_0 = new javax.swing.JLabel();
         Texto4_1 = new javax.swing.JLabel();
+        Texto4_2 = new javax.swing.JLabel();
+        Texto5_0 = new javax.swing.JLabel();
+        Texto5_1 = new javax.swing.JLabel();
+        Texto5_2 = new javax.swing.JLabel();
+        Texto5_3 = new javax.swing.JLabel();
+        Texto6_0 = new javax.swing.JLabel();
+        Texto6_1 = new javax.swing.JLabel();
+        Texto6_2 = new javax.swing.JLabel();
+        Boton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BotonIniciarJuego = new javax.swing.JButton();
-        BotonBorrarJugada = new javax.swing.JButton();
-        BotonBorrarJuego = new javax.swing.JButton();
         BotonGuardarJuego = new javax.swing.JButton();
-        BotonRehacerJugada = new javax.swing.JButton();
         BotonCargarJuego = new javax.swing.JButton();
         BotonTerminarJuego = new javax.swing.JButton();
         Horatexto = new javax.swing.JTextField();
@@ -254,7 +297,19 @@ public class Frame3x3 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        NivelDificultad = new javax.swing.JTextField();
+        BotonBorrarJugada2 = new javax.swing.JButton();
+        BotonRehacerJugada = new javax.swing.JButton();
+        BotonBorrarJuego = new javax.swing.JButton();
+
+        BotonBorrarJugada1.setBackground(new java.awt.Color(0, 204, 204));
+        BotonBorrarJugada1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonBorrarJugada1.setText("BORRAR JUGADA");
+        BotonBorrarJugada1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonBorrarJugada1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJugada1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -266,7 +321,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton0_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 40, 40));
+        getContentPane().add(Boton0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 40, 40));
 
         Boton0_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -275,7 +330,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton0_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 40, 40));
+        getContentPane().add(Boton0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 40, 40));
 
         Boton0_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton0_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -284,7 +339,16 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton0_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 40, 40));
+        getContentPane().add(Boton0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 40, 40));
+
+        Boton0_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton0_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton0_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton0_3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton0_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, 40, 40));
 
         Boton1_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -293,7 +357,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton1_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 40, 40));
+        getContentPane().add(Boton1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 40, 40));
 
         Boton1_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -302,7 +366,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton1_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 40, 40));
+        getContentPane().add(Boton1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 40, 40));
 
         Boton1_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton1_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -311,7 +375,16 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton1_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 40, 40));
+        getContentPane().add(Boton1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 40, 40));
+
+        Boton1_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton1_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton1_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton1_3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 40, 40));
 
         Boton2_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -320,7 +393,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton2_0ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 40, 40));
+        getContentPane().add(Boton2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 40, 40));
 
         Boton2_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -329,7 +402,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton2_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 40, 40));
+        getContentPane().add(Boton2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 40, 40));
 
         Boton2_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         Boton2_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -338,7 +411,16 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton2_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 40, 40));
+        getContentPane().add(Boton2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 40, 40));
+
+        Boton2_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton2_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton2_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton2_3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, 40, 40));
 
         Boton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton1.setText("(1)");
@@ -349,7 +431,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 120, 40, 40));
+        getContentPane().add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, 40, 40));
 
         Boton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton2.setText("(2)");
@@ -359,7 +441,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, 40, 40));
+        getContentPane().add(Boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 180, 40, 40));
 
         Boton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Boton3.setText("(3)");
@@ -369,61 +451,161 @@ public class Frame3x3 extends javax.swing.JFrame {
                 Boton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 40, 40));
+        getContentPane().add(Boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 40, 40));
+
+        Boton3_0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton3_0.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton3_0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton3_0ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 40, 40));
+
+        Boton3_1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton3_1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton3_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton3_1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 40, 40));
+
+        Boton3_2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton3_2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton3_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton3_2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 40, 40));
+
+        Boton3_3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Boton3_3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton3_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton3_3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 40, 40));
 
         Texto0_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_0.setText(">");
-        getContentPane().add(Texto0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, -1, 40));
+        getContentPane().add(Texto0_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, 40));
 
         Texto0_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto0_1.setText(">");
-        getContentPane().add(Texto0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, 40));
+        getContentPane().add(Texto0_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, -1, 40));
+
+        Texto0_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto0_2.setText(">");
+        getContentPane().add(Texto0_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, 40));
 
         Texto1_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_0.setText(" ^");
         Texto1_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 40, 25));
+        getContentPane().add(Texto1_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 40, 25));
 
         Texto1_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_1.setText(" ^");
         Texto1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 40, 25));
+        getContentPane().add(Texto1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 40, 25));
 
         Texto1_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto1_2.setText(" ^");
         Texto1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 40, 25));
+        getContentPane().add(Texto1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 40, 25));
+
+        Texto1_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto1_3.setText(" ^");
+        Texto1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, 40, 25));
 
         Texto2_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_0.setText(">");
-        getContentPane().add(Texto2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, 40));
+        getContentPane().add(Texto2_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, -1, 40));
 
         Texto2_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto2_1.setText(">");
-        getContentPane().add(Texto2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, 40));
+        getContentPane().add(Texto2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, -1, 40));
+
+        Texto2_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto2_2.setText(">");
+        getContentPane().add(Texto2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, -1, 40));
 
         Texto3_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_0.setText(" ^");
         Texto3_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, 40, 25));
+        getContentPane().add(Texto3_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 40, 25));
 
         Texto3_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_1.setText(" ^");
         Texto3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 40, 25));
+        getContentPane().add(Texto3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 40, 25));
 
         Texto3_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto3_2.setText(" ^");
         Texto3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(Texto3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 40, 25));
+        getContentPane().add(Texto3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 40, 25));
+
+        Texto3_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto3_3.setText(" ^");
+        Texto3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 230, 40, 25));
 
         Texto4_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_0.setText(">");
-        getContentPane().add(Texto4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, 40));
+        getContentPane().add(Texto4_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, 40));
 
         Texto4_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Texto4_1.setText(">");
-        getContentPane().add(Texto4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, 40));
+        getContentPane().add(Texto4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, -1, 40));
+
+        Texto4_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto4_2.setText(">");
+        getContentPane().add(Texto4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, -1, 40));
+
+        Texto5_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto5_0.setText(" ^");
+        Texto5_0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 40, 25));
+
+        Texto5_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto5_1.setText(" ^");
+        Texto5_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 40, 25));
+
+        Texto5_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto5_2.setText(" ^");
+        Texto5_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 40, 25));
+
+        Texto5_3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto5_3.setText(" ^");
+        Texto5_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Texto5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 40, 25));
+
+        Texto6_0.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto6_0.setText(">");
+        getContentPane().add(Texto6_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, -1, 40));
+
+        Texto6_1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto6_1.setText(">");
+        getContentPane().add(Texto6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, 40));
+
+        Texto6_2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Texto6_2.setText(">");
+        getContentPane().add(Texto6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, -1, 40));
+
+        Boton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Boton4.setText("(4)");
+        Boton4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 40, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 51));
 
@@ -454,29 +636,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 BotonIniciarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 158, 70));
-
-        BotonBorrarJugada.setBackground(new java.awt.Color(0, 204, 204));
-        BotonBorrarJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonBorrarJugada.setText("BORRAR JUGADA");
-        BotonBorrarJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        BotonBorrarJugada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonBorrarJugadaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonBorrarJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 158, 40));
-
-        BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
-        BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonBorrarJuego.setText("BORRAR JUEGO");
-        BotonBorrarJuego.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonBorrarJuegoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 158, 40));
+        getContentPane().add(BotonIniciarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 158, 70));
 
         BotonGuardarJuego.setBackground(new java.awt.Color(51, 153, 0));
         BotonGuardarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -487,18 +647,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 BotonGuardarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 158, 40));
-
-        BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
-        BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonRehacerJugada.setText("REHACER JUGADA");
-        BotonRehacerJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        BotonRehacerJugada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRehacerJugadaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, 158, 40));
+        getContentPane().add(BotonGuardarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 420, 158, 40));
 
         BotonCargarJuego.setBackground(new java.awt.Color(153, 51, 0));
         BotonCargarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -509,7 +658,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 BotonCargarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonCargarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 470, 158, 40));
+        getContentPane().add(BotonCargarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 510, 158, 40));
 
         BotonTerminarJuego.setBackground(new java.awt.Color(255, 204, 51));
         BotonTerminarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -520,26 +669,26 @@ public class Frame3x3 extends javax.swing.JFrame {
                 BotonTerminarJuegoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 158, 50));
+        getContentPane().add(BotonTerminarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 158, 40));
 
         Horatexto.setEditable(false);
         Horatexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Horatexto.setText("Horas");
-        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, 49, -1));
+        getContentPane().add(Horatexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, 49, -1));
 
         MinutosTexto.setEditable(false);
         MinutosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MinutosTexto.setText("Minutos");
-        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 50, -1));
+        getContentPane().add(MinutosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 50, -1));
 
         SegundosTexto.setEditable(false);
         SegundosTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SegundosTexto.setText("Segundos");
-        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, -1));
+        getContentPane().add(SegundosTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, -1, -1));
 
         HorasTiempo.setEditable(false);
         HorasTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 49, 65));
+        getContentPane().add(HorasTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 530, 49, 65));
 
         MinutosTiempo.setEditable(false);
         MinutosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -549,7 +698,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 MinutosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 50, 65));
+        getContentPane().add(MinutosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 50, 65));
 
         SegundosTiempo.setEditable(false);
         SegundosTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -558,16 +707,16 @@ public class Frame3x3 extends javax.swing.JFrame {
                 SegundosTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 50, 65));
+        getContentPane().add(SegundosTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 50, 65));
 
-        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2futoshiki/borrador.jpg"))); // NOI18N
+        BorrarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/programa2Futoshiki/borrador.jpg"))); // NOI18N
         BorrarBoton.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BorrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BorrarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, -1, 40));
+        getContentPane().add(BorrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, 40));
 
         jLabel2.setText("JUGADOR:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, 38));
@@ -580,7 +729,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                 NombreJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 193, 38));
+        getContentPane().add(NombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 6, 193, 38));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -621,15 +770,37 @@ public class Frame3x3 extends javax.swing.JFrame {
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, 20, -1));
 
-        NivelDificultad.setEditable(false);
-        NivelDificultad.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        NivelDificultad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        NivelDificultad.addActionListener(new java.awt.event.ActionListener() {
+        BotonBorrarJugada2.setBackground(new java.awt.Color(0, 204, 204));
+        BotonBorrarJugada2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonBorrarJugada2.setText("BORRAR JUGADA");
+        BotonBorrarJugada2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonBorrarJugada2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NivelDificultadActionPerformed(evt);
+                BotonBorrarJugada2ActionPerformed(evt);
             }
         });
-        getContentPane().add(NivelDificultad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 193, 38));
+        getContentPane().add(BotonBorrarJugada2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 158, 40));
+
+        BotonRehacerJugada.setBackground(new java.awt.Color(255, 204, 51));
+        BotonRehacerJugada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonRehacerJugada.setText("REHACER JUGADA");
+        BotonRehacerJugada.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BotonRehacerJugada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRehacerJugadaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonRehacerJugada, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 158, 40));
+
+        BotonBorrarJuego.setBackground(new java.awt.Color(153, 153, 255));
+        BotonBorrarJuego.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonBorrarJuego.setText("BORRAR JUEGO");
+        BotonBorrarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBorrarJuegoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 158, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -649,6 +820,11 @@ public class Frame3x3 extends javax.swing.JFrame {
         PuntoY=2;
     }//GEN-LAST:event_Boton0_2ActionPerformed
 
+    private void Boton0_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton0_3ActionPerformed
+        PuntoX=0;
+        PuntoY=3;
+    }//GEN-LAST:event_Boton0_3ActionPerformed
+
     private void Boton1_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_0ActionPerformed
         PuntoX=1;
         PuntoY=0;
@@ -663,6 +839,11 @@ public class Frame3x3 extends javax.swing.JFrame {
         PuntoX=1;
         PuntoY=2;
     }//GEN-LAST:event_Boton1_2ActionPerformed
+
+    private void Boton1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1_3ActionPerformed
+        PuntoX=1;
+        PuntoY=3;
+    }//GEN-LAST:event_Boton1_3ActionPerformed
 
     private void Boton2_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_0ActionPerformed
         PuntoX=2;
@@ -679,6 +860,11 @@ public class Frame3x3 extends javax.swing.JFrame {
         PuntoY=2;
     }//GEN-LAST:event_Boton2_2ActionPerformed
 
+    private void Boton2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2_3ActionPerformed
+        PuntoX=2;
+        PuntoY=3;
+    }//GEN-LAST:event_Boton2_3ActionPerformed
+
     private void Boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1ActionPerformed
         AsignarNum(PuntoX, PuntoY, 1);
     }//GEN-LAST:event_Boton1ActionPerformed
@@ -690,6 +876,30 @@ public class Frame3x3 extends javax.swing.JFrame {
     private void Boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3ActionPerformed
         AsignarNum(PuntoX, PuntoY, 3);
     }//GEN-LAST:event_Boton3ActionPerformed
+
+    private void Boton3_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_0ActionPerformed
+        PuntoX=3;
+        PuntoY=0;
+    }//GEN-LAST:event_Boton3_0ActionPerformed
+
+    private void Boton3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_1ActionPerformed
+        PuntoX=3;
+        PuntoY=1;
+    }//GEN-LAST:event_Boton3_1ActionPerformed
+
+    private void Boton3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_2ActionPerformed
+        PuntoX=3;
+        PuntoY=2;
+    }//GEN-LAST:event_Boton3_2ActionPerformed
+
+    private void Boton3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3_3ActionPerformed
+        PuntoX=3;
+        PuntoY=3;
+    }//GEN-LAST:event_Boton3_3ActionPerformed
+
+    private void Boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4ActionPerformed
+        AsignarNum(PuntoX, PuntoY, 4);
+    }//GEN-LAST:event_Boton4ActionPerformed
 
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
         cargarTiempo();
@@ -805,9 +1015,8 @@ public class Frame3x3 extends javax.swing.JFrame {
 
     }
     
-        String juego="Juego3x3";
+        String juego="Juego4x4";
         System.out.println(Dificultad);
-        NivelDificultad.setText("Nivel "+Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
         }else if(Dificultad=="Intermedio"){
@@ -841,53 +1050,13 @@ public class Frame3x3 extends javax.swing.JFrame {
         AsignarNum(PuntoX, PuntoY, 0);
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
-    private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
-        if (ultimaJugada!=null) {
-            int cordX=ultimaJugada.getCordX();
-            int cordY=ultimaJugada.getCordY();
-            int num=ultimaJugada.getNum();
-            AsignarNum(cordX, cordY, num);
-        }    
-    }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
-
-    private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
-        int respuesta = JOptionPane.showConfirmDialog(
-            null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
-        );
-        if (respuesta == JOptionPane.YES_OPTION){
-            
-        int size = matrizNumeros.length;
-        for (int j = 0; j < size; j++) {
-            for (int i = 0; i < size; i++) {
-                botones[j][i].setText("");
-                matrizNumeros[j][i]=0;
-            }
-        }
-        
-        }
-        
-    }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
-
-    private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
-        if (!jugadas.isEmpty()) {}
-            Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
-            int cordX=jugadaAnterior.getCordX();
-            int cordY=jugadaAnterior.getCordY();
-            int num=Integer.parseInt(botones[cordX][cordY].getText());
-            ultimaJugada=new Jugada(cordX,cordY,num);
-            jugadas.remove(jugadas.size() - 1);
-            botones[cordX][cordY].setText("");
-            matrizNumeros[cordX][cordY]=0;
-    }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
-
     private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(
             null,"¿ESTÁ SEGURO DE TERMINAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
         );
         if (respuesta == JOptionPane.YES_OPTION){
             this.setVisible(false);
-            
-            //new Frame3x3(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+            //new Frame4x4(Dificultad,Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
@@ -903,9 +1072,56 @@ public class Frame3x3 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
 
-    private void NivelDificultadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivelDificultadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NivelDificultadActionPerformed
+    private void BotonBorrarJugada1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugada1ActionPerformed
+        if (!jugadas.isEmpty()) {}
+        Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
+        int cordX=jugadaAnterior.getCordX();
+        int cordY=jugadaAnterior.getCordY();
+        int num=Integer.parseInt(botones[cordX][cordY].getText());
+        ultimaJugada=new Jugada(cordX,cordY,num);
+        jugadas.remove(jugadas.size() - 1);
+        botones[cordX][cordY].setText("");
+        matrizNumeros[cordX][cordY]=0;
+    }//GEN-LAST:event_BotonBorrarJugada1ActionPerformed
+
+    private void BotonBorrarJugada2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugada2ActionPerformed
+        if (!jugadas.isEmpty()) {}
+        Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
+        int cordX=jugadaAnterior.getCordX();
+        int cordY=jugadaAnterior.getCordY();
+        int num=Integer.parseInt(botones[cordX][cordY].getText());
+        ultimaJugada=new Jugada(cordX,cordY,num);
+        jugadas.remove(jugadas.size() - 1);
+        botones[cordX][cordY].setText("");
+        matrizNumeros[cordX][cordY]=0;
+    }//GEN-LAST:event_BotonBorrarJugada2ActionPerformed
+
+    private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
+        if (ultimaJugada!=null) {
+            int cordX=ultimaJugada.getCordX();
+            int cordY=ultimaJugada.getCordY();
+            int num=ultimaJugada.getNum();
+            AsignarNum(cordX, cordY, num);
+        }
+    }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
+
+    private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+        );
+        if (respuesta == JOptionPane.YES_OPTION){
+
+            int size = matrizNumeros.length;
+            for (int j = 0; j < size; j++) {
+                for (int i = 0; i < size; i++) {
+                    botones[j][i].setText("");
+                    matrizNumeros[j][i]=0;
+                }
+            }
+
+        }
+
+    }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
 
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
@@ -933,9 +1149,8 @@ public class Frame3x3 extends javax.swing.JFrame {
         boolean finJuego=juegoTerminado(matrizNumeros);
         if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
-            System.out.println(Multinivel);
             if (Multinivel==0){
-              
+                       
                 ConfValiUsuario();
                 
                 if(ValidoTop){
@@ -948,15 +1163,15 @@ public class Frame3x3 extends javax.swing.JFrame {
                 
                     JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                 
-                }
+                }    
                 
                 this.dispose();
             }else{
                 this.setVisible(false);
                 if (Dificultad=="Fácil"){
-                    new Frame3x3("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+                    new Frame4x4("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else if(Dificultad=="Intermedio"){
-                    new Frame3x3("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
+                    new Frame4x4("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else{
                     
                     ConfValiUsuario();
@@ -970,7 +1185,7 @@ public class Frame3x3 extends javax.swing.JFrame {
                     }else{
                 
                         JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
-                    }     
+                    }            
                     this.dispose();
                 }
             }
@@ -1003,7 +1218,7 @@ public class Frame3x3 extends javax.swing.JFrame {
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
-    if (columna >= 0 && columna+1 < 3 && !matrizSimbolos[fila * 2][columna].equals("")) {
+    if (columna >= 0 && columna+1 < 4 && !matrizSimbolos[fila * 2][columna].equals("")) {
         String simbolo = matrizSimbolos[fila*2][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila][columna + 1] < numero && matrizNumeros[fila][columna + 1] > 0) {
@@ -1048,7 +1263,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         }
     }
 
-    if (fila+1 >= 0 && fila+1 < 3 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
+    if (fila+1 >= 0 && fila+1 < 4 && !matrizSimbolos[fila * 2+1][columna].equals("")) {
         String simbolo = matrizSimbolos[fila * 2+1][columna];
         if (simbolo.equals("<")) {
             if (matrizNumeros[fila + 1][columna] < numero && matrizNumeros[fila + 1][columna] > 0) {
@@ -1065,7 +1280,6 @@ public class Frame3x3 extends javax.swing.JFrame {
 
     return error;
 }
-
     public void imprimirMatriz(int[][] matriz){
         int size = matriz.length;
         String linea;
@@ -1209,26 +1423,66 @@ public class Frame3x3 extends javax.swing.JFrame {
     
         return false;
     
-    }
+    } 
     
     
+        public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Frame4x4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Frame4x4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Frame4x4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Frame4x4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                //new Frame10x10().setVisible(true);  
+            }
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BorrarBoton;
     private javax.swing.JButton Boton0_0;
     private javax.swing.JButton Boton0_1;
     private javax.swing.JButton Boton0_2;
+    private javax.swing.JButton Boton0_3;
     private javax.swing.JButton Boton1;
     private javax.swing.JButton Boton1_0;
     private javax.swing.JButton Boton1_1;
     private javax.swing.JButton Boton1_2;
+    private javax.swing.JButton Boton1_3;
     private javax.swing.JButton Boton2;
     private javax.swing.JButton Boton2_0;
     private javax.swing.JButton Boton2_1;
     private javax.swing.JButton Boton2_2;
+    private javax.swing.JButton Boton2_3;
     private javax.swing.JButton Boton3;
+    private javax.swing.JButton Boton3_0;
+    private javax.swing.JButton Boton3_1;
+    private javax.swing.JButton Boton3_2;
+    private javax.swing.JButton Boton3_3;
+    private javax.swing.JButton Boton4;
     private javax.swing.JButton BotonBorrarJuego;
-    private javax.swing.JButton BotonBorrarJugada;
+    private javax.swing.JButton BotonBorrarJugada1;
+    private javax.swing.JButton BotonBorrarJugada2;
     private javax.swing.JButton BotonCargarJuego;
     private javax.swing.JButton BotonGuardarJuego;
     private javax.swing.JButton BotonIniciarJuego;
@@ -1238,22 +1492,33 @@ public class Frame3x3 extends javax.swing.JFrame {
     private javax.swing.JTextField Horatexto;
     private javax.swing.JTextField MinutosTexto;
     private javax.swing.JTextField MinutosTiempo;
-    private javax.swing.JTextField NivelDificultad;
     private javax.swing.JTextField NombreJugador;
     private javax.swing.JTextField SegundosTexto;
     private javax.swing.JTextField SegundosTiempo;
     private javax.swing.JLabel Texto0_0;
     private javax.swing.JLabel Texto0_1;
+    private javax.swing.JLabel Texto0_2;
     private javax.swing.JLabel Texto1_0;
     private javax.swing.JLabel Texto1_1;
     private javax.swing.JLabel Texto1_2;
+    private javax.swing.JLabel Texto1_3;
     private javax.swing.JLabel Texto2_0;
     private javax.swing.JLabel Texto2_1;
+    private javax.swing.JLabel Texto2_2;
     private javax.swing.JLabel Texto3_0;
     private javax.swing.JLabel Texto3_1;
     private javax.swing.JLabel Texto3_2;
+    private javax.swing.JLabel Texto3_3;
     private javax.swing.JLabel Texto4_0;
     private javax.swing.JLabel Texto4_1;
+    private javax.swing.JLabel Texto4_2;
+    private javax.swing.JLabel Texto5_0;
+    private javax.swing.JLabel Texto5_1;
+    private javax.swing.JLabel Texto5_2;
+    private javax.swing.JLabel Texto5_3;
+    private javax.swing.JLabel Texto6_0;
+    private javax.swing.JLabel Texto6_1;
+    private javax.swing.JLabel Texto6_2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

@@ -2,8 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.programa2futoshiki;
-
+package Vista;
+import Vista.*;
+import Vista.Frame10x10;
+import Vista.Frame3x3;
+import Vista.Frame4x4;
+import Vista.Frame5x5;
+import Vista.Frame6x6;
+import Vista.Frame7x7;
+import Vista.Frame8x8;
+import Vista.Frame9x9;
+import Controlador.AjustesFutoshiki;
+import Controlador.AjustesFutoshiki;
+import Vista.MenuConfigurar;
+import Controlador.SistemaCorreos;
+import Controlador.SistemaCorreos;
+import Modelo.Usuario;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
@@ -232,7 +246,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void botonAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcercaDeActionPerformed
         
-        JOptionPane.showMessageDialog(null,"Acerca de");
+        JOptionPane.showMessageDialog(null,"Programación Orientada a Objetos - Programa 2: FUTOSHIKI\n"+"Versión 1.0\n"+"23/11/24\n"
+                +"Desarollado por Carlos Gutiérrez y Joshua Valverde ");
     }//GEN-LAST:event_botonAcercaDeActionPerformed
 
     private void botonConfigurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfigurarActionPerformed
@@ -409,7 +424,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public void AbrirPDF(){
     
-        File archivoPDF = new File("Manual.pdf");
+        File archivoPDF = new File("programa2_futoshiki_manual_de_usuario.pdf");
     
         if(archivoPDF.exists() && Desktop.isDesktopSupported()){
             
