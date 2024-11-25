@@ -505,6 +505,7 @@ public class Frame7x7 extends javax.swing.JFrame {
         BotonBorrarJugada = new javax.swing.JButton();
         BotonRehacerJugada = new javax.swing.JButton();
         BotonBorrarJuego = new javax.swing.JButton();
+        NivelDificultad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1594,6 +1595,16 @@ public class Frame7x7 extends javax.swing.JFrame {
         });
         getContentPane().add(BotonBorrarJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, 158, 40));
 
+        NivelDificultad.setEditable(false);
+        NivelDificultad.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        NivelDificultad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NivelDificultad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NivelDificultadActionPerformed(evt);
+            }
+        });
+        getContentPane().add(NivelDificultad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 193, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1986,6 +1997,7 @@ public class Frame7x7 extends javax.swing.JFrame {
     
         String juego="Juego7x7";
         System.out.println(Dificultad);
+        NivelDificultad.setText("Nivel "+Dificultad);
         if (Dificultad=="Fácil"){
             juego+="F";
         }else if(Dificultad=="Intermedio"){
@@ -2079,6 +2091,10 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_BotonBorrarJuegoActionPerformed
+
+    private void NivelDificultadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivelDificultadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NivelDificultadActionPerformed
 
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
@@ -2485,6 +2501,7 @@ public class Frame7x7 extends javax.swing.JFrame {
     private javax.swing.JTextField Horatexto;
     private javax.swing.JTextField MinutosTexto;
     private javax.swing.JTextField MinutosTiempo;
+    private javax.swing.JTextField NivelDificultad;
     private javax.swing.JTextField NombreJugador;
     private javax.swing.JTextField SegundosTexto;
     private javax.swing.JTextField SegundosTiempo;
