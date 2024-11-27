@@ -18,8 +18,16 @@ public class Usuario implements Serializable{
     public int UsuarioSegundos;
     public int TiempoTotal;
     
-    public Usuario(String nombre, String pin, String correo){
+    /**
+     *
+     * @param nombre Nombre de Usuario
+     * @param pin Numero PIn del Usuario
+     * @param correo Correo electronico del usuario
+     */
     
+    public Usuario(String nombre, String pin, String correo){
+        // Constructor utilizado para la creacion y registro de usuarios
+        
         this.Nickname = nombre;
         this.Pin = pin;
         this.Correo = correo;

@@ -35,7 +35,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
      * Creates new form MenuConfigurar
      */
     
-    private ArrayList<AjustesFutoshiki> Ajustes = new ArrayList<>();
+    private ArrayList<AjustesFutoshiki> Ajustes = new ArrayList<>(); // Arraylist donde se guarda el ajuste mas reciente
     
     MenuPrincipal menu = new MenuPrincipal();
     
@@ -439,19 +439,20 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }//GEN-LAST:event_cboxTamaño2ActionPerformed
 
     private void cboxMultiNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxMultiNivelActionPerformed
-        // TODO add your handling code here:
+        // ComboBox de MultiNivel
         
-        if(cboxMultiNivel.getSelectedIndex()==1){
         
-            cboxNivel.enable(false);
-            cboxReloj.enable(false);
-            cboxNivel.setSelectedIndex(0);
-            cboxReloj.setSelectedIndex(1);
+        if(cboxMultiNivel.getSelectedIndex()==1){ // Si se seleciona : SI
+        
+            cboxNivel.enable(false); // No se puede interactuar cbox Nivel
+            cboxReloj.enable(false); // No se puede interactuar cbox Reloj
+            cboxNivel.setSelectedIndex(0); // cbox Nivel se ajusta a facil
+            cboxReloj.setSelectedIndex(1); // cbox Reloj se ajusta a temporizador
         
         }else{
         
-            cboxNivel.enable(true);
-            cboxReloj.enable(true);
+            cboxNivel.enable(true); // Se puede interactuar con cbox nivel
+            cboxReloj.enable(true); // Se puede interactuar con cbox reloj
         
         }
     }//GEN-LAST:event_cboxMultiNivelActionPerformed
@@ -474,21 +475,21 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }//GEN-LAST:event_cboxPosicionActionPerformed
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
-        // TODO add your handling code here:
+        // Boton jugar
 
-        if(cboxReloj.getSelectedIndex() == 0 || cboxReloj.getSelectedIndex() == 1){
+        if(cboxReloj.getSelectedIndex() == 0 || cboxReloj.getSelectedIndex() == 1){ // Si cbox reloj es cronometro o temporizador
         
-            if(validarTiempo()){
+            if(validarTiempo()){ // Validacion del los valores de reloj
             
-                setAjustes();
-                seleTablero();    
+                setAjustes(); // Se establecen los ajustes
+                seleTablero(); // Seleccion de tablero   
             
             }else{
                 JOptionPane.showMessageDialog(null, "Valores Invalidos");
             
             }
 
-        }else{
+        }else{ // Si no se utilza reloj
         
                 setAjustes();
                 seleTablero();     
@@ -497,18 +498,19 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }//GEN-LAST:event_botonJugarActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
-        // TODO add your handling code here:
+        // Boton Salir
 
         setVisible(false);
     }//GEN-LAST:event_botonSalirActionPerformed
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
-        // TODO add your handling code here:
+        // Boton Guardar
         
+        // Funcion para guardar en el arraylist los ajustes actualmente seleccionados
         
         if(cboxReloj.getSelectedIndex() == 1){
         
-            if(validarTiempo()){
+            if(validarTiempo()){ // Validacion de valores de reloj
             
                 setAjustes();
                     
@@ -527,7 +529,9 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }//GEN-LAST:event_GuardarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // Boton de Cargar 
+        
+        // Restaura los ajustes previos si existen
         RestaurarAjustes();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -539,48 +543,79 @@ public class MenuConfigurar extends javax.swing.JFrame{
      * @param args the command line arguments
      */
     
+     /**
+     *
+     * @return String Dificultad
+     */
     public String getDificultad(){
           
         return cboxNivel.getSelectedItem().toString();
     }
     
+    /**
+     *
+     * @return Indice de Multinivel
+     */
     public int getMultiNivel(){
         
         return cboxMultiNivel.getSelectedIndex();
     }
     
+    /**
+     *
+     * @return Indice de Reloj
+     */
     public int getReloj(){
             
         return cboxReloj.getSelectedIndex();      
     }
     
+    /**
+     *
+     * @return String de Posicion
+     */
     public String getPosicion(){
      
         return cboxPosicion.getSelectedItem().toString();    
 
     }
+
+    /**
+     *
+     * @return Indice de Tamaño 
+     */
     public int getTam(){
     
         return cboxTamaño.getSelectedIndex();
     
     }
     
+    /**
+     * @return Usuario
+     */
     public void ValidarUsuario(){
       
+        /*  Funcion para validar a un usuario
+            si la caja de usuario se deja en vacio se jugara como Anónimo
+            si la caja de usuario no esta vacia, se tiene que validar con su PIN
+        */
       try{
-        if(txtfUsuario.getText().equalsIgnoreCase("") ||txtfUsuario.getText().equalsIgnoreCase("Anónimo")){
+        if(txtfUsuario.getText().equalsIgnoreCase("") ||txtfUsuario.getText().equalsIgnoreCase("Anónimo")){ // textfield de usuario esta vacio
             
             nombre = "Anónimo";
             
-        }else{
+        }else{ // textfield de usuario no esta vacio
+            
+            // validacion de usuario con su PIN
+            
             String pin = JOptionPane.showInputDialog(null, "Ingrese el PIN del usuario:");
             usuario = menu.ValidarUsuarioPIN(txtfUsuario.getText(), pin);
             
-            if(usuario!=null){
+            if(usuario!=null){ // Validacion exitosa
                 
                 JOptionPane.showMessageDialog(null, "Se jugara como usuario : "+ usuario.Nickname);
                 nombre = usuario.Nickname;
-            }else{
+            }else{ // Usuario o PIN incorrectos
             
                 JOptionPane.showMessageDialog(null, "No se encuentra al usuario, se procedera como usuario anónimo");
                 nombre = "Anónimo";
@@ -592,11 +627,13 @@ public class MenuConfigurar extends javax.swing.JFrame{
       }
     }
     
-    
+    /**
+     *@return Ajustes de Tablero
+     */
     public void setAjustes(){
-       cargarAjustes();
+       cargarAjustes(); // carga arraylist ajustes
         
-       ValidarUsuario();
+       ValidarUsuario(); // uso de usuario
        
        Horas = Integer.parseInt(txtfHoras.getText());
        Minutos = Integer.parseInt(txtfMinutos.getText());
@@ -608,12 +645,15 @@ public class MenuConfigurar extends javax.swing.JFrame{
        Posicion = getPosicion();
        
        Ajustes.add(new AjustesFutoshiki(nombre, Tablero,cboxNivel.getSelectedIndex(),MultiNivel,
-                      UsoReloj,cboxPosicion.getSelectedIndex(),Horas,Minutos,Segundos));
+                      UsoReloj,cboxPosicion.getSelectedIndex(),Horas,Minutos,Segundos)); // Guardado de ajustes
        
-       guardarAjustes();
+       guardarAjustes(); // Se guarda o sobrescribe los ajustes de tablero
     
     }
     
+    /**
+     *@return Actualizacion de cajas de opciones
+     */
     public void RestaurarAjustes(){
     
         cargarAjustes();
@@ -637,10 +677,13 @@ public class MenuConfigurar extends javax.swing.JFrame{
     
     }
     
+    /**
+     *
+     */
     public void guardarAjustes(){
         
         //cargarAjustes();
-        
+        // Guardado de Ajustes en el arraylist de ajustes en archivo binario
         if(Ajustes.size()==2){
         
             Ajustes.remove(0);
@@ -655,8 +698,11 @@ public class MenuConfigurar extends javax.swing.JFrame{
         }
     }
 
+    /**
+     *
+     */
     public void cargarAjustes(){
-    
+        // Carga de arraylist de ajustes de archivo binario
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("futoshiki2024configuración.dat"))) {
             
             Ajustes = (ArrayList<AjustesFutoshiki>) ois.readObject();
@@ -667,22 +713,30 @@ public class MenuConfigurar extends javax.swing.JFrame{
         }
     } 
     
+    /**
+     *
+     * @return Objecto Ajuste
+     */
     public AjustesFutoshiki Ajuste(){
         
         cargarAjustes();
         for( AjustesFutoshiki ajuste: Ajustes ){
         
-            return ajuste;
+            return ajuste; // Objecto de Ajuste de tablero
             
         
         }
         return null;
     }
     
+    /**
+     *
+     * @return Boolean
+     */
     public boolean validarTiempo(){
         
         try{
-            
+            // Validacion ajustes reloj
         int horas = Integer.parseInt(txtfHoras.getText());
         int minutos = Integer.parseInt(txtfMinutos.getText());
         int segundos = Integer.parseInt(txtfSegundos.getText());  
@@ -691,7 +745,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
                 
                 if(minutos <= 59 && segundos <= 59){
                 
-                    return true;
+                    return true; // Se cumple con las restricciones
                 }
             
             }
@@ -701,12 +755,18 @@ public class MenuConfigurar extends javax.swing.JFrame{
         
         
         }
-        return false;
+        return false; // No se cumplen las restricciones
     
     }
     
+    /**
+     * @return Tablero Futoshiki
+     */
     public void seleTablero(){
-    
+        
+        // Funcion para desplegar el tablero, una vez ya se establecieron sus parametros
+        
+        
         switch(Tablero){
             
             case 0 : // 3x3

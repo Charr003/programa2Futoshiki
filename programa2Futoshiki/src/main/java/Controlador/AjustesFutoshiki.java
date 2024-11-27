@@ -20,6 +20,18 @@ public class AjustesFutoshiki implements Serializable {
    public int MinutosG;
    public int SegundosG;
    
+    /**
+     *
+     * @param nombre Nombre del usuario
+     * @param IndiceTam Tamaño del Tablero
+     * @param Nivel Dificultad
+     * @param IndiceMultiNivel Seleccion Multinivel
+     * @param IndiceReloj Seleccion del modo del reloj
+     * @param IndicePosicion Seleccion posicion de botones
+     * @param hora Seleccion de hora para el reloj
+     * @param min Seleccion de minutos para el reloj
+     * @param seg Seleccion de segundos para el reloj
+     */
     public AjustesFutoshiki(String nombre, int IndiceTam, int Nivel, int IndiceMultiNivel, int IndiceReloj, int IndicePosicion, int hora, int min, int seg) {
         
         this.nombre = nombre;

@@ -73,6 +73,19 @@ public class Frame5x5 extends javax.swing.JFrame {
      * Creates new form Frame10x10
      */
     
+    /**
+     *
+     * @param dificultad  Facil, Intermedio, Dificil
+     * @param multinivel  0 = No , 1 = Si
+     * @param usoreloj 0 = Cronometro, 1 = Temporizador 2 = No reloj
+     * @param posicion 0 = Izquierda , 1 = Derecha
+     * @param nombre Nombre de usuario
+     * @param usuario Objecto de usuario
+     * @param Horas Horas seleccionadas
+     * @param Minutos Minutos seleccionados
+     * @param Segundos Segundos seleccionados
+     * @param segundosTranscurridos Segundos totales
+     */
     public Frame5x5(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
         inicializarBotones();
@@ -91,7 +104,7 @@ public class Frame5x5 extends javax.swing.JFrame {
         Posicion = posicion;
         usuario2 = usuario;
 
-        
+        // Manejo de tiempo
         timer = new Timer(1000, new ActionListener(){
             
             @Override
@@ -100,7 +113,7 @@ public class Frame5x5 extends javax.swing.JFrame {
                 
                 tiempoTranscurridoSegundos++; // Esto se usa para el calculo del tiempo total en ambos modos
 
-                if(esCronometro){
+                if(esCronometro){ // Cronometro
                     // Lógica para cuenta hacia adelante
                     tempSeg++;
                                   
@@ -116,13 +129,14 @@ public class Frame5x5 extends javax.swing.JFrame {
                         }
                     }
 
-                    // Validacion del cronometro, revisar si se alcanzado el limite de tiempo: 10 mins
+                    // Validacion del cronometro, revisar si se alcanzado el limite de tiempo
                     
                     if(tempMins == minutos && tempSeg == segundos){
                         detenerTiempo("Se ha acabado el tiempo del cronómetro.");
                     }
 
-                }else{
+                }else{ // Temporizador
+                    
                     // Lógica para cuenta hacia atras
                   
                     if(segundos == 0){
@@ -142,7 +156,7 @@ public class Frame5x5 extends javax.swing.JFrame {
                     }
                 }
 
-                // Actualizar el label de tiempo
+                // Actualizar el label de tiempo para ambos modos
                 if(ModoTiempo==1){
                     
                     HorasTiempo.setText(String.format("%2d", horas));
@@ -153,7 +167,7 @@ public class Frame5x5 extends javax.swing.JFrame {
                     HorasTiempo.setText(String.format("%2d", tempHora));
                     MinutosTiempo.setText(String.format("%2d", tempMins));
                     SegundosTiempo.setText(String.format("%02d", tempSeg));       
-                }else{
+                }else{ // Actualizacion en modo no reloj
                 
                     HorasTiempo.setText("");
                     MinutosTiempo.setText("");
@@ -1210,9 +1224,9 @@ public class Frame5x5 extends javax.swing.JFrame {
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
 
     if(ModoTiempo !=2){  
-        if(!timer.isRunning()){
+        if(!timer.isRunning()){ // Si aun no se ha iniciado el reloj
            
-           if(ModoTiempo ==0){
+           if(ModoTiempo ==0){ // Modo Cronometro
            
                 //reiniciarTiempo();
                 esCronometro = true;
@@ -1220,11 +1234,11 @@ public class Frame5x5 extends javax.swing.JFrame {
                 timer.start();   
            
            
-           }else if(ModoTiempo==1){
+           }else if(ModoTiempo==1){ // Modo Temporizador
                
                 esCronometro = false;
 
-                
+                // Actualizacion de los labels
                 HorasTiempo.setText(String.format("%2d", horas));
                 MinutosTiempo.setText(String.format("%2d", minutos));
                 SegundosTiempo.setText(String.format("%02d", segundos));
@@ -1233,7 +1247,7 @@ public class Frame5x5 extends javax.swing.JFrame {
            //tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
            timer.start();
                        
-        }else{
+        }else{  // Si el tiempo esta corriendo
         
             detenerTiempo("Tiempo detenido.");
         }
@@ -1258,7 +1272,7 @@ public class Frame5x5 extends javax.swing.JFrame {
             }
         }
 
-    }else{
+    }else{ // Modo no reloj
     
         jugar=true;
         
@@ -1410,24 +1424,25 @@ public class Frame5x5 extends javax.swing.JFrame {
         boolean finJuego=juegoTerminado(matrizNumeros);
         if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
-            if (Multinivel==0){
+            if (Multinivel==0){ // No multinivel
                        
-                ConfValiUsuario();
+                ConfValiUsuario(); // Validacion para ver si se uso un usuario
                 
-                if(ValidoTop){
+                if(ValidoTop){ // Valido para ser registrado en el top
                 
                     menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
                     menuTop.guardarAjustes();
                     JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
                 
-                }else{
+                }else{ // No se cumple el requisito para ser tomado en cuenta para el top
                 
                     JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                 
                 }    
                 
                 this.dispose();
-            }else{
+                
+            }else{ // Multinivel
                 this.setVisible(false);
                 if (Dificultad=="Fácil"){
                     new Frame5x5("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
@@ -1435,15 +1450,15 @@ public class Frame5x5 extends javax.swing.JFrame {
                     new Frame5x5("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else{
                     
-                    ConfValiUsuario();
+                    ConfValiUsuario(); // Validacion para ver si se uso un usuario
                     
-                    if(ValidoTop){
+                    if(ValidoTop){ // Valido para ser registrado en el top
                 
-                        menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
+                        menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos)); // Se registra los datos en el arraylist del top
                         menuTop.guardarAjustes();
                         JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
                 
-                    }else{
+                    }else{ // No se cumple el requisito para ser tomado en cuenta para el top
                 
                         JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                     }            
@@ -1568,17 +1583,25 @@ public class Frame5x5 extends javax.swing.JFrame {
         }
     }
     
+    /**
+     *
+     */
     public void reiniciarTiempo(){
-        
+        // Funcion para reiniciar el reloj
         horas = 0;
         minutos = 0;
         segundos = 0;
     }
     
+    /**
+     *
+     * @param mensaje String Notificacion de tiempo
+     */
     public void detenerTiempo(String mensaje) {
         
+        // Funcion para detener el reloj y tomar sus valores
         timer.stop();
-        //JOptionPane.showMessageDialog(null, mensaje);
+        
 
         // Calculo total del tiempo actual
         int horasTotales = tiempoTranscurridoSegundos / 3600;
@@ -1589,13 +1612,14 @@ public class Frame5x5 extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "Tiempo total: " + tiempoDuracion);
         
-        // Falta que pida al usuario si quiere seguir jugando o no.
+        // Pide al usuario si quiere seguir jugando o no.
+        // En este caso el usuario se quedo sin tiempo y ya no es valido para el top pero puede seguir jugando
         
         int resultado = JOptionPane.showConfirmDialog(null, "Seguir Jugando?", "Fin del Juego", JOptionPane.YES_NO_OPTION);
         
         if(resultado == JOptionPane.YES_OPTION){
         
-            if(ModoTiempo==1){
+            if(ModoTiempo==1){ // Temporizador se convierte en cronometro
                 
                 horas = tiempoTranscurridoSegundos / 3600;
                 minutos = (tiempoTranscurridoSegundos % 3600) / 60;
@@ -1603,10 +1627,10 @@ public class Frame5x5 extends javax.swing.JFrame {
                 
                 ModoTiempo=0;
                 //timer.start();
-                ValidoTop = false;
+                ValidoTop = false; // No valido para el top
             
             
-            }else{
+            }else{ // De cronometro se pasa a modo de no reloj
             
                  //timer.start();
                  ModoTiempo=3;
@@ -1618,8 +1642,11 @@ public class Frame5x5 extends javax.swing.JFrame {
         }    
     }
     
+    /**
+     *@return boolean 
+     */
     public void determinarTiempo(){
-    
+        // Validar si el modo de reloj es cronometro o temporizador
         if(ModoTiempo==0){
         
             esCronometro = true;
@@ -1639,8 +1666,11 @@ public class Frame5x5 extends javax.swing.JFrame {
     return (int) (Math.random() * 3) + 1;
     }
     
+    /**
+     *@return Ajustes
+     */
     public void cargarTiempo(){
-        
+        // Restaura los valores del reloj y segundos del archivo XML
         int [] valores = archivoXML.restaurarValoresTiempo();
         
         if (valores != null){
@@ -1658,6 +1688,11 @@ public class Frame5x5 extends javax.swing.JFrame {
     
     }    
     
+    /**
+     *
+     * @param matriz
+     * @return
+     */
     public boolean juegoTerminado(int[][] matriz){
         boolean fin=true;
         int size = matriz.length;
@@ -1671,8 +1706,13 @@ public class Frame5x5 extends javax.swing.JFrame {
         return fin;
     }
     
+    /**
+     *
+     * @return Boolean 
+     */
     public boolean ConfValiUsuario(){
-    
+        // Validar si el juego es valido para el Top
+        // Si es anonimo no cuenta
         if(Nombre.equalsIgnoreCase("Anónimo")){
         
                 ValidoTop = false;
