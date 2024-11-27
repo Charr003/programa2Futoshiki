@@ -18,8 +18,11 @@ import javax.swing.Timer;
 import java.util.ArrayList;
 
 /**
+ * Este frame está encargado de un juego de Futoshiki de tamaño 8x8.
+ * Todos los botones y funciones están contenidos en este frame.
+ * La configuración depende de otra clase.
  *
- * @author jxdga
+ * @author Joshua
  */
 public class Frame8x8 extends javax.swing.JFrame {
     
@@ -2552,6 +2555,13 @@ public class Frame8x8 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NivelDificultadActionPerformed
 
+     /**
+     * Método encargado de asignar un número al cuadro haciendo todas las validaciones necesarias.
+     *
+     * @param fila    La fila del botón.
+     * @param columna La columna del botón.
+     * @param num     El número a asignar.
+     */
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
             int numAnterior=0;
@@ -2624,6 +2634,15 @@ public class Frame8x8 extends javax.swing.JFrame {
         
     }
     
+    /**
+     * Verifica que el número ya no esté en la fila o columna.
+     *
+     * @param matriz  La matriz de números.
+     * @param fila    La fila a verificar.
+     * @param columna La columna a verificar.
+     * @param numero  El número a verificar.
+     * @return true si el número ya está en la fila o columna, false de lo contrario.
+     */
     public boolean verificarMatriz(int[][] matriz,int fila, int columna,int numero){
         int size = matriz.length;
         
@@ -2645,6 +2664,15 @@ public class Frame8x8 extends javax.swing.JFrame {
         }
         return false;
     }
+    /**
+     * Verifica las restricciones de los símbolos adyacentes en la matriz.
+     *
+     * @param matriz  La matriz de números.
+     * @param fila    La fila del número.
+     * @param columna La columna del número.
+     * @param numero  El número a verificar.
+     * @return true si hay un error en las restricciones, false de lo contrario.
+     */
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
@@ -2710,32 +2738,6 @@ public class Frame8x8 extends javax.swing.JFrame {
 
     return error;
 }
-    public void imprimirMatriz(int[][] matriz){
-        int size = matriz.length;
-        String linea;
-        for (int j = 0; j < size; j++) {
-            linea="(";
-            for (int i = 0; i < size; i++) {
-                linea+=matrizNumeros[j][i]+",";
-            }
-            linea+=")";
-            System.out.println(linea);
-        }
-    }
-    public void imprimirMatriz2(String[][] matriz){
-        int filas = matriz.length;
-        int columnas = matriz[0].length;
-        String linea;
-        for (int j = 0; j < filas; j++) {
-            linea = "(";
-            for (int i = 0; i < columnas; i++) {
-                linea += matriz[j][i] + ",";
-            }
-            linea+=")";
-            System.out.println(linea);
-        }
-    }
-    
     /**
      *
      */
