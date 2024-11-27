@@ -18,8 +18,10 @@ import javax.swing.Timer;
 import java.util.ArrayList;
 
 /**
- *
- * @author jxdga
+ *Este frame esta encargado de un juego de futoshiki de tamaño 9x9
+ * Todos los botones y funciones las contiene este frame
+ * para la configuracion depende de otra clase
+ * @author Joshua
  */
 public class Frame9x9 extends javax.swing.JFrame {
     
@@ -82,9 +84,19 @@ public class Frame9x9 extends javax.swing.JFrame {
     };
     
     /**
-     * Creates new form Frame10x10
+     * Constructor para el frame de Futoshiki 9x9.
+     *
+     * @param dificultad            La dificultad del juego ("Fácil", "Intermedio", "Difícil").
+     * @param multinivel            Indica si se juega en modo multinivel.
+     * @param usoreloj              Indica el modo de tiempo (0: Cronómetro, 1: Temporizador, 2: Sin tiempo).
+     * @param posicion              La posición del jugador.
+     * @param nombre                El nombre del jugador.
+     * @param usuario               El objeto Usuario que representa al jugador.
+     * @param Horas                 Las horas iniciales para el temporizador.
+     * @param Minutos               Los minutos iniciales para el temporizador.
+     * @param Segundos              Los segundos iniciales para el temporizador.
+     * @param segundosTranscurridos El tiempo transcurrido en segundos.
      */
-    
     public Frame9x9(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
         inicializarBotones();
@@ -181,7 +193,7 @@ public class Frame9x9 extends javax.swing.JFrame {
      * Método para inicializar la matriz de botones y enlazarlos con los botones del formulario.
      */
     private void inicializarBotones() {
-        botones = new JButton[10][10]; // Creamos la matriz de 10x10
+        botones = new JButton[10][10]; // Creamos la matriz
 
         // Asignación de cada botón de la matriz a su posición correspondiente
         botones[0][0] = Boton0_0;
@@ -275,8 +287,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         botones[8][8] = Boton8_8;
     }
     
+    /**
+     * Método para inicializar la matriz de etiquetas de texto y enlazarlas con las etiquetas del formulario.
+     */
     private void inicializarTexto(){
-        texto = new JLabel[19][10]; // Creamos la matriz de 10x10
+        texto = new JLabel[19][10]; // Creamos la matriz
 
         texto[0][0] = Texto0_0;
     texto[0][1] = Texto0_1;
@@ -2825,6 +2840,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         AsignarNum(PuntoX, PuntoY, 8);
     }//GEN-LAST:event_Boton8ActionPerformed
 
+    /**
+     * Carga el juego guardado desde un archivo XML.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
         cargarTiempo();
         int[][] matrizNumeroCargada = ArchivosXML.cargarMatrizNumeros();
@@ -2862,6 +2882,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SegundosTiempoActionPerformed
 
+    /**
+     * Inicia el juego, el tiempo, carga la plantilla para jugar y habilita el uso del frame.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
 
     if(ModoTiempo !=2){  
@@ -2971,10 +2996,20 @@ public class Frame9x9 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
+    /**
+     * Acción realizada al presionar el botón de borrar.
+     *
+     * @param evt El evento de acción.
+     */
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
         AsignarNum(PuntoX, PuntoY, 0);
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
+    /**
+     * Guarda el estado actual del juego en un archivo XML.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
         ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos,horas,minutos,segundos,tempHora,tempMins,tempSeg,tiempoTranscurridoSegundos,ValidoTop);  
     }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
@@ -2986,6 +3021,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
 
+    /**
+     * Termina el juego actual.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(
             null,"¿ESTÁ SEGURO DE TERMINAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
@@ -2997,6 +3037,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
+    /**
+     * Borra la última jugada realizada.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
         if (!jugadas.isEmpty()) {}
         Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
@@ -3009,6 +3054,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         matrizNumeros[cordX][cordY]=0;
     }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
 
+    /**
+     * Rehace la última jugada que se deshizo.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
         if (ultimaJugada!=null) {
             int cordX=ultimaJugada.getCordX();
@@ -3018,6 +3068,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
 
+    /**
+     * Borra todo el juego actual.
+     *
+     * @param evt El evento de acción.
+     */
     private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(
             null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
@@ -3039,6 +3094,13 @@ public class Frame9x9 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NivelDificultadActionPerformed
 
+    /**
+     * Método encargado de asignar un número al cuadro haciendo todas las validaciones necesarias.
+     *
+     * @param fila    La fila del botón.
+     * @param columna La columna del botón.
+     * @param num     El número a asignar.
+     */
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
             int numAnterior=0;
@@ -3111,6 +3173,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         
     }
     
+    //verifica que el numero n este ya en la amtriz
     public boolean verificarMatriz(int[][] matriz,int fila, int columna,int numero){
         int size = matriz.length;
         
@@ -3132,6 +3195,8 @@ public class Frame9x9 extends javax.swing.JFrame {
         }
         return false;
     }
+    
+    //verifica la matriz con los simbolos adyacentes
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
@@ -3224,6 +3289,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         }
     }
     
+    //reinicia el tiempo
     public void reiniciarTiempo(){
         
         horas = 0;
@@ -3231,6 +3297,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         segundos = 0;
     }
     
+    //detiene el tiempo
     public void detenerTiempo(String mensaje) {
         
         timer.stop();
@@ -3274,6 +3341,7 @@ public class Frame9x9 extends javax.swing.JFrame {
         }    
     }
     
+    //determina el tiempo
     public void determinarTiempo(){
     
         if(ModoTiempo==0){
@@ -3291,10 +3359,7 @@ public class Frame9x9 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    public int generarNumeroAleatorio() {
-    return (int) (Math.random() * 3) + 1;
-    }
-    
+    //carga tiempo guardado
     public void cargarTiempo(){
         
         int [] valores = archivoXML.restaurarValoresTiempo();
@@ -3314,6 +3379,7 @@ public class Frame9x9 extends javax.swing.JFrame {
     
     }    
     
+    //verifica si el juego ya esta listo
     public boolean juegoTerminado(int[][] matriz){
         boolean fin=true;
         int size = matriz.length;
@@ -3327,6 +3393,11 @@ public class Frame9x9 extends javax.swing.JFrame {
         return fin;
     }
     
+    /**
+     * Verifica si el usuario es válido para registrarse en el Top 10.
+     *
+     * @return true si es válido, false de lo contrario.
+     */
     public boolean ConfValiUsuario(){
     
         if(Nombre.equalsIgnoreCase("Anónimo")){
