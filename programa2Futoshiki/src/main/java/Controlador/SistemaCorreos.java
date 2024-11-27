@@ -12,8 +12,22 @@ import javax.mail.internet.*;
 
 public class SistemaCorreos {
 
-public static void EnviarCorreo(String fromEmail, String password, String toEmail, String subject, String messageBody) throws Exception {
+    
+    /**
+     *
+     * @param fromEmail Correo del sistema
+     * @param password Contraseña del correo del sistema
+     * @param toEmail Correo del usuario
+     * @param subject Titular del correo
+     * @param messageBody Cuerpo del correo
+     * @throws Exception
+     */
+    public static void EnviarCorreo(String fromEmail, String password, String toEmail, String subject, String messageBody) throws Exception {
         
+        /*
+           Función base para enviar todos los correos
+        */
+
         // Validar los inputs
         if (fromEmail == null || !fromEmail.contains("@")){
             throw new IllegalArgumentException("Correo del remitente inválido");
@@ -40,6 +54,7 @@ public static void EnviarCorreo(String fromEmail, String password, String toEmai
         });
 
         try {
+            
             // Crear el mensaje
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(fromEmail));
@@ -57,7 +72,13 @@ public static void EnviarCorreo(String fromEmail, String password, String toEmai
         }
     }
 
+    /**
+     *
+     * @param correo Correo del usuario
+     */
     public void EnviarCorreoConfirmacion(String correo){
+        
+        // Funcion para envio de correo: notificacion de creacion de usuario
         
         try {
             String fromEmail = "parksysp11@gmail.com"; 
@@ -79,7 +100,13 @@ public static void EnviarCorreo(String fromEmail, String password, String toEmai
     
     }
     
+    /**
+     *
+     * @param usuario Objecto con la información del usuario
+     */
     public void EnviarCorreoNuevoPin(Usuario usuario){
+        
+        // Funcion para envio de correo: Envio de recuperacion de PIN para usuario existente
     
         try {
             String fromEmail = "parksysp11@gmail.com"; 

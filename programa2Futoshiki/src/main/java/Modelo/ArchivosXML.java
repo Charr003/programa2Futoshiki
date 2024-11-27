@@ -283,13 +283,20 @@ public class ArchivosXML {
         }
     }
     
-    
+    /**
+     * 
+     * @return
+     */
     public int[] restaurarValoresTiempo(){
+        
+        // Función que restaura valores de la partida guardada
+        // Se restaura el reloj, segundos transcurridos y boolean de validacion para el top
         
         int[] valores = new int[7];
         
         try{
             
+            // Se toman los valores del XML y son convertidos en Integers
             File file = new File("PartidaGuardada.xml");
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();

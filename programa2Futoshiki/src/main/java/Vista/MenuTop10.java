@@ -215,11 +215,14 @@ public class MenuTop10 extends javax.swing.JFrame {
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
         
-        cargarAjustes();
+        cargarAjustes(); // Restaura registro del Top
         
-        String buscar = String.valueOf(cboxTamaño.getSelectedItem());
+        String buscar = String.valueOf(cboxTamaño.getSelectedItem()); // Conseguir tamaño del tablero
         
-        
+        /*
+            En los siguientes strings se añaden los diferentes registros 
+            con su especificacion de dificultad respectiva
+        */
         String topFacil = mostrarTop10(buscar, "Fácil");
         String topIntermedio = mostrarTop10(buscar, "Intermedio");
         String topDificil = mostrarTop10(buscar, "Difícil");
@@ -227,6 +230,7 @@ public class MenuTop10 extends javax.swing.JFrame {
         
         //System.out.println(topFacil);
         
+        // Se actualizan las cajas de texto con los strings
         textFacil.setText(topFacil);
         textIntermedio.setText(topIntermedio);
         textDificil.setText(topDificil);
@@ -238,18 +242,28 @@ public class MenuTop10 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    private ArrayList<AjustesTop10> jugadores = new ArrayList<>();
+    private ArrayList<AjustesTop10> jugadores = new ArrayList<>(); // Arraylist donde se almacena el registro del top
     
-    
+    /**
+     *
+     * @param prefs Objecto de jugadores
+     */
     public void AgregarLista(AjustesTop10 prefs){
-        cargarAjustes();
-        jugadores.add(prefs);
+        
+        // Esta funcion se usa en los tableros de futoshiki cuando un jugador registrado termina
+        // su partida
+        
+        cargarAjustes(); // Se restaura la lista para no sobrescribir
+        jugadores.add(prefs); // Se guarda el jugador
         
     }
     
+    /**
+     *
+     */
     public void guardarAjustes(){
         
-        
+        // Funcion para el guardado del arraylist en archivo binario
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("futoshiki2024top10.dat"))){
             
             oos.writeObject(jugadores);
@@ -259,8 +273,12 @@ public class MenuTop10 extends javax.swing.JFrame {
         }
     }
 
+    /**
+     *
+     */
     public void cargarAjustes(){
-    
+        
+        // Funcion para la carga del arraylist de archivo binario
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("futoshiki2024top10.dat"))){
             
             jugadores = (ArrayList<AjustesTop10>) ois.readObject();
@@ -271,25 +289,33 @@ public class MenuTop10 extends javax.swing.JFrame {
         }
     } 
     
+    /**
+     *
+     * @param tablero Tamaño de tablero
+     * @param dificultad Seleccion dificultad
+     * @return
+     */
     public String mostrarTop10(String tablero, String dificultad){
         
-
+        // Formato para el string
+        
         StringBuilder resultado = new StringBuilder();
         //resultado.append("\nTop 10 - Tablero: ").append(tablero).append(" - Dificultad: ").append(dificultad).append("\n");
-
+        
+        // Se crea un arraylist temporal donde se filtran los jugadores
         ArrayList<AjustesTop10> top10 = new ArrayList<>(jugadores.stream()
                 
-                .filter(Top -> Top.Dificultad.equals(dificultad) && Top.TamTablero.equals(tablero))
-                .sorted(Comparator.comparingInt(Top -> Top.SegundosTotal))
-                .limit(10)
-                .toList());
+                .filter(Top -> Top.Dificultad.equals(dificultad) && Top.TamTablero.equals(tablero)) // filtro dificultad
+                .sorted(Comparator.comparingInt(Top -> Top.SegundosTotal)) // filtro para mostrar los menores tiempos primero
+                .limit(10) // filtro para mostrar solo 10 resultados
+                .toList()); // Se devuelve en formato de lista
 
         for(int i = 0; i < top10.size(); i++){
             
-            resultado.append((i + 1)).append(" - ").append(top10.get(i)).append("\n");
+            resultado.append((i + 1)).append(" - ").append(top10.get(i)).append("\n"); // Se sobrescribe el string
         }
 
-        return resultado.toString();
+        return resultado.toString(); // se regresa el string
     }
     
     

@@ -193,16 +193,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
-
+        
+        // Boton de Jugar
+        
         MenuConfigurar config = new MenuConfigurar();
         AjustesFutoshiki ajuste = config.Ajuste();
         
-        if(ajuste!=null){
+        
+        // Seleccion de ajustes utilizados en la ultima partida
+        
+        if(ajuste!=null){ // Ajustes previos si existen
         
             seleTablero(ajuste);
             
 
-        }else{
+        }else{ // No existen ajustes previos y se utilizan ajustes predeterminados
         
              new Frame3x3("Facíl",0,0,"Derecha","Anónimo",null,0,0,0,0).setVisible(true);
              
@@ -213,22 +218,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonJugarActionPerformed
 
     private void botonManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonManualActionPerformed
-        // TODO add your handling code here:
+        // Boton de Manual de usuario
+        
         AbrirPDF();
         
     }//GEN-LAST:event_botonManualActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
-        // TODO add your handling code here:
+        // Boton de Salir
         
         System.exit(0);
     }//GEN-LAST:event_botonSalirActionPerformed
 
     private void botonTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTopActionPerformed
         
-        // Prueba
-        //cargarDatos();
-        //mostrarUsuario();
+        // Boton Top 10
         
         new MenuTop10().setVisible(true);
         
@@ -236,7 +240,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void botonPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPINActionPerformed
         
-        //cargarDatos();
+        //Boton Olvide Mi PIN
+        
         String nick = JOptionPane.showInputDialog("Ingrese el nombre de usuario");
         
         NuevoPIN(nick);
@@ -245,19 +250,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPINActionPerformed
 
     private void botonAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcercaDeActionPerformed
-        
+        // Boton Acerca de 
         JOptionPane.showMessageDialog(null,"Programación Orientada a Objetos - Programa 2: FUTOSHIKI\n"+"Versión 1.0\n"+"23/11/24\n"
                 +"Desarollado por Carlos Gutiérrez y Joshua Valverde ");
     }//GEN-LAST:event_botonAcercaDeActionPerformed
 
     private void botonConfigurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfigurarActionPerformed
-
+        // Boton Configuracion de partida
         new MenuConfigurar().setVisible(true);
     }//GEN-LAST:event_botonConfigurarActionPerformed
 
     private void BotonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistroActionPerformed
         
-        
+        // Boton de Registro
         new MenuRegistro().setVisible(true);
         
 
@@ -304,16 +309,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
     }
     
-    private ArrayList<Usuario> usuarios = new ArrayList<>();
+    private ArrayList<Usuario> usuarios = new ArrayList<>(); // Arraylist donde se almacenan todos los usuarios
     
-    
+    /**
+     *
+     * @param usuario Objecto de usuario para su registro
+     */
     public void agregarUsuario(Usuario usuario) {
         
         usuarios.add(usuario);
     }
     
+    /**
+     *
+     */
     public void guardarDatos(){
-        
+        // Funcion para guardado de Arraylist de usuarios en archivo binario
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("usuarios.dat"))){
             
             oos.writeObject(usuarios);
@@ -323,8 +334,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
     }
     
+    /**
+     *
+     */
     public void cargarDatos(){
-    
+        // Funcion para restaurar Arraylist de usuarios de archivo binario
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("usuarios.dat"))) {
             
             usuarios = (ArrayList<Usuario>) ois.readObject();
@@ -335,8 +349,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
     }
     
+    /**
+     *
+     */
     public void mostrarUsuario(){
       
+       // Funcion de debugging : Mostrar todos los usuarios en el arraylist con un for each 
        if(!usuarios.isEmpty()){
        
          for(Usuario usuario: usuarios){
@@ -351,13 +369,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }
     
+    /**
+     *
+     * @param nick Nombre de Usuario
+     */
     public void NuevoPIN(String nick){
-        
-        
+        // Funcion para generar un PIN nuevo de un usuario existente, se manda un correo con el nuevo PIN
+        // Se toma el nick: Nombre de usuario existente
         cargarDatos();
-        Usuario usuario = ValidarSoloUsuario(nick);
+        Usuario usuario = ValidarSoloUsuario(nick); // Funcion que regresa informacion del usuario en el objecto
         
-        if( usuario != null){
+        if( usuario != null){ // Si se encuentra el ususario
             
             
             String cadenaAleatoria = generarStringAleatorio(4); // Pin aletorio
@@ -368,17 +390,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
             guardarDatos();
             
             JOptionPane.showMessageDialog(null,"Se ha enviado un correo con el PIN de recuperacion.");
-            correos.EnviarCorreoNuevoPin(usuario);
+            correos.EnviarCorreoNuevoPin(usuario); // Envio del PIN
 
-        }else{
+        }else{ // Si no se encuentra un usuario con el nick
         
             JOptionPane.showMessageDialog(null,"Usuario no encontrado.");
         
         }
     }  
     
+    /**
+     *
+     * @param nombre Nombre de usuario
+     * @return Usuario
+     */
     public Usuario ValidarSoloUsuario(String nombre) {
-        
+        // Funcion que toma un nombre y lo busca en el arraylist de usuarios, regresa un objecto con el usuario
         cargarDatos();
         for (Usuario usuario : usuarios) {
             
@@ -391,8 +418,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         return null; // Si no se encuentra ningún usuario con ese nombre
     } 
     
+    /**
+     *
+     * @param nombre Nombre de Usuario
+     * @param Pin PIN del usuario
+     * @return String PIN
+     */
     public Usuario ValidarUsuarioPIN(String nombre, String Pin) {
-        
+        // Funcion que se utiliza para validar a un usuario con su numero PIN
         cargarDatos();
         for (Usuario usuario : usuarios){
             
@@ -406,8 +439,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
         return null; // Si no se encuentra ningún usuario con ese nombre
     }
+
+    /**
+     *
+     * @param longitud Tamaño del string 
+     * @return String random
+     */
     public String generarStringAleatorio(int longitud) { 
-                                                                   
+        // Funcion de string aletorio para generar un PIN nuevo                                                           
         String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         Random random = new Random();
         StringBuilder sb = new StringBuilder(longitud);
@@ -419,44 +458,53 @@ public class MenuPrincipal extends javax.swing.JFrame {
             
         }
         
-        return sb.toString();
+        return sb.toString(); // regresa el string
     }
 
+    /**
+     *
+     */
     public void AbrirPDF(){
+        // Funcion para desplegar el manual de usuario
+        File archivoPDF = new File("programa2_futoshiki_manual_de_usuario.pdf"); // Nombre del manual en la carpeta del programa, si no es igual no se va a abrir
     
-        File archivoPDF = new File("programa2_futoshiki_manual_de_usuario.pdf");
-    
-        if(archivoPDF.exists() && Desktop.isDesktopSupported()){
+        if(archivoPDF.exists() && Desktop.isDesktopSupported()){ // Se encuentra el PDF
             
             try{
                 
                 Desktop.getDesktop().open(archivoPDF);
                 
                 
-            }catch(IOException e){
+            }catch(IOException e){ // Archivo no compatible
                 
                 System.out.println("Error al intentar abrir el archivo PDF: " + e.getMessage());
                 
             }
-        }else{
+        }else{ // No se encuentra un PDF en la carpeta del proyecto con ese nombre
             
             JOptionPane.showMessageDialog(null,"El archivo no existe.");
         }
     }
     
+    /**
+     *
+     * @param ajuste Objecto de ajustes del tablero
+     */
     public void seleTablero(AjustesFutoshiki ajuste){
-        
+     // Se establecen los parametros para desplegar el tablero de Futoshiki
+     // En este caso solo se usa este metodo si existe un ajuste previo y este se guardo, de lo contrario se usa uno default
+     
      String nombre = ajuste.nombre;
      int Tablero = ajuste.IndiceTam;
-     String Dificultad = getDif(ajuste);
+     String Dificultad = getDif(ajuste); // Funcion para conseguir la dificultad
      int MultiNivel = ajuste.IndiceMultiNivel;
      int UsoReloj = ajuste.IndiceReloj;
-     String Posicion = getPosicion(ajuste);
+     String Posicion = getPosicion(ajuste); // Funcion para conseguir la posicion
      int Horas = ajuste.HorasG;
      int Minutos = ajuste.MinutosG;
      int Segundos = ajuste.SegundosG;
      
-        switch(Tablero){
+        switch(Tablero){ // Con los ajustes establecidos se despliega la tabla selecionada 
             
             case 0 : // 3x3
                 new Frame3x3(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
@@ -480,7 +528,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 
             case 4: // 7x7
                 new Frame7x7(Dificultad,MultiNivel,UsoReloj,Posicion,nombre,null,Horas,Minutos,Segundos,0).setVisible(true);
-                setVisible(false);
+                //setVisible(false);
                 break; 
             
             case 5: // 8x8
@@ -501,8 +549,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
     }
 
+    /**
+     *
+     * @param ajuste Objecto con los ajustes de tablero
+     * @return String Dificultad
+     */
     public String getDif(AjustesFutoshiki ajuste){
-    
+        // Funcion para obtener el ajuste de dificultad
         if(ajuste.IndiceNivel ==0){
         
             return "Fácil";
@@ -515,6 +568,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         return "Díficil";
     }
     
+    /**
+     *
+     * @param ajuste Objecto con los ajustes de tablero
+     * @return String Posicion
+     */
     public String getPosicion(AjustesFutoshiki ajuste){
     
         if(ajuste.IndicePosicion==0){

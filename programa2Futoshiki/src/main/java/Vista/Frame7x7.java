@@ -18,10 +18,8 @@ import javax.swing.Timer;
 import java.util.ArrayList;
 
 /**
- *Este frame esta encargado de un juego de futoshiki de tamaño 7x7
- * Todos los botones y funciones las contiene este frame
- * para la configuracion depende de otra clase
- * @author Joshua
+ *
+ * @author jxdga
  */
 public class Frame7x7 extends javax.swing.JFrame {
     
@@ -78,18 +76,21 @@ public class Frame7x7 extends javax.swing.JFrame {
     };
     
     /**
-     * Constructor para el frame de Futoshiki 7x7.
+     * Creates new form Frame10x10
+     */
+    
+    /**
      *
-     * @param dificultad            La dificultad del juego ("Fácil", "Intermedio", "Difícil").
-     * @param multinivel            Indica si se juega en modo multinivel.
-     * @param usoreloj              Indica el modo de tiempo (0: Cronómetro, 1: Temporizador, 2: Sin tiempo).
-     * @param posicion              La posición del jugador.
-     * @param nombre                El nombre del jugador.
-     * @param usuario               El objeto Usuario que representa al jugador.
-     * @param Horas                 Las horas iniciales para el temporizador.
-     * @param Minutos               Los minutos iniciales para el temporizador.
-     * @param Segundos              Los segundos iniciales para el temporizador.
-     * @param segundosTranscurridos El tiempo transcurrido en segundos.
+     * @param dificultad  Facil, Intermedio, Dificil
+     * @param multinivel  0 = No , 1 = Si
+     * @param usoreloj 0 = Cronometro, 1 = Temporizador 2 = No reloj
+     * @param posicion 0 = Izquierda , 1 = Derecha
+     * @param nombre Nombre de usuario
+     * @param usuario Objecto de usuario
+     * @param Horas Horas seleccionadas
+     * @param Minutos Minutos seleccionados
+     * @param Segundos Segundos seleccionados
+     * @param segundosTranscurridos Segundos totales
      */
     public Frame7x7(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
@@ -115,10 +116,10 @@ public class Frame7x7 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 
-                
+                // Manejo de tiempo
                 tiempoTranscurridoSegundos++; // Esto se usa para el calculo del tiempo total en ambos modos
 
-                if(esCronometro){
+                if(esCronometro){ // Cronometro
                     // Lógica para cuenta hacia adelante
                     tempSeg++;
                                   
@@ -134,18 +135,19 @@ public class Frame7x7 extends javax.swing.JFrame {
                         }
                     }
 
-                    // Validacion del cronometro, revisar si se alcanzado el limite de tiempo: 10 mins
+                    // Validacion del cronometro, revisar si se alcanzado el limite de tiempo
                     
                     if(tempMins == minutos && tempSeg == segundos){
                         detenerTiempo("Se ha acabado el tiempo del cronómetro.");
                     }
 
-                }else{
+                }else{ // Temporizador
+                    
                     // Lógica para cuenta hacia atras
                   
                     if(segundos == 0){
                         
-                        if(minutos == 0){
+                        if(minutos == 0){ // Validacion del temporizador
                             
                             detenerTiempo("Se ha acabado el tiempo del temporizador.");
                             return;
@@ -160,7 +162,7 @@ public class Frame7x7 extends javax.swing.JFrame {
                     }
                 }
 
-                // Actualizar el label de tiempo
+                // Actualizar el label de tiempo para ambos modos
                 if(ModoTiempo==1){
                     
                     HorasTiempo.setText(String.format("%2d", horas));
@@ -171,7 +173,7 @@ public class Frame7x7 extends javax.swing.JFrame {
                     HorasTiempo.setText(String.format("%2d", tempHora));
                     MinutosTiempo.setText(String.format("%2d", tempMins));
                     SegundosTiempo.setText(String.format("%02d", tempSeg));       
-                }else{
+                }else{ // Actualizacion en modo no reloj
                 
                     HorasTiempo.setText("");
                     MinutosTiempo.setText("");
@@ -187,7 +189,7 @@ public class Frame7x7 extends javax.swing.JFrame {
      * Método para inicializar la matriz de botones y enlazarlos con los botones del formulario.
      */
     private void inicializarBotones() {
-        botones = new JButton[10][10]; // Creamos la matriz
+        botones = new JButton[10][10]; // Creamos la matriz de 10x10
 
         // Asignación de cada botón de la matriz a su posición correspondiente
         botones[0][0] = Boton0_0;
@@ -247,11 +249,8 @@ public class Frame7x7 extends javax.swing.JFrame {
         botones[6][6] = Boton6_6;
     }
     
-    /**
-     * Método para inicializar la matriz de etiquetas de texto y enlazarlas con las etiquetas del formulario.
-     */
     private void inicializarTexto(){
-        texto = new JLabel[19][10]; // Creamos la matriz
+        texto = new JLabel[19][10]; // Creamos la matriz de 10x10
 
         texto[0][0] = Texto0_0;
     texto[0][1] = Texto0_1;
@@ -1896,11 +1895,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         AsignarNum(PuntoX, PuntoY, 7);
     }//GEN-LAST:event_Boton7ActionPerformed
 
-    /**
-     * Carga el juego guardado desde un archivo XML.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonCargarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarJuegoActionPerformed
         cargarTiempo();
         int[][] matrizNumeroCargada = ArchivosXML.cargarMatrizNumeros();
@@ -1938,17 +1932,12 @@ public class Frame7x7 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SegundosTiempoActionPerformed
 
-    /**
-     * Inicia el juego, el tiempo, carga la plantilla para jugar y habilita el uso del frame.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIniciarJuegoActionPerformed
 
     if(ModoTiempo !=2){  
-        if(!timer.isRunning()){
+        if(!timer.isRunning()){ // Si aun no se ha iniciado el reloj
            
-           if(ModoTiempo ==0){
+           if(ModoTiempo ==0){ // Modo Cronometro
            
                 //reiniciarTiempo();
                 esCronometro = true;
@@ -1956,11 +1945,11 @@ public class Frame7x7 extends javax.swing.JFrame {
                 timer.start();   
            
            
-           }else if(ModoTiempo==1){
+           }else if(ModoTiempo==1){ // Modo Temporizador
                
                 esCronometro = false;
 
-                
+                // Actualizacion de los labels
                 HorasTiempo.setText(String.format("%2d", horas));
                 MinutosTiempo.setText(String.format("%2d", minutos));
                 SegundosTiempo.setText(String.format("%02d", segundos));
@@ -1969,7 +1958,7 @@ public class Frame7x7 extends javax.swing.JFrame {
            //tiempoTranscurridoSegundos = 0; // Reiniciar tiempo transcurrido
            timer.start();
                        
-        }else{
+        }else{ // Si el tiempo esta corriendo
         
             detenerTiempo("Tiempo detenido.");
         }
@@ -1994,7 +1983,7 @@ public class Frame7x7 extends javax.swing.JFrame {
             }
         }
 
-    }else{
+    }else{ // Modo no reloj
     
         jugar=true;
         
@@ -2052,20 +2041,10 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonIniciarJuegoActionPerformed
 
-    /**
-     * Acción realizada al presionar el botón de borrar.
-     *
-     * @param evt El evento de acción.
-     */
     private void BorrarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarBotonActionPerformed
         AsignarNum(PuntoX, PuntoY, 0);
     }//GEN-LAST:event_BorrarBotonActionPerformed
 
-    /**
-     * Termina el juego actual.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTerminarJuegoActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(
             null,"¿ESTÁ SEGURO DE TERMINAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
@@ -2077,11 +2056,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonTerminarJuegoActionPerformed
 
-    /**
-     * Guarda el estado actual del juego en un archivo XML.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarJuegoActionPerformed
         ArchivosXML.guardarEnXML(matrizNumeros,matrizSimbolos,horas,minutos,segundos,tempHora,tempMins,tempSeg,tiempoTranscurridoSegundos,ValidoTop);  
     }//GEN-LAST:event_BotonGuardarJuegoActionPerformed
@@ -2093,11 +2067,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_NombreJugadorActionPerformed
 
-    /**
-     * Borra la última jugada realizada.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonBorrarJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJugadaActionPerformed
         if (!jugadas.isEmpty()) {}
         Jugada jugadaAnterior=jugadas.get(jugadas.size()-1);
@@ -2110,11 +2079,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         matrizNumeros[cordX][cordY]=0;
     }//GEN-LAST:event_BotonBorrarJugadaActionPerformed
 
-    /**
-     * Rehace la última jugada que se deshizo.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonRehacerJugadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRehacerJugadaActionPerformed
         if (ultimaJugada!=null) {
             int cordX=ultimaJugada.getCordX();
@@ -2124,11 +2088,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonRehacerJugadaActionPerformed
 
-    /**
-     * Borra todo el juego actual.
-     *
-     * @param evt El evento de acción.
-     */
     private void BotonBorrarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarJuegoActionPerformed
         int respuesta = JOptionPane.showConfirmDialog(
             null,"¿ESTÁ SEGURO DE BORRAR EL JUEGO? ","Confirmacion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
@@ -2151,13 +2110,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NivelDificultadActionPerformed
 
-    /**
-     * Método encargado de asignar un número al cuadro haciendo todas las validaciones necesarias.
-     *
-     * @param fila    La fila del botón.
-     * @param columna La columna del botón.
-     * @param num     El número a asignar.
-     */
     public void AsignarNum(int fila, int columna, int num) {
         if (jugar){
             int numAnterior=0;
@@ -2184,24 +2136,24 @@ public class Frame7x7 extends javax.swing.JFrame {
         boolean finJuego=juegoTerminado(matrizNumeros);
         if (finJuego){
             JOptionPane.showMessageDialog(null, "Juego Terminado");
-            if (Multinivel==0){
+            if (Multinivel==0){ // No multinivel
                        
-                ConfValiUsuario();
+                ConfValiUsuario(); // Validacion para ver si se uso un usuario
                 
-                if(ValidoTop){
+                if(ValidoTop){ // Valido para ser registrado en el top
                 
-                    menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
+                    menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos)); // Se registra los datos en el arraylist del top
                     menuTop.guardarAjustes();
                     JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
                 
-                }else{
+                }else{ // No se cumple el requisito para ser tomado en cuenta para el top
                 
                     JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                 
                 }    
                 
                 this.dispose();
-            }else{
+            }else{ // Multinivel
                 this.setVisible(false);
                 if (Dificultad=="Fácil"){
                     new Frame7x7("Intermedio",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
@@ -2209,15 +2161,15 @@ public class Frame7x7 extends javax.swing.JFrame {
                     new Frame7x7("Dificil",Multinivel,ModoTiempo,Posicion,NombreJugador.getText(),usuario2,horas,minutos,segundos,tiempoTranscurridoSegundos).setVisible(true);
                 }else{
                     
-                    ConfValiUsuario();
+                    ConfValiUsuario(); // Validacion para ver si se uso un usuario
                     
-                    if(ValidoTop){
+                    if(ValidoTop){ // Valido para ser registrado en el top
                 
                         menuTop.AgregarLista(new AjustesTop10(Nombre,Dificultad, TamTablero, tiempoTranscurridoSegundos));
                         menuTop.guardarAjustes();
                         JOptionPane.showMessageDialog(null, "Se ha registrado en el Top");
                 
-                    }else{
+                    }else{ // No se cumple el requisito para ser tomado en cuenta para el top
                 
                         JOptionPane.showMessageDialog(null, "No se ha registrado en el Top");
                     }            
@@ -2230,7 +2182,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         
     }
     
-    //verifica que el numero n este ya en la amtriz
     public boolean verificarMatriz(int[][] matriz,int fila, int columna,int numero){
         int size = matriz.length;
         
@@ -2252,8 +2203,6 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
         return false;
     }
-    
-    //verifica la matriz con los simbolos adyacentes
     public boolean verificarMatriz2(int[][] matriz, int fila, int columna, int numero) {
     boolean error = false;
     
@@ -2345,19 +2294,24 @@ public class Frame7x7 extends javax.swing.JFrame {
         }
     }
     
-    //reinicia el tiempo
+    /**
+     *
+     */
     public void reiniciarTiempo(){
-        
+        // Funcion para reiniciar el reloj
         horas = 0;
         minutos = 0;
         segundos = 0;
     }
     
-    //detiene el tiempo
+    /**
+     *
+     * @param mensaje String Notificacion de tiempo
+     */
     public void detenerTiempo(String mensaje) {
-        
+        // Funcion para detener el reloj y tomar sus valores
         timer.stop();
-        //JOptionPane.showMessageDialog(null, mensaje);
+        
 
         // Calculo total del tiempo actual
         int horasTotales = tiempoTranscurridoSegundos / 3600;
@@ -2368,13 +2322,14 @@ public class Frame7x7 extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "Tiempo total: " + tiempoDuracion);
         
-        // Falta que pida al usuario si quiere seguir jugando o no.
+        // Pide al usuario si quiere seguir jugando o no.
+        // En este caso el usuario se quedo sin tiempo y ya no es valido para el top pero puede seguir jugando
         
         int resultado = JOptionPane.showConfirmDialog(null, "Seguir Jugando?", "Fin del Juego", JOptionPane.YES_NO_OPTION);
         
         if(resultado == JOptionPane.YES_OPTION){
         
-            if(ModoTiempo==1){
+            if(ModoTiempo==1){ // Temporizador se convierte en cronometro
                 
                 horas = tiempoTranscurridoSegundos / 3600;
                 minutos = (tiempoTranscurridoSegundos % 3600) / 60;
@@ -2385,7 +2340,7 @@ public class Frame7x7 extends javax.swing.JFrame {
                 ValidoTop = false;
             
             
-            }else{
+            }else{ // De cronometro se pasa a modo de no reloj
             
                  //timer.start();
                  ModoTiempo=3;
@@ -2397,7 +2352,9 @@ public class Frame7x7 extends javax.swing.JFrame {
         }    
     }
     
-    //determina el tiempo
+    /**
+     *@return boolean 
+     */
     public void determinarTiempo(){
     
         if(ModoTiempo==0){
@@ -2415,7 +2372,13 @@ public class Frame7x7 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    //carga tiempo guardado
+    public int generarNumeroAleatorio() {
+    return (int) (Math.random() * 3) + 1;
+    }
+    
+    /**
+     *@return Ajustes
+     */
     public void cargarTiempo(){
         
         int [] valores = archivoXML.restaurarValoresTiempo();
@@ -2435,7 +2398,11 @@ public class Frame7x7 extends javax.swing.JFrame {
     
     }    
     
-    //verifica si el juego ya esta listo
+    /**
+     *
+     * @param matriz
+     * @return
+     */
     public boolean juegoTerminado(int[][] matriz){
         boolean fin=true;
         int size = matriz.length;
@@ -2450,12 +2417,12 @@ public class Frame7x7 extends javax.swing.JFrame {
     }
     
     /**
-     * Verifica si el usuario es válido para registrarse en el Top 10.
      *
-     * @return true si es válido, false de lo contrario.
+     * @return Boolean 
      */
     public boolean ConfValiUsuario(){
-    
+        // Validar si el juego es valido para el Top
+        // Si es anonimo no cuenta
         if(Nombre.equalsIgnoreCase("Anónimo")){
         
                 ValidoTop = false;

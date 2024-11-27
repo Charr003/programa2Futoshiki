@@ -15,6 +15,13 @@ public class AjustesTop10 implements Serializable {
     public String TamTablero;
     public int SegundosTotal;
 
+    /**
+     *
+     * @param Nickname Nombre de usuario
+     * @param Dificultad Dificultad del tablero donde el usuario estaba jugando
+     * @param Tablero Tamaño del tablero (3x3 - 10x10)
+     * @param SegundosTotal Integer del total de segundos del juego del usuario
+     */
     public AjustesTop10(String Nickname, String Dificultad, String Tablero, int SegundosTotal){
         
         this.Nickname = Nickname;
@@ -22,6 +29,9 @@ public class AjustesTop10 implements Serializable {
         this.TamTablero = Tablero;
         this.SegundosTotal = SegundosTotal;
     }
+    
+    
+    // Funcion de debugging: toma el int de segundos y calcula segundos, minutos y horas
     public String tiempoFormateado(){
         
         int horas = SegundosTotal / 3600;
@@ -30,6 +40,7 @@ public class AjustesTop10 implements Serializable {
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
     
+    // Funcion de debugging: Para print en consola
     @Override
     public String toString(){
         

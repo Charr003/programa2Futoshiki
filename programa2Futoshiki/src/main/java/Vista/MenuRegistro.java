@@ -135,20 +135,23 @@ public class MenuRegistro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
-        // TODO add your handling code here:
+        // Boton Salir
         
         setVisible(false);
     }//GEN-LAST:event_botonSalirActionPerformed
 
     private void botonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarActionPerformed
-        // TODO add your handling code here:
+        // Boton registrar
         Registrar();
     }//GEN-LAST:event_botonRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-
+    
+    /**
+     * @return Registro de Usuarios
+     */
     public void Registrar(){
         
         String nick;
@@ -158,37 +161,38 @@ public class MenuRegistro extends javax.swing.JFrame {
         
         try{
         
-            //Validaciones
+            //Validaciones de los textfields
             nick = txtfUsuario.getText();
             
-            if(nick instanceof String && nick.length() >= 1 && nick.length() <= 40 ){
+            if(nick instanceof String && nick.length() >= 1 && nick.length() <= 40 ){ // String min 1 max 40
             
                 allgood++;
             }
             
             pin = txtfPin.getText();
-            if(pin instanceof String && pin.length() >= 1 && pin.length() <= 5 ){
+            if(pin instanceof String && pin.length() >= 1 && pin.length() <= 5 ){ // String min 1 max 5
             
                 allgood++;
             }
             
             correo = txtfCorreo.getText();
-            if(correo instanceof String && correo.length() >= 5 && correo.length() <= 40 ){
+            if(correo instanceof String && correo.length() >= 5 && correo.length() <= 40 ){ // String min 5 max 40
             
                 allgood++;
             }
             
             //Registro
-            if(allgood==3){
+            if(allgood==3){ // Si se cumplen todos los requisitos
             
-               menup.agregarUsuario(new Usuario(nick,pin,correo));
-               JOptionPane.showMessageDialog(null, "Se ha registrado al usuario "+ nick);
-               correos.EnviarCorreoConfirmacion(correo);
+               menup.agregarUsuario(new Usuario(nick,pin,correo)); // Guardado de usuario en arraylist de menu principal
                
-               menup.guardarDatos();
+               JOptionPane.showMessageDialog(null, "Se ha registrado al usuario "+ nick);
+               correos.EnviarCorreoConfirmacion(correo); // Envio de confirmacion
+               
+               menup.guardarDatos(); // Guardado de arraylist usuarios
                setVisible(false);
             
-            }else{
+            }else{ // No se cumplen los requisitos para registro
                 JOptionPane.showMessageDialog(null, "No se cumplen los requisitos de Registro");
             }
         
