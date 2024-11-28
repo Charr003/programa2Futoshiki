@@ -11,7 +11,9 @@ import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Este frame está encargado del registro de Usuarios.
+ * Se puede encontrar todas las funciones para registro, la lista se guarda
+ * en el menu principal
  * @author XPC
  */
 public class MenuRegistro extends javax.swing.JFrame {
@@ -150,7 +152,7 @@ public class MenuRegistro extends javax.swing.JFrame {
      */
     
     /**
-     * @return Registro de Usuarios
+     *Registro de Usuario 
      */
     public void Registrar(){
         

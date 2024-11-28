@@ -21,7 +21,10 @@ import java.util.Comparator;
 
 
 /**
- *
+ * Este frame está encargado de desplegar el registro del Top.
+ * Se encuentran casi todos los metodos del registro.
+ * El registro se realiza en los tableros de futoshiki al terminar una partida.
+ * Se guarda la lista en este frame.
  * @author XPC
  */
 public class MenuTop10 extends javax.swing.JFrame {
@@ -238,9 +241,7 @@ public class MenuTop10 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_botonBuscarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     
     private ArrayList<AjustesTop10> jugadores = new ArrayList<>(); // Arraylist donde se almacena el registro del top
     

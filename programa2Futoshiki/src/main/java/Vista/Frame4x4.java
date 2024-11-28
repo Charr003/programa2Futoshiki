@@ -84,7 +84,7 @@ public class Frame4x4 extends javax.swing.JFrame {
      * @param Horas Horas seleccionadas
      * @param Minutos Minutos seleccionados
      * @param Segundos Segundos seleccionados
-     * @param segundosTranscurridos Segundos totales
+     * @param SegundosTranscurridos Segundos totales
      */ 
     public Frame4x4(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
@@ -1398,7 +1398,7 @@ public class Frame4x4 extends javax.swing.JFrame {
     }
     
     /**
-     *@return boolean
+     *Determinar Tiempo
      */
     public void determinarTiempo(){
     
@@ -1413,16 +1413,14 @@ public class Frame4x4 extends javax.swing.JFrame {
         // Falta opcion para no activar el cronometro
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     
     public int generarNumeroAleatorio() {
     return (int) (Math.random() * 3) + 1;
     }
     
     /**
-     *@return Ajustes
+     *Cargar Tiempo 
      */
     public void cargarTiempo(){
         
@@ -1463,7 +1461,7 @@ public class Frame4x4 extends javax.swing.JFrame {
     
     /**
      *
-     * @return Boolean 
+     * 
      */
     public boolean ConfValiUsuario(){
         // Validar si el juego es valido para el Top

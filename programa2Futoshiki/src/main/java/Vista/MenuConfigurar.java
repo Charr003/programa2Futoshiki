@@ -26,7 +26,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 /**
- *
+ * Este frame está  encargado de configurar las partidas de Futoshiki.
+ * Las funciones y listas para ajustes se encunetran en este frame
  * @author XPC
  */
 public class MenuConfigurar extends javax.swing.JFrame{
@@ -544,8 +545,8 @@ public class MenuConfigurar extends javax.swing.JFrame{
      */
     
      /**
-     *
-     * @return String Dificultad
+     *String Dificultad
+     * @return 
      */
     public String getDificultad(){
           
@@ -553,8 +554,8 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     *
-     * @return Indice de Multinivel
+     *Indice de Multinivel
+     * @return 
      */
     public int getMultiNivel(){
         
@@ -562,8 +563,8 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     *
-     * @return Indice de Reloj
+     *Indice de Reloj
+     * @return 
      */
     public int getReloj(){
             
@@ -571,8 +572,8 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     *
-     * @return String de Posicion
+     *String de Posicion
+     * @return 
      */
     public String getPosicion(){
      
@@ -582,7 +583,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
 
     /**
      *
-     * @return Indice de Tamaño 
+     * @return  
      */
     public int getTam(){
     
@@ -591,7 +592,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     * @return Usuario
+     * Validar el perfil de un Usuario
      */
     public void ValidarUsuario(){
       
@@ -628,7 +629,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     *@return Ajustes de Tablero
+     * Aplicar los ajustes 
      */
     public void setAjustes(){
        cargarAjustes(); // carga arraylist ajustes
@@ -652,7 +653,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     *@return Actualizacion de cajas de opciones
+     *Restauro de Ajustes 
      */
     public void RestaurarAjustes(){
     
@@ -715,7 +716,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     
     /**
      *
-     * @return Objecto Ajuste
+     * @return 
      */
     public AjustesFutoshiki Ajuste(){
         
@@ -731,7 +732,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     
     /**
      *
-     * @return Boolean
+     * @return 
      */
     public boolean validarTiempo(){
         
@@ -760,7 +761,7 @@ public class MenuConfigurar extends javax.swing.JFrame{
     }
     
     /**
-     * @return Tablero Futoshiki
+     * Seleccion de Tablero 
      */
     public void seleTablero(){
         

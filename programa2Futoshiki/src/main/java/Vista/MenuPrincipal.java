@@ -30,7 +30,8 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Este frame está encargado de funcionar como un Menu Principal para el juego.
+ * En este frame se puede accesar a todas las funciones del programa
  * @author XPC
  */
 public class MenuPrincipal extends javax.swing.JFrame {

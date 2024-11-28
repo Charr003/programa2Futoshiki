@@ -87,7 +87,7 @@ public class Frame5x5 extends javax.swing.JFrame {
      * @param Horas Horas seleccionadas
      * @param Minutos Minutos seleccionados
      * @param Segundos Segundos seleccionados
-     * @param segundosTranscurridos Segundos totales
+     * @param SegundosTranscurridos Segundos totales
      */
     public Frame5x5(String dificultad, int multinivel, int usoreloj, String posicion, String nombre, Usuario usuario, int Horas, int Minutos, int Segundos, int SegundosTranscurridos) {
         initComponents();
@@ -1645,7 +1645,7 @@ public class Frame5x5 extends javax.swing.JFrame {
     }
     
     /**
-     *@return boolean 
+     * Determianar Tiempo  
      */
     public void determinarTiempo(){
         // Validar si el modo de reloj es cronometro o temporizador
@@ -1660,16 +1660,14 @@ public class Frame5x5 extends javax.swing.JFrame {
         // Falta opcion para no activar el cronometro
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     
     public int generarNumeroAleatorio() {
     return (int) (Math.random() * 3) + 1;
     }
     
     /**
-     *@return Ajustes
+     *Carga Tiempo 
      */
     public void cargarTiempo(){
         // Restaura los valores del reloj y segundos del archivo XML
@@ -1710,7 +1708,7 @@ public class Frame5x5 extends javax.swing.JFrame {
     
     /**
      *
-     * @return Boolean 
+     * @return  
      */
     public boolean ConfValiUsuario(){
         // Validar si el juego es valido para el Top

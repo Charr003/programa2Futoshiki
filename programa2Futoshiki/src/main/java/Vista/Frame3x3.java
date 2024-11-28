@@ -1179,8 +1179,7 @@ public class Frame3x3 extends javax.swing.JFrame {
         }    
     }
     
-    /**
-     *@return boolean 
+    /** 
      */
     public void determinarTiempo(){
         // Validar si el modo de reloj es cronometro o temporizador
@@ -1195,12 +1194,9 @@ public class Frame3x3 extends javax.swing.JFrame {
         
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     
     /**
-     *@return Ajustes
      */
     public void cargarTiempo(){
         // Restaura los valores del reloj y segundos del archivo XML
